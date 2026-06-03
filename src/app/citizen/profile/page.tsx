@@ -3,9 +3,11 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import Link from 'next/link';
 import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function ProfilePage() {
+
   return (
     <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
 
