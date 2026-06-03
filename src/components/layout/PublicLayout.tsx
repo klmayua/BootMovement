@@ -17,19 +17,19 @@ export const PublicLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="flex justify-around items-center h-16">
           <Link href="/" className="flex flex-col items-center gap-0.5 text-secondary">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-            <span className="font-sans text-xs font-medium">Home</span>
+            <span className="font-label-md text-label-md">Home</span>
           </Link>
           <Link href="/communities" className="flex flex-col items-center gap-0.5 text-on-surface-variant">
             <span className="material-symbols-outlined">groups</span>
-            <span className="font-sans text-xs font-medium">Communities</span>
+            <span className="font-label-md text-label-md">Communities</span>
           </Link>
           <Link href="/events" className="flex flex-col items-center gap-0.5 text-on-surface-variant">
             <span className="material-symbols-outlined">event</span>
-            <span className="font-sans text-xs font-medium">Events</span>
+            <span className="font-label-md text-label-md">Events</span>
           </Link>
           <Link href="/impact" className="flex flex-col items-center gap-0.5 text-on-surface-variant">
             <span className="material-symbols-outlined">analytics</span>
-            <span className="font-sans text-xs font-medium">Impact</span>
+            <span className="font-label-md text-label-md">Impact</span>
           </Link>
         </div>
       </nav>

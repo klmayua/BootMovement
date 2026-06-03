@@ -11,9 +11,9 @@ export const Navbar = () => {
             className="h-10 w-auto" 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
           />
-          <span className="font-serif text-xl font-semibold text-primary">BOOT Movement</span>
+          <span className="font-headline-sm text-headline-sm text-primary">BOOT Movement</span>
         </Link>
-        <Link href="/join" className="bg-secondary text-white px-4 py-2 rounded-lg font-sans text-sm font-semibold transition-all active:scale-95 shadow-sm">
+        <Link href="/join" className="bg-secondary text-on-secondary px-4 py-2 rounded-lg font-label-lg text-label-lg transition-all active:scale-95 shadow-sm">
           Join Now
         </Link>
       </div>
