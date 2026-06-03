@@ -3,8 +3,10 @@ import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import Link from 'next/link';
 
 export default function CommunitiesPage() {
+
   return (
     <PublicLayout>
       <section className="py-20 px-4 bg-surface">
