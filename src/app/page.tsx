@@ -53,9 +53,6 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter">
               {/* Card: Traditional Values */}
               <div className="group relative bg-surface p-8 md:p-12 border border-outline-variant/30 hover:border-secondary/50 transition-all duration-500 overflow-hidden rounded-xl md:rounded-none">
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <span className="material-symbols-outlined text-[120px]" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
-                </div>
                 <h3 className="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
                 <a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
@@ -64,9 +61,6 @@ export default function HomePage() {
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-8 md:p-12 text-on-primary transition-all duration-500 overflow-hidden rounded-xl md:rounded-none">
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <span className="material-symbols-outlined text-[120px] text-on-primary-container" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
-                </div>
                 <h3 className="font-headline-md text-headline-md mb-6">Future Progress</h3>
                 <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
                 <a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
