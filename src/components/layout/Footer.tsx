@@ -3,35 +3,43 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary-container text-on-primary px-margin-mobile py-12 flex flex-col gap-8">
-      <div className="flex flex-col gap-6">
-        <div className="flex items-center gap-2">
+    <footer className="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+        <div className="md:col-span-1">
           <img 
             alt="BOOT Logo" 
-            className="h-8 w-auto brightness-200" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
+            className="h-10 mb-6 grayscale hover:grayscale-0 transition-all cursor-pointer" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j"
           />
-          <span className="font-headline-sm text-headline-sm">BOOT Civic Movement</span>
+          <p className="font-body-sm text-body-sm text-on-surface-variant">The BOOT Civic Operating System is a platform for the next generation of principled governance.</p>
         </div>
-        <p className="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
-          Building a nation based on merit, accountability, and the shared promise of a prosperous tomorrow for all Nigerians.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 gap-y-6">
-        <Link href="#" className="font-label-lg text-label-lg text-primary-fixed-dim hover:text-white transition-colors">Privacy Policy</Link>
-        <Link href="#" className="font-label-lg text-label-lg text-primary-fixed-dim hover:text-white transition-colors">Terms of Service</Link>
-        <Link href="#" className="font-label-lg text-label-lg text-primary-fixed-dim hover:text-white transition-colors">Volunteer Portal</Link>
-        <Link href="#" className="font-label-lg text-label-lg text-primary-fixed-dim hover:text-white transition-colors">Donate</Link>
-      </div>
-      <div className="pt-8 border-t border-white/10 flex flex-col items-center gap-4">
-        <div className="flex gap-6">
-          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">social_leaderboard</span>
-          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">campaign</span>
-          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">mail</span>
+        <div>
+          <h5 className="font-label-lg text-label-lg text-primary mb-6">Governance</h5>
+          <ul className="space-y-4">
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Transparency Report</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Policy Thesis</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Legal Framework</Link></li>
+          </ul>
         </div>
-        <p className="font-body-sm text-body-sm text-primary-fixed-dim/60 text-center">
-          © 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.
-        </p>
+        <div>
+          <h5 className="font-label-lg text-label-lg text-primary mb-6">Support</h5>
+          <ul className="space-y-4">
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Privacy Policy</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Terms of Service</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Contact Us</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h5 className="font-label-lg text-label-lg text-primary mb-6">Connect</h5>
+          <div className="flex gap-4">
+            <Link className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>public</span></Link>
+            <Link className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>forum</span></Link>
+            <Link className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span></Link>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center">
+        <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved. Authorized by the National Civic Committee.</p>
       </div>
     </footer>
   );
