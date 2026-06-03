@@ -1,0 +1,191 @@
+import React from 'react';
+import Link from 'next/link';
+import { PublicLayout } from '@/components/layout/PublicLayout';
+
+export default function ProjectsPage() {
+  return (
+    <PublicLayout>
+      <div className="flex flex-col min-h-screen">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full">
+          {/* Hero Stats & Vision */}
+          <section className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20">
+            {/* Large Metric Card */}
+            <div className="col-span-12 lg:col-span-8 relative rounded-xl overflow-hidden bg-primary-container p-8 md:p-12 text-on-primary h-[400px] flex flex-col justify-end group">
+              <div className="absolute inset-0 z-0 opacity-40">
+                <img 
+                  className="w-full h-full object-cover" 
+                  alt="A grand architectural rendering of a modern sustainable city infrastructure project"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDkvT88jJT-Bc63YG2FY4yhfm7QodgCI4Jo80RH5TSmRTChQWPC8YtGnDymS8ef41GncorePTlbRZJbFuV6RWbWBJN8mMS845U9WrYpJUViwvfQvouTvwxCjG9ZE0FS3E21KbOaIROs6XHcgTjZNmFvH-CnrMByM0TP7GfOf9 laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzSyitS_PmsSQHlXHivSCUhF4PzkXm8eT6tNoVqzicf0EewC_jVQKsrGpgvuL1fOnCiwj-6pVsRSwUtpWzPvGoIDVKnX8eMExvD79VvcPNIKXenLiy laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzSyitS_PmsSQHlXHivSCUhF4Pz laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzSyaCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/60 to-transparent z-10"></div>
+              <div className="relative z-20 max-w-2xl">
+                <span className="bg-on-secondary-fixed-variant text-white px-3 py-1 text-label-md font-label-md rounded-sm mb-4 inline-block uppercase tracking-widest">Active Initiative</span>
+                <h3 className="font-display-lg text-display-lg leading-tight mb-4">Rebuilding the National Grid for a Digital Future</h3>
+                <p className="font-body-lg text-body-lg text-on-primary-container/90 mb-6">Our flagship infrastructure project is 68% complete, modernizing over 4,000 community hubs across the federation.</p>
+                <button className="bg-white text-primary px-8 py-3 font-label-lg text-label-lg rounded-sm hover:bg-primary-fixed transition-colors">View Deployment Map</button>
+              </div>
+            </div>
+            {/* Impact Summary */}
+            <div className="col-span-12 lg:col-span-4 bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between border border-outline-variant/30">
+              <div>
+                <h4 className="font-headline-sm text-headline-sm text-primary mb-2">Impact Summary</h4>
+                <p className="text-on-surface-variant font-body-sm">Tracking 24 national and 142 local projects.</p>
+              </div>
+              <div className="space-y-6 py-6">
+                <div className="space-y-2">
+                  <div className="flex justify-between font-label-lg text-label-lg">
+                    <span>Capital Allocation</span>
+                    <span className="text-secondary">$4.2B / $6B</span>
+                  </div>
+                  <div className="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                    <div className="h-full bg-secondary w-[70%]" style={{ boxShadow: '0 0 10px rgba(175, 45, 47, 0.3)' }}></div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between border-t border-outline-variant/30 pt-4">
+                  <div className="text-center">
+                    <p className="font-headline-md text-headline-md text-primary">14k</p>
+                    <p className="font-label-md text-label-md text-on-surface-variant">Jobs Created</p>
+                  </div>
+                  <div className="text-center border-l border-outline-variant/30 pl-8">
+                    <p className="font-headline-md text-headline-md text-primary">89%</p>
+                    <p className="font-label-md text-label-md text-on-surface-variant">On Schedule</p>
+                  </div>
+                </div>
+              </div>
+              <button className="w-full border border-tertiary-container text-tertiary-container py-3 font-label-lg text-label-lg hover:bg-tertiary-container hover:text-white transition-all">Download Quarterly Report</button>
+            </div>
+          </section>
+
+          {/* Projects Categories */}
+          <section className="space-y-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant/30 pb-4 gap-4">
+              <div>
+                <h3 className="font-headline-lg text-headline-lg text-primary">Project Portfolio</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">Strategic developments across national, regional, and local tiers.</p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <button className="px-6 py-2 rounded-full bg-primary text-white font-label-md text-label-md">All Projects</button>
+                <button className="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-primary-container/10 transition-colors">Infrastructure</button>
+                <button className="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-primary-container/10 transition-colors">Education</button>
+                <button className="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-primary-container/10 transition-colors">Digital Civic</button>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="h-48 relative">
+                  <img 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+                    alt="Collaboration on technical blueprint"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZpw7f1fTBl4RCrdH_0DmSZFgFt6sfaMyRih0bsZXpjYcJltb8mk5uIKqUmFzr9Oxxba44iPjerbWE1xRlvrVFfWh21Dw6q1cDh0esOxMcS_vZOqaXezT1EMDu6DLLD6-zNhGLXChBYJo2FdgsYSndS1S_uVnowG-9zPLK1baEYI2zowdsrm1GYBND1-GnJVKjCeZTWOO_Uk3wWXW6GqjL1myuj_ZwG8IVw02a_btzWw7pgvnIltk4gTaHscorgtR6WY8CopRQAb6"
+                  />
+                  <span className="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 text-[10px] font-bold uppercase tracking-widest">National</span>
+                </div>
+                <div className="p-6 space-y-4">
+                  <h4 className="font-headline-sm text-headline-sm text-primary">Civic OS 2.0 Deployment</h4>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">Scaling the digital backbone of our democracy. Ensuring every citizen has a secure, encrypted node for voting and service access.</p>
+                  <div className="flex items-center gap-2">
+                    <span className="px-3 py-1 bg-primary-fixed/30 text-primary font-label-md text-label-md rounded-full">Digital</span>
+                    <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full">In Progress</span>
+                  </div>
+                  <div className="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+                    <span className="font-label-md text-label-md text-secondary">Est. Delivery: Q3 2025</span>
+                    <span className="material-symbols-outlined text-primary cursor-pointer" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+              {/* Card 2 */}
+              <div className="bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="h-48 relative">
+                  <img 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+                    alt="Sustainable infrastructure element"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXJuQoepgEQstkruOYRfkQhqrfyMEQIfzKow4dxXm4w9k8PfF8lecnnK0Bj-AVMhlMGuSD0dLm5n5tvHZz-6Nzwt62bitit_oUlu352DfPHM-vOKMugaO8_OpiFbTO3UAC8QHLFIUbeXs8sq0P-lQnjjTd5jO594sfd-4yRNOWzuT0MljBKnxhO2tJhaEp0UOFwhQYffwiLZZ8g2lWOU7ea9AF3lJ-RZ26i4xBkLYbGZrJfi-cLfLlWNicD5OSgsNia7FV8NTsAMlj"
+                  />
+                  <span className="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Local</span>
+                </div>
+                <div className="p-6 space-y-4">
+                  <h4 className="font-headline-sm text-headline-sm text-primary">The Heritage Greenway</h4>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">Restoring 15km of historical canal paths into smart-monitored pedestrian zones powered by local solar arrays.</p>
+                  <div className="flex items-center gap-2">
+                    <span className="px-3 py-1 bg-primary-fixed/30 text-primary font-label-md text-label-md rounded-full">Eco</span>
+                    <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full">Planning</span>
+                  </div>
+                  <div className="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+                    <span className="font-label-md text-label-md text-secondary">Est. Delivery: Q1 2026</span>
+                    <span className="material-symbols-outlined text-primary cursor-pointer" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+              {/* Card 3 */}
+              <div className="bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="h-48 relative">
+                  <img 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+                    alt="Modern community center"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_vfq9dSWXdkJ2zvPS3GvPMiNLb5Elzq7gG2SggS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS l laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS"
+                  />
+                  <span className="absolute top-4 right-4 bg-on-secondary-fixed-variant text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Community</span>
+                </div>
+                <div className="p-6 space-y-4">
+                  <h4 className="font-headline-sm text-headline-sm text-primary">Civic Learning Labs</h4>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">Building 12 state-of-the-art educational facilities focusing on emerging technology and classical rhetoric.</p>
+                  <div className="flex items-center gap-2">
+                    <span className="px-3 py-1 bg-primary-fixed/30 text-primary font-label-md text-label-md rounded-full">Education</span>
+                    <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full">Active</span>
+                  </div>
+                  <div className="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+                    <span className="font-label-md text-label-md text-secondary">Est. Delivery: Q4 2024</span>
+                    <span className="material-symbols-outlined text-primary cursor-pointer" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Active Milestones Timeline */}
+          <section className="bg-surface-container-low p-12 rounded-2xl">
+            <div className="mb-10 text-center max-w-2xl mx-auto">
+              <h3 className="font-headline-lg text-headline-lg text-primary">Strategic Milestones</h3>
+              <p className="text-on-surface-variant font-body-md">The timeline of our movement's progress toward national maturity.</p>
+            </div>
+            <div className="relative">
+              <div className="absolute top-1/2 left-0 w-full h-px bg-outline-variant/50 -translate-y-1/2"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
+                <div className="text-center space-y-4">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto relative z-10 border-4 border-surface">
+                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                  </div>
+                  <h5 className="font-label-lg text-label-lg text-primary">Phase 1: Seed</h5>
+                  <p className="text-xs font-body-sm text-on-surface-variant">Framework established.<br/>March 2024</p>
+                </div>
+                <div className="text-center space-y-4">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto relative z-10 border-4 border-surface">
+                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                  </div>
+                  <h5 className="font-label-lg text-label-lg text-primary">Phase 2: Alpha</h5>
+                  <p className="text-xs font-body-sm text-on-surface-variant">Pilot deployment.<br/>June 2024</p>
+                </div>
+                <div className="text-center space-y-4">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center mx-auto relative z-10 border-4 border-surface ring-4 ring-secondary/20">
+                    <span className="material-symbols-outlined">bolt</span>
+                  </div>
+                  <h5 className="font-label-lg text-label-lg text-secondary">Phase 3: Scale</h5>
+                  <p className="text-xs font-body-sm text-on-surface-variant">National rollout.<br/>Currently Active</p>
+                </div>
+                <div className="text-center space-y-4 opacity-40">
+                  <div className="w-12 h-12 bg-surface-container-highest text-on-surface-variant rounded-full flex items-center justify-center mx-auto relative z-10 border-4 border-surface">
+                    <span className="material-symbols-outlined">lock</span>
+                  </div>
+                  <h5 className="font-label-lg text-label-lg text-on-surface-variant">Phase 4: Sovereign</h5>
+                  <p className="text-xs font-body-sm text-on-surface-variant">System-wide autonomy.<br/>Expected 2026</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </PublicLayout>
+  );
+}

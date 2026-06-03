@@ -116,3 +116,15 @@ body {
   height: 2px;
   background-color: var(--color-secondary);
 }
+
+.thesis-gradient {
+  background: linear-gradient(180deg, rgba(241, 252, 244, 1) 0%, rgba(224, 235, 227, 0.5) 100%);
+}
+
+.footnote-trigger:hover .footnote-content {
+  display: block;
+}
+
+.footnote-content {
+  display: none;
+}

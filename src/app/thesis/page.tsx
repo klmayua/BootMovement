@@ -1,232 +1,199 @@
 import React from 'react';
-import { PublicLayout } from '@/components/layout/PublicLayout';
-import { Typography } from '@/components/ui/Typography';
-import { Button } from '@/components/ui/Button';
-import Image from 'next/image';
 import Link from 'next/link';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function ThesisPage() {
   return (
     <PublicLayout>
-      <section className="relative py-20 px-4 bg-surface">
-        {/* Header Section */}
-        <div className="max-w-7xl mx-auto text-center space-y-12">
-          <div className="flex justify-center items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs mb-4">
-            <span>🏛️ BOOT Civic Movement</span>
-          </div>
-          
-          <div className="flex justify-center gap-4 mb-8">
-            <Link href="/" className="text-sm font-medium text-neutral hover:text-primary">Home</Link>
-            <Link href="/about" className="text-sm font-medium text-neutral hover:text-primary">About</Link>
-            <Link href="/thesis" className="text-sm font-medium text-primary underline underline-offset-4">Thesis</Link>
-            <Link href="/communities" className="text-sm font-medium text-neutral hover:text-primary">Communities</Link>
-          </div>
-
-          <div className="space-y-8">
-            <Typography variant="label-lg" className="text-accent uppercase tracking-widest">The Manifesto for a New Era</Typography>
-            <Typography variant="display-lg" className="text-primary leading-tight max-w-5xl mx-auto">
-              The BOOT Thesis: Reclaiming the Nigerian Promise.
-            </Typography>
-            <Typography variant="body-lg" className="text-neutral/80 max-w-3xl mx-auto leading-relaxed">
-              A foundational argument for systemic restoration, community-led governance, and the evolution of political participation from temporary cycles to permanent advocacy.
-            </Typography>
-            <Link href="#why-boot">
-              <Button variant="primary" size="lg" className="px-12 py-4 rounded-full">
-                Read the Thesis ↓
-              </Button>
+      <div className="flex flex-row relative min-h-screen">
+        {/* NavigationDrawer (Sticky Left) - Desktop Only */}
+        <aside className="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
+          <div className="flex flex-col gap-2">
+            <h2 className="font-headline-sm text-headline-sm text-primary px-4 mb-4">Movement Navigation</h2>
+            <Link href="/" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">home</span>
+              <span className="font-label-lg text-label-lg">Home</span>
+            </Link>
+            <Link href="/about" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">info</span>
+              <span className="font-label-lg text-label-lg">About</span>
+            </Link>
+            <Link href="/thesis" className="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300">
+              <span className="material-symbols-outlined">menu_book</span>
+              <span className="font-label-lg text-label-lg">Thesis</span>
+            </Link>
+            <Link href="/communities" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">groups</span>
+              <span className="font-label-lg text-label-lg">Communities</span>
+            </Link>
+            <Link href="/events" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">event</span>
+              <span className="font-label-lg text-label-lg">Events</span>
+            </Link>
+            <Link href="/candidates" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">person_search</span>
+              <span className="font-label-lg text-label-lg">Candidates</span>
+            </Link>
+            <Link href="/impact" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+              <span className="material-symbols-outlined">analytics</span>
+              <span className="font-label-lg text-label-lg">Impact Hub</span>
             </Link>
           </div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="max-w-6xl mx-auto mt-20 relative group">
-          <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl group-hover:bg-primary/20 transition-all" />
-          <Image 
-            src="/boot_logo_2022.png" 
-            alt="BOOT Thesis Visual" 
-            width={1200} 
-            height={600} 
-            className="relative z-10 rounded-3xl shadow-2xl border border-accent/20 object-cover"
-          />
-          <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur p-8 rounded-2xl border border-accent/20 shadow-xl max-w-2xl">
-            <Typography variant="body-lg" className="text-primary italic font-serif leading-relaxed">
-              "We do not seek to win the next election; we seek to win the next century for every Nigerian child."
-            </Typography>
-          </div>
-        </div>
-
-        {/* Chapters Navigation */}
-        <div className="max-w-7xl mx-auto py-24">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              { label: 'Why BOOT Exists', icon: 'ℹ️', href: '#why-boot' },
-              { label: 'Nigerian Opportunity', icon: '📈', href: '#opportunity' },
-              { label: 'Participation Gap', icon: '👥', href: '#gap' },
-              { label: 'Movement Not Party', icon: '🏘️', href: '#movement' },
-              { label: 'True Nigerian Concept', icon: '🌍', href: '#true-nigerian' },
-              { label: 'Long Term Vision', icon: '🔭', href: '#vision' },
-            ].map((chapter, i) => (
-              <Link key={i} href={chapter.href} className="p-4 rounded-2xl bg-surface-container border border-accent/20 hover:border-primary transition-all text-center space-y-2 group">
-                <div className="text-xl group-hover:scale-110 transition-transform">{chapter.icon}</div>
-                <Typography variant="label-md" className="text-neutral group-hover:text-primary">{chapter.label}</Typography>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Sections */}
-        <div className="max-w-4xl mx-auto space-y-32 pb-32">
-          {/* Section I */}
-          <div id="why-boot" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">I.</span>
-              <Typography variant="headline-lg" className="text-primary">Why BOOT Exists</Typography>
+          
+          {/* Campaign Progress Indicator */}
+          <div className="mt-12 p-6 bg-surface-container rounded-xl border border-outline-variant/30">
+            <p className="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">Movement Momentum</p>
+            <div className="h-2 w-full bg-tertiary-fixed-dim rounded-full overflow-hidden">
+              <div className="h-full bg-secondary w-3/4 transition-all duration-1000"></div>
             </div>
-            <Typography variant="body-lg" className="text-neutral/80 leading-relaxed space-y-6">
-              <p>
-                The current political framework in Nigeria is designed for cycles, not for citizens. Every four years, the apparatus of power awakens, demanding participation, only to retreat into the shadows of bureaucracy once the ballots are counted. BOOT—the Believe Of Overseas Nigerians and Thais (and all global citizens)—was born from the realization that governance is not a seasonal event, but a continuous civic obligation.
-              </p>
-              <p>
-                We exist to bridge the profound disconnect between the aspirations of the Nigerian people and the mechanics of the state. It is no longer enough to wait for leaders to emerge from smoke-filled rooms; we must build the infrastructure that allows the brightest minds to lead from the front, backed by a community that demands accountability in real-time.
-              </p>
-            </Typography>
+            <p className="font-label-sm text-label-md mt-2 text-on-surface-variant">75% to Phase II Activation</p>
           </div>
+        </aside>
 
-          {/* Section II */}
-          <div id="opportunity" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">II.</span>
-              <Typography variant="headline-lg" className="text-primary">The Nigerian Opportunity</Typography>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-8 rounded-3xl bg-surface-container border border-accent/20 space-y-4">
-                <div className="text-2xl">📈</div>
-                <Typography variant="headline-sm" className="text-primary">Human Capital</Typography>
-                <Typography variant="body-md" className="text-neutral/70">
-                  Our greatest export is our intellect. BOOT leverages the global Nigerian diaspora to repatriate knowledge, technology, and visionary governance.
-                </Typography>
+        {/* Main Content Area */}
+        <section className="flex-1 px-margin-desktop py-16 thesis-gradient">
+          {/* Hero Header */}
+          <header className="max-w-3xl mb-24">
+            <span className="font-label-lg text-label-lg text-secondary mb-4 block tracking-widest uppercase">Core Philosophy v2.4</span>
+            <h1 className="font-display-lg text-display-lg text-primary mb-8">The BOOT Thesis: Reclaiming the Civic Engine</h1>
+            <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 italic border-l-4 border-tertiary-container pl-6 leading-relaxed">
+              "Civic stability is not a static state of rest, but a dynamic equilibrium of accountability, tradition, and radical transparency."
+            </p>
+            <div className="flex items-center gap-6">
+              <div className="flex -space-x-3">
+                <div className="w-10 h-10 rounded-full border-2 border-background bg-primary-container flex items-center justify-center text-white font-label-md">JD</div>
+                <div className="w-10 h-10 rounded-full border-2 border-background bg-tertiary flex items-center justify-center text-white font-label-md">MK</div>
+                <div className="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-white font-label-md">LS</div>
               </div>
-              <div className="p-8 rounded-3xl bg-surface-container border border-accent/20 space-y-4">
-                <div className="text-2xl">🔄</div>
-                <Typography variant="headline-sm" className="text-primary">Systemic Reset</Typography>
-                <Typography variant="body-md" className="text-neutral/70">
-                  Technology allows us to leapfrog traditional political barriers, creating a direct line between policy and public approval.
-                </Typography>
+              <p className="font-label-md text-label-md text-on-surface-variant">Authored by the Council of Visionary Tradition</p>
+            </div>
+          </header>
+
+          {/* Abstract Bento Grid */}
+          <div className="grid grid-cols-12 gap-gutter mb-32">
+            <div className="col-span-12 md:col-span-8 bg-surface-container-highest p-12 rounded-xl relative overflow-hidden">
+              <h3 className="font-headline-sm text-headline-sm text-primary mb-6">01. The Principle of Rooted Mobility</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-loose">
+                The modern state suffers from a disconnect between institutional tradition and the velocity of digital progress. The BOOT movement proposes a "Rooted Mobility" model where foundational legal frameworks remain anchored in history, while administrative execution moves at the speed of decentralized ledger technology.
+              </p>
+              <div className="flex items-center gap-2 text-secondary font-label-lg cursor-pointer hover:underline">
+                <span>Read full derivation</span>
+                <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </div>
             </div>
-            <Typography variant="body-lg" className="text-neutral/80 italic border-l-4 border-accent pl-6 py-2">
-              Nigeria stands at a precipice. The demographic boom of the next decade can either be a dividend or a disaster. BOOT identifies the "Opportunity Gap"—the space where creative innovation meets institutional stability—and seeks to fill it with competent, audited leadership.
-            </Typography>
-          </div>
-
-          {/* Section III */}
-          <div id="gap" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">III.</span>
-              <Typography variant="headline-lg" className="text-primary">The Participation Gap</Typography>
-            </div>
-            <Typography variant="body-lg" className="text-neutral/80 leading-relaxed">
-              "The danger is not that people participate and fail; it is that the best people no longer feel participation is worth the effort."
-            </Typography>
-            <Typography variant="body-md" className="text-neutral/70 leading-relaxed">
-              Only 34% of eligible voters participated in the last major cycle. This is not apathy; it is a rational response to a system that provides no feedback loops. BOOT's digital platform turns every citizen into a stakeholder, allowing for micro-participation that aggregates into massive systemic change.
-            </Typography>
-            <div className="flex flex-wrap gap-4">
-              <div className="px-4 py-2 rounded-full bg-primary text-white text-xs font-bold">✓ Verified Governance</div>
-              <div className="px-4 py-2 rounded-full bg-primary text-white text-xs font-bold">✓ Open Policy Ledger</div>
+            <div className="col-span-12 md:col-span-4 bg-primary-container p-12 rounded-xl text-on-primary-container flex flex-col justify-between">
+              <span className="material-symbols-outlined text-5xl opacity-50">analytics</span>
+              <div>
+                <h4 className="font-headline-sm text-headline-sm mb-4">Accountability Index</h4>
+                <p className="font-body-sm text-body-sm opacity-80">Our metric for measuring the responsiveness of public servants to constituent mandates.</p>
+              </div>
             </div>
           </div>
 
-          {/* Section IV */}
-          <div id="movement" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">IV.</span>
-              <Typography variant="headline-lg" className="text-primary">A Movement, Not Just a Party</Typography>
-            </div>
-            <Typography variant="body-lg" className="text-neutral/80 leading-relaxed">
-              Political parties in the traditional sense are vehicles for conquest. Movements are vehicles for transformation. BOOT functions as an incubator for ideas and a shield for values. We do not just run candidates; we run education programs, community development projects, and civic audits.
-            </Typography>
-            <div className="relative p-8 rounded-3xl bg-surface-container border border-accent/20">
-              <Image 
-                src="/boot_logo_2022.png" 
-                alt="BOOT Movement" 
-                width={800} 
-                height={400} 
-                className="rounded-2xl shadow-lg object-cover"
+          {/* Deep Content Section */}
+          <div className="max-w-3xl space-y-16">
+            <article className="prose prose-slate prose-lg">
+              <h2 className="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+                <span className="w-8 h-8 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center text-sm">2</span>
+                The Mechanics of Institutional Weight
+              </h2>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                Stability is not found in the absence of change, but in the structural integrity of the change process. Institutional weight refers to the intentional friction designed into governance to prevent populist volatility from overriding long-term strategy. 
+                <span className="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1 footnote-trigger">
+                  [1]
+                  <span className="footnote-content absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug">
+                    <strong className="text-primary block mb-1">Footnote 1:</strong>
+                    Referencing the 1922 'Stability vs Velocity' paper by Dr. Aris Thorne. Thorne argues that rapid legislative cycles without "anchor years" lead to civic fatigue.
+                  </span>
+                </span>
+              </p>
+              <div className="my-12 p-8 bg-surface-variant/30 rounded-xl border border-outline-variant/30">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+                    <span className="font-body-md text-body-md">Decentralized Veto Mechanisms for local guilds.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+                    <span className="font-body-md text-body-md">Sunset Clauses on all emergency administrative powers.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+                    <span className="font-body-md text-body-md">Transparent Budgetary Ledgering (The BOOT Protocol).</span>
+                  </li>
+                </ul>
+              </div>
+              <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                By enforcing these constraints, we ensure that every action taken by the civic body is deliberate, documented, and defensible before the electorate.
+              </p>
+            </article>
+
+            {/* Visual Asset Placeholder */}
+            <div className="w-full aspect-video rounded-2xl overflow-hidden relative group">
+              <img 
+                alt="Architectural conceptualization of modern democracy" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QXnmiL9hNIt-zY2sUQ9FMA6Zl8LdzWwk8b1SmuXGdmrRO3u5WPI7Pq1WRvTvugqQ1Iv8CgHbblGsR7yYEwMr3qA7XY5yjiPuhviENmHUsPMepYY2axO7W1mKXYzK9RQnKXhb8ahIdKCZa2g7m17LJyPm5nnXg4eeEg5IA5QGs93cbk-t7cl6mJFG-w5UxVrnp7sC46xFRx7o6ujWl_PF_c-GzoFq2RtA3Gy-4VyPjK2bL1Rk_UvcEgzv2-f2VQQaK2WEsfTdeYkQ"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+                <p className="text-white font-headline-sm text-headline-sm mb-2">Visualizing the Equilibrium</p>
+                <p className="text-white/80 font-body-sm text-body-sm max-w-md">Fig A.1: The intersection of historic precedent and modern data infrastructure.</p>
+              </div>
             </div>
-            <Typography variant="body-md" className="text-neutral/70 leading-relaxed">
-              Our structure is decentralized. Like the roots of an ancient tree, BOOT finds its strength in its local chapters. These chapters are not mere campaign offices; they are "Impact Hubs" where local problems meet collective solutions.
-            </Typography>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {['Permanent Civic Infrastructure', 'Meritocratic Candidate Vetting', 'Zero-Tolerance Transparency'].map((item, i) => (
-                <div key={i} className="p-4 rounded-xl bg-white border border-accent/20 text-center font-bold text-primary text-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
+
+            <article className="prose prose-slate prose-lg">
+              <h2 className="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+                <span className="w-8 h-8 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center text-sm">3</span>
+                The Mandate of Sovereign Action
+              </h2>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                Finally, the thesis addresses the necessity of individual sovereignty within the collective framework. The BOOT movement does not seek to replace the individual with the state, but to provide the individual with a more precise "Boot" — a tool for traction in a slippery political landscape.
+              </p>
+              <blockquote className="border-l-4 border-secondary pl-8 my-12 italic text-on-secondary-fixed-variant font-headline-sm bg-secondary-fixed/30 py-6">
+                "The strength of the chain is not in its links, but in the clarity of the space between them."
+              </blockquote>
+            </article>
           </div>
 
-          {/* Section V */}
-          <div id="true-nigerian" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">V.</span>
-              <Typography variant="headline-lg" className="text-primary">The Concept of the 'True Nigerian'</Typography>
+          {/* Interaction Sidebar/CTA */}
+          <div className="mt-24 pt-16 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div className="max-w-md">
+              <h3 className="font-headline-sm text-headline-sm text-primary mb-4">Request the Full Manuscript</h3>
+              <p className="font-body-sm text-body-sm text-on-surface-variant">The BOOT Thesis is available in a limited-edition leather-bound volume for founding members, or as a verified PDF for movement volunteers.</p>
             </div>
-            <Typography variant="body-md" className="text-neutral/80 mb-8">
-              A True Nigerian is defined not by geography or tribe, but by a shared set of values:
-            </Typography>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: 'Integrity of Service', desc: 'Placing the public good above personal or tribal gain, always.' },
-                { title: 'Intellectual Humility', desc: 'The willingness to learn from data and the experiences of others.' },
-                { title: 'Ancestral Stewardship', desc: 'Acting as temporary custodians of the land for future generations.' },
-                { title: 'Radical Accountability', desc: 'Inviting scrutiny as a means of improving outcomes.' },
-              ].map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white border border-accent/20 space-y-2">
-                  <Typography variant="headline-sm" className="text-primary">{item.title}</Typography>
-                  <Typography variant="body-sm" className="text-neutral/70">{item.desc}</Typography>
-                </div>
-              ))}
+            <div className="flex gap-4">
+              <button className="border-2 border-primary text-primary px-8 py-3 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all">Download PDF</button>
+              <button className="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-lg text-label-lg hover:brightness-110 transition-all">Order Print</button>
             </div>
           </div>
+        </section>
 
-          {/* Section VI */}
-          <div id="vision" className="space-y-8">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-serif font-bold text-primary">VI.</span>
-              <Typography variant="headline-lg" className="text-primary">Long-Term Vision</Typography>
-            </div>
-            <Typography variant="body-lg" className="text-neutral/80 leading-relaxed">
-              By 2030, BOOT aims to have established a parallel civic economy where transparency is the default and engagement is the currency. We are building the first fully-audited political organization in Africa.
-            </Typography>
-            <div className="grid grid-cols-3 gap-6 text-center">
-              {[
-                { label: 'Active Members', value: '10M+' },
-                { label: 'Financial Audits', value: '100%' },
-                { label: 'Local Hubs', value: '774' },
-              ].map((stat, i) => (
-                <div key={i} className="p-6 rounded-3xl bg-primary text-white space-y-2">
-                  <Typography variant="display-lg" className="font-bold">{stat.value}</Typography>
-                  <Typography variant="label-md" className="text-surface-container/60 uppercase">{stat.label}</Typography>
-                </div>
-              ))}
+        {/* Contextual Sidebar */}
+        <aside className="hidden xl:block w-72 h-fit sticky top-20 p-8 space-y-12">
+          <div>
+            <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">On This Page</h4>
+            <nav className="space-y-4">
+              <Link href="#" className="block text-secondary font-medium">01. Rooted Mobility</Link>
+              <Link href="#" className="block text-on-surface-variant hover:text-primary">02. Institutional Weight</Link>
+              <Link href="#" className="block text-on-surface-variant hover:text-primary">03. Sovereign Action</Link>
+              <Link href="#" className="block text-on-surface-variant hover:text-primary">04. Implementation Protocol</Link>
+            </nav>
+          </div>
+          <div className="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl">
+            <h5 className="font-label-lg text-label-lg mb-4">Thesis Score: 98%</h5>
+            <p className="text-xs opacity-80 leading-relaxed">This document has been peer-reviewed by the BOOT Academic Council for logical consistency and historical accuracy.</p>
+            <div className="mt-4 flex -space-x-2">
+              <div className="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
+              <div className="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
+              <div className="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
             </div>
           </div>
-        </div>
-
-        {/* Final CTA */}
-        <div className="max-w-3xl mx-auto text-center py-20 space-y-8">
-          <Typography variant="headline-lg" className="text-primary">Ready to contribute to the Thesis?</Typography>
-          <Typography variant="body-md" className="text-neutral/70">
-            Our movement is dynamic. If you have insights on policy, technology, or governance, we want to hear from you. Join the BOOT Think Tank.
-          </Typography>
-          <div className="flex justify-center gap-4">
-            <Button variant="primary" size="lg" className="px-12">Submit Feedback</Button>
-            <Button variant="secondary" size="lg" className="px-12">Volunteer Today</Button>
+          <div className="text-center">
+            <span className="material-symbols-outlined text-outline-variant text-4xl block mb-2">shield_with_heart</span>
+            <p className="font-label-md text-label-md text-outline">Verified Authenticity</p>
           </div>
-        </div>
-      </section>
+        </aside>
+      </div>
     </PublicLayout>
   );
 }
