@@ -69,7 +69,7 @@ export default function HomePage() {
               <p className="font-serif text-2xl font-semibold text-primary mb-1">85K</p>
               <p className="font-sans text-xs font-medium uppercase text-on-surface-variant">Volunteers</p>
             </div>
-            <div class="w-px h-12 bg-outline-variant/30 self-center"></div>
+            <div className="w-px h-12 bg-outline-variant/30 self-center"></div>
             <div className="flex-shrink-0 text-center">
               <p className="font-serif text-2xl font-semibold text-primary mb-1">774</p>
               <p className="font-sans text-xs font-medium uppercase text-on-surface-variant">LGAs Active</p>
