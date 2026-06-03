@@ -3,10 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function ImpactPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="space-y-12">
         <div className="text-center space-y-4">
           <Typography variant="headline-lg" className="text-primary">My Impact Journey</Typography>

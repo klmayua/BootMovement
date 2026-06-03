@@ -4,10 +4,12 @@ import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function SettingsPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="max-w-3xl mx-auto space-y-12">
         <div>
           <Typography variant="headline-lg" className="text-primary">Account Settings</Typography>

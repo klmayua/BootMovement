@@ -3,10 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function JourneyPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="max-w-4xl mx-auto space-y-16">
         <div className="text-center space-y-6">
           <Typography variant="label-lg" className="text-accent">Path to Citizenship</Typography>

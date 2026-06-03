@@ -3,18 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-
-const adminNav = [
-  { name: 'Global Oversight', href: '/admin/dashboard', icon: '🌐' },
-  { name: 'User Management', href: '/admin/users', icon: '👥' },
-  { name: 'Hub Approval', href: '/admin/hubs', icon: '🏘️' },
-  { name: 'Financial Audit', href: '/admin/finance', icon: '💰' },
-  { name: 'System Config', href: '/admin/config', icon: '⚙️' },
-];
+import { ADMIN_NAV } from '@/constants/navigation';
 
 export default function AdminDashboard() {
   return (
-    <PortalLayout portalName="Super Admin" navItems={adminNav}>
+    <PortalLayout portalName="Super Admin" navItems={ADMIN_NAV}>
+
       <div className="space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Global Oversight</Typography>

@@ -3,10 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function DonationsPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="max-w-5xl mx-auto space-y-12">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">My Donations</Typography>

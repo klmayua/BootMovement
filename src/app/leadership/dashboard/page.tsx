@@ -3,18 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-
-const leadershipNav = [
-  { name: 'Strategy Dashboard', href: '/leadership/dashboard', icon: '🏛️' },
-  { name: 'Metrics', href: '/leadership/metrics', icon: '📈' },
-  { name: 'Hub Oversight', href: '/leadership/hubs', icon: '🏘️' },
-  { name: 'Policy Review', href: '/leadership/policy', icon: '📚' },
-  { name: 'Council Chat', href: '/leadership/chat', icon: '💬' },
-];
+import { LEADERSHIP_NAV } from '@/constants/navigation';
 
 export default function LeadershipDashboard() {
   return (
-    <PortalLayout portalName="Leadership Portal" navItems={leadershipNav}>
+    <PortalLayout portalName="Leadership Portal" navItems={LEADERSHIP_NAV}>
+
       <div className="space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Strategy Dashboard</Typography>

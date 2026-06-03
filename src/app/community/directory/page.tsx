@@ -3,18 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-
-const communityNav = [
-  { name: 'Community Dashboard', href: '/community/dashboard', icon: '🏘️' },
-  { name: 'Directory', href: '/community/directory', icon: '📖' },
-  { name: 'Discussions', href: '/community/discussions', icon: '💬' },
-  { name: 'Projects', href: '/community/projects', icon: '🏗️' },
-  { name: 'Members', href: '/community/members', icon: '👥' },
-];
+import { COMMUNITY_NAV } from '@/constants/navigation';
 
 export default function CommunityDirectory() {
   return (
-    <PortalLayout portalName="Community Portal" navItems={communityNav}>
+    <PortalLayout portalName="Community Portal" navItems={COMMUNITY_NAV}>
+
       <div className="space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Community Directory</Typography>

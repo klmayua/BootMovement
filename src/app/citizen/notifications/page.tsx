@@ -3,10 +3,13 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { clsx } from 'clsx';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function NotificationsPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Notifications</Typography>

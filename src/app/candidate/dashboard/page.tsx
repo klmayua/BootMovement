@@ -3,18 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-
-const candidateNav = [
-  { name: 'Candidate Dashboard', href: '/candidate/dashboard', icon: '🎯' },
-  { name: 'My Profile', href: '/candidate/profile', icon: '👤' },
-  { name: 'Manifesto Editor', href: '/candidate/manifesto', icon: '✍️' },
-  { name: 'Voter Analytics', href: '/candidate/analytics', icon: '📈' },
-  { name: 'Campaign Tools', href: '/candidate/tools', icon: '🛠️' },
-];
+import { CANDIDATE_NAV } from '@/constants/navigation';
 
 export default function CandidateDashboard() {
   return (
-    <PortalLayout portalName="Candidate Portal" navItems={candidateNav}>
+    <PortalLayout portalName="Candidate Portal" navItems={CANDIDATE_NAV}>
+
       <div className="space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Candidate Dashboard</Typography>

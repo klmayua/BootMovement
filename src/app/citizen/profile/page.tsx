@@ -3,10 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function ProfilePage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Profile Header */}
         <div className="bg-white rounded-3xl border border-accent/20 overflow-hidden">

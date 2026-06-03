@@ -4,24 +4,12 @@ import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import Link from 'next/link';
-
-const citizenNav = [
-  { name: 'Dashboard', href: '/citizen/dashboard', icon: '📊' },
-  { name: 'National Feed', href: '/citizen/feed', icon: '🌍' },
-  { name: 'My Communities', href: '/citizen/communities', icon: '🏘️' },
-  { name: 'Projects', href: '/citizen/projects', icon: '🏗️' },
-  { name: 'My Impact', href: '/citizen/impact', icon: '📈' },
-  { name: 'My Donations', href: '/citizen/donations', icon: '💰' },
-  { name: 'True Nigerian Journey', href: '/citizen/journey', icon: '🇳🇬' },
-  { name: 'Messages', href: '/citizen/messages', icon: '💬' },
-  { name: 'Notifications', href: '/citizen/notifications', icon: '🔔' },
-  { name: 'Profile', href: '/citizen/profile', icon: '👤' },
-  { name: 'Settings', href: '/citizen/settings', icon: '⚙️' },
-];
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function CitizenDashboard() {
   return (
-    <PortalLayout portalName="Citizen Portal" navItems={citizenNav}>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="space-y-8">
         {/* Welcome Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">

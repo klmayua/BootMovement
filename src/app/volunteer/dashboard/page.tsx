@@ -3,18 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-
-const volunteerNav = [
-  { name: 'Volunteer Dashboard', href: '/volunteer/dashboard', icon: '🛠️' },
-  { name: 'Opportunities', href: '/volunteer/opportunities', icon: '🌟' },
-  { name: 'My Work', href: '/volunteer/work', icon: '📋' },
-  { name: 'My Events', href: '/volunteer/events', icon: '📅' },
-  { name: 'Rewards', href: '/volunteer/rewards', icon: '🏅' },
-];
+import { VOLUNTEER_NAV } from '@/constants/navigation';
 
 export default function VolunteerDashboard() {
   return (
-    <PortalLayout portalName="Volunteer Portal" navItems={volunteerNav}>
+    <PortalLayout portalName="Volunteer Portal" navItems={VOLUNTEER_NAV}>
+
       <div className="space-y-8">
         <div className="flex justify-between items-center">
           <Typography variant="headline-lg" className="text-primary">Volunteer Dashboard</Typography>

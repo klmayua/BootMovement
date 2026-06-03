@@ -3,10 +3,12 @@ import { PortalLayout } from '@/components/layout/PortalLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { CITIZEN_NAV } from '@/constants/navigation';
 
 export default function MessagesPage() {
   return (
-    <PortalLayout>
+    <PortalLayout portalName="Citizen Portal" navItems={CITIZEN_NAV}>
+
       <div className="h-[calc(100vh-120px)] flex gap-8">
         {/* Contact List */}
         <div className="w-80 bg-white rounded-3xl border border-accent/20 overflow-hidden flex flex-col">
