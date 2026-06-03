@@ -7,208 +7,198 @@ export default function HomePage() {
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-[85vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[870px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              className="w-full h-full object-cover md:brightness-50" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dndBN91UiEj2HgrdJ3hFcXdbdXBSL9bAFJnGOQhuJCnYhBA-OARRQb6deSzroPC8rZPCONTWU3SmzpYhxCh_fmBh_iGEceyZCfpnp26SJgwjCFWris42Mmwen8JhKJvFcbt3zLjl8gCxSf2M6FQ5b49J1jakOLLXSe1wrT33jXsDPb8If01emqu-vmiMuibLKY4kwiaj-pfRLUOCl4GeEK7XNMdcJFQTFNyoUCHQlSzIxmaIBRmQ8OezA7-cRGSB1ICIh_n04AAS"
-              alt="A grand neoclassical government building with towering white columns and a wide stone staircase"
+              className="w-full h-full object-cover" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBktre1t5gtk0LcsqiOsUVYs-OubN7wRk1GSv6y1lyAivhTVCjdh0T8iRu63McxGb_sc7lLTmWU9t1LeTkBAIwm5Z0NEMcf_rJig4DtF5REJuyazi-qZEfJbZ1Hr6EBgmX63s4Tcoi7ulkS39F0mMOFIhz_s3tffqz1_SFJhQNOFjPNUxy3BAA2B1Jn6KoJ7_dzRsiQZKg09PP09-q3nuPOIFRE8uwQsh5t50JguujgmD9QgqG8xOVnjA2x4MG6p_poasX7Pk-1vYjI"
+              alt="National Assembly Building"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent md:hidden"></div>
+            <div className="hero-gradient absolute inset-0"></div>
           </div>
           
-          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
-            <div className="max-w-2xl text-on-primary">
-              <span className="font-label-lg text-label-lg text-secondary uppercase tracking-[0.2em] mb-4 block font-semibold md:hidden">Our Vision</span>
-              <h1 className="font-display-lg text-[42px] md:text-display-lg leading-tight mb-6 md:italic">Because Of Our Tomorrow.</h1>
-              <p className="font-body-lg text-body-lg mb-10 max-w-md md:max-w-none md:border-l-4 md:border-secondary md:pl-6 opacity-90">
-                Building a legacy of stability and forward-looking growth for every citizen. Join the movement for a principled future.
+          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-16 items-center">
+              <div className="text-white space-y-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary-fixed-dim/30 rounded-full bg-primary/40 backdrop-blur-sm">
+                  <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  <span className="font-label-md text-label-md tracking-widest uppercase">The 2024 Reform Agenda</span>
+                </div>
+                <h1 className="font-display-lg text-display-lg leading-tight">
+                  Traditional Values. <br/>
+                  <span className="text-primary-fixed-dim">Future Progress.</span>
+                </h1>
+                <p className="font-body-lg text-body-lg text-surface-variant max-w-lg">
+                  Restoring the foundations of civic duty through transparency, localized empowerment, and unwavering institutional integrity.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-4">
+                  <button className="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-lg text-label-lg flex items-center gap-2 hover:translate-y-[-2px] transition-transform shadow-xl shadow-secondary/20">
+                      Join the Movement
+                      <span className="material-symbols-outlined">arrow_forward</span>
+                  </button>
+                  <button className="border border-white/30 text-white px-8 py-4 rounded-full font-label-lg text-label-lg hover:bg-white/10 transition-all">
+                      View Our Thesis
+                  </button>
+                </div>
+                </div>
+                <div className="hidden md:block">
+                  <div className="bg-surface/5 backdrop-blur-md border border-white/10 p-8 rounded-xl">
+                    <div className="flex justify-between items-end mb-12">
+                      <div>
+                        <p className="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-tighter">Current Momentum</p>
+                        <p className="font-headline-lg text-headline-lg text-white">428,910</p>
+                      </div>
+                      <span className="material-symbols-outlined text-secondary text-headline-lg" style={{ fontVariationSettings: "'FILL' 1" }}>trending_up</span>
+                    </div>
+                    <div className="space-y-6">
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-white font-label-lg text-label-lg">
+                          <span>Volunteer Goal</span>
+                          <span>85%</span>
+                        </div>
+                        <div className="h-2 w-full bg-primary-container rounded-full overflow-hidden">
+                          <div className="h-full bg-secondary" style={{ width: '85%' }}></div>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-primary/40 p-4 rounded-lg">
+                          <p className="text-primary-fixed-dim font-label-md text-label-md">Local Chapters</p>
+                          <p className="text-white font-headline-sm text-headline-sm">114</p>
+                        </div>
+                        <div className="bg-primary/40 p-4 rounded-lg">
+                          <p className="text-primary-fixed-dim font-label-md text-label-md">Active Campaigns</p>
+                          <p className="text-white font-headline-sm text-headline-sm">32</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+        {/* Manifesto Highlight */}
+        <section className="py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-margin-mobile text-center space-y-8">
+            <span className="material-symbols-outlined text-primary text-display-lg opacity-20">format_quote</span>
+            <h3 className="font-headline-lg text-headline-lg text-primary italic">
+              "We do not seek to reinvent the wheel of governance, but to return it to the citizens it was built to serve. Accountability is not a campaign slogan—it is our primary mandate."
+            </h3>
+            <div className="flex flex-col items-center gap-2">
+              <div className="h-px w-24 bg-on-tertiary-container"></div>
+              <p className="font-label-lg text-label-lg uppercase tracking-widest text-on-tertiary-container">The Boot Manifesto, 2024</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Pillars - Bento Grid */}
+        <section className="py-24 px-margin-desktop max-w-container-max mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant">A multi-generational strategy designed to restore trust in public institutions through pragmatic, localized reform.</p>
+            </div>
+            <Link href="#" className="font-label-lg text-label-lg text-primary flex items-center gap-2 group">
+              Explore Our Full Policy Framework
+              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            {/* Pillar 1 */}
+            <div className="md:col-span-2 group pillar-card bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 hover:border-primary/20 transition-all">
+              <div className="flex flex-col h-full justify-between gap-12">
+                <div className="flex justify-between items-start">
+                  <span className="material-symbols-outlined pillar-icon text-primary text-display-lg transition-transform">account_balance</span>
+                  <span className="font-label-md text-label-md text-on-tertiary-container border border-on-tertiary-container/30 px-3 py-1 rounded-full">Pillar 01</span>
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-primary mb-4">Institutional Accountability</h4>
+                  <p className="font-body-md text-body-md text-on-surface-variant max-w-lg">We advocate for strict transparency protocols and digital-first public ledgers to ensure every cent of taxpayer revenue is traceable and purposeful.</p>
+                </div>
+              </div>
+            </div>
+            {/* Pillar 2 */}
+            <div className="group pillar-card bg-primary text-white p-10 rounded-xl transition-all">
+              <div className="flex flex-col h-full justify-between gap-12">
+                <div className="flex justify-between items-start">
+                  <span className="material-symbols-outlined pillar-icon text-secondary text-display-lg transition-transform">groups</span>
+                  <span className="font-label-md text-label-md text-primary-fixed-dim border border-primary-fixed-dim/30 px-3 py-1 rounded-full">Pillar 02</span>
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-white mb-4">Localized Empowerment</h4>
+                  <p className="font-body-md text-body-md text-surface-variant">Returning decision-making power to municipal councils and community boards, reducing central bureaucracy.</p>
+                </div>
+              </div>
+            </div>
+            {/* Pillar 3 */}
+            <div className="group pillar-card bg-surface-container-highest p-10 rounded-xl transition-all">
+              <div className="flex flex-col h-full justify-between gap-12">
+                <div className="flex justify-between items-start">
+                  <span className="material-symbols-outlined pillar-icon text-on-tertiary-container text-display-lg transition-transform">history_edu</span>
+                  <span className="font-label-md text-label-md text-on-surface-variant border border-outline/30 px-3 py-1 rounded-full">Pillar 03</span>
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-primary mb-4">Heritage Conservation</h4>
+                  <p className="font-body-md text-body-md text-on-surface-variant">Protecting our national cultural assets while modernizing the infrastructure that supports them for future generations.</p>
+                </div>
+              </div>
+            </div>
+            {/* Pillar 4 */}
+            <div className="md:col-span-2 group pillar-card bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 transition-all">
+              <div className="flex flex-col md:flex-row gap-10 items-center">
+                <div className="w-full md:w-1/3">
+                  <img className="w-full h-48 object-cover rounded-lg" alt="Professional office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyhxbTLinqETCq9NSMdvnqIScl2K_r7HutjCvexWq-Cu2Z9fkqA0mLOtXJun1C6RYhDp_aBNRJ4WYZ5k3Y6N90karpHe1KSlcuR1ynIkoYj4nWz4B-1KE1djuop4lbFbVCEshrVDSu51utJhSMrUXY-g5hhGGA81txCwGI1xVtmsFr231h1UFnLRnFeceGcq8MQ_9gPmNA-AnM15dy8EUABuLtUG5Vh7YF62i0WDYiqLbWVn5nQZ6Vc8HTW6WDpLcCXAxzpwoO2aK"/>
+                </div>
+                <div className="w-full md:w-2/3">
+                  <div className="flex justify-between items-start mb-4">
+                    <h4 className="font-headline-md text-headline-md text-primary">Pragmatic Economics</h4>
+                    <span className="font-label-md text-label-md text-on-surface-variant">Pillar 04</span>
+                  </div>
+                  <p className="font-body-md text-body-md text-on-surface-variant">A fiscal strategy rooted in reality, prioritizing debt reduction and small-business incentives to drive grassroots growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="bg-primary py-20 text-white">
+          <div className="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+            <div className="space-y-2">
+              <p className="font-display-lg text-display-lg text-secondary">150k+</p>
+              <p className="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Signed Members</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-display-lg text-display-lg text-secondary">$2.4M</p>
+              <p className="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Community Funded</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-display-lg text-display-lg text-secondary">22</p>
+              <p className="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Policy Wins</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-display-lg text-display-lg text-secondary">48</p>
+              <p className="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Endorsed Leaders</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-32 bg-cream overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+            <span className="material-symbols-outlined text-[40rem]" style={{ fontVariationSettings: "'FILL' 0" }}>account_balance</span>
+          </div>
+          <div className="max-w-container-max mx-auto px-margin-desktop relative z-10">
+            <div className="max-w-2xl bg-white p-12 md:p-20 shadow-2xl shadow-primary/5 rounded-xl border-l-8 border-secondary">
+              <h2 className="font-display-lg text-display-lg text-primary mb-6">The future is a choice we make together.</h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                Join the BOOT Civic Movement today. Whether as a donor, a volunteer, or a local organizer, your contribution is the catalyst for national accountability.
               </p>
-              <div className="flex flex-col md:flex-row gap-4">
-                <button className="bg-secondary text-white font-label-lg text-label-lg py-4 px-8 rounded-lg shadow-lg md:shadow-none md:rounded-none md:px-8 md:py-4 active:scale-95 transition-transform text-center uppercase tracking-wider md:hover:translate-y-[-2px] md:duration-300">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-secondary text-on-secondary px-10 py-5 rounded-full font-label-lg text-label-lg hover:brightness-110 shadow-lg shadow-secondary/30 transition-all active:scale-95">
                   Join the Movement
                 </button>
-                <button className="bg-transparent border-2 border-white text-white font-label-lg text-label-lg py-4 px-8 rounded-lg md:rounded-none md:border-2 md:px-8 md:py-4 active:scale-95 transition-transform text-center uppercase tracking-wider md:hover:bg-white/10 md:transition-colors">
-                  Read Our Thesis
+                <button className="bg-primary text-white px-10 py-5 rounded-full font-label-lg text-label-lg hover:brightness-110 transition-all active:scale-95">
+                  Donate to the Cause
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Foundation of Progress */}
-        <section className="px-margin-mobile md:px-0 py-16 md:py-24 bg-surface-container-low md:bg-surface">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-end mb-12 md:mb-16">
-              <div className="md:w-2/3">
-                <h2 className="font-headline-lg text-headline-lg text-primary mb-4 text-center md:text-left">Foundation of Progress</h2>
-                <p className="font-body-lg text-body-lg text-on-surface-variant">
-                  Our philosophy bridges the wisdom of our heritage with the innovations of tomorrow. We believe in building on solid ground.
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                <div className="w-24 h-1 bg-secondary"></div>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter">
-              {/* Card: Traditional Values */}
-              <div className="group relative bg-surface p-8 md:p-12 border border-outline-variant/30 hover:border-secondary/50 transition-all duration-500 overflow-hidden rounded-xl md:rounded-none">
-                <h3 className="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
-                <a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
-                  LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                </a>
-              </div>
-              {/* Card: Future Progress */}
-              <div className="group relative bg-primary-container p-8 md:p-12 text-on-primary transition-all duration-500 overflow-hidden rounded-xl md:rounded-none">
-                <h3 className="font-headline-md text-headline-md mb-6">Future Progress</h3>
-                <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
-                <a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
-                  EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Action Grid - Mobile Only */}
-        <section className="px-margin-mobile py-8 bg-surface-container-low md:hidden">
-          <div className="grid grid-cols-3 gap-4">
-            <div className="flex flex-col items-center gap-2">
-              <button className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white shadow-md active:scale-90 transition-transform">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>person_add</span>
-              </button>
-              <span className="font-label-md text-label-md font-semibold text-primary">Join Now</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <button className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-white shadow-md active:scale-90 transition-transform">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
-              </button>
-              <span className="font-label-md text-label-md font-semibold text-primary">Volunteer</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <button className="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary-fixed shadow-md active:scale-90 transition-transform">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>payments</span>
-              </button>
-              <span className="font-label-md text-label-md font-semibold text-primary">Donate</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section - Desktop Only */}
-        <section className="hidden md:block py-20 border-y border-outline-variant/30 bg-surface">
-          <div className="max-w-container-max mx-auto px-margin-desktop">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-              <div className="stat-card relative pb-8 text-center">
-                <div className="font-display-lg text-display-lg text-primary mb-2">150k+</div>
-                <div className="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Signed Members</div>
-              </div>
-              <div className="stat-card relative pb-8 text-center">
-                <div className="font-display-lg text-display-lg text-primary mb-2">$2.4M</div>
-                <div className="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Community Funded</div>
-              </div>
-              <div className="stat-card relative pb-8 text-center">
-                <div className="font-display-lg text-display-lg text-primary mb-2">22</div>
-                <div className="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Policy Wins</div>
-              </div>
-              <div className="stat-card relative pb-8 text-center">
-                <div className="font-display-lg text-display-lg text-primary mb-2">48</div>
-                <div className="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Endorsed Leaders</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Foundational Pillars - Desktop Only */}
-        <section className="hidden md:block py-24 bg-surface-container">
-          <div className="max-w-container-max mx-auto px-margin-desktop">
-            <div className="text-center mb-16">
-              <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
-              <div className="w-20 h-1 bg-secondary mx-auto"></div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>gavel</span>
-                <h4 className="font-headline-sm text-headline-sm text-primary mb-3">Institutional Accountability</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">Ensuring transparent governance through digital audits and civic oversight.</p>
-              </div>
-              <div className="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>location_city</span>
-                <h4 className="font-headline-sm text-headline-sm text-primary mb-3">Localized Empowerment</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">Returning decision-making power to community councils and local districts.</p>
-              </div>
-              <div className="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>museum</span>
-                <h4 className="font-headline-sm text-headline-sm text-primary mb-3">Heritage Conservation</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">Preserving our cultural landmarks and historic values for the next generation.</p>
-              </div>
-              <div className="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>trending_up</span>
-                <h4 className="font-headline-sm text-headline-sm text-primary mb-3">Pragmatic Economics</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">Evidence-based fiscal policy that prioritizes sustainable growth and equity.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Initiatives (Bento Grid Style) - Desktop Only */}
-        <section className="hidden md:block py-24 bg-surface">
-          <div className="max-w-container-max mx-auto px-margin-desktop">
-            <div className="flex justify-between items-end mb-12">
-              <h2 className="font-headline-lg text-headline-lg text-primary">Latest Initiatives</h2>
-              <a className="font-label-lg text-label-lg text-secondary underline" href="#">View All News</a>
-            </div>
-            <div className="bento-grid">
-              <div className="col-span-12 lg:col-span-8 group relative overflow-hidden h-[400px]">
-                <img 
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuChVQujRFQ_VYUkIT4rS5GAQ4YZA-iQcJNHTzThF-FCmy1eWXV3Kb6ZCfdpF0eqBIhACZ7QP7BwP046wKFHXTxICzsJILyLyDyFp9EDJ4ko65QVvJH-G8OIXOzjrc9dvwwPMs5Va4H5FhZeBvtoFrmELREMyfzoZU0Ee7mA9BzA1IP1ZuxnfwnE2sz-Ld_-iQoWZemm89zFMzidCWGIeV_xHUKqxZJdSrSFJIChjWBLsGYBC4VGSuMYrtkCysHvtJJIZ_aUKdDoDfRG"
-                  alt="A futuristic solar farm at sunrise"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-10 text-on-primary">
-                  <span className="bg-secondary px-3 py-1 font-label-md text-label-md mb-4 inline-block">LEGISLATIVE UPDATE</span>
-                  <h3 className="font-headline-md text-headline-md mb-2">Energy Sovereignty Act</h3>
-                  <p className="font-body-md text-body-md opacity-80 max-w-xl">Securing our nation's grid through decentralized renewable infrastructure and strategic reserves.</p>
-                </div>
-              </div>
-              <div className="col-span-12 lg:col-span-4 bg-surface-container-highest p-10 flex flex-col justify-between">
-                <div>
-                  <span className="text-secondary font-label-md text-label-md mb-4 block">UPCOMING EVENT</span>
-                  <h3 className="font-headline-sm text-headline-sm text-primary mb-4">National Townhall: Digital Infrastructure</h3>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">Join Party leadership this Friday for a live discussion on the 2025 Digital Charter and data privacy initiatives.</p>
-                </div>
-                <button className="w-full border-2 border-primary text-primary font-label-lg text-label-lg py-3 hover:bg-primary hover:text-white transition-all">Register to Attend</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Updates Feed - Mobile Only */}
-        <section className="px-margin-mobile py-16 md:hidden">
-          <div className="flex justify-between items-end mb-8">
-            <h2 className="font-headline-md text-headline-md text-primary">Latest Initiatives</h2>
-            <a className="text-secondary font-label-lg text-label-lg border-b border-secondary" href="#">View All</a>
-          </div>
-          <div className="flex flex-col gap-8">
-            <div className="flex gap-4 items-start">
-              <div className="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-surface-dim">
-                <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr42F8s6DDqvAxnfZGbhfB2D28MAZasvjoSzg24LSp_RLT3HXQhqoV6iUGq3PPM65lZ07o6p_6tA0Iy7Qc4m-MOaYBIN4JgYeD1n9wQdG1uVV5UlpfQFCGugrIsDHWpEFnCqZ021pTtNS-D8Bz_L3aXe61Z7_TYF6J6gtn1_0KeBWwZU3h4K0HuDiTowAawy_mk4mKh_2rdt6bXh3Ra1Vf7bBghnxPrjhWeP386ClpduGe7zFPEyYAWjzj55mL4UStcnWu76-k8JVf" alt="Energy Sovereignty" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="font-label-md text-label-md text-outline font-medium">May 12, 2024</span>
-                <h4 className="font-body-lg text-body-lg font-bold text-primary leading-tight">Energy Sovereignty Act: A New Vision for 2030</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The party leadership unveils the roadmap for national energy independence...</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-surface-dim">
-                <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQAycaew-lg8TPqwIv6eKQ9XSZ27Z0_F59Vy56w2qCehUxWAxSGSW1pwZJOFlS_RmheQ-iYf0RSR2u9tppiHF_vLHg0fsJNlTsQCKUc0KYoyoMnLIOniPOIqoL650uv2Qi2dx_kgoeV4EVKJVc9Ttfo3R_yJW3eB6RvG2UYcrWOw73JYLnx4uyyu1w97zvBM7VWlEcTkfEhrMWNTEDpPBpoxZL-Xm4ld6NQYTAjcbl_GQS5CkNl8YSg9-j8Ciuh7YqUdtlkiAnJzGn" alt="National Townhall" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="font-label-md text-label-md text-outline font-medium">May 08, 2024</span>
-                <h4 className="font-body-lg text-body-lg font-bold text-primary leading-tight">National Townhall: Stability in Economic Transition</h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Over 5,000 citizens joined our latest virtual session on sustainable growth...</p>
               </div>
             </div>
           </div>

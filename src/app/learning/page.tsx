@@ -36,7 +36,7 @@ export default function LearningCenter() {
               <span className="material-symbols-outlined">dashboard</span>
               <span className="font-label-lg text-label-lg">Dashboard</span>
             </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg" href="/learning">
+            <Link className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg" href="#">
               <span className="material-symbols-outlined">assignment</span>
               <span className="font-label-lg text-label-lg">My Courses</span>
             </Link>
@@ -80,10 +80,9 @@ export default function LearningCenter() {
                 <button className="px-6 py-2 bg-primary-container text-white font-label-lg rounded-lg hover:opacity-90 transition-all">Continue Learning</button>
               </div>
             </div>
-
             {/* Learning Stats Bento */}
-            <div className="grid grid-cols-12 gap-gutter">
-              <div className="col-span-8 bg-white/70 backdrop-blur-xl border border-outline-variant/20 rounded-xl p-8 relative overflow-hidden h-64 flex flex-col justify-end">
+            <div className="grid grid-cols-12 gap-6">
+              <div className="col-span-8 bg-white/70 backdrop-blur-xl border border-tertiary-fixed/20 rounded-xl p-8 relative overflow-hidden h-64 flex flex-col justify-end">
                 <div className="relative z-10">
                   <h3 className="font-headline-md text-headline-md text-primary mb-2">Campaign Management 101</h3>
                   <p className="text-on-surface-variant mb-4 max-w-md">You've completed 64% of the Advanced Grassroots Organizing module. Pick up where you left off.</p>
@@ -120,11 +119,7 @@ export default function LearningCenter() {
               {/* Course Card 1 */}
               <div className="group cursor-pointer">
                 <div className="aspect-video rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20">
-                  <img 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                    alt="Professional planners in a modern office"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu-SXxEj3YwKfqe0getG7dxqFF0-BsDiNUW9MopdDQNEyWq-R6xSrffpk9dGaF-ug18mNBdX_TNaYWe8NhwsBXf3OeaGnUs46Cd0UDicqueEjgaKUzCYzNyE7w0C05MAT_y70n407UPqF0zHdXXL2R4id_V8LekykFW9o_i9od_8oo1drrz-g4kbvYRvjEQJC253UHsYQsU0OkOccDyyzMFQfXhWuo7nAO9Do71h2XpUwLnBFOG9wgMy2kjJP3VJ17_RcybMbjRC5T"
-                  />
+                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Professional office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu-SXxEj3YwKfqe0getG7dxqFF0-BsDiNUW9MopdDQNEyWq-R6xSrffpk9dGaF-ug18mNBdX_TNaYWe8NhwsBXf3OeaGnUs46Cd0UDicqueEjgaKUzCYzNyE7w0C5MAT_y70n407UPqF0zHdXXL2R4id_V8LekykFW9o_i9od_8oo1drrz-g4kbvYRvjEQJC253UHsYQsU0OkOccDyyzMFQfXhWuo7nAO9Do71h2XpUwLnBFOG9wgMy2kjJP3VJ17_RcybMbjRC5T"/>
                   <div className="absolute top-4 left-4 bg-primary text-white text-label-md px-2 py-1 rounded">MANDATORY</div>
                 </div>
                 <h4 className="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-secondary transition-colors">Ethical Public Service</h4>
@@ -137,12 +132,7 @@ export default function LearningCenter() {
               {/* Course Card 2 */}
               <div className="group cursor-pointer">
                 <div className="aspect-video rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20">
-                  <img 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                    alt="Grand library with classical books"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2GKvvpE_MSwLrwr7p6CFouVPoVBpAlXaaNIClS0Ck8ZG3YLNVUFPkrY_Pc33JLnO3eFbCRrPG-JC0ltrJnJD79W4L la la la l l l l l l l l l la"
-                    // Note: truncated the long URL for the example in prompt but I will use the full one from the read output
-                  />
+                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Grand library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2GKvvpE_MSwLrwr7p6CFouVPoVBpAlXaaNIClS0Ck8JG3YLNVUFPkrY_Pc33JLnO3eFbCRrPG-JC0ltrJnJD79W4LWjhbGkIdZRzcOOaV2SiX7ZnlznRY7Z_mk1l70g8Gc7MwMMeLqoWHljhXVTUmSAPBZoi7MMDxitBs5PTUujf8-Kx-1xu97epWnViJRifW0uw94HAupjPyW9FvzWd-mbXUeGP9B8YK4ikhK1kxmMMgojmyKTBQaVPye7uztb7MjOBaITKHadw2"/>
                 </div>
                 <h4 className="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-secondary transition-colors">Civic History &amp; Heritage</h4>
                 <p className="text-body-sm text-on-surface-variant mb-4">A deep dive into the historical precedents of the BOOT movement and civic OS.</p>
@@ -154,12 +144,7 @@ export default function LearningCenter() {
               {/* Course Card 3 */}
               <div className="group cursor-pointer">
                 <div className="aspect-video rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20">
-                  <img 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                    alt="People shaking hands over a tablet"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZl6xa60ESLUWRKcv4RwIX4Ta19GOIebpd-B_fi2FtZs1xR2voCM7_RZpzFkrzJizqII06sHdrXrtJag14TARMVCH"
-                    // Note: truncated the long URL
-                  />
+                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Collaboration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZl6xa60ESLUWRKcv4RwIX4Ta19GOIebpd-B_fi2FtZs1xR2voCM7_RZpzFkrzJizqII06sHdrXrtJag14TARMVCcH0zMiLmx17gwWXyWV_txkswLr4tmveOYpj-YnS3wuYXNqcdAinuxx6WmOp_VEM7eK8kgFWDjE_IgvmAvvo3tACzzgfwvJygixnPh3xJpojMhwk0KKSZ70useHb-j57KWgTCrgybw6EhsWWknmTTxsxVBl-DNIlSpJM0w5FuOI-z82Es7e81S"/>
                 </div>
                 <h4 className="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-secondary transition-colors">Data-Driven Policy Making</h4>
                 <p className="text-body-sm text-on-surface-variant mb-4">Mastering the BOOT analytics engine for community resource allocation.</p>

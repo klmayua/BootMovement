@@ -137,11 +137,11 @@ export default function CommunitiesPage() {
               {/* Community Card 3 */}
               <article className="group relative bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
-                  <img 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                    alt="Sophisticated architectural detail of a modern university building"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5gJ-RIzH laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS l l l laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS l laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkS"
-                  />
+                    <img 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                      alt="Sophisticated architectural detail of a modern university building"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5gJ-RIzHFzaKwsQyBZkrAXeQ4tWHJJjth_gtO6oHRFHghHEheSnuJEVjmOxGcfTAZevntVvZOSIY6GghUpGj2_ZwBA_qWJTntlLMFpPigVQsCX0cVCHy6j7bga_3VqGsRzS_kx1jHw4lJTb7ZB7rLtA4nkO1P0P1bHINkQZhvs0M8QaOiRWnBj-a1orO6SqdCdYue7fwqEjDTOvHPeOpSYL9EGzhd3KTeKG-vuT7Z924XCwmYFIVmAxJTGlYfPzIJBabza5MhU2hE"
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
                     <span className="bg-secondary px-3 py-1 font-label-md text-label-md text-on-secondary">STUDENT ALLIANCE</span>
                   </div>

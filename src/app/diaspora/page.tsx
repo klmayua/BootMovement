@@ -248,7 +248,7 @@ export default function DiasporaHub() {
                     <img 
                       alt="Corporate Office" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSceQ2YDeVrj3kX5sl76UrvQsfIdmkkdIOQ2PjxBaqXDNc_sOdXVvscILYc2KErBvxPgH-p_T4AVg2evLwpbhSSHbc4yiS_ptzfp9OJ5bBcEN9AOyTd-zdZvyFrho8Hxkr-w55KId48cVBM_pc22GCQPM8zKUzyKXmmJ-iPZUgR0npQd9ALTWoERMZZ4QmkHBjdaf_Go63wxXIwQ8tqcoAaRuaRemXtuJVKhv8KgM9Yw7YRfmid8nXv73oXwsBVd1Fb-GYb5Brqk2Q"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSceQ2YDeVrj3kX5sl76UrvQsfIdmkkdIOQ2PjxBaqXDNc_sOdXVvscILYc2KErBvxPgH-p_T4AVg2evLwpbhSSHbc4yiS_ptzfp9OJ5bBcEN9AOyTd-zdZvyFrho8Hxkr-w55KId48cVBM_pc22GCQPM8zKUzyKXmmJ-iPZUgR0npQd9ALTWoERMZZ4QmkHBjdaf_Go63wxXIwQ8tqcoAaLruRemXtuJVKhv8KgM9Yw7YRfmid8nXv73oXwsBVd1Fb-GYb5Brqk2Q"
                     />
                   </div>
                   <h4 className="font-label-lg text-primary mb-2">Homeland Tech Corridor</h4>
@@ -268,7 +268,7 @@ export default function DiasporaHub() {
                     <img 
                       alt="Construction Site" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp2Y-1QPqAmJRgRb7_gSnaZsJfSIqNTIUzCy4UspeTpTTwwnBo7QbgLhS_SivXncSioT1XSnBmA-NvcA-1EwyYCGxhfRFqOjgs_p0vhrOhv611OOyG1DeD7Wq2PRduPACM74Bww4ioOK70Fz-CVZJaS"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp2Y-1QPqAmJRgRb7_gSnaZsJfSIqNTIUzCy4UspeTpTTwwnBo7QbmUpWsh6Yg4DWdsrUoQsQtoXPa8MbKpD4Lk2XOygmlvV1dTirm0YQjWpFlTI6ThPSOMjnrtoSVD_8WnT_X8JwZAYoAsFDG_cy7Pw0Z3YEYH-990m6qbXiRXlA5pXwmXDshiksoT1XSnBmA-NvcA-1EwyYCGxhfRFqOjgs_p0vhrOhv611OOyG1DeD7Wq2PRduPACM74Bww4ioOK70Fz-CVZJaS"
                     />
                   </div>
                   <h4 className="font-label-lg text-primary mb-2">Agrarian Modernization</h4>

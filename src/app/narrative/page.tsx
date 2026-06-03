@@ -11,7 +11,7 @@ export default function NarrativeIntelligence() {
           <p className="font-body-sm text-body-sm opacity-70">Executive Portal</p>
         </div>
         <div className="flex-1 space-y-2 px-4">
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/admin/dashboard">
+          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/campaign">
             <span className="material-symbols-outlined">dashboard</span>
             <span className="font-label-lg text-label-lg">Command Center</span>
           </Link>
@@ -77,11 +77,7 @@ export default function NarrativeIntelligence() {
               <button className="p-2 text-on-surface-variant hover:text-primary transition-colors">
                 <span className="material-symbols-outlined">history</span>
               </button>
-              <img 
-                alt="Administrator" 
-                className="w-8 h-8 rounded-full border border-outline-variant" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXe7GK924XUTsK11ep73MoevXczuLmkxXiLmXJ6o6IYaqRmSihirmivfSLdbHsU3XSOKTpAR-pPaUr1jBqKr8ZU4USW-xTbHftahAUbhC6zlETFnb4qw8_feD_Pfak4kuSaS_uTNpE66_iRMdb-MhScUIk8l04K9R9EsJhPL_q1W9D0IQGwgPCXFBFKxNfXHJMm52X_SjPt9OORCB3zatr3OE8plHi0HH_shaaCUPkVSvKcrrQRwZbQBv2zepcAdZeS_bDmhjMajOC"
-              />
+              <img alt="Administrator" className="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXe7GK924XUTsK11ep73MoevXczuLmkxXiLmXJ6o6IYaqRmSihirmivfSLdbHsU3XSOKTpAR-pPaUr1jBqKr8ZU4USW-xTbHftahAUbhC6zlETFnb4qw8_feD_Pfak4kuSaS_uTNpE66_iRMdb-MhScUIk8l04K9R9EsJhPL_q1W9D0IQGwgPCXFBFKxNfXHJMm52X_SjPt9OORCB3zatr3OE8plHi0HH_shaaCUPkVSvKcrrQRwZbQBv2zepcAdZeS_bDmhjMajOC"/>
             </div>
           </div>
         </header>
@@ -100,7 +96,6 @@ export default function NarrativeIntelligence() {
                 <p className="font-headline-sm text-headline-sm text-primary">09:42:01 AM EST</p>
               </div>
             </div>
-
             {/* Misinformation Alert Banner */}
             <div className="bg-error-container/40 border-l-4 border-error p-6 rounded-lg flex items-start gap-4 mb-10">
               <span className="material-symbols-outlined text-error" style={{ fontVariationSettings: "'FILL' 1" }}>warning</span>
@@ -134,7 +129,7 @@ export default function NarrativeIntelligence() {
                     <span className="font-label-lg text-label-lg text-primary">42%</span>
                   </div>
                   <div className="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
-                    <div className="h-full bg-primary" style={{ width: '42%' }}></div>
+                    <div className="h-full bg-primary transition-all duration-1000" style={{ width: '42%' }}></div>
                   </div>
                 </div>
                 <div>
@@ -143,7 +138,7 @@ export default function NarrativeIntelligence() {
                     <span className="font-label-lg text-label-lg text-on-surface-variant">31%</span>
                   </div>
                   <div className="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
-                    <div className="h-full bg-tertiary-fixed-dim" style={{ width: '31%' }}></div>
+                    <div className="h-full bg-tertiary-fixed-dim transition-all duration-1000" style={{ width: '31%' }}></div>
                   </div>
                 </div>
                 <div>
@@ -152,7 +147,7 @@ export default function NarrativeIntelligence() {
                     <span className="font-label-lg text-label-lg text-secondary">27%</span>
                   </div>
                   <div className="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
-                    <div className="h-full bg-secondary" style={{ width: '27%' }}></div>
+                    <div className="h-full bg-secondary transition-all duration-1000" style={{ width: '27%' }}></div>
                   </div>
                 </div>
               </div>
@@ -177,15 +172,15 @@ export default function NarrativeIntelligence() {
               <div className="relative z-10">
                 <h3 className="font-headline-sm text-headline-sm mb-6">Resonance Map</h3>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-lg border border-primary-fixed/20 transition-all cursor-pointer hover:-translate-y-0.5">Security</span>
-                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5">Innovation</span>
-                  <span className="px-6 py-3 bg-secondary-container text-on-secondary-fixed rounded-full font-headline-sm text-xl transition-all cursor-pointer hover:-translate-y-0.5">Heritage</span>
-                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5">Trust</span>
-                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer hover:-translate-y-0.5">Efficiency</span>
-                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5">Tradition</span>
-                  <span className="px-6 py-3 bg-on-primary-container/20 text-on-primary rounded-full font-label-lg text-lg transition-all cursor-pointer hover:-translate-y-0.5">Future</span>
-                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5">Clarity</span>
-                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer hover:-translate-y-0.5">Balance</span>
+                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-lg border border-primary-fixed/20 transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Security</span>
+                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Innovation</span>
+                  <span className="px-6 py-3 bg-secondary-container text-on-secondary-fixed rounded-full font-headline-sm text-xl transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Heritage</span>
+                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Trust</span>
+                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Efficiency</span>
+                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Tradition</span>
+                  <span className="px-6 py-3 bg-on-primary-container/20 text-on-primary rounded-full font-label-lg text-lg transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Future</span>
+                  <span className="px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Clarity</span>
+                  <span className="px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg">Balance</span>
                 </div>
                 <div className="mt-12">
                   <p className="font-body-sm text-body-sm opacity-70">Keywords sized by algorithmic resonance frequency across primary digital channels.</p>

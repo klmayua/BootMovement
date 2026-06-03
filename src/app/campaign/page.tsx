@@ -11,7 +11,7 @@ export default function CampaignCommandCenter() {
           <p className="font-label-lg text-label-lg text-on-primary/60">Executive Portal</p>
         </div>
         <nav className="flex-1 space-y-1">
-          <Link className="flex items-center px-6 py-3 text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="/admin/dashboard">
+          <Link className="flex items-center px-6 py-3 text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="/campaign">
             <span className="material-symbols-outlined mr-3">dashboard</span>
             <span className="font-label-lg text-label-lg">Command Center</span>
           </Link>
@@ -77,11 +77,7 @@ export default function CampaignCommandCenter() {
             <button className="p-2 text-on-surface-variant hover:text-primary transition-colors"><span className="material-symbols-outlined">notifications</span></button>
             <button className="p-2 text-on-surface-variant hover:text-primary transition-colors"><span className="material-symbols-outlined">history</span></button>
             <div className="w-8 h-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant/50">
-              <img 
-                alt="Administrator Profile" 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqiw5D0eK6upv_vwfnoVfrQjEjAAWn46n_-TUaKpwhX8PE90RNBCTrCtyXL5cMUcwlzVATCjRn-n9LPpfBb6ydTTAA" 
-              />
+              <img alt="Administrator Profile" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqiw5D0eK6upv_vwfnoVfrQjEjAAWn46n_-TUaKpwhX8PE90RNBCTrCtyXL5cMUcwlzVATCjRn-n9LPpfBb6ydLTAA" />
             </div>
           </div>
         </div>
@@ -126,11 +122,11 @@ export default function CampaignCommandCenter() {
               </div>
             </div>
             <div className="flex-1 relative bg-surface-dim overflow-hidden">
-              <img 
-                className="w-full h-full object-cover grayscale-[0.3]" 
-                alt="Interactive geographic heatmap" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2To3Okpy2YbtDAt6E1cNBbwhl0Ch68WAaRiYxm-7kP7R5yGDkg3BTpC0XdafUHdzRH4xRRuA-7KWPe2TYIYf88ws5fdsskU7s21GFmFTs_saFnejzGV61M6P" 
-              />
+                <img 
+                  className="w-full h-full object-cover grayscale-[0.3]" 
+                  alt="Interactive geographic heatmap" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2To3Okpy2YbtDAt6E1cNBbwhl0Ch68WAaRiYxm-7kP7R5yGDkg3BTpC0XdafUHdzRH4xRRuA-7KWPe2T3NCPf9Yp8K5vjNSfU5S_S66ulX9scFjAZ9qheJFMOcwpjbvb6Os3qsSOmfGp5_phq5xIguVmH3ZTWQRKse2n5oZWndyVn_QQJapv_-vm30pCqvH5S_ZSduMbgaL7d0HHthVKKP9W86LSyUwmpaKdABIGA94jVyD8LbGFXPyNh9JuTihk9BMLAo0mGQuOzmkDpnNXyviXT0NMLePpxH50H0TzK4h5CrMGU6g89emFYviEk2VKIvpTPwOsU-bgDxUynlMv8u" 
+                />
               <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-4 rounded border border-outline-variant/30 space-y-3 shadow-lg">
                 <div className="flex items-center space-x-2">
@@ -183,7 +179,7 @@ export default function CampaignCommandCenter() {
               </div>
               <div className="flex items-center p-3 rounded-lg border border-outline-variant/10 hover:border-outline-variant/40 transition-all cursor-pointer">
                 <div className="relative">
-                  <img className="w-12 h-12 rounded-full object-cover border-2 border-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr3yn5GeqoNJAF7gmriJsSQ-uwcco1y80A0nHCSdX8C4NA8g_y3firuBbTNrf87V2i62jXsAf0Sx3oBKeH596sA-zV3BZUghINRO4lgy9SFCvdfSn1jfrJ1kUdMhZlfgryllnbfJ6LJoXTfKogcLf7cqJAZ65_2BwIe6504UYy2TfG--WoLpaCwbAB9f1qpfVwt5wlkY3Y1dspRD_VZ5dBH" alt="Elena Rodriguez" />
+                  <img className="w-12 h-12 rounded-full object-cover border-2 border-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr3yn5GeqoNJAF7gmriJsSQ-uwcco1y80A0nHCSdX8C4NA8g_y3firuBbTNrf87V2i62jXsAf0Sx3oBKeH596sA-zV3BZUghINRO4lgy9SFCvdfSn1jfrJ1kUdMhZlfgryllnbfJ6LJoXTfKogcLf7cqJAZ65_2BwIe6504UYy2TfG--WoLpaCwbAB9f1qpfVwt5wlkY3Y1dspRD_VZ5dBh" alt="Elena Rodriguez" />
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div className="ml-4 flex-1">

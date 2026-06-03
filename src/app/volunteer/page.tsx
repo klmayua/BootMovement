@@ -6,7 +6,7 @@ export default function VolunteerPage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
-        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full">
+        <main className="flex-grow xl:ml-64 px-margin-desktop py-12 bg-[#FDFBF7]">
           {/* Hero Header */}
           <section className="mb-16">
             <div className="max-w-4xl">
@@ -75,18 +75,14 @@ export default function VolunteerPage() {
           </section>
 
           {/* Opportunities Bento Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="grid grid-cols-12 gap-6">
             {/* Highlighted Opportunity (Large) */}
             <div className="col-span-12 lg:col-span-8 bg-white border border-[#C5A059]/30 p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden">
               <div className="absolute top-0 right-0">
                 <div className="bg-secondary text-white px-6 py-2 rotate-45 translate-x-12 translate-y-4 font-label-lg">URGENT</div>
               </div>
               <div className="md:w-1/2">
-                <img 
-                  className="w-full h-full object-cover rounded-lg aspect-video md:aspect-square" 
-                  alt="Professional collaborative workspace"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBar1mqIg6NhX21Af64fKiBzeDrgeFGBxJvkAgMzqiVMIguGA0TVnIUQPDrzrNc3WokZYviwv43Fnz4P79ThvEdixSRkCd9wLgfXwNNc80uaoW-_BaMhxRTG6psPyGHFRMB17BMBhAnFIa3RS2rnV77jPH3p9pMLcV7VF20YGzQ_1spQAjbPChbJuublhM2HfpxVRPJ-RsrTLAAROw4zqVXN7QG5WM42EyZwnF5f9E8vkeOZdcASZOTGwNeOu-LUCwKK4Tp3OkEq9Ln"
-                />
+                <img className="w-full h-full object-cover rounded-lg aspect-video md:aspect-square" alt="Professional collaborative workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBar1mqIg6NhX21Af64fKiBzeDrgeFGBxJvkAgMzqiVMIguGA0TVnIUQPDrzrNc3WokZYviwv43Fnz4P79ThvEdixSRkCd9wLgfXwNNc80uaoW-_BaMhxRTG6psPyGHFRMB17BMBhAnFIa3RS2rnV77jPH3p9pMLcV7VF20YGzQ_1spQAjbPChbJuublhM2HfpxVRPJ-RsrTLAAROw4zqVXN7QG5WM42EyZwnF5f9E8vkeOZdcASZOTGwNeOu-LUCwKK4Tp3OkEq9Ln"/>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center">
                 <div className="flex gap-3 mb-4">
@@ -99,8 +95,8 @@ export default function VolunteerPage() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex -space-x-3">
-                    <img className="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8YoyN62H37EyW8ptW2vuKqVXYK00SmcDtkoj0NVla6iMNQQCNzWskUgMzMvoY54VfOT5b-KkqzO2sVFiVDXz9kofDlTyRxHBsJ4tTeWHRNTwX_HzhHDEcVKWZ7nahD-qiuYLKwNUBY06YxE5JtoVBpHb_7j94UiYOp_LRF00gD511OZcpTW7ZCD819S4QqpSrPqL1I9uGq7sYj5oHXNqv7J2k9e3eycgPxpbuKzJGDGBPJ1lxuFMl8v-SPdgczkGjHiJlHF5_MPQe" alt="Member" />
-                    <img className="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnKcBRrlvab0Rxpn4aM1iHgez4Q0StQrGZEnxoHbGX1JHqv2Bj_7m6hQho1Xx0Hs0YH1NDGDkD-NBSmyTBNZSLD3dw-cZfBw_aS7Yg1xqkpzGd1Awfq9IGU2idSy-8gC7fTYIdbd5DaqdhTjxjKUf17E9MgUxzqt1gRk2gddCUYTO5M8ajneqG1NKgbwuzlU8P8cZEDy7hmsBKYV1TvtXQJf7V8px0Ul0yfj-XNEyeGoS7Gvf9M15yezbI82-friucszpIWz6uDirp" alt="Member" />
+                    <img className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Volunteer 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8YoyN62H37EyW8ptW2vuKqVXYK00SmcDtkoj0NVla6iMNQQCNzWskUgMzMvoY54VfOT5b-KkqzO2sVFiVDXz9kofDlTyRxHBsJ4tTeWHRNTwX_HzhHDEcVKWZ7nahD-qiuYLKwNUBY06YxE5JtoVBpHb_7j94UiYOp_LRF00gD511OZcpTW7ZCD819S4QqpSrPqL1I9uGq7sYj5oHXNqv7J2k9e3eycgPxpbuKzJGDGBPJ1lxuFMl8v-SPdgczkGjHiJlHF5_MPQe"/>
+                    <img className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Volunteer 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnKcBRrlvab0Rxpn4aM1iHgez4Q0StQrGZEnxoHbGX1JHqv2Bj_7m6hQho1Xx0Hs0YH1NDGDkD-NBSmyTBNZSLD3dw-cZfBw_aS7Yg1xqkpzGd1Awfq9IGU2idSy-8gC7fTYIdbd5DaqdhTjxjKUf17E9MgUxzqt1gRk2gddCUYTO5M8ajneqG1NKgbwuzlU8P8cZEDy7hmsBKYV1TvtXQJf7V8px0Ul0yfj-XNEyeGoS7Gvf9M15yezbI82-friucszpIWz6uDirp"/>
                     <div className="w-10 h-10 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center text-xs font-bold text-primary">+8</div>
                   </div>
                   <button className="bg-primary text-white px-8 py-3 rounded font-label-lg hover:opacity-90 transition-all">View Role</button>
@@ -127,7 +123,7 @@ export default function VolunteerPage() {
             {/* Regular Opportunities */}
             <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
               <div className="h-40 bg-surface mb-6 rounded overflow-hidden">
-                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDubj8pPViWYidBJRdi6CIAzYdIKgP16_sv9rOIQvQK3WxnRkmhd-LN60Fhu7p6g8p_j-K1wqXgjVhJVwwKGACW0grFMJa5wR0fnOstfVd85tr3-bd7T6nVAIYjtyfChFhUxoH9anQo0nK5uBqJKQVY1wz6j5GbXt9UUqBXrVHEtgp-ReiUBDOp_plBqg-OtxrjIcLN2pY05QgoveaDqcCdhmVi5yEQ9eHnVALJzuqM_QR2RpHthgYSgS1xDdd9mHVx7yxfh9QiawWL" alt="Collaborative workspace" />
+                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Team collaboration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDubj8pPViWYidBJRdi6CIAzYdIKgP16_sv9rOIQvQK3WxnRkmhd-LN60Fhu7p6g8p_j-K1wqXgjVhJVwwKGACW0grFMJa5wR0fnOstfVd85tr3-bd7T6nVAIYjtyfChFhUxoH9anQo0nK5uBqJKQVY1wz6j5GbXt9UUqBXrVHEtgp-ReiUBDOp_plBqg-OtxrjIcLN2pY05QgoveaDqcCdhmVi5yEQ9eHnVALJzuqM_QR2RpHthgYSgS1xDdd9mHVx7yxfh9QiawWL"/>
               </div>
               <span className="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Climate Justice</span>
               <h4 className="font-headline-sm text-[20px] text-primary mb-3">Air Quality Data Analyst</h4>
@@ -138,7 +134,7 @@ export default function VolunteerPage() {
             </div>
             <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
               <div className="h-40 bg-surface mb-6 rounded overflow-hidden">
-                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNQSrdcixXEjkAYflvPeiP2-xe1f5-9lDZEhGu62_BlV-sJGg5d4GeVW0wNUXg4Q2BeG2BcstlrHEUHdy5b7J-0ZuO_8cIPEjL7ovPyamP6XBkTRNK9m1BT50h1N9toHmv6m8sGGmbrGr7z3dmMbwRgjQ2rpaQjxcZpU_A8P5z-LH laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS l l l laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkS" alt="Minimalist government building corridor" />
+                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Government building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNQSrdcixXEjkAYflvPeiP2-xe1f5-9lDZEhGu62_BlV-sJGg5d SUVs_C9L_V-sJGg5d4GeVW0wNUXg4Q2BeG2BcstlrHEUHdy5b7J-0ZuO_8cIPEjL7ovPyamP6XBkTRNK9m1BT50h1N9toHmv6m8sGGmbrGr7z3dmMbwRgjQ2rpaQjxcZpU_A8P5z-LWjwd5_c6jHy2rwv1wbifW7yRoveYOQxH3tYCRe4zxN-A-37yvBEOkARVIKUhWwhkfub8qxqr3fCD4PPipz004i0bsYNBs11BeS"/>
               </div>
               <span className="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Digital Privacy</span>
               <h4 className="font-headline-sm text-[20px] text-primary mb-3">Policy Documentation Lead</h4>
@@ -149,7 +145,7 @@ export default function VolunteerPage() {
             </div>
             <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
               <div className="h-40 bg-surface mb-6 rounded overflow-hidden">
-                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmyBjM8ZYmOMXIUWHbZE4ahdeO6CXSm6T0SjmxwZwKRK0t3YTMMI-2Vn8IGmV5qwp88eqdEpDIqyWGN9vV9t28e-92nPS2GrMjZrIsq-XkqbmCB6cV0pia0ZfsbLEZii7ilP7Y2U-IHk8jDvxcyXbPHKREDqQ1ULhIiBk9YHx-LRlOK6xcwHHS8_M-YCdmUxUwz6y9eF1qxo4BnP2z09vU2YKcc8NlfqoA14npl5lNIt9hN6E31IztaMWV5wz-At3Hw7c35fHBwrQx" alt="Hand holding fountain pen" />
+                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Writing document" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmyBjM8ZYmOMXIUWHbZE4ahdeO6CXSm6T0SjmxwZwKRK0t3YTMMI-2Vn8IGmV5qwp88eqdEpDIqyWGN9vV9t28e-92nPS2GrMjZrIsq-XkqbmCB6cV0pia0ZfsbLEZii7ilP7Y2UH laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS lCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS"/>
               </div>
               <span className="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Education</span>
               <h4 className="font-headline-sm text-[20px] text-primary mb-3">Literacy Program Mentor</h4>
@@ -160,7 +156,7 @@ export default function VolunteerPage() {
             </div>
           </div>
 
-          {/* Load More / Pagination */}
+          {/* Load More */}
           <div className="mt-16 flex justify-center">
             <button className="group flex flex-col items-center gap-2">
               <span className="text-label-lg text-primary group-hover:text-secondary transition-colors">Explore more opportunities</span>

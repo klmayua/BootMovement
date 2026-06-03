@@ -1,45 +1,62 @@
 import React from 'react';
 import Link from 'next/link';
-import { PublicLayout } from '@/components/layout/PublicLayout';
 
-export default function ThesisPage() {
+export default function BootThesis() {
   return (
-    <PublicLayout>
-      <div className="flex flex-row relative min-h-screen">
-        {/* NavigationDrawer (Sticky Left) - Desktop Only */}
+    <div className="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary/20 selection:text-secondary">
+      {/* TopAppBar */}
+      <header className="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-50">
+        <div className="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+          <div className="flex items-center gap-4 cursor-pointer active:opacity-80">
+            <span className="material-symbols-outlined text-primary text-[32px]">account_balance</span>
+            <h1 className="font-headline-md text-headline-md text-primary tracking-tight">BOOT Civic Movement</h1>
+          </div>
+          <nav className="hidden md:flex items-center gap-8">
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Home</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</Link>
+            <Link className="font-label-lg text-label-lg text-secondary border-b-2 border-secondary transition-colors duration-200" href="/thesis">Thesis</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Communities</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Events</Link>
+          </nav>
+          <button className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-lg text-label-lg transition-transform hover:scale-[1.02] active:scale-[0.98]">
+            Join Now
+          </button>
+        </div>
+      </header>
+      <main className="max-w-container-max mx-auto flex flex-row relative min-h-screen">
+        {/* NavigationDrawer (Sticky Left) */}
         <aside className="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
           <div className="flex flex-col gap-2">
             <h2 className="font-headline-sm text-headline-sm text-primary px-4 mb-4">Movement Navigation</h2>
-            <Link href="/" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300 group" href="#">
               <span className="material-symbols-outlined">home</span>
               <span className="font-label-lg text-label-lg">Home</span>
             </Link>
-            <Link href="/about" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
               <span className="material-symbols-outlined">info</span>
               <span className="font-label-lg text-label-lg">About</span>
             </Link>
-            <Link href="/thesis" className="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300" href="/thesis">
               <span className="material-symbols-outlined">menu_book</span>
               <span className="font-label-lg text-label-lg">Thesis</span>
             </Link>
-            <Link href="/communities" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
               <span className="material-symbols-outlined">groups</span>
               <span className="font-label-lg text-label-lg">Communities</span>
             </Link>
-            <Link href="/events" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
               <span className="material-symbols-outlined">event</span>
               <span className="font-label-lg text-label-lg">Events</span>
             </Link>
-            <Link href="/candidates" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
               <span className="material-symbols-outlined">person_search</span>
               <span className="font-label-lg text-label-lg">Candidates</span>
             </Link>
-            <Link href="/impact" className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
               <span className="material-symbols-outlined">analytics</span>
               <span className="font-label-lg text-label-lg">Impact Hub</span>
             </Link>
           </div>
-          
           {/* Campaign Progress Indicator */}
           <div className="mt-12 p-6 bg-surface-container rounded-xl border border-outline-variant/30">
             <p className="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">Movement Momentum</p>
@@ -49,12 +66,11 @@ export default function ThesisPage() {
             <p className="font-label-sm text-label-md mt-2 text-on-surface-variant">75% to Phase II Activation</p>
           </div>
         </aside>
-
         {/* Main Content Area */}
-        <section className="flex-1 px-margin-desktop py-16 thesis-gradient">
+        <section className="flex-1 px-margin-desktop py-16 bg-gradient-to-b from-[#f1fcf4] to-[#e0ebe3]/50">
           {/* Hero Header */}
           <header className="max-w-3xl mb-24">
-            <span className="font-label-lg text-label-lg text-secondary mb-4 block tracking-widest uppercase">Core Philosophy v2.4</span>
+            <span className="font-label-lg text-label-lg text-secondary tracking-widest uppercase mb-4 block">Core Philosophy v2.4</span>
             <h1 className="font-display-lg text-display-lg text-primary mb-8">The BOOT Thesis: Reclaiming the Civic Engine</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 italic border-l-4 border-tertiary-container pl-6 leading-relaxed">
               "Civic stability is not a static state of rest, but a dynamic equilibrium of accountability, tradition, and radical transparency."
@@ -68,7 +84,6 @@ export default function ThesisPage() {
               <p className="font-label-md text-label-md text-on-surface-variant">Authored by the Council of Visionary Tradition</p>
             </div>
           </header>
-
           {/* Abstract Bento Grid */}
           <div className="grid grid-cols-12 gap-gutter mb-32">
             <div className="col-span-12 md:col-span-8 bg-surface-container-highest p-12 rounded-xl relative overflow-hidden">
@@ -89,7 +104,6 @@ export default function ThesisPage() {
               </div>
             </div>
           </div>
-
           {/* Deep Content Section */}
           <div className="max-w-3xl space-y-16">
             <article className="prose prose-slate prose-lg">
@@ -99,15 +113,15 @@ export default function ThesisPage() {
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                 Stability is not found in the absence of change, but in the structural integrity of the change process. Institutional weight refers to the intentional friction designed into governance to prevent populist volatility from overriding long-term strategy. 
-                <span className="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1 footnote-trigger">
+                <span className="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1">
                   [1]
-                  <span className="footnote-content absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug">
+                  <span className="hidden group-hover:block absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug">
                     <strong className="text-primary block mb-1">Footnote 1:</strong>
                     Referencing the 1922 'Stability vs Velocity' paper by Dr. Aris Thorne. Thorne argues that rapid legislative cycles without "anchor years" lead to civic fatigue.
                   </span>
                 </span>
               </p>
-              <div className="my-12 p-8 bg-surface-variant/30 rounded-xl border border-outline-variant/30">
+              <div className="my-12 p-8 bg-white/70 backdrop-blur-sm border border-outline-variant/20 rounded-xl">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
@@ -127,20 +141,14 @@ export default function ThesisPage() {
                 By enforcing these constraints, we ensure that every action taken by the civic body is deliberate, documented, and defensible before the electorate.
               </p>
             </article>
-
             {/* Visual Asset Placeholder */}
             <div className="w-full aspect-video rounded-2xl overflow-hidden relative group">
-              <img 
-                alt="Architectural conceptualization of modern democracy" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QXnmiL9hNIt-zY2sUQ9FMA6Zl8LdzWwk8b1SmuXGdmrRO3u5WPI7Pq1WRvTvugqQ1Iv8CgHbblGsR7yYEwMr3qA7XY5yjiPuhviENmHUsPMepYY2axO7W1mKXYzK9RQnKXhb8ahIdKCZa2g7m17LJyPm5nnXg4eeEg5IA5QGs93cbk-t7cl6mJFG-w5UxVrnp7sC46xFRx7o6ujWl_PF_c-GzoFq2RtA3Gy-4VyPjK2bL1Rk_UvcEgzv2-f2VQQaK2WEsfTdeYkQ"
-              />
+              <img alt="Architectural conceptualization of modern democracy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QXnmiL9hNIt-zY2sUQ9FMA6Zl8LdzWwk8b1SmuXGdmrRO3u5WPI7Pq1WRvTvugqQ1Iv8CgHbblGsR7yYEwMr3qA7XY5yjiPuhviENmHUsPMepYY2axO7W1mKXYzK9RQnKXhb8ahIdKCZa2g7m17LJyPm5nnXg4eeEg5IA5QGs93cbk-t7cl6mJFG-w5UxVrnp7sC46xFRx7o6ujWl_PF_c-GzoFq2RtA3Gy-4VyPjK2bL1Rk_UvcEgzv2-f2VQQaK2WEsfTdeYkQ"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
                 <p className="text-white font-headline-sm text-headline-sm mb-2">Visualizing the Equilibrium</p>
                 <p className="text-white/80 font-body-sm text-body-sm max-w-md">Fig A.1: The intersection of historic precedent and modern data infrastructure.</p>
               </div>
             </div>
-
             <article className="prose prose-slate prose-lg">
               <h2 className="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
                 <span className="w-8 h-8 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center text-sm">3</span>
@@ -154,7 +162,6 @@ export default function ThesisPage() {
               </blockquote>
             </article>
           </div>
-
           {/* Interaction Sidebar/CTA */}
           <div className="mt-24 pt-16 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="max-w-md">
@@ -167,16 +174,15 @@ export default function ThesisPage() {
             </div>
           </div>
         </section>
-
         {/* Contextual Sidebar */}
         <aside className="hidden xl:block w-72 h-fit sticky top-20 p-8 space-y-12">
           <div>
             <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">On This Page</h4>
             <nav className="space-y-4">
-              <Link href="#" className="block text-secondary font-medium">01. Rooted Mobility</Link>
-              <Link href="#" className="block text-on-surface-variant hover:text-primary">02. Institutional Weight</Link>
-              <Link href="#" className="block text-on-surface-variant hover:text-primary">03. Sovereign Action</Link>
-              <Link href="#" className="block text-on-surface-variant hover:text-primary">04. Implementation Protocol</Link>
+              <Link className="block text-secondary font-medium" href="#">01. Rooted Mobility</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="#">02. Institutional Weight</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="#">03. Sovereign Action</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="#">04. Implementation Protocol</Link>
             </nav>
           </div>
           <div className="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl">
@@ -193,7 +199,37 @@ export default function ThesisPage() {
             <p className="font-label-md text-label-md text-outline">Verified Authenticity</p>
           </div>
         </aside>
-      </div>
-    </PublicLayout>
+      </main>
+      {/* Footer */}
+      <footer className="w-full mt-auto bg-primary dark:bg-primary-container text-on-primary">
+        <div className="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-headline-sm text-headline-sm text-on-primary">BOOT Civic Movement</h3>
+            <p className="font-body-sm text-body-sm opacity-80 max-w-xs">Restoring the foundations of civic duty through transparency, accountability, and the weight of history.</p>
+            <p className="font-body-sm text-body-sm mt-4 text-primary-fixed-dim">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
+          </div>
+          <div className="flex gap-12">
+            <div className="flex flex-col gap-3">
+              <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Platform</h4>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Privacy Policy</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Terms of Service</Link>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Engagement</h4>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Volunteer Portal</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Donate</Link>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
+              <span className="material-symbols-outlined text-white">share</span>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
+              <span className="material-symbols-outlined text-white">mail</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }

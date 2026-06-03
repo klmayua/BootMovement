@@ -8,7 +8,7 @@ export default function ExecutiveDashboard() {
       <header className="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant/30">
         <div className="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
           <div className="flex items-center gap-4">
-            <span className="material-symbols-outlined text-primary text-3xl">account_balance</span>
+            <span className="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
             <h1 className="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">CivicOS</h1>
           </div>
           <nav className="hidden md:flex gap-8 items-center">
@@ -19,17 +19,12 @@ export default function ExecutiveDashboard() {
           </nav>
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden border-2 border-outline-variant">
-              <img 
-                alt="Executive User" 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJlnOruBHt7IVR0At2r--MbaH8KPIYOASxd_ccCPSaL9QkWmDG2IIVyBGsN5mHnMryzT-w9KRMhpMv6aG-Hf_O8cIy6Osa1SpahRFQ2NA7KHS8OhNy6vXC53M_lrBNPAVriCBS3Z0f1YfHCDqoyM6sNE4Fc3tbu0fJwdxgRl8RTCvaH6U91ZDnA0Uqjn2pYm75c1SsCh2w9sSp8ALoSfvnymL_3xRL0PV2FgdYouKetWfOs82ddZPiOtWNWp0xmug8uTu3r2mLXhoO"
-              />
+              <img alt="Executive User" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJlnOruBHt7IVR0At2r--MbaH8KPIYOASxd_ccCPSaL9QkWmDG2IIVyBGsN5mHnMryzT-w9KRMhpMv6aG-Hf_O8cIy6Osa1SpahRFQ2NA7KHS8OhNy6vXC53M_lrBNPAVriCBS3Z0f1YfHCDqoyM6sNE4Fc3tbu0fJwdxgRl8RTCvaH6U91ZDnA0Uqjn2pYm75c1SsCh2w9sSp8ALoSfvnymL_3xRL0PV2FgdYouKetWfOs82ddZPiOtWNWp0xmug8uTu3r2mLXhoO" />
             </div>
-            <span className="material-symbols-outlined text-on-surface-variant cursor-pointer">settings</span>
+            <span className="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="settings">settings</span>
           </div>
         </div>
       </header>
-
       <div className="flex min-h-screen">
         {/* NavigationDrawer (Desktop Only) */}
         <aside className="hidden lg:flex flex-col h-full w-80 fixed left-0 top-20 bg-surface-container-low dark:bg-inverse-surface border-r border-outline-variant/30 py-6">
@@ -38,24 +33,23 @@ export default function ExecutiveDashboard() {
           </div>
           <nav className="flex flex-col gap-2">
             <Link className="bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 flex items-center gap-4 cursor-pointer" href="/admin/dashboard">
-              <span className="material-symbols-outlined">dashboard</span>
+              <span className="material-symbols-outlined" data-icon="dashboard">dashboard</span>
               <span className="font-label-lg text-label-lg">Leadership Portal</span>
             </Link>
             <div className="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-3 flex items-center gap-4 cursor-pointer transition-all">
-              <span className="material-symbols-outlined">how_to_vote</span>
+              <span className="material-symbols-outlined" data-icon="how_to_vote">how_to_vote</span>
               <span className="font-label-lg text-label-lg">Election Ops</span>
             </div>
             <Link className="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-3 flex items-center gap-4 cursor-pointer transition-all" href="/diaspora">
-              <span className="material-symbols-outlined">public</span>
+              <span className="material-symbols-outlined" data-icon="public">public</span>
               <span className="font-label-lg text-label-lg">Diaspora Hub</span>
             </Link>
             <div className="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-3 flex items-center gap-4 cursor-pointer transition-all">
-              <span className="material-symbols-outlined">analytics</span>
+              <span className="material-symbols-outlined" data-icon="analytics">analytics</span>
               <span className="font-label-lg text-label-lg">Admin Intel</span>
             </div>
           </nav>
         </aside>
-
         {/* Main Content Canvas */}
         <main className="flex-1 lg:ml-80 p-8 md:p-12 mb-20 lg:mb-0">
           <div className="max-w-7xl mx-auto">
@@ -65,14 +59,13 @@ export default function ExecutiveDashboard() {
               <h2 className="font-display-lg text-display-lg text-primary mb-4">Strategic Command</h2>
               <div className="h-1 w-24 bg-secondary"></div>
             </div>
-
             {/* Bento Grid Layout */}
             <div className="grid grid-cols-12 gap-gutter">
               {/* KPI Tile: Membership */}
               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
                 <div>
                   <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-primary p-2 bg-surface-container rounded-lg">groups</span>
+                    <span className="material-symbols-outlined text-primary p-2 bg-surface-container rounded-lg" data-icon="groups">groups</span>
                     <span className="text-green-600 font-bold text-sm">+12.4%</span>
                   </div>
                   <h3 className="font-label-lg text-label-lg text-on-surface-variant">Active Membership</h3>
@@ -88,12 +81,11 @@ export default function ExecutiveDashboard() {
                   </div>
                 </div>
               </div>
-
               {/* KPI Tile: Funding */}
               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
                 <div>
                   <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-secondary p-2 bg-secondary-container/10 rounded-lg">payments</span>
+                    <span className="material-symbols-outlined text-secondary p-2 bg-secondary-container/10 rounded-lg" data-icon="payments">payments</span>
                     <span className="text-green-600 font-bold text-sm">On Track</span>
                   </div>
                   <h3 className="font-label-lg text-label-lg text-on-surface-variant">Movement Funding</h3>
@@ -109,12 +101,11 @@ export default function ExecutiveDashboard() {
                   </div>
                 </div>
               </div>
-
               {/* KPI Tile: Engagement */}
               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
                 <div>
                   <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-tertiary p-2 bg-tertiary-fixed/30 rounded-lg">bolt</span>
+                    <span className="material-symbols-outlined text-tertiary p-2 bg-tertiary-fixed/30 rounded-lg" data-icon="bolt">bolt</span>
                     <span className="text-secondary font-bold text-sm">Critical</span>
                   </div>
                   <h3 className="font-label-lg text-label-lg text-on-surface-variant">Action Response Rate</h3>
@@ -130,7 +121,6 @@ export default function ExecutiveDashboard() {
                   </div>
                 </div>
               </div>
-
               {/* National Resource Map */}
               <div className="col-span-12 lg:col-span-8 bg-primary-container rounded-xl overflow-hidden relative min-h-[500px] flex flex-col">
                 <div className="p-8 z-10">
@@ -139,7 +129,7 @@ export default function ExecutiveDashboard() {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-8 opacity-40">
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[300px] text-white/10">public</span>
+                    <span className="material-symbols-outlined text-[300px] text-white/10" data-icon="public">public</span>
                     <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-secondary rounded-full animate-pulse shadow-[0_0_15px_#af2d2f]"></div>
                     <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-secondary rounded-full animate-pulse shadow-[0_0_15px_#af2d2f]"></div>
                     <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-secondary rounded-full animate-pulse shadow-[0_0_15px_#af2d2f]"></div>
@@ -159,11 +149,10 @@ export default function ExecutiveDashboard() {
                   </div>
                 </div>
               </div>
-
               {/* Legislative Wins Timeline */}
               <div className="col-span-12 lg:col-span-4 bg-white border border-outline-variant/30 p-8 flex flex-col">
                 <div className="flex items-center gap-3 mb-8">
-                  <span className="material-symbols-outlined text-primary">history_edu</span>
+                  <span className="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
                   <h3 className="font-headline-sm text-headline-sm text-primary">Policy Milestones</h3>
                 </div>
                 <div className="space-y-8 flex-1 border-l-2 border-surface-container ml-2">
@@ -187,7 +176,6 @@ export default function ExecutiveDashboard() {
                   </div>
                 </div>
               </div>
-
               {/* Initiative Tracker Table */}
               <div className="col-span-12 bg-white border border-outline-variant/30 overflow-hidden">
                 <div className="p-8 border-b border-outline-variant/20 flex justify-between items-center">
@@ -196,7 +184,7 @@ export default function ExecutiveDashboard() {
                     <p className="text-body-sm text-on-surface-variant">Monitoring key project execution across the nation.</p>
                   </div>
                   <button className="bg-primary text-white px-6 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary/90 transition-all">
-                    <span className="material-symbols-outlined text-sm">add</span>
+                    <span className="material-symbols-outlined text-sm" data-icon="add">add</span>
                     New Initiative
                   </button>
                 </div>
@@ -283,7 +271,6 @@ export default function ExecutiveDashboard() {
           </div>
         </main>
       </div>
-
       {/* BottomNavBar (Mobile Only) */}
       <nav className="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface dark:bg-surface-bright border-t border-outline-variant/20 shadow-lg flex justify-around items-center h-20 px-4 pb-4">
         <div className="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-1 active:scale-95 transition-transform">
@@ -303,7 +290,6 @@ export default function ExecutiveDashboard() {
           <span className="font-label-md text-label-md">Grants</span>
         </div>
       </nav>
-
       {/* Footer */}
       <footer className="w-full mt-auto bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/50">
         <div className="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto">

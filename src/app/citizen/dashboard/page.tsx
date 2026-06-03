@@ -65,9 +65,9 @@ export default function CitizenDashboard() {
             </div>
             <div className="flex items-center gap-6">
               <div className="hidden lg:flex items-center gap-6">
-                <a className="text-secondary border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Activity</a>
-                <a className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Resources</a>
-                <a className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Support</a>
+                <Link className="text-secondary border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Activity</Link>
+                <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Resources</Link>
+                <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Support</Link>
               </div>
               <button className="bg-secondary text-white px-6 py-2 rounded shadow-sm hover:opacity-90 transition-all font-label-lg">Join Now</button>
             </div>
@@ -158,7 +158,7 @@ export default function CitizenDashboard() {
                     <img 
                       className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" 
                       alt="Community town hall meeting"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ka75Qa_ts_QPrf-qQVdnASk2EqNlye-TipBg7B4C4n9Wsayq2vIAb7zN9p_1kfPIGDVzLn0l7jHtyXuXpnrdrW-rY8XEzTV8kRpIZmUEMcWz7KpGI1155W6KxbjZ2md_9tMifQ0pfcZJcgeUAd__Rd5TcpkxxpIj_REcmjoJjVGFp_fIbHx0unCV8KyWgGynhYNH_601uyqZtHtMTZcuIP0FxbRzLj9PhAO1KpJfN692CznugESRFAhI7qVCJJqJWKtrxEVyLjPj"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ka75Qa_ts_QPrf-qQVdnASk2EqNlye-TipBg7B4C4n9Wsayq2vIAb7zN9p_1kfPIGDVzLn0l7jHtyXuXpnrdrW-rY8XEzTV8kRpIZmUEMcWz7KpGI1155W6LxbjZ2md_9tMifQ0pfcZJcgeUAd__Rd5TcpkxxpIj_REcmjoJjVGFp_fIbHx0unCV8KyWgGynhYNH_601uyqZtHtMTZcuIP0FxbRzLj9PhAO1KpJfN692CznugESRFAhI7qVCJJqJWKtrxEVyLjPj"
                     />
                     <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-primary font-label-md text-label-md">Lagos Central</div>
                   </div>
@@ -208,57 +208,57 @@ export default function CitizenDashboard() {
                 <button className="mt-4 text-center py-3 border border-outline-variant hover:bg-surface-variant transition-all font-label-lg text-label-lg rounded">View All Actions</button>
               </div>
             </div>
-          </div>
 
-          {/* CALENDAR SECTION */}
-          <div className="col-span-12 bento-card p-8 rounded-xl mt-4">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-              <h3 className="font-headline-sm text-headline-sm text-primary">Upcoming Movement Events</h3>
-              <div className="flex items-center gap-4 bg-surface-container-low p-2 rounded-lg">
-                <button className="p-1 hover:bg-surface-variant rounded"><span className="material-symbols-outlined">chevron_left</span></button>
-                <span className="font-label-lg text-label-lg text-primary px-4">August 2024</span>
-                <button className="p-1 hover:bg-surface-variant rounded"><span className="material-symbols-outlined">chevron_right</span></button>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-              <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
-                <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
-                  <span className="font-label-md text-label-md uppercase">Aug</span>
-                  <span className="font-headline-sm text-headline-sm leading-none">12</span>
-                </div>
-                <div>
-                  <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">National Strategy Summit</h5>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant">Abuja, FCT • 09:00 AM</p>
+            {/* CALENDAR SECTION */}
+            <div className="col-span-12 bento-card p-8 rounded-xl mt-4">
+              <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                <h3 className="font-headline-sm text-headline-sm text-primary">Upcoming Movement Events</h3>
+                <div className="flex items-center gap-4 bg-surface-container-low p-2 rounded-lg">
+                  <button className="p-1 hover:bg-surface-variant rounded"><span className="material-symbols-outlined">chevron_left</span></button>
+                  <span className="font-label-lg text-label-lg text-primary px-4">August 2024</span>
+                  <button className="p-1 hover:bg-surface-variant rounded"><span className="material-symbols-outlined">chevron_right</span></button>
                 </div>
               </div>
-              <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
-                <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
-                  <span className="font-label-md text-label-md uppercase">Aug</span>
-                  <span className="font-headline-sm text-headline-sm leading-none">15</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+                  <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+                    <span className="font-label-md text-label-md uppercase">Aug</span>
+                    <span className="font-headline-sm text-headline-sm leading-none">12</span>
+                  </div>
+                  <div>
+                    <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">National Strategy Summit</h5>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Abuja, FCT • 09:00 AM</p>
+                  </div>
                 </div>
-                <div>
-                  <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Grassroots Training</h5>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant">Virtual Workshop • 06:00 PM</p>
+                <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+                  <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+                    <span className="font-label-md text-label-md uppercase">Aug</span>
+                    <span className="font-headline-sm text-headline-sm leading-none">15</span>
+                  </div>
+                  <div>
+                    <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Grassroots Training</h5>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Virtual Workshop • 06:00 PM</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
-                <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
-                  <span className="font-label-md text-label-md uppercase">Aug</span>
-                  <span className="font-headline-sm text-headline-sm leading-none">22</span>
+                <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+                  <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+                    <span className="font-label-md text-label-md uppercase">Aug</span>
+                    <span className="font-headline-sm text-headline-sm leading-none">22</span>
+                  </div>
+                  <div>
+                    <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Economic Thesis Launch</h5>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Lagos Island • 10:00 AM</p>
+                  </div>
                 </div>
-                <div>
-                  <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Economic Thesis Launch</h5>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant">Lagos Island • 10:00 AM</p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
-                <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
-                  <span className="font-label-md text-label-md uppercase">Sep</span>
-                  <span className="font-headline-sm text-headline-sm leading-none">05</span>
-                </div>
-                <div>
-                  <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Regional Town Hall</h5>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant">Enugu Chapter • 02:00 PM</p>
+                <div className="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+                  <div className="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+                    <span className="font-label-md text-label-md uppercase">Sep</span>
+                    <span className="font-headline-sm text-headline-sm leading-none">05</span>
+                  </div>
+                  <div>
+                    <h5 className="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Regional Town Hall</h5>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Enugu Chapter • 02:00 PM</p>
+                  </div>
                 </div>
               </div>
             </div>
