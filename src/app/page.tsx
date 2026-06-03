@@ -6,35 +6,34 @@ export default function HomePage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
-        {/* Hero Section - Responsive Logic */}
+        {/* Hero Section */}
         <section className="relative h-[80vh] md:h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              className="w-full h-full object-cover brightness-50" 
+              className="w-full h-full object-cover md:brightness-50" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dndBN91UiEj2HgrdJ3hFcXdbdXBSL9bAFJnGOQhuJCnYhBA-OARRQb6deSzroPC8rZPCONTWU3SmzpYhxCh_fmBh_iGEceyZCfpnp26SJgwjCFWris42Mmwen8JhKJvFcbt3zLjl8gCxSf2M6FQ5b49J1jakOLLXSe1wrT33jXsDPb8If01emqu-vmiMuibLKY4kwiaj-pfRLUOCl4GeEK7XNMdcJFQTFNyoUCHQlSzIxmaIBRmQ8OezA7-cRGSB1ICIh_n04AAS"
-              alt="Institutional Building"
+              alt="Hero Building"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
           </div>
+          
           <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
             <div className="max-w-2xl text-on-primary">
               <span className="font-label-lg text-label-lg text-secondary uppercase tracking-[0.2em] mb-4 block font-semibold">
-                {/* Mobile: "Nigeria's Future, Built Today" | Desktop: "Our Vision" */}
                 <span className="md:hidden">Nigeria's Future, Built Today</span>
                 <span className="hidden md:block">Our Vision</span>
               </span>
-              <h1 className="font-display-lg text-[36px] md:text-display-lg leading-tight mb-6 italic">
-                Because Of <span className="md:hidden text-secondary">Our Tomorrow</span>
-                <span className="hidden md:inline">Because Of Our Tomorrow.</span>
+              <h1 className="font-display-lg text-[42px] md:text-display-lg leading-tight mb-6 italic">
+                Because Of Our Tomorrow.
               </h1>
-              <p className="font-body-lg text-body-lg mb-10 max-w-md text-surface-variant border-l-4 border-secondary pl-6">
+              <p className="font-body-lg text-body-lg mb-10 max-w-md text-surface-variant md:border-l-4 md:border-secondary md:pl-6">
                 Building a legacy of stability and forward-looking growth for every citizen. Join the movement for a principled future.
               </p>
               <div className="flex flex-col md:flex-row gap-4">
-                <Link href="/join" className="bg-secondary text-white font-label-lg text-label-lg py-4 px-8 rounded-lg shadow-lg active:scale-95 transition-transform text-center uppercase tracking-wider">
+                <Link href="/join" className="bg-secondary text-white font-label-lg text-label-lg py-4 px-8 rounded-lg shadow-lg active:scale-95 transition-transform text-center uppercase tracking-wider md:hover:translate-y-[-2px] md:duration-300">
                   Join the Movement
                 </Link>
-                <Link href="/thesis" className="bg-transparent border-2 border-surface-variant text-surface-variant font-label-lg text-label-lg py-4 px-8 rounded-lg active:scale-95 transition-transform text-center uppercase tracking-wider">
+                <Link href="/thesis" className="bg-transparent border-2 border-surface-variant text-surface-variant font-label-lg text-label-lg py-4 px-8 rounded-lg active:scale-95 transition-transform text-center uppercase tracking-wider md:hover:bg-white/10 md:transition-colors">
                   Read Our Thesis
                 </Link>
               </div>
@@ -57,7 +56,7 @@ export default function HomePage() {
               </div>
             </div>
             
-            {/* Mobile: Single Column | Desktop: 2 Column Grid */}
+            {/* Mobile: 1 col | Desktop: 2 col Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
               {/* Pillar 1 */}
               <div className="group relative bg-surface p-8 md:p-12 border border-outline-variant/30 hover:border-secondary/50 transition-all duration-500 overflow-hidden rounded-xl">
@@ -89,7 +88,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Quick Action Grid (Mobile focus) */}
+        {/* Quick Action Grid (Mobile Only) */}
         <section className="px-margin-mobile py-8 bg-surface-container-low md:hidden">
           <div className="grid grid-cols-3 gap-4">
             <div className="flex flex-col items-center gap-2">
@@ -113,7 +112,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Latest Initiatives / Updates */}
+        {/* Latest Initiatives Feed */}
         <section className="px-margin-mobile py-16 bg-surface">
           <div className="max-w-container-max mx-auto px-0 md:px-margin-desktop">
             <div className="flex justify-between items-end mb-8 md:mb-12">
