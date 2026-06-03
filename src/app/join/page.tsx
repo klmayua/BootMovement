@@ -3,8 +3,10 @@ import { AuthLayout } from '@/components/layout/AuthLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import Link from 'next/link';
 
 export default function JoinPage() {
+
   return (
     <AuthLayout>
       <div className="space-y-8">
