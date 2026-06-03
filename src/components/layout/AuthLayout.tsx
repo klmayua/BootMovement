@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card } from '../ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import Image from 'next/image';
 
 export const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+
   return (
     <div className="min-h-screen bg-surface flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
