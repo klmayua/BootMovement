@@ -2,6 +2,7 @@ import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
 import Image from 'next/image';
 import Link from 'next/link';
 
