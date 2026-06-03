@@ -229,7 +229,7 @@ export default function CampaignCommandCenter() {
           </div>
           <div className="h-64 flex items-end justify-between space-x-2 mb-4">
             <div className="flex-1 bg-surface-container-low rounded-t-lg relative overflow-hidden h-full">
-              <svg className="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 100">
                 <path d="M0,80 Q50,70 100,75 T200,40 T300,50 T400,20" fill="none" stroke="#1a4331" strokeWidth="3"></path>
               </svg>
               <div className="absolute top-4 left-4">
@@ -238,7 +238,7 @@ export default function CampaignCommandCenter() {
               </div>
             </div>
             <div className="flex-1 bg-surface-container-low rounded-t-lg relative overflow-hidden h-full">
-              <svg className="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 100">
                 <path d="M0,50 Q100,60 200,45 T400,30" fill="none" stroke="#af2d2f" strokeWidth="3"></path>
               </svg>
               <div className="absolute top-4 left-4">
