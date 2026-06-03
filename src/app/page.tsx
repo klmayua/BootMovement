@@ -291,10 +291,10 @@ export default function HomePage() {
             <span className="material-symbols-outlined">groups</span>
             <span className="font-sans text-xs font-medium">Communities</span>
           </div>
-          <div className flex-col items-center gap-0.5 text-on-surface-variant">
-            <span className="material-symbols-outlined">events</span>
-            <span className="font-sans text-xs font-medium">Events</span>
-          </div>
+           <div className="flex flex-col items-center gap-0.5 text-on-surface-variant">
+             <span className="material-symbols-outlined">events</span>
+             <span className="font-sans text-xs font-medium">Events</span>
+           </div>
           <div className="flex flex-col items-center gap-0.5 text-on-surface-variant">
             <span className="material-symbols-outlined">analytics</span>
             <span className="font-sans text-xs font-medium">Impact</span>
