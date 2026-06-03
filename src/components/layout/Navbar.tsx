@@ -1,40 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '../ui/Button';
-import Image from 'next/image';
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-surface border-b border-accent/20 px-4 py-3">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image 
-            src="/boot_logo_2022.png" 
-            alt="BOOT Logo" 
-            width={40} 
-            height={40} 
-            className="object-contain"
+    <header className="bg-surface sticky top-0 z-50 w-full border-b border-outline-variant/30 px-margin-mobile py-4">
+      <div className="flex justify-between items-center max-w-container-max mx-auto">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer active:opacity-80">
+          <img 
+            alt="BOOT Movement Logo" 
+            className="h-10 w-auto" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
           />
-          <span className="font-serif font-bold text-primary text-xl hidden md:block">BOOT MOVEMENT</span>
+          <span className="font-serif text-xl font-semibold text-primary">BOOT Movement</span>
         </Link>
-        
-        <div className="hidden md:flex items-center gap-6">
-          <Link href="/about" className="text-sm font-medium text-neutral hover:text-primary transition-colors">About</Link>
-          <Link href="/thesis" className="text-sm font-medium text-neutral hover:text-primary transition-colors">Thesis</Link>
-          <Link href="/movement" className="text-sm font-medium text-neutral hover:text-primary transition-colors">Movement</Link>
-          <Link href="/candidates" className="text-sm font-medium text-neutral hover:text-primary transition-colors">Candidates</Link>
-          <Link href="/donate" className="text-sm font-medium text-neutral hover:text-primary transition-colors">Donate</Link>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <Link href="/auth/login">
-            <Button variant="ghost" size="sm">Login</Button>
-          </Link>
-          <Link href="/join">
-            <Button variant="action" size="sm">Join BOOT</Button>
-          </Link>
-        </div>
+        <Link href="/join" className="bg-secondary text-white px-4 py-2 rounded-lg font-sans text-sm font-semibold transition-all active:scale-95 shadow-sm">
+          Join Now
+        </Link>
       </div>
-    </nav>
+    </header>
   );
 };

@@ -1,27 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Top App Bar */}
-      <header className="bg-surface sticky top-0 z-50 w-full border-b border-outline-variant/30 px-margin-mobile py-4">
-        <div className="flex justify-between items-center max-w-container-max mx-auto">
-          <div className="flex items-center gap-2 cursor-pointer active:opacity-80">
-            <img 
-              alt="BOOT Movement Logo" 
-              className="h-10 w-auto" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
-            />
-            <span className="font-serif text-xl font-semibold text-primary">BOOT Movement</span>
-          </div>
-          <Link href="/join" className="bg-secondary text-white px-4 py-2 rounded-lg font-sans text-sm font-semibold transition-all active:scale-95 shadow-sm">
-            Join Now
-          </Link>
-        </div>
-      </header>
-
-      <main className="flex-grow">
+    <PublicLayout>
+      <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <section className="relative px-margin-mobile pt-12 pb-16 overflow-hidden">
           <div className="max-w-container-max mx-auto relative z-10">
@@ -245,67 +229,7 @@ export default function HomePage() {
             </button>
           </div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-primary-container text-white px-margin-mobile py-12 flex flex-col gap-8">
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center gap-2">
-            <img 
-              alt="BOOT Logo" 
-              className="h-8 w-auto brightness-200" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
-            />
-            <span className="font-serif text-xl font-semibold">BOOT Civic Movement</span>
-          </div>
-          <p className="font-sans text-sm text-primary-fixed-dim leading-relaxed">
-            Building a nation based on merit, accountability, and the shared promise of a prosperous tomorrow for all Nigerians.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-y-6">
-          <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Terms of Service</Link>
-          <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Volunteer Portal</Link>
-          <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Donate</Link>
-        </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col items-center gap-4">
-          <div className="flex gap-6">
-            <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">social_leaderboard</span>
-            <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">campaign</span>
-            <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">mail</span>
-          </div>
-          <p className="font-sans text-xs text-primary-fixed-dim/60 text-center">
-            © 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.
-          </p>
-        </div>
-      </footer>
-
-      {/* Bottom Navigation Bar (Mobile) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant/20 z-50 px-4 pb-safe">
-        <div className="flex justify-around items-center h-16">
-          <div className="flex flex-col items-center gap-0.5 text-secondary">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-            <span className="font-sans text-xs font-medium">Home</span>
-          </div>
-          <div className="flex flex-col items-center gap-0.5 text-on-surface-variant">
-            <span className="material-symbols-outlined">groups</span>
-            <span className="font-sans text-xs font-medium">Communities</span>
-          </div>
-           <div className="flex flex-col items-center gap-0.5 text-on-surface-variant">
-             <span className="material-symbols-outlined">events</span>
-             <span className="font-sans text-xs font-medium">Events</span>
-           </div>
-          <div className="flex flex-col items-center gap-0.5 text-on-surface-variant">
-            <span className="material-symbols-outlined">analytics</span>
-            <span className="font-sans text-xs font-medium">Impact</span>
-          </div>
-        </div>
-      </nav>
-
-      {/* Floating Action Button */}
-      <button className="fixed bottom-24 right-margin-mobile bg-secondary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center z-40 active:scale-90 transition-transform">
-        <span className="material-symbols-outlined text-3xl">volunteer_activism</span>
-      </button>
-    </div>
+      </div>
+    </PublicLayout>
   );
 }

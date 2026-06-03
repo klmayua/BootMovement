@@ -1,55 +1,37 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-surface-container py-12 px-4 mt-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div className="col-span-1 md:col-span-2">
-          <Link href="/" className="flex items-center gap-2 mb-6">
-            <Image 
-              src="/boot_logo_2022.png" 
-              alt="BOOT Logo" 
-              width={50} 
-              height={50} 
-              className="brightness-200 grayscale invert"
-            />
-            <span className="font-serif font-bold text-2xl">BOOT MOVEMENT</span>
-          </Link>
-          <p className="text-surface-container/70 max-w-md leading-relaxed">
-            Empowering every Nigerian to take ownership of their future. 
-            Building a sustainable, transparent, and inclusive governance system for all.
-          </p>
+    <footer className="bg-primary-container text-white px-margin-mobile py-12 flex flex-col gap-8">
+      <div className="flex flex-col gap-6">
+        <div className="flex items-center gap-2">
+          <img 
+            alt="BOOT Logo" 
+            className="h-8 w-auto brightness-200" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQTmS9_xN8aTPsOwdk77Dsrz8C8KbckVG4qQvtSgP4F1N96A_GogSFIL07PBDsoRbQTsJP7nv8JssLhY9ZKPkkYRvG9jq2rYIOAVGkji5TIykKcIKEmoZozLdk_oGtmF9BHiLXa0Gugs3hmlclnaRvIg1_quhiji8C3xTkq7SwVAbKn1bT8BAq-5CAUUCLOGU7gZBgbKWFAeKpuIK3AljzA2c3P7yn8fIsNG1U-veKIGakjB5OrLbwzEkjKe6MIASV-Z7oHQ32NLR"
+          />
+          <span className="font-serif text-xl font-semibold">BOOT Civic Movement</span>
         </div>
-        
-        <div>
-          <h4 className="font-serif font-semibold text-lg mb-6 text-white">Quick Links</h4>
-          <ul className="space-y-3">
-            <li><Link href="/about" className="text-surface-container/60 hover:text-white transition-colors">About BOOT</Link></li>
-            <li><Link href="/thesis" className="text-surface-container/60 hover:text-white transition-colors">The Thesis</Link></li>
-            <li><Link href="/movement" className="text-surface-container/60 hover:text-white transition-colors">Movement</Link></li>
-            <li><Link href="/candidates" className="text-surface-container/60 hover:text-white transition-colors">Candidates</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-serif font-semibold text-lg mb-6 text-white">Connect</h4>
-          <ul className="space-y-3">
-            <li><Link href="/contact" className="text-surface-container/60 hover:text-white transition-colors">Contact Us</Link></li>
-            <li><Link href="/volunteer" className="text-surface-container/60 hover:text-white transition-colors">Volunteer</Link></li>
-            <li><Link href="/donate" className="text-surface-container/60 hover:text-white transition-colors">Donate</Link></li>
-            <li><Link href="/join" className="text-surface-container/60 hover:text-white transition-colors">Join the Movement</Link></li>
-          </ul>
-        </div>
+        <p className="font-sans text-sm text-primary-fixed-dim leading-relaxed">
+          Building a nation based on merit, accountability, and the shared promise of a prosperous tomorrow for all Nigerians.
+        </p>
       </div>
-      
-      <div className="max-w-7xl mx-auto border-t border-surface-container/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-surface-container/50">
-        <p>© 2026 BOOT Movement. All rights reserved.</p>
+      <div className="grid grid-cols-2 gap-y-6">
+        <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Privacy Policy</Link>
+        <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Terms of Service</Link>
+        <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Volunteer Portal</Link>
+        <Link href="#" className="font-sans text-sm font-semibold text-primary-fixed-dim hover:text-white transition-colors">Donate</Link>
+      </div>
+      <div className="pt-8 border-t border-white/10 flex flex-col items-center gap-4">
         <div className="flex gap-6">
-          <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">social_leaderboard</span>
+          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">campaign</span>
+          <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed-dim">mail</span>
         </div>
+        <p className="font-sans text-xs text-primary-fixed-dim/60 text-center">
+          © 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.
+        </p>
       </div>
     </footer>
   );
