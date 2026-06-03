@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from './ui/Button';
+import { Button } from '../ui/Button';
 import Image from 'next/image';
 
 export const Navbar = () => {

@@ -42,7 +42,7 @@ export default function AdminDashboard() {
               <Typography variant="headline-sm" className="text-primary">Pending Approvals</Typography>
               {[
                 { title: 'Kano North Hub Application', type: 'Hub', urgency: 'Medium' },
-                { title: 'Dr. Sarah's Steward Request', type: 'User', urgency: 'High' },
+                { title: "Dr. Sarah's Steward Request", type: 'User', urgency: 'High' },
                 { title: 'Sokoto Project Funding', type: 'Financial', urgency: 'High' },
               ].map((req, i) => (
                 <div key={i} className="p-4 rounded-xl bg-surface-container border border-accent/10 flex justify-between items-center">
