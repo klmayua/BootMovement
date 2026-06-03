@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-grow">
         {children}

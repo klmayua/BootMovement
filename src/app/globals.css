@@ -63,12 +63,21 @@
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
+
+  /* Verbatim Spacing from Stitch Config */
+  --spacing-gutter: 24px;
+  --spacing-margin-tablet: 32px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-unit: 8px;
+  --spacing-container-max: 1280px;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-on-surface);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
 .material-symbols-outlined {
@@ -91,3 +100,8 @@ body {
   scrollbar-width: none;
 }
 
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
