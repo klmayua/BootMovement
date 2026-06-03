@@ -332,7 +332,7 @@ export default function CampaignCommandCenter() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       {/* Footer Shell */}
       <footer className="ml-64 w-[calc(100%-16rem)] flex flex-col md:flex-row justify-between items-center py-8 px-margin-desktop bg-surface-container-low border-t border-outline-variant/20 mt-12">
