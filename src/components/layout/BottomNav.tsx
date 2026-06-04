@@ -16,6 +16,7 @@ const NAV_CONFIGS = {
     { label: 'About', href: '/about', icon: 'info' },
     { label: 'Communities', href: '/communities', icon: 'groups' },
     { label: 'Events', href: '/events', icon: 'event' },
+    { label: 'Party', href: '/party', icon: 'language' },
     { label: 'Join', href: '/join', icon: 'person_add' },
   ],
   citizen: [
@@ -60,15 +61,15 @@ export function BottomNav() {
             className={`relative flex flex-col items-center justify-center gap-1 
                         px-4 py-2 min-w-[64px] transition-all duration-200 
                         active:scale-90 touch-manipulation
-                        ${isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+                        ${isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
             aria-current={isActive ? 'page' : undefined}
           >
-            <span className={`material-symbols-outlined transition-transform duration-200 
+            <span className={`material-symbols-outlined transition-all duration-200 
                              ${isActive ? 'scale-110' : 'scale-100'}`}
                   style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
               {item.icon}
             </span>
-            <span className="text-[10px] font-medium leading-none">{item.label}</span>
+            <span className={`text-[10px] leading-none ${isActive ? 'font-bold' : 'font-medium'}`}>{item.label}</span>
             {isActive && (
               <div className="absolute -bottom-1 w-1 h-1 bg-primary rounded-full" />
             )}

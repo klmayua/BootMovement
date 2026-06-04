@@ -53,10 +53,10 @@ export const PortalLayout = ({
               key={item.href}
               href={item.href}
               className={clsx(
-                'flex items-center gap-3 px-3 py-2 rounded-md transition-colors text-sm font-medium',
+                'flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200 text-sm font-medium active:scale-95',
                 pathname === item.href 
-                  ? 'bg-white text-primary' 
-                  : 'text-surface-container/70 hover:bg-white/10 hover:text-white'
+                  ? 'bg-white text-primary font-bold' 
+                  : 'text-white/70 hover:bg-white/10 hover:text-white'
               )}
             >
               <span>{item.icon}</span>
@@ -66,7 +66,7 @@ export const PortalLayout = ({
         </nav>
 
         <div className="p-4 border-t border-primary/20">
-          <Link href="/auth/login" className="flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium text-surface-container/70 hover:bg-white/10 hover:text-white transition-colors">
+          <Link href="/auth/login" className="flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium text-white/70 hover:bg-white/10 hover:text-white active:scale-95 transition-all duration-200">
             <span>🚪</span> Logout
           </Link>
         </div>
