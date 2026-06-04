@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function PartyPage() {
   return (
@@ -6,26 +7,30 @@ export default function PartyPage() {
       {/* Top Navigation Bar */}
       <header className="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 px-margin-desktop py-4 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center gap-8">
-          <img alt="BOOT Party Official Logo" className="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j" />
+          <Link href="/party" className="flex items-center gap-3 active:scale-95 transition-transform">
+            <img alt="BOOT Party Official Logo" className="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j" />
+          </Link>
           <nav className="hidden md:flex gap-6">
-<a className="text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg px-1 py-1" href="/citizen/dashboard">Dashboard</a>
-<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/communities">Communities</a>
-<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/events">Events</a>
-<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/projects">Projects</a>
+            <Link className="text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all font-label-lg text-label-lg px-1 py-1 rounded-md active:scale-95" href="/manifesto">Manifesto</Link>
+            <Link className="text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all font-label-lg text-label-lg px-1 py-1 rounded-md active:scale-95" href="/thesis">The Thesis</Link>
+            <Link className="text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all font-label-lg text-label-lg px-1 py-1 rounded-md active:scale-95" href="/leadership">Leadership</Link>
+            <Link className="text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all font-label-lg text-label-lg px-1 py-1 rounded-md active:scale-95" href="/newsroom">Newsroom</Link>
+            <Link className="text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg px-1 py-1 active:scale-95" href="/">Movement Portal</Link>
           </nav>
         </div>
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center bg-surface-container px-4 py-2 rounded-full">
             <span className="material-symbols-outlined text-on-surface-variant mr-2">search</span>
-            <input className="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Search Policies..." type="text" />
+            <input className="bg-transparent border-none focus:ring-0 text-body-sm w-48 outline-none" placeholder="Search Policies..." type="text" />
           </div>
           <div className="flex items-center gap-4">
-            <span className="material-symbols-outlined text-primary cursor-pointer" data-icon="notifications">notifications</span>
-            <span className="material-symbols-outlined text-primary cursor-pointer" data-icon="account_circle">account_circle</span>
-            <button className="bg-secondary text-on-secondary px-6 py-2 font-label-lg text-label-lg hover:opacity-90 transition-opacity">Donate Now</button>
+            <span className="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-low p-1 rounded-full transition-all active:scale-90" data-icon="notifications">notifications</span>
+            <span className="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-low p-1 rounded-full transition-all active:scale-90" data-icon="account_circle">account_circle</span>
+            <Link href="/donate" className="bg-secondary text-on-secondary px-6 py-2 font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all">Donate Now</Link>
           </div>
         </div>
       </header>
+
 
       <main>
         {/* Hero Section */}
@@ -39,10 +44,10 @@ export default function PartyPage() {
               <p className="font-body-lg text-body-lg mb-10 opacity-90 border-l-4 border-secondary pl-6">
                 Building a legacy of stability and forward-looking growth for every citizen. Join the movement for a principled future.
               </p>
-              <div className="flex gap-4">
-                <button className="bg-secondary px-8 py-4 font-label-lg text-label-lg text-on-secondary hover:translate-y-[-2px] transition-transform duration-300">Join the Movement</button>
-                <button className="border-2 border-white px-8 py-4 font-label-lg text-label-lg text-white hover:bg-white/10 transition-colors">Read Our Thesis</button>
-              </div>
+               <div className="flex gap-4">
+                 <Link href="/" className="bg-secondary px-8 py-4 font-label-lg text-label-lg text-on-secondary hover:translate-y-[-2px] transition-transform duration-300 active:scale-95">Enter Movement Portal</Link>
+                 <Link href="/thesis" className="border-2 border-white px-8 py-4 font-label-lg text-label-lg text-white hover:bg-white/10 transition-colors active:scale-95">Read Our Thesis</Link>
+               </div>
             </div>
           </div>
         </section>
@@ -169,7 +174,7 @@ export default function PartyPage() {
                   <h3 className="font-headline-sm text-headline-sm text-primary mb-4">National Townhall: Digital Infrastructure</h3>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">Join Party leadership this Friday for a live discussion on the 2025 Digital Charter and data privacy initiatives.</p>
                 </div>
-                <button className="w-full border-2 border-primary text-primary font-label-lg text-label-lg py-3 hover:bg-primary hover:text-white transition-all">Register to Attend</button>
+                 <Link href="/events" className="w-full text-center border-2 border-primary text-primary font-label-lg text-label-lg py-3 hover:bg-primary hover:text-white transition-all active:scale-95">Register to Attend</Link>
               </div>
             </div>
           </div>
