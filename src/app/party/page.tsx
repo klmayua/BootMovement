@@ -8,10 +8,10 @@ export default function PartyPage() {
         <div className="flex items-center gap-8">
           <img alt="BOOT Party Official Logo" className="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j" />
           <nav className="hidden md:flex gap-6">
-            <a className="text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg px-1 py-1" href="#">Dashboard</a>
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Communities</a>
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Events</a>
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Projects</a>
+<a className="text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg px-1 py-1" href="/citizen/dashboard">Dashboard</a>
+<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/communities">Communities</a>
+<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/events">Events</a>
+<a className="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="/projects">Projects</a>
           </nav>
         </div>
         <div className="flex items-center gap-6">
@@ -67,9 +67,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
-                <a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
-                  LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                </a>
+<a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/about">
+                            LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                        </a>
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
@@ -78,9 +78,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md mb-6">Future Progress</h3>
                 <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
-                <a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
-                  EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                </a>
+<a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/thesis">
+                            EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                        </a>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function PartyPage() {
           <div className="max-w-container-max mx-auto px-margin-desktop">
             <div className="flex justify-between items-end mb-12">
               <h2 className="font-headline-lg text-headline-lg text-primary">Latest Initiatives</h2>
-              <a className="font-label-lg text-label-lg text-secondary underline" href="#">View All News</a>
+              <a className="font-label-lg text-label-lg text-secondary underline" href="/newsroom">View All News</a>
             </div>
             <div className="grid grid-cols-12 gap-gutter">
               <div className="col-span-12 lg:col-span-8 group relative overflow-hidden h-[400px]">
@@ -199,25 +199,25 @@ export default function PartyPage() {
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6">Governance</h5>
             <ul className="space-y-4">
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Transparency Report</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Policy Thesis</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Legal Framework</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/newsroom">Transparency Report</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/thesis">Policy Thesis</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/about">Legal Framework</a></li>
             </ul>
           </div>
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6">Support</h5>
             <ul className="space-y-4">
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Privacy Policy</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Terms of Service</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Contact Us</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/about">Privacy Policy</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/about">Terms of Service</a></li>
+<li><a className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6">Connect</h5>
             <div className="flex gap-4">
-              <a className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined">public</span></a>
-              <a className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined">forum</span></a>
-              <a className="text-on-surface-variant hover:text-secondary" href="#"><span className="material-symbols-outlined">mail</span></a>
+<a className="text-on-surface-variant hover:text-secondary" href="/contact"><span className="material-symbols-outlined">public</span></a>
+<a className="text-on-surface-variant hover:text-secondary" href="/contact"><span className="material-symbols-outlined">forum</span></a>
+<a className="text-on-surface-variant hover:text-secondary" href="/contact"><span className="material-symbols-outlined">mail</span></a>
             </div>
           </div>
         </div>

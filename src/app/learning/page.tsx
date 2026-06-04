@@ -8,11 +8,11 @@ export default function LearningCenter() {
       <header className="bg-surface w-full sticky top-0 z-50 border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
         <div className="flex items-center gap-8">
           <span className="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</span>
-          <nav className="hidden md:flex gap-6 items-center">
-            <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 font-body-md" href="#">Resources</Link>
-            <Link className="text-primary font-bold border-b-2 border-primary px-3 py-1 font-body-md" href="/learning">Learning Center</Link>
-            <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 font-body-md" href="#">Library</Link>
-          </nav>
+           <nav className="hidden md:flex gap-6 items-center">
+             <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 font-body-md" href="/learning">Resources</Link>
+             <Link className="text-primary font-bold border-b-2 border-primary px-3 py-1 font-body-md" href="/learning">Learning Center</Link>
+             <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 font-body-md" href="/learning">Library</Link>
+           </nav>
         </div>
         <div className="flex items-center gap-4">
           <div className="relative">
@@ -31,37 +31,37 @@ export default function LearningCenter() {
             <h2 className="font-headline-sm text-headline-sm text-primary">Learning</h2>
             <p className="text-on-surface-variant text-body-sm">Civic Leadership Track</p>
           </div>
-          <nav className="flex-1 space-y-2">
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="#">
-              <span className="material-symbols-outlined">dashboard</span>
-              <span className="font-label-lg text-label-lg">Dashboard</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg" href="#">
-              <span className="material-symbols-outlined">assignment</span>
-              <span className="font-label-lg text-label-lg">My Courses</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="#">
-              <span className="material-symbols-outlined">groups</span>
-              <span className="font-label-lg text-label-lg">Study Circles</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="#">
-              <span className="material-symbols-outlined">monitoring</span>
-              <span className="font-label-lg text-label-lg">Impact Analytics</span>
-            </Link>
-          </nav>
+           <nav className="flex-1 space-y-2">
+             <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="/citizen/dashboard">
+               <span className="material-symbols-outlined">dashboard</span>
+               <span className="font-label-lg text-label-lg">Dashboard</span>
+             </Link>
+             <Link className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg" href="/learning">
+               <span className="material-symbols-outlined">assignment</span>
+               <span className="font-label-lg text-label-lg">My Courses</span>
+             </Link>
+             <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="/communities">
+               <span className="material-symbols-outlined">groups</span>
+               <span className="font-label-lg text-label-lg">Study Circles</span>
+             </Link>
+             <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="/narrative">
+               <span className="material-symbols-outlined">monitoring</span>
+               <span className="font-label-lg text-label-lg">Impact Analytics</span>
+             </Link>
+           </nav>
           <div className="mt-auto border-t border-outline-variant/20 pt-6 px-4">
             <button className="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity mb-4">
               Donate Now
             </button>
             <div className="space-y-2">
-              <Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all" href="#">
-                <span className="material-symbols-outlined">help</span>
-                <span className="text-label-md">Support</span>
-              </Link>
-              <Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all" href="#">
-                <span className="material-symbols-outlined">logout</span>
-                <span className="text-label-md">Logout</span>
-              </Link>
+               <Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all" href="/contact">
+                 <span className="material-symbols-outlined">help</span>
+                 <span className="text-label-md">Support</span>
+               </Link>
+               <Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all" href="/auth/login">
+                 <span className="material-symbols-outlined">logout</span>
+                 <span className="text-label-md">Logout</span>
+               </Link>
             </div>
           </div>
         </aside>
@@ -161,7 +161,7 @@ export default function LearningCenter() {
             <div className="border border-outline-variant/20 rounded-2xl overflow-hidden">
               <div className="bg-surface-container p-6 border-b border-outline-variant/20 flex justify-between items-center">
                 <h3 className="font-headline-sm text-headline-sm text-primary">Live Training Sessions</h3>
-                <Link className="text-secondary font-label-lg hover:underline transition-all" href="#">View Full Calendar</Link>
+                 <Link className="text-secondary font-label-lg hover:underline transition-all" href="/events">View Full Calendar</Link>
               </div>
               <div className="divide-y divide-outline-variant/10">
                 <div className="p-6 flex items-center justify-between hover:bg-surface-container-low transition-all">
@@ -206,25 +206,20 @@ export default function LearningCenter() {
           <div className="col-span-1">
             <h6 className="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-wider">Education</h6>
             <ul className="space-y-4">
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Course Directory</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Certification Paths</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Civic Internships</Link></li>
+               <Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/about">Course Directory</Link>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/learning">Certification Paths</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/learning">Civic Internships</Link></li>
             </ul>
           </div>
           <div className="col-span-1">
             <h6 className="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-wider">Governance</h6>
             <ul className="space-y-4">
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Transparency Report</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">OS Documentation</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Privacy Policy</Link></li>
-            </ul>
-          </div>
-          <div className="col-span-1">
-            <h6 className="font-label-lg text-label-lg text-primary mb-6 uppercase tracking-wider">Contact</h6>
-            <ul className="space-y-4">
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Help Center</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Terms of Service</Link></li>
-              <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Contact Us</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/about">Transparency Report</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/about">OS Documentation</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/about">Privacy Policy</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/contact">Help Center</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/about">Terms of Service</Link></li>
+               <li><Link className="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="/contact">Contact Us</Link></li>
             </ul>
           </div>
         </div>

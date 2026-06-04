@@ -15,39 +15,39 @@ export default function DiasporaHub() {
             <span className="material-symbols-outlined mr-4">dashboard</span>
             <span className="font-label-lg text-label-lg">Command Center</span>
           </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-4">groups</span>
-            <span className="font-label-lg text-label-lg">Citizens</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-4">psychology</span>
-            <span className="font-label-lg text-label-lg">Narrative</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-4">how_to_vote</span>
-            <span className="font-label-lg text-label-lg">Election Ops</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-4">inventory_2</span>
-            <span className="font-label-lg text-label-lg">Resources</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-4">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/dashboard">
+             <span className="material-symbols-outlined mr-4">groups</span>
+             <span className="font-label-lg text-label-lg">Citizens</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/narrative">
+             <span className="material-symbols-outlined mr-4">psychology</span>
+             <span className="font-label-lg text-label-lg">Narrative</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/campaign">
+             <span className="material-symbols-outlined mr-4">how_to_vote</span>
+             <span className="font-label-lg text-label-lg">Election Ops</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/learning">
+             <span className="material-symbols-outlined mr-4">inventory_2</span>
+             <span className="font-label-lg text-label-lg">Resources</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/settings">
+             <span className="material-symbols-outlined mr-4">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </Link>
         </nav>
         <div className="mt-auto px-6 space-y-4">
           <button className="w-full bg-secondary-container text-on-secondary-container py-3 font-label-lg rounded transition-transform active:scale-95 duration-100">
             New Initiative
           </button>
-          <div className="pt-4 border-t border-on-primary/10">
-            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary font-label-md" href="#">
-              <span className="material-symbols-outlined mr-3 text-[20px]">help</span> Support
-            </Link>
-            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary font-label-md" href="#">
-              <span className="material-symbols-outlined mr-3 text-[20px]">logout</span> Log Out
-            </Link>
-          </div>
+           <div className="pt-4 border-t border-on-primary/10">
+             <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary font-label-md" href="/contact">
+               <span className="material-symbols-outlined mr-3 text-[20px]">help</span> Support
+             </Link>
+             <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary font-label-md" href="/auth/login">
+               <span className="material-symbols-outlined mr-3 text-[20px]">logout</span> Log Out
+             </Link>
+           </div>
         </div>
       </aside>
 
@@ -62,11 +62,11 @@ export default function DiasporaHub() {
               </span>
               <input className="bg-surface-container-low border-none focus:ring-2 focus:ring-primary text-body-sm w-64 pl-10 py-1.5 rounded-full" placeholder="Global Diaspora Search..." type="text"/>
             </div>
-            <nav className="hidden lg:flex space-x-6">
-              <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md" href="#">Analytics</Link>
-              <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Deployment</Link>
-              <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Strategy</Link>
-            </nav>
+             <nav className="hidden lg:flex space-x-6">
+               <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md" href="/narrative">Analytics</Link>
+               <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="/narrative">Deployment</Link>
+               <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="/narrative">Strategy</Link>
+             </nav>
           </div>
           <div className="flex items-center space-x-4">
             <button className="bg-secondary text-white px-4 py-1.5 text-label-md font-bold rounded hover:opacity-90 transition-opacity">Action Alert</button>
@@ -240,7 +240,7 @@ export default function DiasporaHub() {
             <div className="col-span-7 space-y-6">
               <div className="flex items-center justify-between">
                 <h3 className="font-headline-sm text-headline-sm text-primary">Priority Sponsorships</h3>
-                <Link className="text-label-lg text-secondary underline" href="#">View All Projects</Link>
+                <Link className="text-label-lg text-secondary underline" href="/projects">View All Projects</Link>
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-surface-container border border-outline-variant/30 p-6 rounded-lg group">
@@ -294,12 +294,12 @@ export default function DiasporaHub() {
               <p className="font-body-sm text-body-sm">© 2024 Visionary Tradition Movement. All Rights Reserved.</p>
               <p className="font-body-sm text-body-sm opacity-60 italic">Institutional Oversight Protocol v4.2</p>
             </div>
-            <div className="flex space-x-6">
-              <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="#">Ethics Policy</Link>
-              <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="#">Privacy</Link>
-              <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="#">Legal</Link>
-              <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="#">Contact Bureau</Link>
-            </div>
+             <div className="flex space-x-6">
+               <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="/manifesto">Ethics Policy</Link>
+               <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="/about">Privacy</Link>
+               <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="/about">Legal</Link>
+               <Link className="font-label-md text-label-md hover:text-primary transition-colors hover:underline" href="/contact">Contact Bureau</Link>
+             </div>
           </footer>
         </div>
       </main>

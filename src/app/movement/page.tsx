@@ -12,10 +12,10 @@ export default function MovementHub() {
             <span className="font-headline-md text-headline-md text-primary">BOOT Civic Movement</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Home</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/">Home</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/about">About</Link>
             <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/thesis">Thesis</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Communities</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/communities">Communities</Link>
             <Link className="font-label-lg text-label-lg text-secondary border-b-2 border-secondary" href="/movement">Impact Hub</Link>
           </div>
           <button className="bg-secondary text-on-secondary px-6 py-2 font-label-lg text-label-lg rounded-DEFAULT hover:opacity-90 transition-all shadow-sm">
@@ -204,13 +204,13 @@ export default function MovementHub() {
           <div className="flex flex-wrap gap-x-12 gap-y-6">
             <div className="flex flex-col gap-3">
               <h5 className="font-label-lg text-label-lg text-on-primary uppercase tracking-widest mb-2">Movement</h5>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="#">Volunteer Portal</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="#">Donate</Link>
+               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="/volunteer/dashboard">Volunteer Portal</Link>
+               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="/donate">Donate</Link>
             </div>
             <div className="flex flex-col gap-3">
               <h5 className="font-label-lg text-label-lg text-on-primary uppercase tracking-widest mb-2">Legal</h5>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="#">Privacy Policy</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="#">Terms of Service</Link>
+               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="/about">Privacy Policy</Link>
+               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity" href="/about">Terms of Service</Link>
             </div>
           </div>
           <div className="flex gap-4">

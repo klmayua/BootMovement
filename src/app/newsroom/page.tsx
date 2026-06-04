@@ -9,9 +9,9 @@ export default function Newsroom() {
         <div className="flex items-center gap-8">
           <span className="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">BOOT Civic OS</span>
           <nav className="hidden md:flex gap-6">
-            <Link className="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 transition-all duration-200" href="#">Dashboard</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 transition-all duration-200" href="/citizen/dashboard">Dashboard</Link>
             <Link className="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary" href="/newsroom">Newsroom</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 transition-all duration-200" href="#">Communities</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 transition-all duration-200" href="/my-communities">Communities</Link>
           </nav>
         </div>
         <div className="flex items-center gap-4">
@@ -105,7 +105,7 @@ export default function Newsroom() {
                 <h3 className="font-headline-sm text-headline-sm text-primary mb-4">Impact Report 2024</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">Measuring the shift in civic engagement across our top 10 communities.</p>
               </div>
-              <Link className="font-label-lg text-label-lg text-secondary flex items-center gap-2 mt-8" href="#">
+              <Link className="font-label-lg text-label-lg text-secondary flex items-center gap-2 mt-8" href="/my-impact">
                 READ REPORT <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
             </div>
@@ -157,17 +157,17 @@ export default function Newsroom() {
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6 uppercase">Resources</h5>
             <ul className="space-y-3">
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</Link></li>
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</Link></li>
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Privacy Policy</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Terms of Service</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/manifesto">Transparency Report</Link></li>
             </ul>
           </div>
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6 uppercase">Support</h5>
             <ul className="space-y-3">
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</Link></li>
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Help Center</Link></li>
-              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Community Guidelines</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/contact">Contact Us</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/contact">Help Center</Link></li>
+              <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Community Guidelines</Link></li>
             </ul>
           </div>
           <div>

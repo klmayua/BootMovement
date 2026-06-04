@@ -10,41 +10,41 @@ export default function SurveysPage() {
           <p className="font-label-md text-label-md text-on-surface-variant opacity-70">Civic Dashboard</p>
         </div>
         <nav className="flex-grow space-y-2">
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="font-label-lg text-label-lg">Dashboard</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined">groups</span>
-            <span className="font-label-lg text-label-lg">Communities</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined">event</span>
-            <span className="font-label-lg text-label-lg">Events</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all hover:translate-x-1 duration-300 group" href="#">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>assignment</span>
-            <span className="font-label-lg text-label-lg">Projects</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined">monitoring</span>
-            <span className="font-label-lg text-label-lg">Analytics</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="/citizen/dashboard">
+             <span className="material-symbols-outlined">dashboard</span>
+             <span className="font-label-lg text-label-lg">Dashboard</span>
+           </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="/communities">
+             <span className="material-symbols-outlined">groups</span>
+             <span className="font-label-lg text-label-lg">Communities</span>
+           </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="/events">
+             <span className="material-symbols-outlined">event</span>
+             <span className="font-label-lg text-label-lg">Events</span>
+           </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all hover:translate-x-1 duration-300 group" href="/projects">
+             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>assignment</span>
+             <span className="font-label-lg text-label-lg">Projects</span>
+           </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="/narrative">
+             <span className="material-symbols-outlined">monitoring</span>
+             <span className="font-label-lg text-label-lg">Analytics</span>
+           </a>
+           <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="/citizen/settings">
+             <span className="material-symbols-outlined">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </a>
         </nav>
         <div className="mt-auto border-t border-outline-variant/30 pt-6 space-y-2">
           <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mb-4">
             <span className="material-symbols-outlined text-[20px]">volunteer_activism</span>
             Donate Now
           </button>
-          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="/contact">
             <span className="material-symbols-outlined">help</span>
             <span className="font-label-md text-label-md">Support</span>
           </a>
-          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="/auth/login">
             <span className="material-symbols-outlined">logout</span>
             <span className="font-label-md text-label-md">Logout</span>
           </a>
@@ -58,9 +58,9 @@ export default function SurveysPage() {
           <div className="flex items-center gap-8">
             <h2 className="font-headline-sm text-headline-sm font-bold text-primary">Public Opinion Portal</h2>
             <div className="hidden md:flex gap-6">
-              <a className="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">Surveys</a>
-              <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Policy Drafts</a>
-              <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Town Halls</a>
+              <a className="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="/surveys">Surveys</a>
+              <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="/policy-discussions">Policy Drafts</a>
+              <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="/town-halls">Town Halls</a>
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -253,31 +253,31 @@ export default function SurveysPage() {
             <div>
               <h5 className="font-label-lg text-label-lg text-primary uppercase mb-6">Platforms</h5>
               <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><a className="hover:text-primary transition-colors" href="#">CivicID Portal</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Legislative Tracker</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Community Hubs</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Financial Transparency</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/my-profile">CivicID Portal</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/petitions">Legislative Tracker</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/my-communities">Community Hubs</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/my-impact">Financial Transparency</a></li>
               </ul>
             </div>
             <div>
               <h5 className="font-label-lg text-label-lg text-primary uppercase mb-6">Resources</h5>
               <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><a className="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Transparency Report</a></li>
-                <li><a className="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/about">Privacy Policy</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/about">Terms of Service</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/manifesto">Transparency Report</a></li>
+                <li><a className="hover:text-primary transition-colors" href="/contact">Contact Us</a></li>
               </ul>
             </div>
             <div>
               <h5 className="font-label-lg text-label-lg text-primary uppercase mb-6">Official Channels</h5>
               <div className="flex gap-4 mb-6">
-                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="/about">
                   <span className="material-symbols-outlined text-[20px]">public</span>
                 </a>
-                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="/about">
                   <span className="material-symbols-outlined text-[20px]">chat_bubble</span>
                 </a>
-                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+                <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="/about">
                   <span className="material-symbols-outlined text-[20px]">share</span>
                 </a>
               </div>

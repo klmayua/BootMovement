@@ -10,41 +10,41 @@ export default function PetitionsPage() {
           <p className="font-label-md text-label-md text-on-surface-variant">Civic Dashboard</p>
         </div>
         <div className="flex-grow space-y-2">
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:text-primary">dashboard</span>
-            <span className="font-label-lg text-label-lg">Dashboard</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:text-primary">groups</span>
-            <span className="font-label-lg text-label-lg">Communities</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg group" href="#">
+<a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/citizen/dashboard">
+             <span className="material-symbols-outlined group-hover:text-primary">dashboard</span>
+             <span className="font-label-lg text-label-lg">Dashboard</span>
+           </a>
+<a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/my-communities">
+             <span className="material-symbols-outlined group-hover:text-primary">groups</span>
+             <span className="font-label-lg text-label-lg">Communities</span>
+           </a>
+          <a className="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg group" href="/projects">
             <span className="material-symbols-outlined">assignment</span>
             <span className="font-label-lg text-label-lg">Projects</span>
           </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:text-primary">event</span>
-            <span className="font-label-lg text-label-lg">Events</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:text-primary">monitoring</span>
-            <span className="font-label-lg text-label-lg">Analytics</span>
-          </a>
-          <a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:text-primary">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </a>
+<a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/events">
+             <span className="material-symbols-outlined group-hover:text-primary">event</span>
+             <span className="font-label-lg text-label-lg">Events</span>
+           </a>
+<a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/my-impact">
+             <span className="material-symbols-outlined group-hover:text-primary">monitoring</span>
+             <span className="font-label-lg text-label-lg">Analytics</span>
+           </a>
+<a className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/citizen/settings">
+             <span className="material-symbols-outlined group-hover:text-primary">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </a>
         </div>
         <button className="mt-auto bg-secondary text-on-secondary py-4 px-6 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mb-8">
           <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
           Donate Now
         </button>
         <div className="border-t border-outline-variant/30 pt-6 space-y-2">
-          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="/contact">
             <span className="material-symbols-outlined">help</span>
             <span className="font-label-md text-label-md">Support</span>
           </a>
-          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+          <a className="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="/auth/login">
             <span className="material-symbols-outlined">logout</span>
             <span className="font-label-md text-label-md">Logout</span>
           </a>
@@ -282,19 +282,19 @@ export default function PetitionsPage() {
             <div className="space-y-4">
               <h6 className="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-widest">Navigation</h6>
               <ul className="space-y-2">
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Dashboards</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Public Initiatives</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Local Councils</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Impact Reports</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/citizen/dashboard">Dashboards</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/petitions">Public Initiatives</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/my-communities">Local Councils</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/my-impact">Impact Reports</a></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h6 className="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-widest">Resources</h6>
               <ul className="space-y-2">
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Terms of Service</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Transparency Report</a></li>
-                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Contact Us</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Privacy Policy</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Terms of Service</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/manifesto">Transparency Report</a></li>
+                <li><a className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/contact">Contact Us</a></li>
               </ul>
             </div>
             <div className="space-y-6">

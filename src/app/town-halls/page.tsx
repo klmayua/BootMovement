@@ -8,10 +8,10 @@ export default function TownHallsPage() {
         <div className="flex items-center gap-8">
           <span className="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</span>
           <nav className="hidden md:flex items-center gap-6">
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
-            <a className="text-primary font-bold border-b-2 border-primary px-3 py-1" href="#">Events</a>
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Projects</a>
-            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Communities</a>
+            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="/citizen/dashboard">Dashboard</a>
+            <a className="text-primary font-bold border-b-2 border-primary px-3 py-1" href="/town-halls">Events</a>
+            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="/projects">Projects</a>
+            <a className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="/my-communities">Communities</a>
           </nav>
         </div>
         <div className="flex items-center gap-4">
@@ -27,29 +27,29 @@ export default function TownHallsPage() {
       {/* SideNavBar */}
       <aside className="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 py-8 px-4 flex-col hidden xl:flex mt-[72px]">
         <div className="flex flex-col gap-2 flex-grow">
-          <div className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all duration-300">
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="font-label-lg text-label-lg">Dashboard</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
-            <span className="material-symbols-outlined">groups</span>
-            <span className="font-label-lg text-label-lg">Communities</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
-            <span className="material-symbols-outlined">event</span>
-            <span className="font-label-lg text-label-lg">Events</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
-            <span className="material-symbols-outlined">assignment</span>
-            <span className="font-label-lg text-label-lg">Projects</span>
-          </div>
+<div className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all duration-300 cursor-pointer hover:translate-x-1" onClick={() => window.location.href='/citizen/dashboard'}>
+             <span className="material-symbols-outlined">dashboard</span>
+             <span className="font-label-lg text-label-lg">Dashboard</span>
+           </div>
+<div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 cursor-pointer" onClick={() => window.location.href='/my-communities'}>
+             <span className="material-symbols-outlined">groups</span>
+             <span className="font-label-lg text-label-lg">Communities</span>
+           </div>
+<div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 cursor-pointer" onClick={() => window.location.href='/town-halls'}>
+             <span className="material-symbols-outlined">event</span>
+             <span className="font-label-lg text-label-lg">Events</span>
+           </div>
+<div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 cursor-pointer" onClick={() => window.location.href='/projects'}>
+             <span className="material-symbols-outlined">assignment</span>
+             <span className="font-label-lg text-label-lg">Projects</span>
+           </div>
         </div>
         <div className="mt-auto border-t border-outline-variant/30 pt-4 flex flex-col gap-2">
           <button className="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity">Donate Now</button>
-          <div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all">
-            <span className="material-symbols-outlined">help</span>
-            <span className="font-label-lg text-label-lg">Support</span>
-          </div>
+<div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all rounded-lg" href="/contact">
+             <span className="material-symbols-outlined">help</span>
+             <span className="font-label-lg text-label-lg">Support</span>
+           </div>
         </div>
       </aside>
 
@@ -266,17 +266,17 @@ export default function TownHallsPage() {
           <div>
             <h4 className="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Explore</h4>
             <ul className="space-y-4">
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Town Halls</a></li>
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Project Radar</a></li>
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Budget Tracker</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/town-halls">Town Halls</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/projects">Project Radar</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/my-impact">Budget Tracker</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Organization</h4>
             <ul className="space-y-4">
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a></li>
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Transparency Report</a></li>
-              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Press Kit</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/about">About Us</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/manifesto">Transparency Report</a></li>
+              <li><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/about">Press Kit</a></li>
             </ul>
           </div>
           <div>
@@ -293,9 +293,9 @@ export default function TownHallsPage() {
         <div className="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex justify-between items-center">
           <p className="font-body-sm text-body-sm text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Privacy Policy</a>
-            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Terms of Service</a>
-            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Contact Us</a>
+            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="/about">Privacy Policy</a>
+            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="/about">Terms of Service</a>
+            <a className="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="/contact">Contact Us</a>
           </div>
         </div>
       </footer>

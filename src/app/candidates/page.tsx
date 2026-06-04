@@ -51,26 +51,26 @@ export default function CandidatesPage() {
               <span className="material-symbols-outlined">assignment</span>
               <span className="font-label-lg">Projects</span>
             </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
-              <span className="material-symbols-outlined">monitoring</span>
-              <span className="font-label-lg">Analytics</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
-              <span className="material-symbols-outlined">settings</span>
-              <span className="font-label-lg">Settings</span>
-            </Link>
+             <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="/narrative">
+               <span className="material-symbols-outlined">monitoring</span>
+               <span className="font-label-lg">Analytics</span>
+             </Link>
+             <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="/citizen/settings">
+               <span className="material-symbols-outlined">settings</span>
+               <span className="font-label-lg">Settings</span>
+             </Link>
           </nav>
           <div className="mt-auto pt-8 border-t border-outline-variant/30 px-2">
             <button className="w-full bg-secondary text-on-secondary font-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity mb-4">Donate Now</button>
             <div className="space-y-1">
-              <Link className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
-                <span className="material-symbols-outlined text-sm">help</span>
-                <span className="text-label-md">Support</span>
-              </Link>
-              <Link className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
-                <span className="material-symbols-outlined text-sm">logout</span>
-                <span className="text-label-md">Logout</span>
-              </Link>
+               <Link className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all" href="/contact">
+                 <span className="material-symbols-outlined text-sm">help</span>
+                 <span className="text-label-md">Support</span>
+               </Link>
+               <Link className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all" href="/auth/login">
+                 <span className="material-symbols-outlined text-sm">logout</span>
+                 <span className="text-label-md">Logout</span>
+               </Link>
             </div>
           </div>
         </aside>
@@ -238,16 +238,11 @@ export default function CandidatesPage() {
           <div>
             <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Resources</h4>
             <ul className="space-y-4">
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Transparency Report</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Policy Framework</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Contact Us</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-4">
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Terms of Service</Link></li>
+               <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Transparency Report</Link></li>
+               <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Policy Framework</Link></li>
+               <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/contact">Contact Us</Link></li>
+               <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Privacy Policy</Link></li>
+               <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Terms of Service</Link></li>
             </ul>
           </div>
           <div>

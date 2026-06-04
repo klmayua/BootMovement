@@ -27,27 +27,27 @@ export default function CommunityDirectory() {
             <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">assignment</span>
             <span className="font-label-lg text-label-lg">Projects</span>
           </Link>
-          <Link className="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">monitoring</span>
-            <span className="font-label-lg text-label-lg">Analytics</span>
-          </Link>
-          <Link className="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
-            <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </Link>
+           <Link className="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="/narrative">
+             <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">monitoring</span>
+             <span className="font-label-lg text-label-lg">Analytics</span>
+           </Link>
+           <Link className="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="/citizen/settings">
+             <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </Link>
         </div>
         <div className="mt-auto pt-8 border-t border-outline-variant/20 space-y-2">
           <button className="w-full bg-secondary text-on-secondary py-3 px-4 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity mb-6">
             Donate Now
           </button>
-          <Link className="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
-            <span className="material-symbols-outlined">help</span>
-            <span className="font-label-lg text-label-lg">Support</span>
-          </Link>
-          <Link className="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
-            <span className="material-symbols-outlined">logout</span>
-            <span className="font-label-lg text-label-lg">Logout</span>
-          </Link>
+           <Link className="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="/contact">
+             <span className="material-symbols-outlined">help</span>
+             <span className="font-label-lg text-label-lg">Support</span>
+           </Link>
+           <Link className="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="/auth/login">
+             <span className="material-symbols-outlined">logout</span>
+             <span className="font-label-lg text-label-lg">Logout</span>
+           </Link>
         </div>
       </nav>
 
@@ -59,11 +59,11 @@ export default function CommunityDirectory() {
             <span className="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Community Directory</span>
           </div>
           <div className="flex items-center gap-8">
-            <div className="hidden lg:flex items-center gap-6">
-              <Link className="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="#">Overview</Link>
-              <Link className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary py-1" href="/community/directory">Directory</Link>
-              <Link className="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="#">Resources</Link>
-            </div>
+             <div className="hidden lg:flex items-center gap-6">
+               <Link className="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="/citizen/dashboard">Overview</Link>
+               <Link className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary py-1" href="/community/directory">Directory</Link>
+               <Link className="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="/learning">Resources</Link>
+             </div>
             <div className="flex items-center gap-4">
               <button className="p-2 hover:bg-surface-container-low rounded-full transition-colors material-symbols-outlined text-primary">notifications</button>
               <div className="flex items-center gap-2 cursor-pointer group">
@@ -269,10 +269,10 @@ export default function CommunityDirectory() {
             <div>
               <h5 className="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim mb-6">RESOURCES</h5>
               <ul className="space-y-3">
-                <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</Link></li>
-                <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</Link></li>
-                <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</Link></li>
-                <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</Link></li>
+                 <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Privacy Policy</Link></li>
+                 <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Terms of Service</Link></li>
+                 <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Transparency Report</Link></li>
+                 <li><Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/contact">Contact Us</Link></li>
               </ul>
             </div>
             <div>

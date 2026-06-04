@@ -12,11 +12,11 @@ export default function BootThesis() {
             <h1 className="font-headline-md text-headline-md text-primary tracking-tight">BOOT Civic Movement</h1>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Home</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/citizen/dashboard">Home</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/about">About</Link>
             <Link className="font-label-lg text-label-lg text-secondary border-b-2 border-secondary transition-colors duration-200" href="/thesis">Thesis</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Communities</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Events</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/my-communities">Communities</Link>
+            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/events">Events</Link>
           </nav>
           <button className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-lg text-label-lg transition-transform hover:scale-[1.02] active:scale-[0.98]">
             Join Now
@@ -28,34 +28,34 @@ export default function BootThesis() {
         <aside className="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
           <div className="flex flex-col gap-2">
             <h2 className="font-headline-sm text-headline-sm text-primary px-4 mb-4">Movement Navigation</h2>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300 group" href="#">
+            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300 group" href="/citizen/dashboard">
               <span className="material-symbols-outlined">home</span>
               <span className="font-label-lg text-label-lg">Home</span>
             </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
-              <span className="material-symbols-outlined">info</span>
-              <span className="font-label-lg text-label-lg">About</span>
-            </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="/about">
+               <span className="material-symbols-outlined">info</span>
+               <span className="font-label-lg text-label-lg">About</span>
+             </Link>
             <Link className="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300" href="/thesis">
               <span className="material-symbols-outlined">menu_book</span>
               <span className="font-label-lg text-label-lg">Thesis</span>
             </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
-              <span className="material-symbols-outlined">groups</span>
-              <span className="font-label-lg text-label-lg">Communities</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
-              <span className="material-symbols-outlined">event</span>
-              <span className="font-label-lg text-label-lg">Events</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
-              <span className="material-symbols-outlined">person_search</span>
-              <span className="font-label-lg text-label-lg">Candidates</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
-              <span className="material-symbols-outlined">analytics</span>
-              <span className="font-label-lg text-label-lg">Impact Hub</span>
-            </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="/my-communities">
+               <span className="material-symbols-outlined">groups</span>
+               <span className="font-label-lg text-label-lg">Communities</span>
+             </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="/events">
+               <span className="material-symbols-outlined">event</span>
+               <span className="font-label-lg text-label-lg">Events</span>
+             </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="/candidates">
+               <span className="material-symbols-outlined">person_search</span>
+               <span className="font-label-lg text-label-lg">Candidates</span>
+             </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="/my-impact">
+               <span className="material-symbols-outlined">analytics</span>
+               <span className="font-label-lg text-label-lg">Impact Hub</span>
+             </Link>
           </div>
           {/* Campaign Progress Indicator */}
           <div className="mt-12 p-6 bg-surface-container rounded-xl border border-outline-variant/30">
@@ -179,10 +179,10 @@ export default function BootThesis() {
           <div>
             <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">On This Page</h4>
             <nav className="space-y-4">
-              <Link className="block text-secondary font-medium" href="#">01. Rooted Mobility</Link>
-              <Link className="block text-on-surface-variant hover:text-primary" href="#">02. Institutional Weight</Link>
-              <Link className="block text-on-surface-variant hover:text-primary" href="#">03. Sovereign Action</Link>
-              <Link className="block text-on-surface-variant hover:text-primary" href="#">04. Implementation Protocol</Link>
+              <Link className="block text-secondary font-medium" href="/thesis#rooted-mobility">01. Rooted Mobility</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="/thesis#institutional-weight">02. Institutional Weight</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="/thesis#sovereign-action">03. Sovereign Action</Link>
+              <Link className="block text-on-surface-variant hover:text-primary" href="/thesis#implementation-protocol">04. Implementation Protocol</Link>
             </nav>
           </div>
           <div className="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl">
@@ -211,13 +211,13 @@ export default function BootThesis() {
           <div className="flex gap-12">
             <div className="flex flex-col gap-3">
               <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Platform</h4>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Privacy Policy</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Terms of Service</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/about">Privacy Policy</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/about">Terms of Service</Link>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Engagement</h4>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Volunteer Portal</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Donate</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/volunteer">Volunteer Portal</Link>
+              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/donate">Donate</Link>
             </div>
           </div>
           <div className="flex gap-4">

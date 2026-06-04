@@ -15,38 +15,38 @@ export default function NarrativeIntelligence() {
             <span className="material-symbols-outlined">dashboard</span>
             <span className="font-label-lg text-label-lg">Command Center</span>
           </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined">groups</span>
-            <span className="font-label-lg text-label-lg">Citizens</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="/narrative">
-            <span className="material-symbols-outlined">psychology</span>
-            <span className="font-label-lg text-label-lg">Narrative</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined">how_to_vote</span>
-            <span className="font-label-lg text-label-lg">Election Ops</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined">inventory_2</span>
-            <span className="font-label-lg text-label-lg">Resources</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </Link>
+           <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/dashboard">
+             <span className="material-symbols-outlined">groups</span>
+             <span className="font-label-lg text-label-lg">Citizens</span>
+           </Link>
+           <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="/narrative">
+             <span className="material-symbols-outlined">psychology</span>
+             <span className="font-label-lg text-label-lg">Narrative</span>
+           </Link>
+           <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/campaign">
+             <span className="material-symbols-outlined">how_to_vote</span>
+             <span className="font-label-lg text-label-lg">Election Ops</span>
+           </Link>
+           <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/learning">
+             <span className="material-symbols-outlined">inventory_2</span>
+             <span className="font-label-lg text-label-lg">Resources</span>
+           </Link>
+           <Link className="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/settings">
+             <span className="material-symbols-outlined">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </Link>
         </div>
         <div className="mt-auto px-4 space-y-2">
           <button className="w-full py-3 bg-secondary-container text-on-secondary-fixed rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 mb-4">
             <span className="material-symbols-outlined">add</span>
             New Initiative
           </button>
-          <Link className="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
-            <span className="material-symbols-outlined">help</span> Support
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
-            <span className="material-symbols-outlined">logout</span> Log Out
-          </Link>
+           <Link className="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="/contact">
+             <span className="material-symbols-outlined">help</span> Support
+           </Link>
+           <Link className="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="/auth/login">
+             <span className="material-symbols-outlined">logout</span> Log Out
+           </Link>
         </div>
       </nav>
 
@@ -59,11 +59,11 @@ export default function NarrativeIntelligence() {
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
               <input className="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/30 rounded-lg text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search narrative data..." type="text"/>
             </div>
-            <div className="ml-8 flex gap-6">
-              <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md text-label-md" href="#">Analytics</Link>
-              <Link className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="#">Deployment</Link>
-              <Link className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="#">Strategy</Link>
-            </div>
+             <div className="ml-8 flex gap-6">
+               <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md text-label-md" href="/narrative">Analytics</Link>
+               <Link className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="/narrative">Deployment</Link>
+               <Link className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="/narrative">Strategy</Link>
+             </div>
           </div>
           <div className="flex items-center gap-4">
             <button className="bg-secondary px-4 py-2 rounded text-on-secondary font-label-md text-label-md flex items-center gap-2">
@@ -284,12 +284,12 @@ export default function NarrativeIntelligence() {
             <span className="mx-2 text-outline-variant">|</span>
             <span className="font-body-sm text-body-sm text-on-surface-variant">© 2024 Visionary Tradition Movement. All Rights Reserved. Institutional Oversight Protocol v4.2</span>
           </div>
-          <div className="flex gap-8">
-            <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Ethics Policy</Link>
-            <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Privacy</Link>
-            <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Legal</Link>
-            <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Contact Bureau</Link>
-          </div>
+           <div className="flex gap-8">
+             <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="/manifesto">Ethics Policy</Link>
+             <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="/about">Privacy</Link>
+             <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="/about">Legal</Link>
+             <Link className="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="/contact">Contact Bureau</Link>
+           </div>
         </footer>
       </div>
     </div>

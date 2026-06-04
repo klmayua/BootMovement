@@ -9,9 +9,9 @@ export default function MyProfilePage() {
           <div className="flex items-center gap-8">
             <span className="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">BOOT Civic OS</span>
             <nav className="hidden md:flex gap-6">
-              <a className="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
-              <a className="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Communities</a>
-              <a className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-label-lg text-label-lg px-3 py-1" href="#">Profile</a>
+              <a className="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="/citizen/dashboard">Dashboard</a>
+              <a className="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="/my-communities">Communities</a>
+              <a className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-label-lg text-label-lg px-3 py-1" href="/my-profile">Profile</a>
             </nav>
           </div>
           <div className="flex items-center gap-4">
@@ -37,41 +37,41 @@ export default function MyProfilePage() {
             <p className="text-on-surface-variant font-label-md text-label-md">Civic Dashboard</p>
           </div>
           <nav className="flex-grow space-y-1">
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-              <span className="material-symbols-outlined">dashboard</span>
-              Dashboard
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-              <span className="material-symbols-outlined">groups</span>
-              Communities
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-              <span className="material-symbols-outlined">event</span>
-              Events
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-              <span className="material-symbols-outlined">assignment</span>
-              Projects
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-              <span className="material-symbols-outlined">monitoring</span>
-              Analytics
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg font-label-lg text-label-lg transition-all" href="#">
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>settings</span>
-              Settings
-            </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="/citizen/dashboard">
+               <span className="material-symbols-outlined">dashboard</span>
+               Dashboard
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-communities">
+               <span className="material-symbols-outlined">groups</span>
+               Communities
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="/events">
+               <span className="material-symbols-outlined">event</span>
+               Events
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="/projects">
+               <span className="material-symbols-outlined">assignment</span>
+               Projects
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-impact">
+               <span className="material-symbols-outlined">monitoring</span>
+               Analytics
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg font-label-lg text-label-lg transition-all" href="/citizen/settings">
+               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>settings</span>
+               Settings
+             </a>
           </nav>
           <div className="mt-auto space-y-1 pt-8 border-t border-outline-variant/20">
             <button className="w-full bg-secondary text-on-secondary px-4 py-3 rounded-lg font-label-lg text-label-lg mb-4 hover:opacity-90 transition-opacity">Donate Now</button>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-all" href="#">
-              <span className="material-symbols-outlined">help</span>
-              Support
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-all" href="#">
-              <span className="material-symbols-outlined">logout</span>
-              Logout
-            </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-all" href="/contact">
+               <span className="material-symbols-outlined">help</span>
+               Support
+             </a>
+<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-all" href="/auth/login">
+               <span className="material-symbols-outlined">logout</span>
+               Logout
+             </a>
           </div>
         </aside>
         <main className="ml-64 flex-grow px-margin-desktop py-12 min-h-screen">
@@ -243,17 +243,17 @@ export default function MyProfilePage() {
           <div>
             <h4 className="font-label-lg text-label-lg text-primary mb-4">Governance</h4>
             <ul className="space-y-2">
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Transparency Report</a></li>
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Civic Constitution</a></li>
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Ledger Security</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/manifesto">Transparency Report</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/about">Civic Constitution</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/about">Ledger Security</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-label-lg text-label-lg text-primary mb-4">Support</h4>
             <ul className="space-y-2">
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Privacy Policy</a></li>
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Terms of Service</a></li>
-              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="#">Contact Us</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/about">Privacy Policy</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/about">Terms of Service</a></li>
+              <li><a className="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-all" href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div>

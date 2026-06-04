@@ -65,9 +65,9 @@ export default function CitizenDashboard() {
             </div>
             <div className="flex items-center gap-6">
               <div className="hidden lg:flex items-center gap-6">
-                <Link className="text-secondary border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Activity</Link>
-                <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Resources</Link>
-                <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Support</Link>
+                 <Link className="text-secondary border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="/citizen/dashboard">Activity</Link>
+                 <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="/learning">Resources</Link>
+                 <Link className="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="/contact">Support</Link>
               </div>
               <button className="bg-secondary text-white px-6 py-2 rounded shadow-sm hover:opacity-90 transition-all font-label-lg">Join Now</button>
             </div>
@@ -273,10 +273,10 @@ export default function CitizenDashboard() {
               <p className="font-body-sm text-body-sm opacity-80 max-w-sm">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
             </div>
             <div className="flex flex-wrap gap-8">
-              <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Privacy Policy</Link>
-              <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Terms of Service</Link>
-              <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Volunteer Portal</Link>
-              <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Donate</Link>
+               <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="/about">Privacy Policy</Link>
+               <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="/about">Terms of Service</Link>
+               <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="/volunteer/dashboard">Volunteer Portal</Link>
+               <Link className="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="/donate">Donate</Link>
             </div>
           </div>
         </footer>

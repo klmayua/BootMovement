@@ -15,37 +15,37 @@ export default function CampaignCommandCenter() {
             <span className="material-symbols-outlined mr-3">dashboard</span>
             <span className="font-label-lg text-label-lg">Command Center</span>
           </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-3">groups</span>
-            <span className="font-label-lg text-label-lg">Citizens</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/narrative">
-            <span className="material-symbols-outlined mr-3">psychology</span>
-            <span className="font-label-lg text-label-lg">Narrative</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-3">how_to_vote</span>
-            <span className="font-label-lg text-label-lg">Election Ops</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-3">inventory_2</span>
-            <span className="font-label-lg text-label-lg">Resources</span>
-          </Link>
-          <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
-            <span className="material-symbols-outlined mr-3">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/dashboard">
+             <span className="material-symbols-outlined mr-3">groups</span>
+             <span className="font-label-lg text-label-lg">Citizens</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/narrative">
+             <span className="material-symbols-outlined mr-3">psychology</span>
+             <span className="font-label-lg text-label-lg">Narrative</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/campaign">
+             <span className="material-symbols-outlined mr-3">how_to_vote</span>
+             <span className="font-label-lg text-label-lg">Election Ops</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/learning">
+             <span className="material-symbols-outlined mr-3">inventory_2</span>
+             <span className="font-label-lg text-label-lg">Resources</span>
+           </Link>
+           <Link className="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="/citizen/settings">
+             <span className="material-symbols-outlined mr-3">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </Link>
         </nav>
         <div className="px-6 mt-auto pt-8 border-t border-on-primary/10">
           <button className="w-full py-3 mb-6 bg-secondary-container text-on-secondary-container font-label-lg rounded-lg hover:opacity-90 transition-all scale-95 active:duration-100">
             New Initiative
           </button>
           <div className="space-y-1">
-            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="#">
+            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="/contact">
               <span className="material-symbols-outlined mr-3">help</span>
               <span className="font-label-lg text-label-lg">Support</span>
             </Link>
-            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="#">
+            <Link className="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="/auth/login">
               <span className="material-symbols-outlined mr-3">logout</span>
               <span className="font-label-lg text-label-lg">Log Out</span>
             </Link>
@@ -60,11 +60,11 @@ export default function CampaignCommandCenter() {
             <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
             <input className="pl-10 pr-4 py-2 bg-surface-container-low border-none focus:ring-2 focus:ring-primary rounded-lg text-body-sm w-80 transition-all" placeholder="Search districts, agents, or data sets..." type="text"/>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md" href="#">Analytics</Link>
-            <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Deployment</Link>
-            <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Strategy</Link>
-          </nav>
+           <nav className="hidden md:flex space-x-6">
+             <Link className="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md" href="/narrative">Analytics</Link>
+             <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="/narrative">Deployment</Link>
+             <Link className="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="/narrative">Strategy</Link>
+           </nav>
         </div>
         <div className="flex items-center space-x-4">
           <button className="flex items-center px-4 py-2 border border-secondary text-secondary rounded-lg font-label-md hover:bg-secondary/5 transition-all">
@@ -336,12 +336,12 @@ export default function CampaignCommandCenter() {
           <h4 className="font-label-lg text-label-lg font-bold text-primary mb-1">CivicOS</h4>
           <p className="font-body-sm text-body-sm text-on-surface-variant opacity-70">© 2024 Visionary Tradition Movement. All Rights Reserved. Institutional Oversight Protocol v4.2</p>
         </div>
-        <div className="flex space-x-8">
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Ethics Policy</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Privacy</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Legal</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Contact Bureau</Link>
-        </div>
+         <div className="flex space-x-8">
+           <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="/manifesto">Ethics Policy</Link>
+           <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="/about">Privacy</Link>
+           <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="/about">Legal</Link>
+           <Link className="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="/contact">Contact Bureau</Link>
+         </div>
       </footer>
     </div>
   );

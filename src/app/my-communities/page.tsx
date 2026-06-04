@@ -10,28 +10,28 @@ export default function MyCommunitiesPage() {
           <p className="font-label-md text-label-md text-on-surface-variant">Civic Dashboard</p>
         </div>
         <nav className="flex-1 space-y-2">
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/citizen/dashboard">
             <span className="material-symbols-outlined text-primary" data-icon="dashboard">dashboard</span>
             <span className="font-label-lg text-label-lg">Dashboard</span>
           </a>
           {/* ACTIVE TAB: Communities */}
-          <a className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg group" href="/communities">
             <span className="material-symbols-outlined" data-icon="groups" style={{ fontVariationSettings: "'FILL' 1" }}>groups</span>
             <span className="font-label-lg text-label-lg">Communities</span>
           </a>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/events">
             <span className="material-symbols-outlined" data-icon="event">event</span>
             <span className="font-label-lg text-label-lg">Events</span>
           </a>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/projects">
             <span className="material-symbols-outlined" data-icon="assignment">assignment</span>
             <span className="font-label-lg text-label-lg">Projects</span>
           </a>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/citizen/impact">
             <span className="material-symbols-outlined" data-icon="monitoring">monitoring</span>
             <span className="font-label-lg text-label-lg">Analytics</span>
           </a>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg group" href="/citizen/settings">
             <span className="material-symbols-outlined" data-icon="settings">settings</span>
             <span className="font-label-lg text-label-lg">Settings</span>
           </a>
@@ -40,11 +40,11 @@ export default function MyCommunitiesPage() {
           <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg shadow-sm hover:opacity-90 transition-opacity">
             Donate Now
           </button>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="/contact">
             <span className="material-symbols-outlined" data-icon="help">help</span>
             <span className="font-label-lg text-label-lg">Support</span>
           </a>
-          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 transition-all duration-300 rounded-lg" href="/auth/login">
             <span className="material-symbols-outlined" data-icon="logout">logout</span>
             <span className="font-label-lg text-label-lg">Logout</span>
           </a>
@@ -88,8 +88,8 @@ export default function MyCommunitiesPage() {
                 <p className="font-body-lg text-body-lg text-primary-fixed-dim max-w-lg">You are currently active in 4 local councils and 2 community projects. Three votes are closing in the next 48 hours.</p>
               </div>
               <div className="z-10 flex gap-4">
-                <button className="bg-secondary text-on-secondary px-6 py-3 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity">View Active Polls</button>
-                <button className="bg-white/10 hover:bg-white/20 border border-white/20 px-6 py-3 rounded-lg font-label-lg text-label-lg transition-all">Community Guidelines</button>
+                <button className="bg-secondary text-on-secondary px-6 py-3 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity" onClick={() => window.location.href='/surveys'}>View Active Polls</button>
+                <button className="bg-white/10 hover:bg-white/20 border border-white/20 px-6 py-3 rounded-lg font-label-lg text-label-lg transition-all" onClick={() => window.location.href='/about'}>Community Guidelines</button>
               </div>
               {/* Abstract Background Pattern */}
               <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
@@ -134,7 +134,7 @@ export default function MyCommunitiesPage() {
                   </div>
                 </div>
               </div>
-              <button className="w-full text-center py-2 mt-4 text-primary font-label-lg text-label-lg hover:underline transition-all">Explore All Communities</button>
+              <button className="w-full text-center py-2 mt-4 text-primary font-label-lg text-label-lg hover:underline transition-all" onClick={() => window.location.href='/communities'}>Explore All Communities</button>
             </div>
           </div>
 
@@ -178,8 +178,8 @@ export default function MyCommunitiesPage() {
                     </div>
                   </div>
                   <div className="flex md:flex-col gap-2">
-                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors">Dashboard</button>
-                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors">Settings</button>
+                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors" onClick={() => window.location.href='/communities/1'}>Dashboard</button>
+                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors" onClick={() => window.location.href='/citizen/settings'}>Settings</button>
                   </div>
                 </div>
                 {/* Community Item 2 */}
@@ -203,8 +203,8 @@ export default function MyCommunitiesPage() {
                     </div>
                   </div>
                   <div className="flex md:flex-col gap-2">
-                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors">Dashboard</button>
-                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors">Settings</button>
+                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors" onClick={() => window.location.href='/communities/1'}>Dashboard</button>
+                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors" onClick={() => window.location.href='/citizen/settings'}>Settings</button>
                   </div>
                 </div>
                 {/* Community Item 3 */}
@@ -227,8 +227,8 @@ export default function MyCommunitiesPage() {
                     </div>
                   </div>
                   <div className="flex md:flex-col gap-2">
-                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors">Dashboard</button>
-                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors">Settings</button>
+                    <button className="px-4 py-2 bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-colors" onClick={() => window.location.href='/communities/1'}>Dashboard</button>
+                    <button className="px-4 py-2 border border-outline-variant rounded-lg font-label-lg text-label-lg hover:bg-surface-container transition-colors" onClick={() => window.location.href='/citizen/settings'}>Settings</button>
                   </div>
                 </div>
               </div>
@@ -319,20 +319,20 @@ export default function MyCommunitiesPage() {
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Platform</h4>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</a>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Governance Model</a>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">API Access</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/newsroom">Transparency Report</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/thesis">Governance Model</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">API Access</a>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Legal</h4>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Data Rights</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Privacy Policy</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Terms of Service</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/about">Data Rights</a>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Connect</h4>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</a>
-              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Help Center</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/contact">Contact Us</a>
+              <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="/contact">Help Center</a>
               <div className="flex gap-4 mt-2">
                 <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="share">share</span>
                 <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="mail">mail</span>

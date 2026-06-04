@@ -96,10 +96,10 @@ export default function HomePage() {
               <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant">A multi-generational strategy designed to restore trust in public institutions through pragmatic, localized reform.</p>
             </div>
-            <Link href="#" className="font-label-lg text-label-lg text-primary flex items-center gap-2 group">
-              Explore Our Full Policy Framework
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
+               <Link href="/manifesto" className="font-label-lg text-label-lg text-primary flex items-center gap-2 group">
+                 Explore Our Full Policy Framework
+                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+               </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {/* Pillar 1 */}
@@ -204,44 +204,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Newsletter Signup */}
-        <section className="px-margin-mobile md:px-0 py-12 md:py-24 mx-margin-mobile md:mx-0 rounded-2xl md:rounded-none bg-primary-container text-on-primary overflow-hidden relative md:bg-primary-container">
-          <div className="absolute -right-10 -top-10 w-40 h-40 border-8 border-white/5 rounded-full md:hidden"></div>
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-            <h2 className="font-headline-lg md:font-headline-lg text-headline-lg md:text-headline-lg mb-6">Stay Informed</h2>
-            <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">Receive weekly policy briefings, community reports, and movement updates directly from the BOOT Civic Secretariat.</p>
-            <form className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-              <input className="flex-grow bg-white/10 border border-white/20 text-white placeholder:text-white/50 px-6 py-4 focus:ring-2 focus:ring-secondary outline-none" placeholder="Your professional email" type="email"/>
-              <button className="bg-secondary text-white px-10 py-4 font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors whitespace-nowrap">Subscribe Now</button>
-            </form>
-            <p className="mt-6 font-label-md text-label-md text-on-primary-container opacity-60">We value your privacy. Unsubscribe at any time.</p>
-          </div>
-        </section>
-
-        {/* Mobile Bottom Navbar - Only visible on mobile */}
-        <nav className="fixed bottom-0 left-0 w-full z-50 md:hidden flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant shadow-lg rounded-t-xl">
-          <a className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-transform duration-150 scale-95 active:scale-90" href="#">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-            <span className="font-label-md text-label-md">Home</span>
-          </a>
-          <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all duration-150 active:scale-90" href="#">
-            <span className="material-symbols-outlined">group</span>
-            <span className="font-label-md text-label-md">Communities</span>
-          </a>
-          <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all duration-150 active:scale-90" href="#">
-            <span className="material-symbols-outlined">event</span>
-            <span className="font-label-md text-label-md">Events</span>
-          </a>
-          <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all duration-150 active:scale-90" href="#">
-            <span className="material-symbols-outlined">rss_feed</span>
-            <span className="font-label-md text-label-md">Feed</span>
-          </a>
-          <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all duration-150 active:scale-90" href="#">
-            <span className="material-symbols-outlined">person</span>
-            <span className="font-label-md text-label-md">Profile</span>
-          </a>
-        </nav>
-      </div>
-    </PublicLayout>
-  );
+         {/* Newsletter Signup */}
+         <section className="px-margin-mobile md:px-0 py-12 md:py-24 mx-margin-mobile md:mx-0 rounded-2xl md:rounded-none bg-primary-container text-on-primary overflow-hidden relative md:bg-primary-container">
+           <div className="absolute -right-10 -top-10 w-40 h-40 border-8 border-white/5 rounded-full md:hidden"></div>
+           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+             <h2 className="font-headline-lg md:font-headline-lg text-headline-lg md:text-headline-lg mb-6">Stay Informed</h2>
+             <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">Receive weekly policy briefings, community reports, and movement updates directly from the BOOT Civic Secretariat.</p>
+             <form className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+               <input className="flex-grow bg-white/10 border border-white/20 text-white placeholder:text-white/50 px-6 py-4 focus:ring-2 focus:ring-secondary outline-none" placeholder="Your professional email" type="email"/>
+               <button className="bg-secondary text-white px-10 py-4 font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors whitespace-nowrap">Subscribe Now</button>
+             </form>
+             <p className="mt-6 font-label-md text-label-md text-on-primary-container opacity-60">We value your privacy. Unsubscribe at any time.</p>
+           </div>
+         </section>
+         {/* Bottom Navbar removed - now handled by RootLayout */}
+         <div className="hidden md:block"></div>
+       </div>
+     </PublicLayout>
+   );
 }

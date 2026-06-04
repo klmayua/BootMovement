@@ -13,9 +13,9 @@ export default function ExecutiveDashboard() {
           </div>
           <nav className="hidden md:flex gap-8 items-center">
             <Link className="text-primary dark:text-primary-fixed font-bold border-b-2 border-secondary font-label-lg text-label-lg py-2" href="/admin/dashboard">Leadership Portal</Link>
-            <Link className="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-lg text-label-lg py-2" href="#">Election Ops</Link>
+            <Link className="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-lg text-label-lg py-2" href="/campaign">Election Ops</Link>
             <Link className="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-lg text-label-lg py-2" href="/diaspora">Diaspora Hub</Link>
-            <Link className="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-lg text-label-lg py-2" href="#">Admin Intel</Link>
+            <Link className="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-lg text-label-lg py-2" href="/admin/dashboard">Admin Intel</Link>
           </nav>
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden border-2 border-outline-variant">
@@ -270,40 +270,21 @@ export default function ExecutiveDashboard() {
             </div>
           </div>
         </main>
-      </div>
-      {/* BottomNavBar (Mobile Only) */}
-      <nav className="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface dark:bg-surface-bright border-t border-outline-variant/20 shadow-lg flex justify-around items-center h-20 px-4 pb-4">
-        <div className="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-1 active:scale-95 transition-transform">
-          <span className="material-symbols-outlined">grid_view</span>
-          <span className="font-label-md text-label-md">Command</span>
-        </div>
-        <div className="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 active:scale-95 transition-transform">
-          <span className="material-symbols-outlined">description</span>
-          <span className="font-label-md text-label-md">Policies</span>
-        </div>
-        <div className="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 active:scale-95 transition-transform">
-          <span className="material-symbols-outlined">groups</span>
-          <span className="font-label-md text-label-md">Voters</span>
-        </div>
-        <div className="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 active:scale-95 transition-transform">
-          <span className="material-symbols-outlined">payments</span>
-          <span className="font-label-md text-label-md">Grants</span>
-        </div>
-      </nav>
-      {/* Footer */}
-      <footer className="w-full mt-auto bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/50">
-        <div className="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto">
-          <div className="mb-8 md:mb-0">
-            <span className="font-label-lg text-label-lg font-bold text-primary">CivicOS</span>
-            <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">© 2024 Civic Operating System. Visionary Tradition Infrastructure.</p>
-          </div>
-          <div className="flex gap-8">
-            <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Legal Charter</Link>
-            <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Protocol Documentation</Link>
-            <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Support Access</Link>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+       </div>
+       {/* Footer */}
+       <footer className="w-full mt-auto bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/50">
+         <div className="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto">
+           <div className="mb-8 md:mb-0">
+             <span className="font-label-lg text-label-lg font-bold text-primary">CivicOS</span>
+             <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">© 2024 Civic Operating System. Visionary Tradition Infrastructure.</p>
+           </div>
+           <div className="flex gap-8">
+             <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/manifesto">Legal Charter</Link>
+             <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/about">Protocol Documentation</Link>
+             <Link className="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="/contact">Support Access</Link>
+           </div>
+         </div>
+       </footer>
+     </div>
+   );
 }

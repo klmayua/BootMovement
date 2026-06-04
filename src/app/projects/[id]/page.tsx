@@ -9,9 +9,9 @@ export default function ProjectDetailPage() {
           <div className="flex items-center gap-8">
             <span className="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim cursor-pointer">BOOT Civic OS</span>
             <nav className="hidden md:flex gap-6">
-              <a className="text-on-surface-variant dark:text-surface-variant font-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
-              <a className="text-on-surface-variant dark:text-surface-variant font-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="#">Communities</a>
-              <a className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-body-md px-1" href="#">Projects</a>
+              <a className="text-on-surface-variant dark:text-surface-variant font-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="/citizen/dashboard">Dashboard</a>
+              <a className="text-on-surface-variant dark:text-surface-variant font-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="/my-communities">Communities</a>
+              <a className="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-body-md px-1" href="/projects">Projects</a>
             </nav>
           </div>
           <div className="flex items-center gap-4">
@@ -238,17 +238,17 @@ export default function ProjectDetailPage() {
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6">Initiatives</h5>
             <ul className="space-y-4">
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Energy Grid</a></li>
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Education Labs</a></li>
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Health Connect</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/projects">Energy Grid</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/projects">Education Labs</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/projects">Health Connect</a></li>
             </ul>
           </div>
           <div>
             <h5 className="font-label-lg text-label-lg text-primary mb-6">Transparency</h5>
             <ul className="space-y-4">
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Transparency Report</a></li>
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Audits</a></li>
-              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/manifesto">Transparency Report</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/about">Audits</a></li>
+              <li><a className="text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/about">Privacy Policy</a></li>
             </ul>
           </div>
           <div>

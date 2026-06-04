@@ -11,41 +11,41 @@ export default function ProjectsHub() {
           <p className="font-label-md text-on-surface-variant">Civic Dashboard</p>
         </div>
         <nav className="flex-grow space-y-2">
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out group" href="#">
+          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out group" href="/citizen/dashboard">
             <span className="material-symbols-outlined">dashboard</span>
             <span className="font-label-lg text-label-lg">Dashboard</span>
           </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-            <span className="material-symbols-outlined">groups</span>
-            <span className="font-label-lg text-label-lg">Communities</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-            <span className="material-symbols-outlined">event</span>
-            <span className="font-label-lg text-label-lg">Events</span>
-          </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-communities">
+             <span className="material-symbols-outlined">groups</span>
+             <span className="font-label-lg text-label-lg">Communities</span>
+           </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/events">
+             <span className="material-symbols-outlined">event</span>
+             <span className="font-label-lg text-label-lg">Events</span>
+           </Link>
           <Link className="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg hover:translate-x-1 duration-300 ease-in-out" href="/projects">
             <span className="material-symbols-outlined">assignment</span>
             <span className="font-label-lg text-label-lg">Projects</span>
           </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-            <span className="material-symbols-outlined">monitoring</span>
-            <span className="font-label-lg text-label-lg">Analytics</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
-            <span className="material-symbols-outlined">settings</span>
-            <span className="font-label-lg text-label-lg">Settings</span>
-          </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-impact">
+             <span className="material-symbols-outlined">monitoring</span>
+             <span className="font-label-lg text-label-lg">Analytics</span>
+           </Link>
+<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/citizen/settings">
+             <span className="material-symbols-outlined">settings</span>
+             <span className="font-label-lg text-label-lg">Settings</span>
+           </Link>
         </nav>
         <div className="mt-auto border-t border-outline-variant/30 pt-6 px-2">
           <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg uppercase tracking-wider hover:opacity-90 transition-opacity">
             Donate Now
           </button>
           <div className="mt-6 space-y-2">
-            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-primary transition-colors" href="/contact">
               <span className="material-symbols-outlined">help</span>
               <span className="font-label-md text-label-md">Support</span>
             </Link>
-            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-error transition-colors" href="/auth/login">
               <span className="material-symbols-outlined">logout</span>
               <span className="font-label-md text-label-md">Logout</span>
             </Link>
@@ -241,25 +241,25 @@ export default function ProjectsHub() {
             <div>
               <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Governance</h4>
               <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="#">Transparency Report</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Constitutional Code</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Vote Audit</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/newsroom">Transparency Report</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/thesis">Constitutional Code</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/about">Vote Audit</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Legal</h4>
               <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="#">Privacy Policy</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Terms of Service</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Ethics Charter</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/about">Privacy Policy</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/about">Terms of Service</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/about">Ethics Charter</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Contact</h4>
               <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="#">Press Office</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Ambassador Program</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="#">Contact Us</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/newsroom">Press Office</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/about">Ambassador Program</Link></li>
+                <li><Link className="hover:text-primary transition-all underline" href="/contact">Contact Us</Link></li>
               </ul>
             </div>
           </div>
