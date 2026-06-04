@@ -44,13 +44,13 @@ export default function TownHallsPage() {
              <span className="font-label-lg text-label-lg">Projects</span>
            </div>
         </div>
-        <div className="mt-auto border-t border-outline-variant/30 pt-4 flex flex-col gap-2">
-          <button className="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity">Donate Now</button>
-<div className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all rounded-lg" href="/contact">
+         <div className="mt-auto border-t border-outline-variant/30 pt-4 flex flex-col gap-2">
+           <button className="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity">Donate Now</button>
+           <a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all rounded-lg" href="/contact">
              <span className="material-symbols-outlined">help</span>
              <span className="font-label-lg text-label-lg">Support</span>
-           </div>
-        </div>
+           </a>
+         </div>
       </aside>
 
       <main className="xl:ml-64 px-margin-desktop py-12 max-w-container-max mx-auto">
