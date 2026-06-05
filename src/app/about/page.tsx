@@ -11,8 +11,8 @@ export default function AboutPage() {
            <section className="px-margin-desktop py-24 grid grid-cols-12 gap-gutter items-center">
              <div className="lg:col-span-7 text-center lg:text-left space-y-6 md:space-y-8">
                <p className="font-label-lg text-label-lg text-secondary mb-4 tracking-widest uppercase">Tradition x Technology</p>
-               <h2 className="font-display-lg text-primary mb-8 max-w-2xl mx-auto lg:mx-0">A Legacy Reimagined for the Digital Electorate.</h2>
-               <div className="h-px w-full bg-gradient-to-r from-tertiary-fixed/30 to-transparent mb-8"></div>
+                <h2 className="font-display-lg text-display-lg text-primary mb-8 max-w-2xl mx-auto lg:mx-0">A Legacy Reimagined for the Digital Electorate.</h2>
+                <div className="h-px w-full bg-gradient-to-r from-on-tertiary-container/30 to-transparent mb-8"></div>
                <p className="font-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                  CivicOS (BOOT) isn't just a political platform; it's a structural evolution. We bridge the gap between institutional stability and frontier technology to create a governance model that is both ancient in its wisdom and modern in its execution.
                </p>
@@ -37,64 +37,63 @@ export default function AboutPage() {
            </section>
 
 
-           {/* Mission & Values: Bento Grid */}
-           <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low">
-             <div className="text-center mb-16">
-               <h3 className="font-headline-lg text-primary mb-4">Core Directives</h3>
-               <p className="font-body-md text-on-surface-variant max-w-lg mx-auto">The principles that guide every algorithm and every policy within the CivicOS ecosystem.</p>
-             </div>
-             <div className="bento-grid h-auto">
-               <div className="md:col-span-4 p-6 md:p-10 bg-surface rounded-xl border border-tertiary-fixed/30 flex flex-col justify-between">
-                 <div>
-                   <span className="material-symbols-outlined text-primary text-5xl mb-6">verified_user</span>
-                   <h4 className="font-headline-md text-primary mb-4">Institutional Trust</h4>
-                   <p className="font-body-md text-on-surface-variant leading-relaxed">We leverage distributed ledger technology to ensure transparency is not a promise, but a mathematical certainty. Every vote, every grant, every policy change is immutable and verifiable.</p>
-                 </div>
-                 <ul className="space-y-3 mt-8">
-                   <li className="flex items-center gap-2 font-label-md text-primary">
-                     <span className="material-symbols-outlined text-tertiary-container text-sm">diamond</span> Audited Protocols
-                   </li>
-                   <li className="flex items-center gap-2 font-label-md text-primary">
-                     <span className="material-symbols-outlined text-tertiary-container text-sm">diamond</span> Zero-Knowledge Privacy
-                   </li>
-                 </ul>
-               </div>
-               <div className="md:col-span-8 p-6 md:p-10 bg-primary-container text-on-primary-container rounded-xl flex items-center gap-6 md:gap-12 overflow-hidden relative">
-                 <div className="z-10 relative">
-                   <h4 className="font-headline-md mb-4 text-white">Visionary Stewardship</h4>
-                   <p className="font-body-lg opacity-90 max-w-md">Our leaders are stewards of the future, guided by long-term alignment rather than short-term cycles.</p>
-                 </div>
-               </div>
-               <div className="md:col-span-4 p-6 md:p-10 bg-surface rounded-xl border border-tertiary-fixed/30">
-                 <span className="material-symbols-outlined text-secondary text-4xl mb-4">public</span>
-                 <h4 className="font-headline-sm text-primary mb-2">Diaspora Hub</h4>
-                 <p className="font-body-sm text-on-surface-variant">Connecting the global network of citizens through borderless digital infrastructure.</p>
-               </div>
-               <div className="md:col-span-4 p-6 md:p-10 bg-surface rounded-xl border border-tertiary-fixed/30">
-                 <span className="material-symbols-outlined text-tertiary-container text-4xl mb-4">analytics</span>
-                 <h4 className="font-headline-sm text-primary mb-2">Admin Intel</h4>
-                 <p className="font-body-sm text-on-surface-variant">Data-driven decision making that prioritizes human outcomes and systemic efficiency.</p>
-               </div>
-             </div>
-           </section>
+            <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low">
+              <div className="text-center mb-16">
+                <h3 className="font-headline-lg text-headline-lg text-primary mb-4">Core Directives</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto">The principles that guide every algorithm and every policy within the CivicOS ecosystem.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[600px]">
+                <div className="md:row-span-2 p-6 md:p-10 bg-surface rounded-xl border border-on-tertiary-container/30 flex flex-col justify-between transition-all hover:border-primary/20">
+                  <div>
+                    <span className="material-symbols-outlined text-primary text-5xl mb-6">verified_user</span>
+                    <h4 className="font-headline-md text-headline-md text-primary mb-4">Institutional Trust</h4>
+                    <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We leverage distributed ledger technology to ensure transparency is not a promise, but a mathematical certainty. Every vote, every grant, every policy change is immutable and verifiable.</p>
+                  </div>
+                  <ul className="space-y-3 mt-8">
+                    <li className="flex items-center gap-2 font-label-md text-label-md text-primary">
+                      <span className="material-symbols-outlined text-on-tertiary-container text-sm">diamond</span> Audited Protocols
+                    </li>
+                    <li className="flex items-center gap-2 font-label-md text-label-md text-primary">
+                      <span className="material-symbols-outlined text-on-tertiary-container text-sm">diamond</span> Zero-Knowledge Privacy
+                    </li>
+                  </ul>
+                </div>
+                <div className="md:col-span-2 p-6 md:p-10 bg-primary-container text-on-primary-container rounded-xl flex items-center gap-6 md:gap-12 overflow-hidden relative transition-all hover:bg-primary-container/90">
+                  <div className="z-10 relative">
+                    <h4 className="font-headline-md text-headline-md mb-4 text-white">Visionary Stewardship</h4>
+                    <p className="font-body-lg text-body-lg opacity-90 max-w-md">Our leaders are stewards of the future, guided by long-term alignment rather than short-term cycles.</p>
+                  </div>
+                </div>
+                <div className="p-6 md:p-10 bg-surface rounded-xl border border-on-tertiary-container/30 transition-all hover:border-primary/20">
+                  <span className="material-symbols-outlined text-secondary text-4xl mb-4">public</span>
+                  <h4 className="font-headline-sm text-headline-sm text-primary mb-2">Diaspora Hub</h4>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant">Connecting the global network of citizens through borderless digital infrastructure.</p>
+                </div>
+                <div className="p-6 md:p-10 bg-surface rounded-xl border border-on-tertiary-container/30 transition-all hover:border-primary/20">
+                  <span className="material-symbols-outlined text-on-tertiary-container text-4xl mb-4">analytics</span>
+                  <h4 className="font-headline-sm text-headline-sm text-primary mb-2">Admin Intel</h4>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant">Data-driven decision making that prioritizes human outcomes and systemic efficiency.</p>
+                </div>
+              </div>
+            </section>
 
            {/* History: The Timeline Grid */}
-           <section className="px-margin-mobile md:px-margin-desktop py-24">
-             <div className="flex flex-col md:flex-row gap-12 md:gap-20">
-               <div className="md:w-1/3">
-                 <h3 className="font-headline-lg text-primary md:sticky top-32">The Genesis of the Movement</h3>
-                 <div className="h-px w-full bg-gradient-to-r from-tertiary-fixed/30 to-transparent my-6"></div>
-                 <p className="font-body-md text-on-surface-variant mb-6">
-                   Tracing the evolution from a grassroots policy incubator to a global operating system for civic life.
-                 </p>
-                 <div className="p-6 border border-outline-variant/30 rounded-lg">
-                   <p className="font-label-md text-secondary mb-2">Current Milestone</p>
-                   <p className="font-headline-sm text-primary">Beta 2.0 Deployment</p>
-                   <div className="w-full h-2 bg-surface-variant rounded-full mt-4 overflow-hidden">
-                     <div className="h-full bg-secondary-container" style={{ width: '75%' }}></div>
-                   </div>
-                 </div>
-               </div>
+            <section className="px-margin-mobile md:px-margin-desktop py-24">
+              <div className="flex flex-col md:flex-row gap-12 md:gap-20">
+                <div className="md:w-1/3">
+                  <h3 className="font-headline-lg text-headline-lg text-primary md:sticky top-32">The Genesis of the Movement</h3>
+                  <div className="h-px w-full bg-gradient-to-r from-on-tertiary-container/30 to-transparent my-6"></div>
+                  <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Tracing the evolution from a grassroots policy incubator to a global operating system for civic life.
+                  </p>
+                  <div className="p-6 border border-outline-variant/30 rounded-lg">
+                    <p className="font-label-md text-label-md text-secondary mb-2">Current Milestone</p>
+                    <p className="font-headline-sm text-headline-sm text-primary">Beta 2.0 Deployment</p>
+                    <div className="w-full h-2 bg-surface-variant rounded-full mt-4 overflow-hidden">
+                      <div className="h-full bg-secondary-container" style={{ width: '75%' }}></div>
+                    </div>
+                  </div>
+                </div>
                <div className="md:w-2/3 space-y-16">
                  <div className="relative pl-8 md:pl-12 border-l-2 border-outline-variant/20 pb-4">
                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>

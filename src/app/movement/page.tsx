@@ -4,105 +4,26 @@ import { MovementLayout } from '@/components/layout/movement/MovementLayout';
 export default function MovementHub() {
   return (
     <MovementLayout>
-      {/* TopAppBar */}
-       <header className="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-50">
-         <nav className="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
-           <div className="flex items-center gap-3 cursor-pointer active:opacity-80 touch-manipulation">
-             <span className="material-symbols-outlined text-primary text-3xl">account_balance</span>
-             <span className="font-headline-md text-headline-md text-primary">BOOT Civic Movement</span>
-           </div>
-           <div className="hidden md:flex items-center gap-8">
-             <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/">Home</Link>
-             <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/about">About</Link>
-             <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/thesis">Thesis</Link>
-             <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/communities">Communities</Link>
-             <Link className="font-label-lg text-label-lg text-secondary border-b-2 border-secondary" href="/movement">Impact Hub</Link>
-           </div>
-           <div className="flex items-center gap-4">
-             <button className="bg-secondary text-on-secondary px-6 py-2 font-label-lg text-label-lg rounded-DEFAULT hover:opacity-90 transition-all shadow-sm hidden sm:block touch-manipulation">
-               Join Now
-             </button>
-             <button 
-               className="md:hidden material-symbols-outlined text-primary p-2 active:scale-90 transition-all touch-manipulation"
-               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-             >
-               {mobileMenuOpen ? 'close' : 'menu'}
-             </button>
-           </div>
-         </nav>
-         {mobileMenuOpen && (
-           <div className="absolute top-full left-0 right-0 bg-surface border-b border-outline-variant/30 md:hidden shadow-lg z-50">
-             <nav className="flex flex-col p-4 gap-2">
-               <Link onClick={() => setMobileMenuOpen(false)} className="font-label-lg text-label-lg px-4 py-3 text-on-surface-variant hover:text-primary touch-manipulation" href="/">Home</Link>
-               <Link onClick={() => setMobileMenuOpen(false)} className="font-label-lg text-label-lg px-4 py-3 text-on-surface-variant hover:text-primary touch-manipulation" href="/about">About</Link>
-               <Link onClick={() => setMobileMenuOpen(false)} className="font-label-lg text-label-lg px-4 py-3 text-on-surface-variant hover:text-primary touch-manipulation" href="/thesis">Thesis</Link>
-               <Link onClick={() => setMobileMenuOpen(false)} className="font-label-lg text-label-lg px-4 py-3 text-on-surface-variant hover:text-primary touch-manipulation" href="/communities">Communities</Link>
-               <Link onClick={() => setMobileMenuOpen(false)} className="font-label-lg text-label-lg px-4 py-3 text-secondary font-bold touch-manipulation" href="/movement">Impact Hub</Link>
-               <Link onClick={() => setMobileMenuOpen(false)} className="bg-secondary text-on-secondary px-6 py-3 font-label-lg text-center rounded-DEFAULT mt-2 touch-manipulation" href="/join">Join Now</Link>
-             </nav>
-           </div>
-         )}
-      </header>
-      <main className="flex min-h-screen pb-bottom-nav">
-        {/* NavigationDrawer (Sidebar) */}
-        <aside className="hidden lg:flex flex-col h-[calc(100vh-80px)] w-80 bg-surface-container-low sticky top-20 p-4 border-r border-outline-variant/20 shadow-sm">
-          <h2 className="px-4 py-6 font-headline-sm text-headline-sm text-primary">Movement Navigation</h2>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">home</span>
-              <span className="font-label-lg text-label-lg">Home</span>
-            </div>
-            <div className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">info</span>
-              <span className="font-label-lg text-label-lg">About</span>
-            </div>
-            <div className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">menu_book</span>
-              <span className="font-label-lg text-label-lg">Thesis</span>
-            </div>
-            <div className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">groups</span>
-              <span className="font-label-lg text-label-lg">Communities</span>
-            </div>
-            <div className="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">event</span>
-              <span className="font-label-lg text-label-lg">Events</span>
-            </div>
-            <div className="flex items-center gap-4 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300 cursor-pointer">
-              <span className="material-symbols-outlined">analytics</span>
-              <span className="font-label-lg text-label-lg">Impact Hub</span>
-            </div>
-          </div>
-          <div className="mt-auto p-4 bg-surface-container-high rounded-lg border border-outline-variant/30">
-            <p className="font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-widest">Active Campaign</p>
-            <h4 className="font-headline-sm text-[18px] leading-tight text-primary mb-3">Transparency Bill 2024</h4>
-            <div className="w-full h-2 bg-tertiary-fixed rounded-full overflow-hidden">
-              <div className="h-full bg-secondary" style={{ width: '68%' }}></div>
-            </div>
-            <p className="font-label-md text-label-md mt-2 text-right text-secondary">68% of Target</p>
-          </div>
-        </aside>
-        {/* Content Canvas */}
-       <div className="flex-1 px-margin-mobile md:px-margin-desktop py-12 max-w-[1000px] mx-auto">
-         {/* Hero Header */}
-         <section className="mb-16 text-center md:text-left">
-           <span className="font-label-lg text-label-lg text-secondary-container bg-secondary-container/10 px-3 py-1 rounded-sm uppercase tracking-tighter mb-4 inline-block">Real-time Accountability</span>
-           <h1 className="font-display-lg text-primary mb-6">Movement Performance Dashboard</h1>
-           <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">A transparent window into the BOOT Civic Movement. We track every initiative, every local chapter, and every metric of success to ensure our visionary tradition remains grounded in results.</p>
-         </section>
+      <div className="flex-1 px-margin-mobile md:px-margin-desktop py-12 max-w-[1000px] mx-auto">
+        {/* Hero Header */}
+        <section className="mb-16">
+          <span className="font-label-lg text-label-lg text-secondary-container bg-secondary-container/10 px-3 py-1 rounded-sm uppercase tracking-tighter mb-4 inline-block">Real-time Accountability</span>
+          <h1 className="font-display-lg text-display-lg text-primary mb-6">Movement Performance Dashboard</h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A transparent window into the BOOT Civic Movement. We track every initiative, every local chapter, and every metric of success to ensure our visionary tradition remains grounded in results.</p>
+        </section>
          {/* Impact Metrics Bento Grid */}
          <section className="grid grid-cols-12 gap-6 mb-20">
-           {/* Large Metric Card */}
-           <div className="col-span-12 md:col-span-8 bg-primary-container rounded-xl p-8 text-on-primary shadow-sm relative overflow-hidden group touch-manipulation">
-             <div className="relative z-10">
-               <p className="font-label-lg text-label-lg text-primary-fixed-dim uppercase tracking-widest mb-2">Total Movement Impact</p>
-               <h3 className="font-display-lg text-[48px] md:text-[64px] leading-none mb-4">2.4M</h3>
-               <p className="font-body-md text-body-md text-on-primary-container max-w-md">Citizens empowered through our legislative transparency portals and community-led accountability sessions across 42 regions.</p>
-             </div>
-             <div className="absolute -right-12 -bottom-12 opacity-10 group-hover:scale-110 transition-transform duration-700">
-               <span className="material-symbols-outlined text-[200px]">analytics</span>
-             </div>
-           </div>
+            {/* Large Metric Card */}
+            <div className="col-span-12 md:col-span-8 bg-primary-container rounded-xl p-8 text-on-primary shadow-sm relative overflow-hidden group touch-manipulation">
+              <div className="relative z-10">
+                <p className="font-label-lg text-label-lg text-primary-fixed-dim uppercase tracking-widest mb-2">Total Movement Impact</p>
+                <h3 className="font-display-lg text-[64px] leading-none mb-4">2.4M</h3>
+                <p className="font-body-md text-body-md text-on-primary-container max-w-md">Citizens empowered through our legislative transparency portals and community-led accountability sessions across 42 regions.</p>
+              </div>
+              <div className="absolute -right-12 -bottom-12 opacity-10 group-hover:scale-110 transition-transform duration-700">
+                <span className="material-symbols-outlined text-[200px]">analytics</span>
+              </div>
+            </div>
            {/* Secondary Metric */}
            <div className="col-span-12 md:col-span-4 bg-surface-container-high border border-outline-variant/30 rounded-xl p-8 flex flex-col justify-between touch-manipulation">
              <div>
@@ -112,32 +33,40 @@ export default function MovementHub() {
              </div>
              <p className="font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/20 pt-4">+12% from last quarter</p>
            </div>
-           {/* Small Metrics */}
-           <div className="col-span-6 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
-             <p className="font-label-md text-label-md text-on-surface-variant mb-2">Policies Drafted</p>
-             <h4 className="font-headline-md text-headline-md text-primary">84</h4>
-           </div>
+            {/* Small Metrics */}
+            <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
+              <p className="font-label-md text-label-md text-on-surface-variant mb-2">Policies Drafted</p>
+              <h4 className="font-headline-md text-headline-md text-primary">84</h4>
+            </div>
+            <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
+              <p className="font-label-md text-label-md text-on-surface-variant mb-2">Local Events</p>
+              <h4 className="font-headline-md text-headline-md text-primary">1,240</h4>
+            </div>
+            <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
+              <p className="font-label-md text-label-md text-on-surface-variant mb-2">Volunteers</p>
+              <h4 className="font-headline-md text-headline-md text-primary">32k</h4>
+            </div>
            <div className="col-span-6 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
              <p className="font-label-md text-label-md text-on-surface-variant mb-2">Local Events</p>
              <h4 className="font-headline-md text-headline-md text-primary">1,240</h4>
            </div>
-           <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
-             <p className="font-label-md text-label-md text-on-surface-variant mb-2">Volunteers</p>
-             <h4 className="font-headline-md text-headline-md text-primary">32k</h4>
-           </div>
-         </section>
-           {/* The Pillars Section */}
-           <section className="mb-20">
-             <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 text-center md:text-left">
-               <div>
-                 <h2 className="font-headline-lg text-headline-lg text-primary mb-2">Core Movement Pillars</h2>
-                 <p className="font-body-md text-body-md text-on-surface-variant">Our strategic focus areas for the 2024-2025 cycle.</p>
-               </div>
-               <button className="text-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:underline touch-manipulation">
-                 View Strategic Plan <span className="material-symbols-outlined text-sm">arrow_forward</span>
-               </button>
-             </div>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/20 rounded-xl p-6 shadow-sm hover:border-secondary/30 transition-colors touch-manipulation">
+              <p className="font-label-md text-label-md text-on-surface-variant mb-2">Volunteers</p>
+              <h4 className="font-headline-md text-headline-md text-primary">32k</h4>
+            </div>
+          </section>
+            {/* The Pillars Section */}
+            <section className="mb-20">
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                  <h2 className="font-headline-lg text-headline-lg text-primary mb-2">Core Movement Pillars</h2>
+                  <p className="font-body-md text-body-md text-on-surface-variant">Our strategic focus areas for the 2024-2025 cycle.</p>
+                </div>
+                <button className="text-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:underline touch-manipulation">
+                  View Strategic Plan <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                {/* Pillar 1 */}
                <div className="group cursor-pointer touch-manipulation active:scale-95 transition-transform">
                  <div className="aspect-[4/5] relative overflow-hidden rounded-lg mb-4">
@@ -176,12 +105,12 @@ export default function MovementHub() {
                </div>
              </div>
            </section>
-           {/* Active Chapters / Map Section */}
-           <section className="mb-20 bg-surface-container-low rounded-2xl p-10 border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center">
-             <div className="flex-1 text-center md:text-left">
-               <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Chapter Network</h2>
-               <p className="font-body-md text-body-md text-on-surface-variant mb-8">Our movement grows bottom-up. Explore our active local chapters and find your nearest movement hub to start contributing today.</p>
-               <ul className="space-y-4">
+            {/* Active Chapters / Map Section */}
+            <section className="mb-20 bg-surface-container-low rounded-2xl p-10 border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center">
+              <div className="flex-1">
+                <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Chapter Network</h2>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-8">Our movement grows bottom-up. Explore our active local chapters and find your nearest movement hub to start contributing today.</p>
+                <ul className="space-y-4">
                  <li className="flex items-start gap-4">
                    <span className="material-symbols-outlined text-tertiary mt-1" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
                    <div>
@@ -211,8 +140,7 @@ export default function MovementHub() {
                <div className="absolute top-1/2 right-1/2 w-4 h-4 bg-secondary rounded-full animate-pulse border-2 border-white shadow-lg"></div>
              </div>
            </section>
-        </div>
-      </main>
+      </div>
     </MovementLayout>
   );
 }

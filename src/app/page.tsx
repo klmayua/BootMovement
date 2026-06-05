@@ -77,7 +77,7 @@ export default function HomePage() {
 
 
         {/* Manifesto Highlight */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-cream">
           <div className="max-w-4xl mx-auto px-margin-mobile text-center space-y-8">
             <span className="material-symbols-outlined text-primary text-display-lg opacity-20">format_quote</span>
             <h3 className="font-headline-lg text-headline-lg text-primary italic">
@@ -90,75 +90,75 @@ export default function HomePage() {
           </div>
         </section>
 
-         {/* Mission Pillars - Bento Grid */}
-         <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-             <div className="max-w-xl">
-               <h2 className="font-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
-               <p className="font-body-lg text-on-surface-variant">A multi-generational strategy designed to restore trust in public institutions through pragmatic, localized reform.</p>
-             </div>
-                <Link href="/manifesto" className="font-label-lg text-primary flex items-center gap-2 group touch-manipulation">
-                  Explore Our Full Policy Framework
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </Link>
-           </div>
-           <div className="bento-grid">
-             {/* Pillar 1 */}
-             <div className="md:col-span-8 group pillar-card bg-surface-container-low p-6 md:p-10 rounded-xl border border-outline-variant/20 hover:border-primary/20 transition-all">
-               <div className="flex flex-col h-full justify-between gap-12">
-                 <div className="flex justify-between items-start">
-                   <span className="material-symbols-outlined pillar-icon text-primary text-display-lg transition-transform">account_balance</span>
-                   <span className="font-label-md text-on-tertiary-container border border-on-tertiary-container/30 px-3 py-1 rounded-full">Pillar 01</span>
-                 </div>
-                 <div>
-                   <h4 className="font-headline-md text-primary mb-4">Institutional Accountability</h4>
-                   <p className="font-body-md text-on-surface-variant max-w-lg">We advocate for strict transparency protocols and digital-first public ledgers to ensure every cent of taxpayer revenue is traceable and purposeful.</p>
-                 </div>
-               </div>
-             </div>
-             {/* Pillar 2 */}
-             <div className="md:col-span-4 group pillar-card bg-primary text-white p-6 md:p-10 rounded-xl transition-all">
-               <div className="flex flex-col h-full justify-between gap-12">
-                 <div className="flex justify-between items-start">
-                   <span className="material-symbols-outlined pillar-icon text-secondary text-display-lg transition-transform">groups</span>
-                   <span className="font-label-md text-primary-fixed-dim border border-primary-fixed-dim/30 px-3 py-1 rounded-full">Pillar 02</span>
-                 </div>
-                 <div>
-                   <h4 className="font-headline-md text-white mb-4">Localized Empowerment</h4>
-                   <p className="font-body-md text-surface-variant">Returning decision-making power to municipal councils and community boards, reducing central bureaucracy.</p>
-                 </div>
-               </div>
-             </div>
-             {/* Pillar 3 */}
-             <div className="md:col-span-4 group pillar-card bg-surface-container-highest p-6 md:p-10 rounded-xl transition-all">
-               <div className="flex flex-col h-full justify-between gap-12">
-                 <div className="flex justify-between items-start">
-                   <span className="material-symbols-outlined pillar-icon text-on-tertiary-container text-display-lg transition-transform">history_edu</span>
-                   <span className="font-label-md text-on-surface-variant border border-outline/30 px-3 py-1 rounded-full">Pillar 03</span>
-                 </div>
-                 <div>
-                   <h4 className="font-headline-md text-primary mb-4">Heritage Conservation</h4>
-                   <p className="font-body-md text-on-surface-variant">Protecting our national cultural assets while modernizing the infrastructure that supports them for future generations.</p>
-                 </div>
-               </div>
-             </div>
-             {/* Pillar 4 */}
-             <div className="md:col-span-8 group pillar-card bg-surface-container-low p-6 md:p-10 rounded-xl border border-outline-variant/20 transition-all">
-               <div className="flex flex-col md:flex-row gap-10 items-center">
-                 <div className="w-full md:w-1/3">
-                   <img className="w-full h-48 object-cover rounded-lg" alt="Professional office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyhxbTLinqETCq9NSMdvnqIScl2K_r7HutjCvexWq-Cu2Z9fkqA0mLOtXJun1C6RYhDp_aBNRJ4WYZ5k3Y6N90karpHe1KSlcuR1ynIkoYj4nWz4B-1KE1djuop4lbFbVCEshrVDSu51utJhSMrUXY-g5hhGGA81txCwGI1xVtmsFr231h1UFnLRnFeceGcq8MQ_9gPmNA-AnM15dy8EUABuLtUG5Vh7YF62i0WDYiqLbWVn5nQZ6Vc8HTW6WDpLcCXAxzpwoO2aK"/>
-                 </div>
-                 <div className="w-full md:w-2/3">
-                   <div className="flex justify-between items-start mb-4">
-                     <h4 className="font-headline-md text-primary">Pragmatic Economics</h4>
-                     <span className="font-label-md text-on-surface-variant">Pillar 04</span>
-                   </div>
-                   <p className="font-body-md text-on-surface-variant">A fiscal strategy rooted in reality, prioritizing debt reduction and small-business incentives to drive grassroots growth.</p>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </section>
+          {/* Mission Pillars - Bento Grid */}
+          <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+              <div className="max-w-xl">
+                <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant">A multi-generational strategy designed to restore trust in public institutions through pragmatic, localized reform.</p>
+              </div>
+                 <Link href="/manifesto" className="font-label-lg text-label-lg text-primary flex items-center gap-2 group touch-manipulation">
+                   Explore Our Full Policy Framework
+                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                 </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+              {/* Pillar 1 */}
+              <div className="md:col-span-2 group pillar-card bg-surface-container-low p-6 md:p-10 rounded-xl border border-outline-variant/20 hover:border-primary/20 transition-all">
+                <div className="flex flex-col h-full justify-between gap-12">
+                  <div className="flex justify-between items-start">
+                    <span className="material-symbols-outlined pillar-icon text-primary text-display-lg transition-transform">account_balance</span>
+                    <span className="font-label-md text-label-md text-on-tertiary-container border border-on-tertiary-container/30 px-3 py-1 rounded-full">Pillar 01</span>
+                  </div>
+                  <div>
+                    <h4 className="font-headline-md text-headline-md text-primary mb-4">Institutional Accountability</h4>
+                    <p className="font-body-md text-body-md text-on-surface-variant max-w-lg">We advocate for strict transparency protocols and digital-first public ledgers to ensure every cent of taxpayer revenue is traceable and purposeful.</p>
+                  </div>
+                </div>
+              </div>
+              {/* Pillar 2 */}
+              <div className="group pillar-card bg-primary text-white p-6 md:p-10 rounded-xl transition-all">
+                <div className="flex flex-col h-full justify-between gap-12">
+                  <div className="flex justify-between items-start">
+                    <span className="material-symbols-outlined pillar-icon text-secondary text-display-lg transition-transform">groups</span>
+                    <span className="font-label-md text-label-md text-primary-fixed-dim border border-primary-fixed-dim/30 px-3 py-1 rounded-full">Pillar 02</span>
+                  </div>
+                  <div>
+                    <h4 className="font-headline-md text-headline-md text-white mb-4">Localized Empowerment</h4>
+                    <p className="font-body-md text-body-md text-surface-variant">Returning decision-making power to municipal councils and community boards, reducing central bureaucracy.</p>
+                  </div>
+                </div>
+              </div>
+              {/* Pillar 3 */}
+              <div className="group pillar-card bg-surface-container-highest p-6 md:p-10 rounded-xl transition-all">
+                <div className="flex flex-col h-full justify-between gap-12">
+                  <div className="flex justify-between items-start">
+                    <span className="material-symbols-outlined pillar-icon text-on-tertiary-container text-display-lg transition-transform">history_edu</span>
+                    <span className="font-label-md text-label-md text-on-surface-variant border border-outline/30 px-3 py-1 rounded-full">Pillar 03</span>
+                  </div>
+                  <div>
+                    <h4 className="font-headline-md text-headline-md text-primary mb-4">Heritage Conservation</h4>
+                    <p className="font-body-md text-body-md text-on-surface-variant">Protecting our national cultural assets while modernizing the infrastructure that supports them for future generations.</p>
+                  </div>
+                </div>
+              </div>
+              {/* Pillar 4 */}
+              <div className="md:col-span-2 group pillar-card bg-surface-container-low p-6 md:p-10 rounded-xl border border-outline-variant/20 transition-all">
+                <div className="flex flex-col md:flex-row gap-10 items-center">
+                  <div className="w-full md:w-1/3">
+                    <img className="w-full h-48 object-cover rounded-lg" alt="Professional office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyhxbTLinqETCq9NSMdvnqIScl2K_r7HutjCvexWq-Cu2Z9fkqA0mLOtXJun1C6RYhDp_aBNRJ4WYZ5k3Y6N90karpHe1KSlcuR1ynIkoYj4nWz4B-1KE1djuop4lbFbVCEshrVDSu51utJhSMrUXY-g5hhGGA81txCwGI1xVtmsFr231h1UFnLRnFeceGcq8MQ_9gPmNA-AnM15dy8EUABuLtUG5Vh7YF62i0WDYiqLbWVn5nQZ6Vc8HTW6WDpLcCXAxzpwoO2aK"/>
+                  </div>
+                  <div className="w-full md:w-2/3">
+                    <div className="flex justify-between items-start mb-4">
+                      <h4 className="font-headline-md text-headline-md text-primary">Pragmatic Economics</h4>
+                      <span className="font-label-md text-label-md text-on-surface-variant">Pillar 04</span>
+                    </div>
+                    <p className="font-body-md text-body-md text-on-surface-variant">A fiscal strategy rooted in reality, prioritizing debt reduction and small-business incentives to drive grassroots growth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
         {/* Stats Section */}
         <section className="bg-primary py-20 text-white">

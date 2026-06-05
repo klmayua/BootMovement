@@ -6,9 +6,9 @@ export default function CommunitiesPage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
-        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full pb-bottom-nav">
+         <main className="py-12 max-w-container-max mx-auto w-full pb-bottom-nav">
           {/* Hero Section */}
-          <section className="relative h-[400px] flex items-center overflow-hidden bg-primary-container text-on-primary-container mb-20">
+          <section className="relative h-[400px] flex items-center px-margin-mobile md:px-margin-desktop overflow-hidden bg-primary-container text-on-primary-container">
             <div className="relative z-10 max-w-2xl px-margin-mobile md:px-0">
               <span className="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-md text-label-md mb-6 uppercase tracking-widest">National Reach</span>
               <h2 className="font-display-lg text-display-lg leading-tight mb-4">Empowering the <span className="text-tertiary-fixed-dim">Civic Voice</span> through Local Action.</h2>
@@ -17,10 +17,10 @@ export default function CommunitiesPage() {
           </section>
 
           {/* Filters & Search Bento Area */}
-          <section className="mb-20 -mt-32 relative z-20">
+          <section className="px-margin-mobile md:px-margin-desktop mb-20 -mt-16 relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               {/* Search Box */}
-              <div className="col-span-12 lg:col-span-8 bg-white/70 backdrop-blur-md border border-outline-variant/30 p-8 flex flex-col justify-center rounded-xl">
+               <div className="col-span-12 lg:col-span-8 bg-surface/70 backdrop-blur-md border border-outline-variant/30 p-8 flex flex-col justify-center">
                 <label className="font-label-lg text-label-lg text-primary mb-2 block">Search Collectives</label>
                 <div className="relative">
                   <input 
@@ -56,8 +56,8 @@ export default function CommunitiesPage() {
             </div>
           </section>
 
-          {/* Main Directory Grid */}
-          <section className="mb-24">
+           {/* Main Directory Grid */}
+           <section className="px-margin-mobile md:px-margin-desktop mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Community Card 1 */}
               <article className="group relative bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all duration-300">
@@ -169,11 +169,19 @@ export default function CommunitiesPage() {
                     </button>
                   </div>
                 </div>
-              </article>
-            </div>
-          </section>
-
-          {/* Nationwide Stats Section */}
+               </article>
+             </div>
+           </section>
+ 
+           {/* Pagination or Load More */}
+           <div className="mt-16 flex flex-col items-center px-margin-mobile md:px-margin-desktop">
+             <p className="font-label-md text-label-md text-on-surface-variant mb-4">Showing 3 of 412 Communities Nationally</p>
+             <button className="px-12 py-4 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all duration-300">
+               LOAD MORE CHAPTERS
+             </button>
+           </div>
+ 
+           {/* Nationwide Stats Section */}
           <section className="bg-surface-container py-24 px-margin-mobile md:px-margin-desktop mb-24">
             <div className="max-w-container-max mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">

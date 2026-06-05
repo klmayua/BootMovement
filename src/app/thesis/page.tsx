@@ -1,29 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function BootThesis() {
   return (
-    <div className="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary/20 selection:text-secondary">
-      {/* TopAppBar */}
-      <header className="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-50">
-        <div className="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
-          <div className="flex items-center gap-4 cursor-pointer active:opacity-80">
-            <span className="material-symbols-outlined text-primary text-[32px]">account_balance</span>
-            <h1 className="font-headline-md text-headline-md text-primary tracking-tight">BOOT Civic Movement</h1>
-          </div>
-          <nav className="hidden md:flex items-center gap-8">
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/citizen/dashboard">Home</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/about">About</Link>
-            <Link className="font-label-lg text-label-lg text-secondary border-b-2 border-secondary transition-colors duration-200" href="/thesis">Thesis</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/my-communities">Communities</Link>
-            <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="/events">Events</Link>
-          </nav>
-          <button className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-lg text-label-lg transition-transform hover:scale-[1.02] active:scale-[0.98]">
-            Join Now
-          </button>
-        </div>
-      </header>
-      <main className="max-w-container-max mx-auto flex flex-row relative min-h-screen">
+    <PublicLayout>
+      <div className="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary/20 selection:text-secondary">
+        <main className="max-w-container-max mx-auto flex flex-row relative min-h-screen">
         {/* NavigationDrawer (Sticky Left) */}
         <aside className="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
           <div className="flex flex-col gap-2">
@@ -113,15 +96,15 @@ export default function BootThesis() {
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                 Stability is not found in the absence of change, but in the structural integrity of the change process. Institutional weight refers to the intentional friction designed into governance to prevent populist volatility from overriding long-term strategy. 
-                <span className="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1">
-                  [1]
-                  <span className="hidden group-hover:block absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug">
-                    <strong className="text-primary block mb-1">Footnote 1:</strong>
-                    Referencing the 1922 'Stability vs Velocity' paper by Dr. Aris Thorne. Thorne argues that rapid legislative cycles without "anchor years" lead to civic fatigue.
-                  </span>
-                </span>
+                <span className="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1 footnote-trigger">
+                   [1]
+                   <span className="hidden group-hover:block absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug footnote-content">
+                     <strong className="text-primary block mb-1">Footnote 1:</strong>
+                     Referencing the 1922 'Stability vs Velocity' paper by Dr. Aris Thorne. Thorne argues that rapid legislative cycles without "anchor years" lead to civic fatigue.
+                   </span>
+                 </span>
               </p>
-              <div className="my-12 p-8 bg-white/70 backdrop-blur-sm border border-outline-variant/20 rounded-xl">
+               <div className="my-12 p-8 bg-white/70 backdrop-blur-sm border border-on-tertiary-container/20 rounded-xl">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
@@ -200,36 +183,6 @@ export default function BootThesis() {
           </div>
         </aside>
       </main>
-      {/* Footer */}
-      <footer className="w-full mt-auto bg-primary dark:bg-primary-container text-on-primary">
-        <div className="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
-          <div className="flex flex-col gap-4">
-            <h3 className="font-headline-sm text-headline-sm text-on-primary">BOOT Civic Movement</h3>
-            <p className="font-body-sm text-body-sm opacity-80 max-w-xs">Restoring the foundations of civic duty through transparency, accountability, and the weight of history.</p>
-            <p className="font-body-sm text-body-sm mt-4 text-primary-fixed-dim">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
-          </div>
-          <div className="flex gap-12">
-            <div className="flex flex-col gap-3">
-              <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Platform</h4>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/about">Privacy Policy</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/about">Terms of Service</Link>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-label-lg text-label-lg text-tertiary-fixed">Engagement</h4>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/volunteer">Volunteer Portal</Link>
-              <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="/donate">Donate</Link>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
-              <span className="material-symbols-outlined text-white">share</span>
-            </div>
-            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
-              <span className="material-symbols-outlined text-white">mail</span>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+      </PublicLayout>
+    );
+  }

@@ -1,78 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function ProjectsHub() {
   return (
-    <div className="bg-surface font-body-md text-on-surface min-h-screen">
-      {/* SideNavBar */}
-      <aside className="fixed left-0 top-0 h-screen w-64 bg-surface-container-low dark:bg-on-background border-r border-outline-variant/30 dark:border-outline/20 flex flex-col h-full py-8 px-4 z-50">
-        <div className="mb-10 px-2">
-          <h1 className="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim">BOOT OS</h1>
-          <p className="font-label-md text-on-surface-variant">Civic Dashboard</p>
-        </div>
-        <nav className="flex-grow space-y-2">
-          <Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out group" href="/citizen/dashboard">
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="font-label-lg text-label-lg">Dashboard</span>
-          </Link>
-<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-communities">
-             <span className="material-symbols-outlined">groups</span>
-             <span className="font-label-lg text-label-lg">Communities</span>
-           </Link>
-<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/events">
-             <span className="material-symbols-outlined">event</span>
-             <span className="font-label-lg text-label-lg">Events</span>
-           </Link>
-          <Link className="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg hover:translate-x-1 duration-300 ease-in-out" href="/projects">
-            <span className="material-symbols-outlined">assignment</span>
-            <span className="font-label-lg text-label-lg">Projects</span>
-          </Link>
-<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/my-impact">
-             <span className="material-symbols-outlined">monitoring</span>
-             <span className="font-label-lg text-label-lg">Analytics</span>
-           </Link>
-<Link className="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="/citizen/settings">
-             <span className="material-symbols-outlined">settings</span>
-             <span className="font-label-lg text-label-lg">Settings</span>
-           </Link>
-        </nav>
-        <div className="mt-auto border-t border-outline-variant/30 pt-6 px-2">
-          <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg uppercase tracking-wider hover:opacity-90 transition-opacity">
-            Donate Now
-          </button>
-          <div className="mt-6 space-y-2">
-            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-primary transition-colors" href="/contact">
-              <span className="material-symbols-outlined">help</span>
-              <span className="font-label-md text-label-md">Support</span>
-            </Link>
-            <Link className="flex items-center gap-3 px-2 py-2 text-on-surface-variant hover:text-error transition-colors" href="/auth/login">
-              <span className="material-symbols-outlined">logout</span>
-              <span className="font-label-md text-label-md">Logout</span>
-            </Link>
-          </div>
-        </div>
-      </aside>
-      <main className="ml-64 min-h-screen flex flex-col">
-        {/* TopAppBar */}
-        <header className="bg-surface dark:bg-on-background w-full sticky top-0 z-40 border-b border-outline-variant/30 dark:border-outline/20 flex justify-between items-center px-margin-desktop py-4">
-          <div className="flex items-center gap-4">
-            <h2 className="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Projects Hub</h2>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="relative group">
-              <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-              <input className="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-body-sm w-64 focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search initiatives..." type="text"/>
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span>
-              <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold overflow-hidden cursor-pointer active:opacity-80 transition-all duration-200">
-                <img alt="User profile" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTU9XkIH7czrhauWBIwzvHawAQqJPu23u4_E_-M93-1uzBHvLTdbCflJzv9ZBIYyorhUYk9WrzIA3ZkXDdNN8FOaRjH9UxB60mHkSxDkS9_bCKvitcEVL2Y5FROo2tKChUFwqRX5qfOLqe3MveP8eAl1bqAey-gw9u7wM_94UzN_OdcPjrMl8rrkAFJRFFBzFgHzKRZUF3F5xp0eZko5XMl7NE4ZdYZzYuWCYl9PKw-O3mnVRSdnM-WeMyIxTd2DovzLCvigKOAMsC"/>
-              </div>
-            </div>
-          </div>
-        </header>
-        {/* Canvas Content */}
-        <div className="flex-grow p-margin-desktop space-y-12">
+    <PublicLayout>
+      <div className="bg-surface font-body-md text-on-surface min-h-screen">
+        <main className="flex-grow p-margin-desktop space-y-12">
           {/* Hero Stats & Vision */}
           <section className="grid grid-cols-12 gap-6">
             <div className="col-span-8 relative rounded-xl overflow-hidden bg-primary-container p-12 text-on-primary h-[400px] flex flex-col justify-end group">
