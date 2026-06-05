@@ -240,8 +240,7 @@ export default function CandidatesPage() {
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
-          </div>
-      </div>
+      </footer>
       <footer className="bg-surface border-t border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-12">
         <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
