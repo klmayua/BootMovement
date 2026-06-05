@@ -277,14 +277,6 @@ export default function CandidatesPage() {
             </form>
           </div>
         </div>
-        <div className="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between gap-4">
-          <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
-          <div className="flex gap-6">
-            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>
-            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
-            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
-          </div>
-        </div>
       </footer>
     </PublicLayout>
   );

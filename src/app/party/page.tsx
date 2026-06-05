@@ -206,9 +206,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
-<a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/about">
+<Link className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/party/about">
                             LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                        </a>
+                        </Link>
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
@@ -217,9 +217,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md mb-6">Future Progress</h3>
                 <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
-<a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/thesis">
+<Link className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/party/thesis">
                             EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                        </a>
+                        </Link>
               </div>
             </div>
           </div>
