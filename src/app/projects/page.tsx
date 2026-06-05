@@ -206,5 +206,6 @@ export default function ProjectsHub() {
         <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>add</span>
       </button>
     </div>
+    </PublicLayout>
   );
 }
