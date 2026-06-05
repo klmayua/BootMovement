@@ -241,9 +241,51 @@ export default function CandidatesPage() {
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
           </div>
-        </div>
-        </footer>
       </div>
+      <footer className="bg-surface border-t border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-12">
+        <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Platform</h4>
+            <ul className="space-y-3">
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">About</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/manifesto">Manifesto</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/communities">Communities</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/events">Events</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Resources</h4>
+            <ul className="space-y-3">
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/citizen/dashboard">Dashboard</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/candidates">Candidates</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/projects">Projects</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/learning">Learning</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Legal</h4>
+            <ul className="space-y-3">
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Privacy Policy</Link></li>
+              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Terms of Service</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Stay Informed</h4>
+            <form className="space-y-3">
+              <input className="w-full bg-surface p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:outline-none text-body-sm" placeholder="Email address" type="email" />
+              <button className="w-full bg-primary text-on-primary py-3 rounded font-label-lg hover:opacity-90 transition-opacity">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div className="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between gap-4">
+          <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+          <div className="flex gap-6">
+            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>
+            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
+            <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
+          </div>
+        </div>
+      </footer>
     </PublicLayout>
   );
 }

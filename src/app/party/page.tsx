@@ -3,8 +3,7 @@ import Link from 'next/link';
 
 export default function PartyPage() {
   return (
-    <div className="font-body-md text-on-surface">
-      <main>
+    <main className="font-body-md text-on-surface">
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -364,7 +363,6 @@ export default function PartyPage() {
         <div className="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center">
           <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved. Authorized by the National Civic Committee.</p>
         </div>
-      </footer>
-    </div>
+    </main>
   );
 }
