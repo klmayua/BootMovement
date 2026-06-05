@@ -1,13 +1,33 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { PublicLayout } from '@/components/layout/PublicLayout';
-import { Navbar } from '@/components/layout/Navbar';
 
 export default function CandidatesPage() {
   return (
-    <PublicLayout>
-      <Navbar />
+    <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+      {/* Top Navigation Bar */}
+      <header className="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
+        <div className="flex items-center gap-8">
+          <h1 className="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</h1>
+          <nav className="hidden md:flex gap-6">
+            <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="/citizen/dashboard">Dashboard</Link>
+            <Link className="text-primary font-bold border-b-2 border-primary px-3 py-2 font-label-lg text-label-lg" href="/candidates">Communities</Link>
+            <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="/events">Events</Link>
+            <Link className="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="/projects">Projects</Link>
+          </nav>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="relative group">
+            <input className="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/50 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none w-64 transition-all duration-300" placeholder="Search candidates..." type="text" />
+            <span className="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant">search</span>
+          </div>
+          <button className="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">notifications</button>
+          <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container cursor-pointer overflow-hidden border border-primary/20">
+            <img alt="User Profile" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHPR4TbRRJaXBeJkymj5v4_3VjzGoNx8DmVgZVpDW1jvVUmqGJkjeBKdF6F8ySwJUOMcbarU1s_QAb3IQdO98399BFcoIpFZ1imzJBLxBt-si5Yd_8bqPdL6PDa2DGyx-VvA5w9-zPuYEWGKnVEj8ZFNAVjiaNQHOsFersEmCCxKq0Nxm9jfewmbMM0JbkB4HtYM-crV prognostic" />
+          </div>
+        </div>
+      </header>
+
       <div className="flex min-h-screen">
         {/* Side Navigation Bar */}
         <aside className="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col h-full py-8 px-4 hidden lg:flex mt-[73px]">
@@ -56,53 +76,53 @@ export default function CandidatesPage() {
           </div>
         </aside>
 
-         {/* Main Content Area */}
-         <main className="flex-grow lg:ml-64 p-margin-mobile md:p-margin-desktop bg-surface pb-bottom-nav">
-           <div className="max-w-container-max mx-auto">
-             <div className="mb-12">
-               <h2 className="font-headline-lg text-primary mb-2">Candidate Directory</h2>
-               <p className="font-body-lg text-on-surface-variant max-w-2xl">Discover the visionaries leading our movement across the nation. Informed, vetted, and backed by the BOOT Civic OS community.</p>
-             </div>
+        {/* Main Content Area */}
+        <main className="flex-grow lg:ml-64 p-margin-desktop bg-surface">
+          <div className="max-w-container-max mx-auto">
+            <div className="mb-12">
+              <h2 className="font-headline-lg text-headline-lg text-primary mb-2">Candidate Directory</h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover the visionaries leading our movement across the nation. Informed, vetted, and backed by the BOOT Civic OS community.</p>
+            </div>
             
-             {/* Filter Controls (Bento Style) */}
-             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-               <div className="col-span-1 md:col-span-2 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl flex flex-col justify-between">
-                 <label className="font-label-lg text-primary mb-3 flex items-center gap-2">
-                   <span className="material-symbols-outlined text-sm">location_on</span>
-                   Region
-                 </label>
-                 <div className="flex flex-wrap gap-2">
-                   <button className="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-semibold touch-manipulation">All Regions</button>
-                   <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md touch-manipulation">Northeast</button>
-                   <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md touch-manipulation">Southwest</button>
-                   <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md touch-manipulation">Midwest</button>
-                   <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md touch-manipulation">West Coast</button>
-                 </div>
-               </div>
-               <div className="col-span-1 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl">
-                 <label className="font-label-lg text-primary mb-3 flex items-center gap-2">
-                   <span className="material-symbols-outlined text-sm">account_balance</span>
-                   Office Level
-                 </label>
-                 <select className="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface cursor-pointer p-0 outline-none touch-manipulation">
-                   <option>All Levels</option>
-                   <option>Federal</option>
-                   <option>State Senate</option>
-                   <option>State Assembly</option>
-                   <option>Municipal</option>
-                 </select>
-               </div>
-               <div className="col-span-1 p-6 bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between touch-manipulation">
-                 <div>
-                   <p className="font-headline-sm">124</p>
-                   <p className="font-label-md opacity-80 uppercase tracking-wider">Candidates Active</p>
-                 </div>
-                 <button className="flex items-center gap-2 font-label-lg hover:underline transition-all">
-                   View New Endorsements
-                   <span className="material-symbols-outlined">arrow_forward</span>
-                 </button>
-               </div>
-             </div>
+            {/* Filter Controls (Bento Style) */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+              <div className="col-span-1 md:col-span-2 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl flex flex-col justify-between">
+                <label className="font-label-lg text-primary mb-3 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-sm">location_on</span>
+                  Region
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  <button className="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-semibold">All Regions</button>
+                  <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Northeast</button>
+                  <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Southwest</button>
+                  <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Midwest</button>
+                  <button className="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">West Coast</button>
+                </div>
+              </div>
+              <div className="col-span-1 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl">
+                <label className="font-label-lg text-primary mb-3 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-sm">account_balance</span>
+                  Office Level
+                </label>
+                <select className="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface cursor-pointer p-0 outline-none">
+                  <option>All Levels</option>
+                  <option>Federal</option>
+                  <option>State Senate</option>
+                  <option>State Assembly</option>
+                  <option>Municipal</option>
+                </select>
+              </div>
+              <div className="col-span-1 p-6 bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between">
+                <div>
+                  <p className="font-headline-sm text-headline-sm">124</p>
+                  <p className="font-label-md opacity-80 uppercase tracking-wider">Candidates Active</p>
+                </div>
+                <button className="flex items-center gap-2 font-label-lg hover:underline transition-all">
+                  View New Endorsements
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
 
             {/* Directory Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -130,7 +150,7 @@ export default function CandidatesPage() {
                       </div>
                       <p className="text-label-md mt-2 text-on-surface-variant">72% Goal Funded</p>
                     </div>
-                    <button className="material-symbols-outlined p-3 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all touch-manipulation">favorite</button>
+                    <button className="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
                   </div>
                 </div>
               </div>
@@ -158,7 +178,7 @@ export default function CandidatesPage() {
                       </div>
                       <p className="text-label-md mt-2 text-on-surface-variant">45% Goal Funded</p>
                     </div>
-                    <button className="material-symbols-outlined p-3 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all touch-manipulation">favorite</button>
+                    <button className="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
                   </div>
                 </div>
               </div>
@@ -186,7 +206,7 @@ export default function CandidatesPage() {
                       </div>
                       <p className="text-label-md mt-2 text-on-surface-variant">88% Goal Funded</p>
                     </div>
-                    <button className="material-symbols-outlined p-3 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all touch-manipulation">favorite</button>
+                    <button className="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
                   </div>
                 </div>
               </div>
@@ -194,7 +214,7 @@ export default function CandidatesPage() {
             
             {/* Load More / Pagination */}
             <div className="mt-16 flex flex-col items-center gap-6">
-              <button className="px-8 py-4 bg-surface border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-all flex items-center gap-2 touch-manipulation">
+              <button className="px-8 py-3 bg-surface border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-all flex items-center gap-2">
                 Load More Profiles
                 <span className="material-symbols-outlined">expand_more</span>
               </button>
@@ -240,40 +260,6 @@ export default function CandidatesPage() {
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
-      </footer>
-      <footer className="bg-surface border-t border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-12">
-        <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Platform</h4>
-            <ul className="space-y-3">
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">About</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/manifesto">Manifesto</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/communities">Communities</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/events">Events</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Resources</h4>
-            <ul className="space-y-3">
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/citizen/dashboard">Dashboard</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/candidates">Candidates</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/projects">Projects</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/learning">Learning</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Privacy Policy</Link></li>
-              <li><Link className="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/about">Terms of Service</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-lg text-primary mb-6 uppercase tracking-wider">Stay Informed</h4>
-            <form className="space-y-3">
-              <input className="w-full bg-surface p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:outline-none text-body-sm" placeholder="Email address" type="email" />
-              <button className="w-full bg-primary text-on-primary py-3 rounded font-label-lg hover:opacity-90 transition-opacity">Subscribe</button>
-            </form>
           </div>
         </div>
       </footer>

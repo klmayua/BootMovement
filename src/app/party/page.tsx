@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 export default function PartyPage() {
   return (
-    <main className="font-body-md text-on-surface">
+    <div className="font-body-md text-on-surface">
+      <main>
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -44,7 +45,7 @@ export default function PartyPage() {
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
                 <Link className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all active:scale-95" href="/party/about">
                                 LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                            </Link>
+                            </a>
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
@@ -55,7 +56,7 @@ export default function PartyPage() {
                 <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
                 <Link className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all active:scale-95" href="/party/thesis">
                                 EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                            </Link>
+                            </a>
               </div>
             </div>
           </div>
@@ -162,6 +163,13 @@ export default function PartyPage() {
     </div>
   );
 }
+
+
+
+
+      <main>
+        {/* Hero Section */}
+        <section className="relative h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img className="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dndBN91UiEj2HgrdJ3hFcXdbdXBSL9bAFJnGOQhuJCnYhBA-OARRQb6deSzroPC8rZPCONTWU3SmzpYhxCh_fmBh_iGEceyZCfpnp26SJgwjCFWris42Mmwen8JhKJvFcbt3zLjl8gCxSf2M6FQ5b49J1jakOLLXSe1wrT33jXsDPb8If01emqu-vmiMuibLKY4kwiaj-pfRLUOCl4GeEK7XNMdcJFQTFNyoUCHQlSzIxmaIBRmQ8OezA7-cRGSB1ICIh_n04AAS" alt="Neoclassical government building" />
           </div>
@@ -199,9 +207,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
-<Link className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/party/about">
+<a className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/about">
                             LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                        </Link>
+                        </a>
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
@@ -210,9 +218,9 @@ export default function PartyPage() {
                 </div>
                 <h3 className="font-headline-md text-headline-md mb-6">Future Progress</h3>
                 <p className="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
-<Link className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/party/thesis">
+<a className="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="/thesis">
                             EXPLORE VISION <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                        </Link>
+                        </a>
               </div>
             </div>
           </div>
@@ -356,6 +364,7 @@ export default function PartyPage() {
         <div className="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center">
           <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved. Authorized by the National Civic Committee.</p>
         </div>
-    </main>
+      </footer>
+    </div>
   );
 }
