@@ -163,9 +163,8 @@ export default function ProjectsHub() {
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-        {/* Footer */}
+           </section>
+         {/* Footer */}
         <footer className="bg-surface-container-highest dark:bg-on-background w-full py-16 border-t border-outline-variant/30 dark:border-outline/20">
           <div className="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
             <div className="space-y-4">

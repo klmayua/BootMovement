@@ -182,7 +182,8 @@ export default function BootThesis() {
             <p className="font-label-md text-label-md text-outline">Verified Authenticity</p>
           </div>
         </aside>
-      </main>
-      </PublicLayout>
+       </main>
+       </div>
+       </PublicLayout>
     );
   }
