@@ -17,8 +17,8 @@ export default function HomePage() {
             <div className="hero-gradient absolute inset-0"></div>
           </div>
           
-            <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-16 items-center py-20 md:py-0">
-               <div className="text-white space-y-6 md:space-y-8 text-center md:text-left">
+            <div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full grid md:grid-cols-2 gap-16 items-center py-20 md:py-0">
+                <div className="text-white space-y-8 text-left">
                  <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary-fixed-dim/30 rounded-full bg-primary/40 backdrop-blur-sm">
                    <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
                    <span className="font-label-md text-label-md tracking-widest uppercase">The 2024 Reform Agenda</span>

@@ -93,7 +93,7 @@ export default function MovementHub() {
          {/* Impact Metrics Bento Grid */}
          <section className="grid grid-cols-12 gap-6 mb-20">
            {/* Large Metric Card */}
-           <div className="col-span-12 md:col-span-8 bg-primary-container rounded-xl p-6 md:p-8 text-on-primary shadow-sm relative overflow-hidden group touch-manipulation">
+           <div className="col-span-12 md:col-span-8 bg-primary-container rounded-xl p-8 text-on-primary shadow-sm relative overflow-hidden group touch-manipulation">
              <div className="relative z-10">
                <p className="font-label-lg text-label-lg text-primary-fixed-dim uppercase tracking-widest mb-2">Total Movement Impact</p>
                <h3 className="font-display-lg text-[48px] md:text-[64px] leading-none mb-4">2.4M</h3>
@@ -104,7 +104,7 @@ export default function MovementHub() {
              </div>
            </div>
            {/* Secondary Metric */}
-           <div className="col-span-12 md:col-span-4 bg-surface-container-high border border-outline-variant/30 rounded-xl p-6 md:p-8 flex flex-col justify-between touch-manipulation">
+           <div className="col-span-12 md:col-span-4 bg-surface-container-high border border-outline-variant/30 rounded-xl p-8 flex flex-col justify-between touch-manipulation">
              <div>
                <span className="material-symbols-outlined text-secondary text-4xl mb-4">volunteer_activism</span>
                <p className="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest mb-1">Active Chapters</p>
@@ -177,7 +177,7 @@ export default function MovementHub() {
              </div>
            </section>
            {/* Active Chapters / Map Section */}
-           <section className="mb-20 bg-surface-container-low rounded-2xl p-6 md:p-10 border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center">
+           <section className="mb-20 bg-surface-container-low rounded-2xl p-10 border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center">
              <div className="flex-1 text-center md:text-left">
                <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Chapter Network</h2>
                <p className="font-body-md text-body-md text-on-surface-variant mb-8">Our movement grows bottom-up. Explore our active local chapters and find your nearest movement hub to start contributing today.</p>

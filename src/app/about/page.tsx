@@ -29,7 +29,7 @@ export default function AboutPage() {
                <div className="aspect-[4/5] rounded-xl overflow-hidden border border-tertiary-fixed/30 shadow-2xl">
                  <img className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-700" alt="Modern government building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHknQm1wfjIW7vBkBtmBUJ5Egw42Cl0pTnlV0a24qCCZOoa67fob2nlmq_G_cTWqsinyA6xGaESEgN9nq_CVuGimN0bic3x3PQgh4e0vFd1J2Q8BTn0oxZFn8EtPcvXvjSekBz7gQgOn9SnUnDDs3TnF3xXF_6Mf-F67Ar5QUuCVnhXyR39-4-opT_n65mz2p8h5W005avHYG24kbHbxX5Y7Oh13Fe7AUEn6zVgUZxGfi7y5j6vTGC_J0lcBgnHUXAz1TwU22ZvPGM"/>
                </div>
-               <div className="absolute -bottom-4 -left-2 md:-bottom-10 md:-left-10 p-4 md:p-6 bg-surface-container-highest border border-tertiary-fixed/30 rounded-xl max-w-[240px] md:max-w-[280px] shadow-lg z-10">
+                <div className="absolute -bottom-10 -left-10 p-8 bg-surface-container-highest border border-tertiary-fixed/30 rounded-xl max-w-xs shadow-lg z-10">
                  <p className="font-headline-sm text-primary mb-2">2040 Vision</p>
                  <p className="font-body-sm text-on-surface-variant">The roadmap for a fully integrated civic operating system by the end of the decade.</p>
                </div>
@@ -140,27 +140,9 @@ export default function AboutPage() {
                  </button>
                </div>
              </div>
-           </section>
-
-          {/* CTA Section */}
-          <section className="px-margin-mobile md:px-margin-desktop py-24">
-            <div className="bg-surface-container-highest rounded-2xl p-20 flex flex-col items-center text-center relative overflow-hidden">
-              <h2 className="font-display-lg text-display-lg text-primary mb-6 z-10">Shape the Next Century.</h2>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 z-10 leading-relaxed">
-                The tradition of the future starts with your participation. Join the movement that is defining the next era of human coordination.
-              </p>
-              <div className="flex gap-4 z-10">
-                <button className="bg-secondary text-white px-10 py-4 rounded-full font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors shadow-lg shadow-secondary/20">
-                  Become a Delegate
-                </button>
-                <button className="bg-primary text-white px-10 py-4 rounded-full font-label-lg text-label-lg hover:bg-primary-container transition-colors">
-                  Explore Governance
-                </button>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </PublicLayout>
-  );
-}
+            </section>
+          </main>
+        </div>
+      </PublicLayout>
+    );
+  }
