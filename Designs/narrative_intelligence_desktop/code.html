@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CivicOS | Administrative Intelligence Portal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#002d1c",
+                    "surface-container": "#e6f1e9",
+                    "secondary-container": "#fe6763",
+                    "on-surface-variant": "#414944",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-secondary-fixed": "#410004",
+                    "surface-variant": "#dae5de",
+                    "outline": "#717973",
+                    "inverse-on-surface": "#e8f3ec",
+                    "on-primary-fixed": "#002114",
+                    "surface-container-low": "#ebf6ef",
+                    "primary-container": "#1a4331",
+                    "inverse-primary": "#a4d0b8",
+                    "on-tertiary-container": "#c6a15a",
+                    "surface": "#f1fcf4",
+                    "outline-variant": "#c1c8c2",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#a4d0b8",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#261900",
+                    "tertiary": "#342300",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f1fcf4",
+                    "on-primary-container": "#85b098",
+                    "on-background": "#141e19",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#29332e",
+                    "surface-container-high": "#e0ebe3",
+                    "surface-dim": "#d2ddd5",
+                    "secondary": "#af2d2f",
+                    "background": "#f1fcf4",
+                    "on-secondary-container": "#69000c",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#c0edd3",
+                    "surface-tint": "#3e6752",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#141e19",
+                    "surface-container-highest": "#dae5de",
+                    "tertiary-container": "#4f3800",
+                    "on-primary-fixed-variant": "#264e3c",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-secondary-fixed-variant": "#8d131b",
+                    "secondary-fixed": "#ffdad7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Work Sans"],
+                    "headline-md": ["Source Serif 4"],
+                    "headline-sm": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "body-md": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "body-sm": ["Work Sans"],
+                    "headline-lg": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sentiment-bar {
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .narrative-chip:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(26, 67, 49, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen flex flex-col py-8 bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container w-64 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">CivicOS</h1>
+<p class="font-body-sm text-body-sm opacity-70">Executive Portal</p>
+</div>
+<div class="flex-1 space-y-2 px-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Command Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Citizens</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-lg text-label-lg">Narrative</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">how_to_vote</span>
+<span class="font-label-lg text-label-lg">Election Ops</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-lg text-label-lg">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-4 space-y-2">
+<button class="w-full py-3 bg-secondary-container text-on-secondary-fixed rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 mb-4">
+<span class="material-symbols-outlined">add</span>
+                New Initiative
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">help</span> Support
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-primary/70 hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span> Log Out
+            </a>
+</div>
+</nav>
+<!-- Main Content Shell -->
+<div class="ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full h-16 px-margin-desktop bg-surface dark:bg-surface-dim border-b border-outline-variant/30 sticky top-0 z-40">
+<div class="flex items-center flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/30 rounded-lg text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search narrative data..." type="text"/>
+</div>
+<div class="ml-8 flex gap-6">
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md text-label-md" href="#">Analytics</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="#">Deployment</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-all" href="#">Strategy</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary px-4 py-2 rounded text-on-secondary font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">error</span>
+                    Action Alert
+                </button>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">history</span>
+</button>
+<img alt="Administrator" class="w-8 h-8 rounded-full border border-outline-variant" data-alt="Professional portrait of a high-ranking government administrator in a clean office setting. The lighting is bright and authoritative, reflecting the modern institutional aesthetic of CivicOS. The background is slightly blurred with soft shades of cream and dark green, maintaining a scholarly and minimalist atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXe7GK924XUTsK11ep73MoevXczuLmkxXiLmXJ6o6IYaqRmSihirmivfSLdbHsU3XSOKTpAR-pPaUr1jBqKr8ZU4USW-xTbHftahAUbhC6zlETFnb4qw8_feD_Pfak4kuSaS_uTNpE66_iRMdb-MhScUIk8l04K9R9EsJhPL_q1W9D0IQGwgPCXFBFKxNfXHJMm52X_SjPt9OORCB3zatr3OE8plHi0HH_shaaCUPkVSvKcrrQRwZbQBv2zepcAdZeS_bDmhjMajOC"/>
+</div>
+</div>
+</header>
+<!-- Main Workspace -->
+<main class="flex-1 p-margin-desktop max-w-[1400px] mx-auto w-full">
+<!-- Hero Stats / Alerts -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">National Sentiment Monitor</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Real-time aggregate of multi-platform citizen discourse.</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md uppercase tracking-widest text-outline">Last Updated</span>
+<p class="font-headline-sm text-headline-sm text-primary">09:42:01 AM EST</p>
+</div>
+</div>
+<!-- Misinformation Alert Banner -->
+<div class="bg-error-container/40 border-l-4 border-error p-6 rounded-lg flex items-start gap-4 mb-10">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-error-container">CRITICAL MISINFORMATION ALERT: Regional Energy Grid Rumors</h3>
+<p class="font-body-sm text-body-sm text-on-error-container mt-1">Coordinated bot activity detected in Northeast sectors spreading falsified blackout projections. Narrative resonance has increased by 140% in the last 2 hours.</p>
+</div>
+<button class="text-label-lg font-label-lg text-error hover:underline">Deploy Response</button>
+</div>
+</div>
+<!-- Bento Grid Dashboard -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Sentiment Analysis Card -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                            Sentiment Distribution
+                        </h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-primary text-on-primary rounded text-label-md font-label-md">24H</button>
+<button class="px-3 py-1 hover:bg-surface-container-high rounded text-label-md font-label-md transition-colors">7D</button>
+<button class="px-3 py-1 hover:bg-surface-container-high rounded text-label-md font-label-md transition-colors">30D</button>
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-lg text-label-lg">Positive Alignment</span>
+<span class="font-label-lg text-label-lg text-primary">42%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="sentiment-bar h-full bg-primary" style="width: 42%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-lg text-label-lg">Neutral / Observation</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">31%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="sentiment-bar h-full bg-tertiary-fixed-dim" style="width: 31%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-lg text-label-lg">Critical / Resistance</span>
+<span class="font-label-lg text-label-lg text-secondary">27%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="sentiment-bar h-full bg-secondary" style="width: 27%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-outline-variant/20 grid grid-cols-3 gap-8">
+<div>
+<p class="text-label-md font-label-md text-outline uppercase tracking-wider">Velocity</p>
+<p class="text-headline-sm font-headline-sm text-primary">+2.4% <span class="text-body-sm font-body-sm font-normal text-on-surface-variant">/ hr</span></p>
+</div>
+<div>
+<p class="text-label-md font-label-md text-outline uppercase tracking-wider">Top Driver</p>
+<p class="text-headline-sm font-headline-sm text-primary">New Policy</p>
+</div>
+<div>
+<p class="text-label-md font-label-md text-outline uppercase tracking-wider">Confidence</p>
+<p class="text-headline-sm font-headline-sm text-primary">94.8%</p>
+</div>
+</div>
+</div>
+<!-- Narrative Word Cloud Area -->
+<div class="col-span-12 lg:col-span-4 bg-primary text-on-primary p-8 rounded-xl overflow-hidden relative min-h-[400px]">
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm mb-6">Resonance Map</h3>
+<div class="flex flex-wrap gap-3">
+<span class="narrative-chip px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-lg border border-primary-fixed/20 transition-all cursor-pointer">Security</span>
+<span class="narrative-chip px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer">Innovation</span>
+<span class="narrative-chip px-6 py-3 bg-secondary-container text-on-secondary-fixed rounded-full font-headline-sm text-xl transition-all cursor-pointer">Heritage</span>
+<span class="narrative-chip px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer">Trust</span>
+<span class="narrative-chip px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer">Efficiency</span>
+<span class="narrative-chip px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer">Tradition</span>
+<span class="narrative-chip px-6 py-3 bg-on-primary-container/20 text-on-primary rounded-full font-label-lg text-lg transition-all cursor-pointer">Future</span>
+<span class="narrative-chip px-4 py-2 bg-on-primary-container/10 text-on-primary rounded-full font-label-md text-sm transition-all cursor-pointer">Clarity</span>
+<span class="narrative-chip px-5 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-md transition-all cursor-pointer">Balance</span>
+</div>
+<div class="mt-12">
+<p class="font-body-sm text-body-sm opacity-70">Keywords sized by algorithmic resonance frequency across primary digital channels.</p>
+</div>
+</div>
+<!-- Subtle background effect -->
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-[80px]"></div>
+</div>
+<!-- Media Tracking Table -->
+<div class="col-span-12 bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<div class="p-8 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm text-primary">Media Response Tracking</h3>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                            </button>
+<button class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span> Export Report
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md border-b border-outline-variant/30">
+<th class="px-8 py-4">Source</th>
+<th class="px-8 py-4">Headline / Lead</th>
+<th class="px-8 py-4">Tone Index</th>
+<th class="px-8 py-4">Reach</th>
+<th class="px-8 py-4">Action Status</th>
+</tr>
+</thead>
+<tbody class="text-body-sm text-on-surface">
+<tr class="border-b border-outline-variant/10 hover:bg-surface transition-colors">
+<td class="px-8 py-6 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        National Times
+                                    </td>
+<td class="px-8 py-6 font-medium">New Administrative Protocol Shows Early Promise in Efficiency Gains</td>
+<td class="px-8 py-6">
+<span class="px-2 py-1 bg-surface-container-high text-primary rounded font-label-md text-[10px] uppercase">Stable</span>
+</td>
+<td class="px-8 py-6">1.2M</td>
+<td class="px-8 py-6">
+<button class="text-primary font-label-md hover:underline">Monitor</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface transition-colors">
+<td class="px-8 py-6 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+                                        Regional Independent
+                                    </td>
+<td class="px-8 py-6 font-medium text-secondary">Citizens Express Concern Over New Data Disclosure Mandates</td>
+<td class="px-8 py-6">
+<span class="px-2 py-1 bg-error-container text-error rounded font-label-md text-[10px] uppercase">Critical</span>
+</td>
+<td class="px-8 py-6">450K</td>
+<td class="px-8 py-6">
+<button class="text-secondary font-label-lg bg-secondary/10 px-3 py-1 rounded hover:bg-secondary/20">Intervene</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface transition-colors">
+<td class="px-8 py-6 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></div>
+                                        The Ledger Post
+                                    </td>
+<td class="px-8 py-6 font-medium">Infrastructure Spending Bill: What it means for the Average Citizen</td>
+<td class="px-8 py-6">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded font-label-md text-[10px] uppercase">Neutral</span>
+</td>
+<td class="px-8 py-6">890K</td>
+<td class="px-8 py-6">
+<button class="text-primary font-label-md hover:underline">Acknowledge</button>
+</td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="px-8 py-6 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        Visionary Herald
+                                    </td>
+<td class="px-8 py-6 font-medium">Why the CivicOS Portal is a Game-Changer for Modern Governance</td>
+<td class="px-8 py-6">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded font-label-md text-[10px] uppercase">Positive</span>
+</td>
+<td class="px-8 py-6">3.1M</td>
+<td class="px-8 py-6">
+<button class="text-primary font-label-md hover:underline">Amplify</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center py-8 px-margin-desktop bg-surface-container-low border-t border-outline-variant/20 w-full">
+<div class="mb-4 md:mb-0">
+<span class="font-label-lg text-label-lg font-bold text-primary">CivicOS</span>
+<span class="mx-2 text-outline-variant">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Visionary Tradition Movement. All Rights Reserved. Institutional Oversight Protocol v4.2</span>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Ethics Policy</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Legal</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Contact Bureau</a>
+</div>
+</footer>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate sentiment bars on load
+            const bars = document.querySelectorAll('.sentiment-bar');
+            bars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 100);
+            });
+
+            // Handle navigation active states
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    navLinks.forEach(l => {
+                        l.classList.remove('bg-primary-container/20', 'border-l-4', 'border-secondary-container', 'text-on-primary');
+                        l.classList.add('text-on-primary/70');
+                    });
+                    link.classList.add('bg-primary-container/20', 'border-l-4', 'border-secondary-container', 'text-on-primary');
+                    link.classList.remove('text-on-primary/70');
+                });
+            });
+        });
+    </script>
+</body></html>

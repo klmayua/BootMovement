@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#8d131b",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#69000c",
+                    "surface-container": "#e6f1e9",
+                    "on-secondary-fixed": "#410004",
+                    "inverse-surface": "#29332e",
+                    "surface-container-highest": "#dae5de",
+                    "on-primary-container": "#85b098",
+                    "surface-bright": "#f1fcf4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#264e3c",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fe6763",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-surface": "#141e19",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#4f3800",
+                    "primary-fixed-dim": "#a4d0b8",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-surface-variant": "#414944",
+                    "surface-container-low": "#ebf6ef",
+                    "outline": "#717973",
+                    "on-tertiary-fixed": "#261900",
+                    "on-tertiary-container": "#c6a15a",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "outline-variant": "#c1c8c2",
+                    "on-background": "#141e19",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#c0edd3",
+                    "background": "#f1fcf4",
+                    "primary": "#002d1c",
+                    "secondary": "#af2d2f",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffdad7",
+                    "surface-dim": "#d2ddd5",
+                    "tertiary": "#342300",
+                    "surface-container-high": "#e0ebe3",
+                    "inverse-primary": "#a4d0b8",
+                    "surface-tint": "#3e6752",
+                    "error-container": "#ffdad6",
+                    "surface": "#f1fcf4",
+                    "inverse-on-surface": "#e8f3ec",
+                    "tertiary-fixed": "#ffdea5",
+                    "surface-variant": "#dae5de",
+                    "primary-container": "#1a4331",
+                    "on-primary-fixed": "#002114"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Source Serif 4"],
+                    "headline-lg": ["Source Serif 4"],
+                    "headline-sm": ["Source Serif 4"],
+                    "body-md": ["Work Sans"],
+                    "body-sm": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "label-lg": ["Work Sans"],
+                    "display-lg": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FDFBF7; /* Cream White Foundation */
+            color: #141e19;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- Sidebar Navigation Shell -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col py-8 px-4 z-40">
+<div class="mb-12 px-2">
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">BOOT OS</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Civic Dashboard</p>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all hover:translate-x-1 duration-300 group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-lg text-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-6 space-y-2">
+<button class="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mb-4">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+                Donate Now
+            </button>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- Top App Bar Shell -->
+<header class="sticky top-0 z-30 bg-surface w-full border-b border-outline-variant/30 px-margin-desktop py-4 flex justify-between items-center backdrop-blur-md bg-opacity-90">
+<div class="flex items-center gap-8">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Public Opinion Portal</h2>
+<div class="hidden md:flex gap-6">
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">Surveys</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Policy Drafts</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Town Halls</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="bg-surface-container-low border border-outline-variant rounded-full px-6 py-2 text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container w-64 transition-all" placeholder="Search polls..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">notifications</button>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-fixed font-bold border-2 border-primary-fixed">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Hero Stats Row -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-primary-container text-on-primary p-8 rounded-lg border border-primary-container/20">
+<p class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest mb-2">Total Participation</p>
+<h3 class="font-headline-lg text-headline-lg">142.8k</h3>
+<p class="text-body-sm text-on-primary-container mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% this month
+                    </p>
+</div>
+<div class="bg-surface border border-outline-variant/30 p-8 rounded-lg">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-2">Active Polls</p>
+<h3 class="font-headline-lg text-headline-lg text-primary">24</h3>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-4">
+<div class="bg-secondary h-1 rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant/30 p-8 rounded-lg">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-2">Policy Impacts</p>
+<h3 class="font-headline-lg text-headline-lg text-primary">09</h3>
+<p class="text-body-sm text-on-surface-variant mt-2 italic">Resulting in direct amendments</p>
+</div>
+<div class="bg-surface border border-outline-variant/30 p-8 rounded-lg flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-2">verified_user</span>
+<p class="font-label-lg text-label-lg text-primary">Verified Citizen Status</p>
+<p class="text-body-sm text-on-surface-variant">Validated via CivicID</p>
+</div>
+</section>
+<!-- Featured Poll & Bento Content -->
+<section class="bento-grid">
+<!-- Large Featured Card -->
+<div class="col-span-12 md:col-span-8 relative overflow-hidden rounded-xl h-[500px] border border-outline-variant/30 group">
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10 opacity-80"></div>
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand, neoclassical government building at dusk with soft ambient lights illuminating its columns. The image is captured with professional architectural photography techniques, emphasizing a sense of visionary tradition and institutional weight. The sky is a deep twilight blue, harmonizing with the Trust Green and Heritage Gold palette of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC10h77ZdN31alaSVOIUj2CvdcUqLw7T-lTyLPfgaCDIM4gMOQRv7H5cCb39DrXPF6II2h1JGfpL2vVkAJRvsnJDDMPDlzSUEwK_uA7Ks0iZ0nNJp14E_wJElyP9r9f0vpcNreZsCrzx9rTC7F7R-3ak6K7dSgaIeHMArqayQ8NEfrHcUxhuscaZN3sJfhcz24JH_-D6IcvKrtBF8ju6FphS9iNyWokmH67chzEjdQpH0lUHtGzsc6JR3dzbUUqowqHonIjzk3BZrxG"/>
+<div class="absolute bottom-0 left-0 p-12 z-20 w-full md:w-3/4">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded font-label-md text-label-md mb-4 inline-block uppercase tracking-wider">Urgent Action</span>
+<h2 class="font-display-lg text-display-lg text-white mb-4">Metropolitan Transit Expansion 2025</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-8 leading-relaxed">Phase 3 of the infrastructure redevelopment plan is now open for public commentary. Your feedback directly determines the allocation of $450M in heritage preservation funds.</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-white px-8 py-3 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+                                Cast Your Vote
+                            </button>
+<button class="border border-white/40 text-white px-8 py-3 rounded-lg font-label-lg text-label-lg hover:bg-white/10 transition-colors">
+                                Review Proposals
+                            </button>
+</div>
+</div>
+</div>
+<!-- Secondary Feedback Tracking -->
+<div class="col-span-12 md:col-span-4 glass-card p-8 rounded-xl flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Sentiment</h3>
+<span class="material-symbols-outlined text-secondary">analytics</span>
+</div>
+<div class="space-y-6 flex-grow">
+<div class="space-y-2">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Public Transit Support</span>
+<span class="text-primary font-bold">78%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 78%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Green Space Allocation</span>
+<span class="text-primary font-bold">42%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 42%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Digital Service Ease</span>
+<span class="text-primary font-bold">91%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 91%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<p class="text-body-sm text-on-surface-variant italic leading-snug">"Community data is aggregated anonymously to preserve privacy while ensuring authentic democratic representation."</p>
+</div>
+</div>
+<!-- Active Polls List -->
+<div class="col-span-12 md:col-span-7 bg-surface border border-outline-variant/30 p-8 rounded-xl">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-sm text-headline-sm text-primary">Ongoing Surveys</h3>
+<button class="text-primary font-label-lg text-label-lg flex items-center gap-1 hover:underline">
+                            View All <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Survey Item -->
+<div class="flex items-center gap-6 p-4 hover:bg-surface-container-low transition-all border-b border-outline-variant/10 group cursor-pointer">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex items-center justify-center text-primary-container overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-3xl">park</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Riverside Park Revitalization</h4>
+<p class="text-body-sm text-on-surface-variant">Closes in 3 days • 4.2k Responses</p>
+</div>
+<span class="bg-surface-container px-3 py-1 rounded-full text-primary font-label-md text-label-md">Open</span>
+</div>
+<!-- Survey Item -->
+<div class="flex items-center gap-6 p-4 hover:bg-surface-container-low transition-all border-b border-outline-variant/10 group cursor-pointer">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex items-center justify-center text-primary-container overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">School Lunch Program Feedback</h4>
+<p class="text-body-sm text-on-surface-variant">Closes in 12 days • 1.1k Responses</p>
+</div>
+<span class="bg-surface-container px-3 py-1 rounded-full text-primary font-label-md text-label-md">Open</span>
+</div>
+<!-- Survey Item -->
+<div class="flex items-center gap-6 p-4 hover:bg-surface-container-low transition-all border-b border-outline-variant/10 group cursor-pointer">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex items-center justify-center text-primary-container overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Local Tax Allocation Review</h4>
+<p class="text-body-sm text-on-surface-variant">Closes in 5 days • 8.9k Responses</p>
+</div>
+<span class="bg-secondary/10 px-3 py-1 rounded-full text-secondary font-label-md text-label-md">Trending</span>
+</div>
+</div>
+</div>
+<!-- Personal Activity / Progress -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-low p-8 rounded-xl border border-primary/5">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Your Contribution</h3>
+<div class="flex items-center justify-center py-8">
+<div class="relative w-48 h-48">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-outline-variant/20" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="138.23" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-display-lg text-headline-lg text-primary">75%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Civic Score</span>
+</div>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm">Voted on Education Bill 2024</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm">Submitted Zoning Feedback</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline-variant text-xl">pending</span>
+<span class="text-body-sm text-on-surface-variant">Health Infrastructure Poll Pending</span>
+</li>
+</ul>
+<button class="w-full mt-8 border border-primary text-primary font-label-lg text-label-lg py-3 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        Download Participation Certificate
+                    </button>
+</div>
+</section>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30 mt-12">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">BOOT Civic OS</h4>
+<p class="text-body-sm text-on-surface-variant mb-6">Empowering digital democracy through transparent leadership and verified public participation.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Platforms</h5>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">CivicID Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legislative Tracker</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community Hubs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Financial Transparency</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Resources</h5>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Transparency Report</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Official Channels</h5>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+<p class="text-body-sm text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interactions for survey items
+        document.querySelectorAll('.cursor-pointer').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-2px)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Simple animation for the progress ring on load
+        window.addEventListener('load', () => {
+            const circle = document.querySelector('circle.text-secondary');
+            if(circle) {
+                circle.style.transition = 'stroke-dashoffset 1.5s ease-out';
+                // Triggered by removing the dashoffset manually or letting transition handle it if preset
+            }
+        });
+    </script>
+</body></html>

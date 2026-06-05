@@ -8,15 +8,15 @@ export default function AboutPage() {
       <div className="flex flex-col min-h-screen overflow-x-hidden">
         <main className="max-w-container-max mx-auto pb-bottom-nav">
           {/* Hero Section: Editorial Impact */}
-           <section className="px-margin-mobile md:px-margin-desktop py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-gutter items-center">
+           <section className="px-margin-desktop py-24 grid grid-cols-12 gap-gutter items-center">
              <div className="lg:col-span-7 text-center lg:text-left space-y-6 md:space-y-8">
                <p className="font-label-lg text-label-lg text-secondary mb-4 tracking-widest uppercase">Tradition x Technology</p>
-               <h2 className="font-display-lg text-primary mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0">A Legacy Reimagined for the Digital Electorate.</h2>
+               <h2 className="font-display-lg text-primary mb-8 max-w-2xl mx-auto lg:mx-0">A Legacy Reimagined for the Digital Electorate.</h2>
                <div className="h-px w-full bg-gradient-to-r from-tertiary-fixed/30 to-transparent mb-8"></div>
                <p className="font-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                  CivicOS (BOOT) isn't just a political platform; it's a structural evolution. We bridge the gap between institutional stability and frontier technology to create a governance model that is both ancient in its wisdom and modern in its execution.
                </p>
-               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
                  <button className="bg-primary text-white px-8 py-4 rounded-full font-label-lg flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform active:scale-95 touch-manipulation">
                    Read the Charter <span className="material-symbols-outlined">arrow_forward</span>
                  </button>

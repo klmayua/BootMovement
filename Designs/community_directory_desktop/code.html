@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(241, 252, 244, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1fcf4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #717973;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#8d131b",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#69000c",
+                      "surface-container": "#e6f1e9",
+                      "on-secondary-fixed": "#410004",
+                      "inverse-surface": "#29332e",
+                      "surface-container-highest": "#dae5de",
+                      "on-primary-container": "#85b098",
+                      "surface-bright": "#f1fcf4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#264e3c",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fe6763",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface": "#141e19",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#4f3800",
+                      "primary-fixed-dim": "#a4d0b8",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-surface-variant": "#414944",
+                      "surface-container-low": "#ebf6ef",
+                      "outline": "#717973",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-container": "#c6a15a",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "outline-variant": "#c1c8c2",
+                      "on-background": "#141e19",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#c0edd3",
+                      "background": "#f1fcf4",
+                      "primary": "#002d1c",
+                      "secondary": "#af2d2f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad7",
+                      "surface-dim": "#d2ddd5",
+                      "tertiary": "#342300",
+                      "surface-container-high": "#e0ebe3",
+                      "inverse-primary": "#a4d0b8",
+                      "surface-tint": "#3e6752",
+                      "error-container": "#ffdad6",
+                      "surface": "#f1fcf4",
+                      "inverse-on-surface": "#e8f3ec",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-variant": "#dae5de",
+                      "primary-container": "#1a4331",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "32px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Source Serif 4"],
+                      "headline-lg": ["Source Serif 4"],
+                      "headline-sm": ["Source Serif 4"],
+                      "body-md": ["Work Sans"],
+                      "body-sm": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display-lg": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- SideNavBar (Authority: JSON) -->
+<nav class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low dark:bg-on-background border-r border-outline-variant/30 dark:border-outline/20 flex flex-col py-8 px-4 z-50">
+<div class="mb-12 px-4">
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim font-bold">BOOT OS</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Civic Dashboard</p>
+</div>
+<div class="flex-grow space-y-2">
+<!-- Mapping JSON tab_labels and tab_icons -->
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">assignment</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">monitoring</span>
+<span class="font-label-lg text-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:translate-x-1 duration-300">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/20 space-y-2">
+<button class="w-full bg-secondary text-on-secondary py-3 px-4 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity mb-6">
+                Donate Now
+            </button>
+<a class="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-lg text-label-lg">Support</span>
+</a>
+<a class="flex items-center gap-4 py-2 px-4 text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-lg text-label-lg">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen relative">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="w-full sticky top-0 z-40 bg-surface dark:bg-on-background border-b border-outline-variant/30 dark:border-outline/20 flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-6">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Community Directory</span>
+</div>
+<div class="flex items-center gap-8">
+<!-- Navigation within TopBar from JSON logic -->
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="#">Overview</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary py-1" href="#">Directory</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-lg hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors material-symbols-outlined text-primary">notifications</button>
+<div class="flex items-center gap-2 cursor-pointer group">
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional headshot of a mature individual with a confident and trustworthy expression, set against a soft-focus office background with warm architectural lighting. The overall aesthetic is corporate yet accessible, aligning with a high-end institutional visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9FmTRb8fHoX8BKBa4L-pEHsAo0vrIH7DDybroRm3JxJoAWoQhtCKv-jiYs-4bEJf-awhIxJYtMhZwuAi4MP3KgdWOxSbyvxDKeL-p8u7_mSwGwjqwskxbkgzl9MqiHkRdzIBNfLJhWv2WO3m1wqcFSxVZQPSiRpLVBMvB4FVp8D8SQeEJ3q3uSyOsf557ah_DdcWH6CXOmum4ItutwmoAPcqkJX6KZouqVCe45b_-4uu9svxFzB8As-yy4Xmrl6x_xMHZbKD70pPg"/>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center px-margin-desktop overflow-hidden bg-primary-container text-on-primary-container">
+
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-md text-label-md mb-6 uppercase tracking-widest">National Reach</span>
+<h2 class="font-display-lg text-display-lg leading-tight mb-4">Empowering the <span class="text-tertiary-fixed-dim">Civic Voice</span> through Local Action.</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-xl">Explore our nationwide network of chapters and collectives. Find your people, organize your movement, and build the future of our democracy from the ground up.</p>
+</div>
+</section>
+<!-- Filters & Search Bento Area -->
+<section class="px-margin-desktop -mt-16 relative z-20 mb-20">
+<div class="grid grid-cols-12 gap-6">
+<!-- Search Box -->
+<div class="col-span-12 lg:col-span-8 glass-card border border-outline-variant/30 p-8 flex flex-col justify-center">
+<label class="font-label-lg text-label-lg text-primary mb-2 block">Search Collectives</label>
+<div class="relative">
+<input class="w-full h-16 pl-14 pr-6 bg-surface-container-lowest border border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary rounded-lg transition-all text-body-lg font-body-md outline-none" placeholder="Search by city, chapter name, or policy focus..." type="text"/>
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-primary text-3xl">search</span>
+</div>
+</div>
+<!-- Quick Action Bento Item -->
+<div class="col-span-12 lg:col-span-4 bg-primary text-on-primary p-8 rounded-lg flex flex-col justify-between hover:scale-[1.02] transition-transform cursor-pointer">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Can't find a local chapter?</h3>
+<p class="font-body-sm text-body-sm opacity-80">Download the BOOT OS starter kit to establish a new collective in your community today.</p>
+</div>
+<button class="flex items-center gap-2 font-label-lg text-label-lg text-on-primary-fixed hover:gap-4 transition-all mt-4">
+                        START A CHAPTER <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Filters Sidebar/Row -->
+<div class="col-span-12 flex flex-wrap gap-4 items-center py-4 overflow-x-auto whitespace-nowrap">
+<span class="font-label-lg text-label-lg text-on-surface-variant flex items-center gap-2 mr-4">
+<span class="material-symbols-outlined">filter_list</span> FILTER BY:
+                    </span>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md">All Communities</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Urban Chapters</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Rural Councils</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Economic Policy</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Environmental Action</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Justice Collective</button>
+</div>
+</div>
+</section>
+<!-- Main Directory Grid -->
+<section class="px-margin-desktop mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Community Card 1 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A wide cinematic shot of a majestic city bridge at sunrise, representing urban connectivity and strength. The lighting is golden and authoritative, featuring deep greens and rich gold tones in the shadows, adhering to a minimalist and professional design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJAG5JwqCtyBmwdJB6Xyq9l8eOrE5Ni5zzQ4oN6pZApPO-iP5_V6nmydJZ8mIxeTj8gh8QNrJffPU7qrrkuR3ayn4SXwlGp-XSHEUjlrlggaHxpBcaeBO9Jgo-BDKUkBOQkaPOasOF6tn5vyjvoIiuHxvdq3G6Nv0XdoGH1gVwRylsAxgkUK_3XF4M9YGxW8YR-mROqgNy_mDUVtqnQicKMeNUlJqRTfMj4KIFBD9RcADzhLwmeIgprAXRU-0QQoP77eNcBpKRnbk_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+<span class="bg-secondary px-3 py-1 font-label-md text-label-md text-on-secondary">METRO CHAPTER</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">San Francisco Civic</h3>
+<div class="flex items-center gap-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md">Tier 1</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Focusing on high-density housing solutions and public transit reform in the Bay Area. Active since 2019.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Urbanism</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Housing</span>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar of a diverse community member, stylized for a professional UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgo3UTtlYecjwYuz3yJLCKAONaJbea_JhfqDWoKLiQF77S0mX6JzJfmVgrm5TCHqn2J4m4YgyiX29eJqHHu_ly38SNY1uN9nc5mD2g-WTZFATRx6oVG2MtO7mpDTS6PQ3ybSU6R993Z1ZaEsAJkauKPlaL3td_OoY4N06ZFD-wBWrQjWc0Y-CGEUQzgeItdZnAvd_vg5if46MwjJWRjI6qROGR86I31NmMjFZCe-g6L8jBKO_b-EBCEZ_A1IpHVyPU95MnUHdIiuHz"/>
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar of a diverse community member, stylized for a professional UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNo24MxICqsAVJ3ieCa_u_s2cfVXxK9fin3eWbVKOP83N9tbTuOCNoJyhlr9mT3jXVLD6BxHLz808NqBPBcvJcPgZB5_BwUmVPtvAgx9lhcxPX_b1vRnPDgcSu8QohNB6ao_zw059yvIAqYdL-gBCMWdmWENLBWIJH2_a9Z5_SjdzTKLZaMwnVyyBka8tzfhLbJB8badNU9Oa9AWRvfBZwyXbUaYcn8xfbsrK0y4QI_kA0Moy0BsgiONyryoz2wo0LElKZWcqXHO_d"/>
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar of a diverse community member, stylized for a professional UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKs_3vEg63pHk1VILrojDMcvoif7ceN9u4anJTG9nWk3vEnhmX0OCM3Kj8IyoQda8v_s32m9uADpl9o4eJfloqGZzuiMDbFyNAG_YCPA4tOtC_hMFjGw7AIquvmrtADNy-Svu2mi34LrMnp9FLk8R0rVH4Bu87hWMqEFvWayiG3eLN4NxIcFUJE9wkPNUv8euuyP2jIp0qIwblOY6AuhU_Q0npETAmsrqR1qC1-5UNnBZmjkmFpvGzPBx6zZ2hSdsgdKAjbQtZC1vG"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">+1.2k</div>
+</div>
+<button class="font-label-lg text-label-lg text-primary flex items-center gap-2 group/btn">
+                                VIEW CHAPTER <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Community Card 2 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vast open landscape of rolling green hills under a dramatic sky, symbolizing growth and rural strength. The scene is rendered with high contrast and deep greens, maintaining a sense of authority and visionary tradition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDocfCyUNdH-LTwL1DyxbXTe7kwpSe180K8aaGlq-pkFd6aan8FyahKh3scpzZGYitN7iUO-RFWf42xxE-vxvZFalDhLSl4kXCnOr5ndpc4b6rrF7W__xjfhyiP339msK1x1xzij3vcGalvhtIi31wFfGq0DuP1qVyLYtNY44dGMwucupbGatKenaNbicZQC-fE2LmcXfCkTookzRvuDqIHH5PfkQCLb3knlC7UkgVGQscP07jCcso-pyIUsQoGWTRqgsKxW5zEw-IJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+<span class="bg-secondary px-3 py-1 font-label-md text-label-md text-on-secondary">RURAL COUNCIL</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">High Plains Collective</h3>
+<div class="flex items-center gap-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md">Tier 1</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Dedicated to sustainable agriculture policy and rural broadband infrastructure expansion across the plains.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Agriculture</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Infra</span>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar of a diverse community member." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTsbugwl8xdlNNxzXHVo0CxZanxj_05LKNfZ5hEMNJxhxjY7mWogLLwU2lNYffutmrL-04xz9u4h7cO77_9o7iMVCw2ue2yG-OELotp84_4tyrsO_UVKh_C0W_GIHUMBRSTcSaE8k2Dl7Xg-Eggg7K7z_fow8HGKFQvpPYWz-b-HtxXNwET5LLmGu1aAxPlb3Zch3OjJcD2y1huBJKA0q4HHT8MECm6xyd0miGoLh5YNVxOdgn1-2yeIgv-NPvR6J54HunwzKsRwZN"/>
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar of a diverse community member." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu10JI3VIer5S00pTB7uZc0Og_qwV9oTX06UCyDUtW_LsWoS6mC287Pc0jE3G6tQB7S3tYMU2NjjqdZjd7Ewy2VN3kb_1lnpxPXpNJaUKzTqAcGLE8PV6Z5opfpKxvIySqcJrfZjmXflOBGEZZnzKT9zridnamymTUmM8_iskgn8qJeAhZd0MFbSuS_aRAFGLncMUZLPK3Kb2LC1e0Qu86WPjCiOkc0nvcCUxOsPAzffdeJwD36kem-sjSeMC0ewPpkftLENXFSF73"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">+400</div>
+</div>
+<button class="font-label-lg text-label-lg text-primary flex items-center gap-2 group/btn">
+                                VIEW CHAPTER <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Community Card 3 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A sophisticated architectural detail of a modern university building, symbolizing education and research. Crisp lines, soft cream-toned stonework, and deep shadows create a high-end academic feel consistent with the brand's heritage and authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5gJ-RIzHFzaKwsQyBZkrAXeQ4tWHJJjth_gtO6oHRFHghHEheSnuJEVjmOxGcfTAZevntVvZOSIY6GghUpGj2_ZwBA_qWJTntlLMFpPigVQsCX0cVCHy6j7bga_3VqGsRzS_kx1jHw4lJTb7ZB7rLtA4nkO1P0P1bHINkQZhvs0M8QaOiRWnBj-a1orO6SqdCdYue7fwqEjDTOvHPeOpSYL9EGzhd3KTeKG-vuT7Z924XCwmYFIVmAxJTGlYfPzIJBabza5MhU2hE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+<span class="bg-secondary px-3 py-1 font-label-md text-label-md text-on-secondary">STUDENT ALLIANCE</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Columbia Policy Lab</h3>
+<div class="flex items-center gap-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="font-label-md">Tier 2</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Student-led research initiative developing actionable policy frameworks for national economic stability.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Economics</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-primary font-label-md">#Policy</span>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="A small profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTT2FAQxBdsTbJW-xMniWq9iO0lnWAW3BbJ6UYUPfe77Dq4K3NlKajkOGWMyJOuitYKZKL331ht7bBWkO2isyIyaAMcmrLVUZJWXYON8GbbQrQ1gFOB_kNkiIZwRkw3EKWF3dypEmlm4mKW-CcHFQHeA3S_rsvPzPLeUIDQxQH3PTO28dcPdaXhTW4RWn8ioibZSvIbaUasTAn7wMOnEECT-tbxgvHtQoB7qSL0H7y6TSLGSWNmhnRJRq0oNUms6RDswl8IZ4zlxk3"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">+80</div>
+</div>
+<button class="font-label-lg text-label-lg text-primary flex items-center gap-2 group/btn">
+                                VIEW CHAPTER <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination or Load More -->
+<div class="mt-16 flex flex-col items-center">
+<p class="font-label-md text-label-md text-on-surface-variant mb-4">Showing 3 of 412 Communities Nationally</p>
+<button class="px-12 py-4 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    LOAD MORE CHAPTERS
+                </button>
+</div>
+</section>
+<!-- Nationwide Stats Section -->
+<section class="bg-surface-container py-24 px-margin-desktop mb-24">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+<div>
+<p class="font-display-lg text-display-lg text-primary mb-2">412</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">Active Chapters</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-secondary mb-2">82k</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">Vested Members</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-primary mb-2">14</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">Policy Labs</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-tertiary mb-2">50</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">States Represented</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Authority: JSON) -->
+<footer class="w-full py-16 bg-surface-container-highest dark:bg-on-background border-t border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim mb-6">BOOT Civic Operating System</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant max-w-sm">
+                        Building the foundations for a more resilient, transparent, and participatory democratic process through technology and local community empowerment.
+                    </p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim mb-6">RESOURCES</h5>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim mb-6">NEWSLETTER</h5>
+<div class="flex gap-2">
+<input class="bg-surface border border-outline-variant p-2 w-full focus:ring-1 focus:ring-primary outline-none" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2">JOIN</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between gap-4">
+<p class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interaction for scroll effects on header
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md', 'bg-opacity-95');
+            } else {
+                header.classList.remove('shadow-md', 'bg-opacity-95');
+            }
+        });
+
+        // Search input simple interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.parentElement.classList.add('border-primary');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.parentElement.classList.remove('border-primary');
+        });
+    </script>
+</body></html>

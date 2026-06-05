@@ -1,9 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+import { PartyLayout } from '@/components/layout/party/PartyLayout';
 
 export default function PartyPage() {
   return (
-    <div className="font-body-md text-on-surface">
+    <PartyLayout>
       <main>
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
@@ -160,6 +159,6 @@ export default function PartyPage() {
           </div>
         </section>
       </main>
-    </div>
+    </PartyLayout>
   );
 }

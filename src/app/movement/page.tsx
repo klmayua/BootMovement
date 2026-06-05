@@ -1,12 +1,9 @@
 "use client";
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { MovementLayout } from '@/components/layout/movement/MovementLayout';
 
 export default function MovementHub() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <div className="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+    <MovementLayout>
       {/* TopAppBar */}
        <header className="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-50">
          <nav className="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
@@ -216,36 +213,6 @@ export default function MovementHub() {
            </section>
         </div>
       </main>
-      {/* Footer */}
-       <footer className="w-full mt-auto bg-primary text-on-primary py-12 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/10">
-         <div className="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-gutter">
-           <div className="max-w-xs text-center md:text-left">
-             <span className="font-headline-sm text-headline-sm text-on-primary block mb-4">BOOT Civic Movement</span>
-             <p className="font-body-sm text-body-sm text-primary-fixed-dim opacity-80">Forging a visionary tradition through accountability, clarity, and collective civic action.</p>
-             <p className="font-body-sm text-body-sm mt-4 text-primary-fixed-dim">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
-           </div>
-           <div className="flex flex-wrap justify-center md:justify-start gap-x-12 gap-y-6">
-             <div className="flex flex-col gap-3">
-               <h5 className="font-label-lg text-label-lg text-on-primary uppercase tracking-widest mb-2">Movement</h5>
-               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity touch-manipulation" href="/volunteer/dashboard">Volunteer Portal</Link>
-               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity touch-manipulation" href="/donate">Donate</Link>
-             </div>
-             <div className="flex flex-col gap-3">
-               <h5 className="font-label-lg text-label-lg text-on-primary uppercase tracking-widest mb-2">Legal</h5>
-               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity touch-manipulation" href="/about">Privacy Policy</Link>
-               <Link className="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-opacity touch-manipulation" href="/about">Terms of Service</Link>
-             </div>
-           </div>
-           <div className="flex gap-4 justify-center md:justify-end">
-             <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all touch-manipulation">
-               <span className="material-symbols-outlined text-white">share</span>
-             </div>
-             <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all touch-manipulation">
-               <span className="material-symbols-outlined text-white">mail</span>
-             </div>
-           </div>
-         </div>
-       </footer>
-    </div>
+    </MovementLayout>
   );
 }

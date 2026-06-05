@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOOT Civic OS | Because Of Our Tomorrow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f1fcf4",
+                        "surface-container-highest": "#dae5de",
+                        "inverse-on-surface": "#e8f3ec",
+                        "surface-tint": "#3e6752",
+                        "on-secondary-fixed": "#410004",
+                        "primary-container": "#1a4331",
+                        "inverse-primary": "#a4d0b8",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "on-primary-fixed": "#002114",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#8d131b",
+                        "secondary": "#af2d2f",
+                        "outline-variant": "#c1c8c2",
+                        "on-surface-variant": "#414944",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-bright": "#f1fcf4",
+                        "secondary-container": "#fe6763",
+                        "on-primary-container": "#85b098",
+                        "on-primary-fixed-variant": "#264e3c",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e6f1e9",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#c0edd3",
+                        "surface-variant": "#dae5de",
+                        "on-secondary-container": "#69000c",
+                        "outline": "#717973",
+                        "on-background": "#141e19",
+                        "tertiary-container": "#4f3800",
+                        "on-tertiary-fixed": "#261900",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "background": "#f1fcf4",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "surface-dim": "#d2ddd5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#c6a15a",
+                        "on-surface": "#141e19",
+                        "surface-container-low": "#ebf6ef",
+                        "primary-fixed-dim": "#a4d0b8",
+                        "primary": "#002d1c",
+                        "inverse-surface": "#29332e",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e0ebe3",
+                        "tertiary": "#342300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "32px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Work Sans"],
+                        "headline-md": ["Source Serif 4"],
+                        "label-lg": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "headline-lg": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"],
+                        "headline-sm": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f1fcf4; /* Cream White foundation */
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: #af2d2f; /* Action Red */
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Top Navigation Bar (Derived from JSON TopAppBar & side logic) -->
+<header class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 px-margin-desktop py-4 flex justify-between items-center transition-all duration-300">
+<div class="flex items-center gap-8">
+<img alt="BOOT Party Official Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j"/>
+<nav class="hidden md:flex gap-6">
+<a class="text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg px-1 py-1" href="#">Dashboard</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Communities</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Events</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-lg text-label-lg px-1 py-1" href="#">Projects</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Search Policies..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="account_circle">account_circle</span>
+<button class="bg-secondary text-on-secondary px-6 py-2 font-label-lg text-label-lg hover:opacity-90 transition-opacity">Donate Now</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-50" data-alt="A grand neoclassical government building with towering white columns and a wide stone staircase, set against a clear, deep blue dusk sky. The lighting is dramatic and formal, emphasizing the architectural stability and institutional weight of the structure. The scene is captured in a wide-angle shot that highlights the symmetrical and authoritative design of the building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dndBN91UiEj2HgrdJ3hFcXdbdXBSL9bAFJnGOQhuJCnYhBA-OARRQb6deSzroPC8rZPCONTWU3SmzpYhxCh_fmBh_iGEceyZCfpnp26SJgwjCFWris42Mmwen8JhKJvFcbt3zLjl8gCxSf2M6FQ5b49J1jakOLLXSe1wrT33jXsDPb8If01emqu-vmiMuibLKY4kwiaj-pfRLUOCl4GeEK7XNMdcJFQTFNyoUCHQlSzIxmaIBRmQ8OezA7-cRGSB1ICIh_n04AAS"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl text-on-primary">
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Because Of Our Tomorrow.</h1>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 border-l-4 border-secondary pl-6">
+                        Building a legacy of stability and forward-looking growth for every citizen. Join the movement for a principled future.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary px-8 py-4 font-label-lg text-label-lg text-on-secondary hover:translate-y-[-2px] transition-transform duration-300">Join the Movement</button>
+<button class="border-2 border-white px-8 py-4 font-label-lg text-label-lg text-white hover:bg-white/10 transition-colors">Read Our Thesis</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Foundation of Progress -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-12 items-end mb-16">
+<div class="md:w-2/3">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Foundation of Progress</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our philosophy bridges the wisdom of our heritage with the innovations of tomorrow. We believe in building on solid ground.</p>
+</div>
+<div class="md:w-1/3 flex justify-end">
+<div class="w-24 h-1 bg-secondary"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card: Traditional Values -->
+<div class="group relative bg-surface p-12 border border-outline-variant/30 hover:border-secondary/50 transition-all duration-500 overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Traditional Values</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
+<a class="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
+                            LEARN MORE <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+<!-- Card: Future Progress -->
+<div class="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-on-primary-container" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6">Future Progress</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-8">Investing in the technologies and policies that will define the next century. Our vision is forward-facing, bold, and meticulously planned.</p>
+<a class="inline-flex items-center text-on-primary font-label-lg text-label-lg group-hover:gap-4 transition-all" href="#">
+                            EXPLORE VISION <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-20 border-y border-outline-variant/30 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="stat-card relative pb-8 text-center">
+<div class="font-display-lg text-display-lg text-primary mb-2">150k+</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Signed Members</div>
+</div>
+<div class="stat-card relative pb-8 text-center">
+<div class="font-display-lg text-display-lg text-primary mb-2">$2.4M</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Community Funded</div>
+</div>
+<div class="stat-card relative pb-8 text-center">
+<div class="font-display-lg text-display-lg text-primary mb-2">22</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Policy Wins</div>
+</div>
+<div class="stat-card relative pb-8 text-center">
+<div class="font-display-lg text-display-lg text-primary mb-2">48</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Endorsed Leaders</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Foundational Pillars -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="gavel">gavel</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Institutional Accountability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ensuring transparent governance through digital audits and civic oversight.</p>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="location_city">location_city</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Localized Empowerment</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Returning decision-making power to community councils and local districts.</p>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="museum">museum</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Heritage Conservation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Preserving our cultural landmarks and historic values for the next generation.</p>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/20 hover:shadow-xl transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="trending_up">trending_up</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Pragmatic Economics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evidence-based fiscal policy that prioritizes sustainable growth and equity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Initiatives (Bento Grid Style) -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">Latest Initiatives</h2>
+<a class="font-label-lg text-label-lg text-secondary underline" href="#">View All News</a>
+</div>
+<div class="bento-grid">
+<div class="col-span-12 lg:col-span-8 group relative overflow-hidden h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic solar farm at sunrise, with thousands of sleek blue panels stretching across a high-altitude plateau. The lighting is warm and golden, contrasting with the high-tech, minimalist engineering of the energy grid. The mood is one of quiet efficiency and visionary progress, capturing the essence of Energy Sovereignty in a clean, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChVQujRFQ_VYUkIT4rS5GAQ4YZA-iQcJNHTzThF-FCmy1eWXV3Kb6ZCfdpF0eqBIhACZ7QP7BwP046wKFHXTxICzsJILyLyDyFp9EDJ4ko65QVvJH-G8OIXOzjrc9dvwwPMs5Va4H5FhZeBvtoFrmELREMyfzoZU0Ee7mA9BzA1IP1ZuxnfwnE2sz-Ld_-iQoWZemm89zFMzidCWGIeV_xHUKqxZJdSrSFJIChjWBLsGYBC4VGSuMYrtkCysHvtJJIZ_aUKdDoDfRG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-on-primary">
+<span class="bg-secondary px-3 py-1 font-label-md text-label-md mb-4 inline-block">LEGISLATIVE UPDATE</span>
+<h3 class="font-headline-md text-headline-md mb-2">Energy Sovereignty Act</h3>
+<p class="font-body-md text-body-md opacity-80 max-w-xl">Securing our nation's grid through decentralized renewable infrastructure and strategic reserves.</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-surface-container-highest p-10 flex flex-col justify-between">
+<div>
+<span class="text-secondary font-label-md text-label-md mb-4 block">UPCOMING EVENT</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">National Townhall: Digital Infrastructure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Join Party leadership this Friday for a live discussion on the 2025 Digital Charter and data privacy initiatives.</p>
+</div>
+<button class="w-full border-2 border-primary text-primary font-label-lg text-label-lg py-3 hover:bg-primary hover:text-white transition-all">Register to Attend</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Signup -->
+<section class="py-24 bg-primary-container text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-6">Stay Informed</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">Receive weekly policy briefings, community reports, and movement updates directly from the BOOT Civic Secretariat.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-grow bg-white/10 border border-white/20 text-white placeholder:text-white/50 px-6 py-4 focus:ring-2 focus:ring-secondary outline-none" placeholder="Your professional email" type="email"/>
+<button class="bg-secondary text-white px-10 py-4 font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors whitespace-nowrap">Subscribe Now</button>
+</form>
+<p class="mt-6 font-label-md text-label-md text-on-primary-container opacity-60">We value your privacy. Unsubscribe at any time.</p>
+</div>
+</section>
+</main>
+<!-- Footer (From JSON Footer) -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<img alt="BOOT Logo" class="h-10 mb-6 grayscale hover:grayscale-0 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzphfpJ0ilRJ4OKndPGRQoy2L3bEoSDLwjRjVjLEVHTF3U6i4tngba5qDB29rf_5jWSDfNv8IKj12oBWjzAW5Xj_oSzJG4hQ0zU24ry4nvRh7MSG52KrZ_uJ5gbIFF05KZ5xxQj4_bRHa-jVdrMCMrsUKbri10D55qp_ND8NWDWAS5MAIcWH98IwhXdPJ9DDiyK9xAoihWafz8bL4zzJVYRGei40wZAlldVNV_5O0q3T2oU-NdU3GSDpJcJbz7zHc_jX_SxNOAXY3j"/>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The BOOT Civic Operating System is a platform for the next generation of principled governance.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Governance</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Transparency Report</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Policy Thesis</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Legal Framework</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline transition-all font-body-sm text-body-sm" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Connect</h5>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined">forum</span></a>
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved. Authorized by the National Civic Committee.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                // Subtle feedback handled by Tailwind classes
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('shadow-lg', 'py-2');
+                header.classList.add('py-4');
+            }
+        });
+    </script>
+</body></html>

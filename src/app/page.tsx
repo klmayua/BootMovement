@@ -7,7 +7,7 @@ export default function HomePage() {
     <PublicLayout>
       <div className="flex flex-col min-h-screen overflow-x-hidden">
         {/* Hero Section */}
-        <section className="relative min-h-[70vh] md:min-h-[870px] flex items-center overflow-hidden">
+        <section className="relative min-h-[870px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               className="w-full h-full object-cover" 
@@ -17,7 +17,7 @@ export default function HomePage() {
             <div className="hero-gradient absolute inset-0"></div>
           </div>
           
-           <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center py-20 md:py-0">
+            <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-16 items-center py-20 md:py-0">
                <div className="text-white space-y-6 md:space-y-8 text-center md:text-left">
                  <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary-fixed-dim/30 rounded-full bg-primary/40 backdrop-blur-sm">
                    <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
@@ -41,7 +41,7 @@ export default function HomePage() {
                  </div>
                  </div>
                  <div className="w-full md:block">
-                   <div className="bg-surface/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-xl">
+                    <div className="bg-surface/5 backdrop-blur-md border border-white/10 p-8 rounded-xl">
                      <div className="flex justify-between items-end mb-8 md:mb-12">
                        <div>
                          <p className="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-tighter">Current Momentum</p>

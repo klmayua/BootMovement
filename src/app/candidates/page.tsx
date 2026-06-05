@@ -1,10 +1,8 @@
-"use client";
-import React from 'react';
-import Link from 'next/link';
+import { PartyLayout } from '@/components/layout/party/PartyLayout';
 
 export default function CandidatesPage() {
   return (
-    <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <PartyLayout>
       {/* Top Navigation Bar */}
       <header className="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
         <div className="flex items-center gap-8">
@@ -263,6 +261,6 @@ export default function CandidatesPage() {
           </div>
         </div>
       </footer>
-    </div>
+    </PartyLayout>
   );
 }

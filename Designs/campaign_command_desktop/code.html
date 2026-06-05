@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CivicOS | Executive Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#002d1c",
+            "surface-container": "#e6f1e9",
+            "secondary-container": "#fe6763",
+            "on-surface-variant": "#414944",
+            "on-tertiary-fixed-variant": "#5d4201",
+            "on-secondary-fixed": "#410004",
+            "surface-variant": "#dae5de",
+            "outline": "#717973",
+            "inverse-on-surface": "#e8f3ec",
+            "on-primary-fixed": "#002114",
+            "surface-container-low": "#ebf6ef",
+            "primary-container": "#1a4331",
+            "inverse-primary": "#a4d0b8",
+            "on-tertiary-container": "#c6a15a",
+            "surface": "#f1fcf4",
+            "outline-variant": "#c1c8c2",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#a4d0b8",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#261900",
+            "tertiary": "#342300",
+            "on-error-container": "#93000a",
+            "surface-bright": "#f1fcf4",
+            "on-primary-container": "#85b098",
+            "on-background": "#141e19",
+            "tertiary-fixed-dim": "#e9c176",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "inverse-surface": "#29332e",
+            "surface-container-high": "#e0ebe3",
+            "surface-dim": "#d2ddd5",
+            "secondary": "#af2d2f",
+            "background": "#f1fcf4",
+            "on-secondary-container": "#69000c",
+            "error": "#ba1a1a",
+            "primary-fixed": "#c0edd3",
+            "surface-tint": "#3e6752",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#141e19",
+            "surface-container-highest": "#dae5de",
+            "tertiary-container": "#4f3800",
+            "on-primary-fixed-variant": "#264e3c",
+            "secondary-fixed-dim": "#ffb3ae",
+            "tertiary-fixed": "#ffdea5",
+            "on-secondary-fixed-variant": "#8d131b",
+            "secondary-fixed": "#ffdad7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "container-max": "1280px",
+            "margin-desktop": "64px",
+            "unit": "8px",
+            "margin-mobile": "20px",
+            "margin-tablet": "32px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "label-lg": ["Work Sans"],
+            "headline-md": ["Source Serif 4"],
+            "headline-sm": ["Source Serif 4"],
+            "display-lg": ["Source Serif 4"],
+            "body-md": ["Work Sans"],
+            "body-lg": ["Work Sans"],
+            "label-md": ["Work Sans"],
+            "body-sm": ["Work Sans"],
+            "headline-lg": ["Source Serif 4"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c1c8c2;
+      border-radius: 10px;
+    }
+    .grid-bg {
+      background-image: linear-gradient(#1a433110 1px, transparent 1px), linear-gradient(90deg, #1a433110 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-0 h-screen flex flex-col py-8 bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container w-64 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">CivicOS</h1>
+<p class="font-label-lg text-label-lg text-on-primary/60">Executive Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 text-on-primary bg-primary-container/20 border-l-4 border-secondary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-label-lg text-label-lg">Command Center</span>
+</a>
+<a class="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">groups</span>
+<span class="font-label-lg text-label-lg">Citizens</span>
+</a>
+<a class="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">psychology</span>
+<span class="font-label-lg text-label-lg">Narrative</span>
+</a>
+<a class="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">how_to_vote</span>
+<span class="font-label-lg text-label-lg">Election Ops</span>
+</a>
+<a class="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">inventory_2</span>
+<span class="font-label-lg text-label-lg">Resources</span>
+</a>
+<a class="flex items-center px-6 py-3 text-on-primary/70 hover:text-on-primary hover:bg-primary-container/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto pt-8 border-t border-on-primary/10">
+<button class="w-full py-3 mb-6 bg-secondary-container text-on-secondary-container font-label-lg rounded-lg hover:opacity-90 transition-all scale-95 active:duration-100">
+        New Initiative
+      </button>
+<div class="space-y-1">
+<a class="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="#">
+<span class="material-symbols-outlined mr-3">help</span>
+<span class="font-label-lg text-label-lg">Support</span>
+</a>
+<a class="flex items-center py-2 text-on-primary/70 hover:text-on-primary" href="#">
+<span class="material-symbols-outlined mr-3">logout</span>
+<span class="font-label-lg text-label-lg">Log Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Top AppBar Shell -->
+<header class="fixed top-0 right-0 ml-64 w-[calc(100%-16rem)] h-16 bg-surface dark:bg-surface-dim border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop z-40">
+<div class="flex items-center space-x-8">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none focus:ring-2 focus:ring-primary rounded-lg text-body-sm w-80 transition-all" placeholder="Search districts, agents, or data sets..." type="text"/>
+</div>
+<nav class="hidden md:flex space-x-6">
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md" href="#">Analytics</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Deployment</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-all" href="#">Strategy</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<button class="flex items-center px-4 py-2 border border-secondary text-secondary rounded-lg font-label-md hover:bg-secondary/5 transition-all">
+        Emergency
+      </button>
+<button class="bg-secondary text-on-secondary px-4 py-2 rounded-lg font-label-md hover:opacity-90 transition-all">
+        Action Alert
+      </button>
+<div class="flex items-center space-x-2 border-l border-outline-variant/30 pl-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">history</span></button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant/50">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a mature political strategist in a deep green suit, looking directly at the camera with an expression of confidence and authority. The lighting is dramatic, high-contrast, and focused, emphasizing deep shadows and bright highlights consistent with a serious, corporate, minimalist aesthetic. The background is a soft, blurred office interior with cream-colored walls and dark wood accents, matching the project's primary and foundation colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqiw5D0eK6upv_vwfnoVfrQjEjAAWn46n_-TUaKpwhX8PE90RNBCTrCtyXL5cMUcwlzVATCjRn-n9LPpfBb6ydzBl0aXiir2kzMrCWmcScZC5AIuHydvxJiiQja612eX_Hg325YoFQRohKjfjNuk80_P36gyfa8lPjqkoYiD8htQPlzIYW9lAsn_q4EgYEfbwpRWhF8N5dtbuASkpcY84YjnPq-ZF56uQpb1OhBZRGDTYAd5lgoFyMv3YZreEqqKyUEdNQVMgjC6-q"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-margin-desktop min-h-screen bg-surface-container-lowest grid-bg">
+<!-- Hero Dashboard Header -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="inline-block px-3 py-1 bg-primary-container text-on-primary-container font-label-md rounded mb-4">REAL-TIME SURVEILLANCE ACTIVE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Tactical Operations Dashboard</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Visualizing demographic shifts and field agent performance across priority districts. High-fidelity geographic intelligence for optimized resource allocation.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container p-4 rounded-lg border border-outline-variant/20 min-w-[160px]">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1">Total Reach</p>
+<p class="font-headline-sm text-headline-sm text-primary">4.2M <span class="text-label-md text-primary/60">+12%</span></p>
+</div>
+<div class="bg-surface-container p-4 rounded-lg border border-outline-variant/20 min-w-[160px]">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1">Active Agents</p>
+<p class="font-headline-sm text-headline-sm text-primary">1,248 <span class="text-label-md text-secondary">Live</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Voter Heatmap (Primary Visual) -->
+<div class="col-span-12 lg:col-span-8 bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col h-[600px] group shadow-sm">
+<div class="p-6 border-b border-outline-variant/20 flex justify-between items-center bg-surface-container-lowest">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">map</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Interactive Voter Heatmap</h3>
+</div>
+<div class="flex space-x-2">
+<button class="px-3 py-1 text-label-md bg-primary-container text-on-primary-container rounded">Demographics</button>
+<button class="px-3 py-1 text-label-md hover:bg-surface-container rounded transition-colors">Affiliation</button>
+<button class="px-3 py-1 text-label-md hover:bg-surface-container rounded transition-colors">Turnout Risk</button>
+</div>
+</div>
+<div class="flex-1 relative bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="A highly detailed and sophisticated interactive geographic heatmap of a metropolitan city district at night. The map features luminous color overlays ranging from deep trust green to action red, representing voter density and sentiment. Grid lines are subtle and precise, with tiny data point clusters glowing with a digital pulse. The aesthetic is clean, corporate, and authoritative, using a professional dark teal and cream color palette with golden accent markers for key polling stations." data-location="Washington DC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2To3Okpy2YbtDAt6E1cNBbwhl0Ch68WAaRiYxm-7kP7R5yGDkg3BTpC0XdafUHdzRH4xRRuA-7KWPe2TYIYf88ws5fdsskU7s21GFmFTs_saFnejzGV61M6pqtlIEqr3tUpvFJKCCSIsCmIaymAikKpgJDaVzQ9mXrTlxaphaC25q38G9IteXgJc9B1iw59xD1fCinfGZp-EKlzfDNsbRWIS918H8W1RGDfZ0AFIFVuMfCbjucQbLUAJWfgk7BnJwiROwkwzYWLsU"/>
+<!-- Map Overlays -->
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-4 rounded border border-outline-variant/30 space-y-3 shadow-lg">
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="font-label-md text-label-md text-primary">Critical Swing (45-55%)</span>
+</div>
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-label-md text-label-md text-primary">Strong Hold (70%+)</span>
+</div>
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-tertiary-container"></div>
+<span class="font-label-md text-label-md text-primary">Developing Territory</span>
+</div>
+</div>
+<!-- Interaction Marker -->
+<div class="absolute top-1/2 left-1/3 group cursor-pointer">
+<div class="w-4 h-4 bg-secondary rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-secondary rounded-full relative border-2 border-white"></div>
+<div class="hidden group-hover:block absolute top-6 left-1/2 -translate-x-1/2 bg-primary text-white p-3 rounded shadow-xl w-48 z-10">
+<p class="font-label-lg">District 12B</p>
+<div class="mt-1 h-1 w-full bg-on-primary/20 rounded">
+<div class="h-full bg-secondary-container w-[72%]"></div>
+</div>
+<p class="text-[10px] mt-2 opacity-80">72% Registration Momentum</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Field Agent Status (Sidebar) -->
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant/30 rounded-lg flex flex-col h-[600px] shadow-sm">
+<div class="p-6 border-b border-outline-variant/20 flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-primary">Field Agents</h3>
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-md rounded">Active Now</span>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+<!-- Agent Item 1 -->
+<div class="flex items-center p-3 rounded-lg border border-outline-variant/10 hover:border-outline-variant/40 transition-all cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-surface-container" data-alt="A professional field operative headshot with a neutral expression, wearing a clean white shirt and dark green tactical jacket. The background is a crisp white studio wall. High-end editorial lighting, corporate minimalist aesthetic, using primary green and cream tones in the color grading." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6PYiNsYzPjdjBTrMKLhFpr_rH8To7rRYqscFjAZ9qheJFMOcwpjbvb6Os3qsSOmfGp5_phq5xIguVmH3ZTWQRKse2n5oZWndyVn_QQJapv_-vm30pCqvH5S_ZSduMbgaL7d0HHthVKKP9W86LSyUwmpaKdABIGA94jVyD8LbGFXPyNh9JuTihk9BMLAo0mGQuOzmkDpnNXyviXT0NMLePpxH50H0TzK4h5CrMGU6g89emFYviEk2VKIvpTPwOsU-bgDxUynlMv8u"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+</div>
+<div class="ml-4 flex-1">
+<p class="font-label-lg text-primary">Marcus Thorne</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">District 04 | Canvassing</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-primary">82%</p>
+<p class="text-[10px] text-on-surface-variant">Quota</p>
+</div>
+</div>
+<!-- Agent Item 2 -->
+<div class="flex items-center p-3 rounded-lg border border-outline-variant/10 hover:border-outline-variant/40 transition-all cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-surface-container" data-alt="A focused female political agent with an authoritative look, wearing a professional blazer in heritage gold tones. The lighting is bright and modern, creating a trustworthy and vision-focused persona. Set against a clean, minimalist architectural background in cream white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr3yn5GeqoNJAF7gmriJsSQ-uwcco1y80A0nHCSdX8C4NA8g_y3firuBbTNrf87V2i62jXsAf0Sx3oBKeH596sA-zV3BZUghINRO4lgy9SFCvdfSn1jfrJ1kUdMhZlfgryllnbfJ6LJoXTfKogcLf7cqJAZ65_2BwIe6504UYy2TfG--WoLpaCwbAB9f1qpfVwt5wlkY3Y1dspRD_VZ5dBh7yRF5mMpYKUDvtJQvF9PFT7k2klkdNNNfTuWXwsriAokgN9O9Uq50g2"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+</div>
+<div class="ml-4 flex-1">
+<p class="font-label-lg text-primary">Elena Rodriguez</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">District 12 | Registration</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-primary">105%</p>
+<p class="text-[10px] text-secondary font-bold">EXCEEDING</p>
+</div>
+</div>
+<!-- Agent Item 3 -->
+<div class="flex items-center p-3 rounded-lg border border-outline-variant/10 hover:border-outline-variant/40 transition-all cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-surface-container" data-alt="A mature male campaign manager in a professional dark charcoal suit. Serious expression, standing in a brightly lit modern gallery space with minimalist decor. The lighting emphasizes a sophisticated, corporate identity using the primary green and golden cream palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwzgMSPDxcIjmmFFOPheIzRzLGf09ym7pnvXiehpnPSCxq4YPAy7KFseCQ43YQMnE-7qyRIlGhCX19w7U1AEJMbILoi2FpLz2HXLdsFSy3oXBEdZh03_lYpfwp4rPxtdVgRCr2AWsL7YQ16vt6LkPukzLRxeXW5vgXLpht0yk9dCbSjpU9mgwqjN3hVrvOI-0gRWWrepXJ06Ayoe55oT8osXWlPySGaIvXvnf3_1otLTtbn0o__40G-Q6Iru0giM2stNLvoBGE9NL4"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white"></div>
+</div>
+<div class="ml-4 flex-1">
+<p class="font-label-lg text-primary">David Chen</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">District 08 | Logistics</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-primary">42%</p>
+<p class="text-[10px] text-on-surface-variant">Delay</p>
+</div>
+</div>
+<!-- Placeholder agents -->
+<div class="flex items-center p-3 rounded-lg opacity-40 grayscale border border-dashed border-outline-variant/40">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div class="ml-4 flex-1 h-4 bg-surface-container rounded w-1/2"></div>
+<div class="w-10 h-4 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low">
+<button class="w-full py-2 text-label-md text-primary border border-primary/20 rounded hover:bg-primary/5 transition-all">View All 1,248 Agents</button>
+</div>
+</div>
+<!-- Live Polling Data Streams (Charts) -->
+<div class="col-span-12 lg:col-span-7 bg-white border border-outline-variant/30 rounded-lg p-6 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Polling Sentiment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aggregate feed from top-tier polling datasets &amp; field reports</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md text-secondary">LIVE FEED</span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between space-x-2 mb-4 group">
+<!-- Mock Line Chart Simulation -->
+<div class="flex-1 bg-surface-container-low rounded-t-lg relative overflow-hidden h-full">
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,80 Q50,70 100,75 T200,40 T300,50 T400,20" fill="none" stroke="#1a4331" stroke-width="3"></path>
+<path d="M0,80 Q50,70 100,75 T200,40 T300,50 T400,20 V100 H0 Z" fill="url(#grad1)" opacity="0.1"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#1a4331;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#1a4331;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute top-4 left-4">
+<p class="font-label-md text-primary">Trust Metric</p>
+<p class="font-headline-sm text-headline-sm text-primary">68.4%</p>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-t-lg relative overflow-hidden h-full">
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,50 Q100,60 200,45 T400,30" fill="none" stroke="#af2d2f" stroke-width="3"></path>
+<path d="M0,50 Q100,60 200,45 T400,30 V100 H0 Z" fill="url(#grad2)" opacity="0.1"></path>
+<defs>
+<lineargradient id="grad2" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#af2d2f;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#af2d2f;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute top-4 left-4">
+<p class="font-label-md text-secondary">Volatilty Index</p>
+<p class="font-headline-sm text-headline-sm text-secondary">12.2%</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4 pt-6 border-t border-outline-variant/20">
+<div class="text-center">
+<p class="font-label-md text-on-surface-variant mb-1">Stability</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-md text-on-surface-variant mb-1">Reach</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[62%]"></div>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-md text-on-surface-variant mb-1">Momentum</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[77%]"></div>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-md text-on-surface-variant mb-1">Conversion</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[44%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- District-by-District Registration Tracker -->
+<div class="col-span-12 lg:col-span-5 bg-white border border-outline-variant/30 rounded-lg p-6 shadow-sm overflow-hidden flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Registration Tracker</h3>
+<div class="space-y-6 flex-1 overflow-y-auto custom-scrollbar pr-2">
+<!-- District Entry 1 -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-lg text-primary">District 01: North Metropolitan</span>
+<span class="font-label-md text-primary">94%</span>
+</div>
+<div class="h-3 w-full bg-tertiary-container/30 rounded-full overflow-hidden relative">
+<div class="h-full bg-secondary w-[94%] transition-all duration-1000"></div>
+</div>
+<div class="flex justify-between mt-2">
+<p class="text-[10px] text-on-surface-variant">Goal: 50,000 Voters</p>
+<p class="text-[10px] text-primary font-bold">47,200 REGISTERED</p>
+</div>
+</div>
+<!-- District Entry 2 -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-lg text-primary">District 05: Central Hub</span>
+<span class="font-label-md text-primary">76%</span>
+</div>
+<div class="h-3 w-full bg-tertiary-container/30 rounded-full overflow-hidden relative">
+<div class="h-full bg-secondary w-[76%] transition-all duration-1000"></div>
+</div>
+<div class="flex justify-between mt-2">
+<p class="text-[10px] text-on-surface-variant">Goal: 85,000 Voters</p>
+<p class="text-[10px] text-primary font-bold">64,600 REGISTERED</p>
+</div>
+</div>
+<!-- District Entry 3 -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-lg text-primary">District 12: South Plains</span>
+<span class="font-label-md text-secondary">42% (Critical)</span>
+</div>
+<div class="h-3 w-full bg-tertiary-container/30 rounded-full overflow-hidden relative">
+<div class="h-full bg-secondary w-[42%] transition-all duration-1000"></div>
+</div>
+<div class="flex justify-between mt-2">
+<p class="text-[10px] text-on-surface-variant">Goal: 32,000 Voters</p>
+<p class="text-[10px] text-primary font-bold">13,440 REGISTERED</p>
+</div>
+</div>
+<!-- District Entry 4 -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-lg text-primary">District 08: Tech Corridor</span>
+<span class="font-label-md text-primary">88%</span>
+</div>
+<div class="h-3 w-full bg-tertiary-container/30 rounded-full overflow-hidden relative">
+<div class="h-full bg-secondary w-[88%] transition-all duration-1000"></div>
+</div>
+<div class="flex justify-between mt-2">
+<p class="text-[10px] text-on-surface-variant">Goal: 120,000 Voters</p>
+<p class="text-[10px] text-primary font-bold">105,600 REGISTERED</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="ml-64 w-[calc(100%-16rem)] flex flex-col md:flex-row justify-between items-center py-8 px-margin-desktop bg-surface-container-low border-t border-outline-variant/20 mt-12">
+<div class="mb-4 md:mb-0">
+<h4 class="font-label-lg text-label-lg font-bold text-primary mb-1">CivicOS</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">© 2024 Visionary Tradition Movement. All Rights Reserved. Institutional Oversight Protocol v4.2</p>
+</div>
+<div class="flex space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Ethics Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Legal</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md underline-offset-4 hover:underline" href="#">Contact Bureau</a>
+</div>
+</footer>
+<script>
+    // Micro-interactions for the tactical dashboard
+    document.addEventListener('DOMContentLoaded', () => {
+      const bars = document.querySelectorAll('.registration-bar');
+      bars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        setTimeout(() => {
+          bar.style.width = width + '%';
+        }, 500);
+      });
+
+      // Simple real-time update simulation
+      setInterval(() => {
+        const reachDisplay = document.querySelector('.reach-value');
+        if (reachDisplay) {
+          const current = parseFloat(reachDisplay.innerText.replace('M', ''));
+          const next = (current + (Math.random() * 0.01)).toFixed(2);
+          reachDisplay.innerHTML = `${next}M <span class="text-label-md text-primary/60">+12%</span>`;
+        }
+      }, 3000);
+    });
+  </script>
+</body></html>

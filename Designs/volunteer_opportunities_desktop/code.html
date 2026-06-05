@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer Opportunities | BOOT Civic OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            background: rgba(241, 252, 244, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1fcf4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #717973;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#8d131b",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#69000c",
+                      "surface-container": "#e6f1e9",
+                      "on-secondary-fixed": "#410004",
+                      "inverse-surface": "#29332e",
+                      "surface-container-highest": "#dae5de",
+                      "on-primary-container": "#85b098",
+                      "surface-bright": "#f1fcf4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#264e3c",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fe6763",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface": "#141e19",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#4f3800",
+                      "primary-fixed-dim": "#a4d0b8",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-surface-variant": "#414944",
+                      "surface-container-low": "#ebf6ef",
+                      "outline": "#717973",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-container": "#c6a15a",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "outline-variant": "#c1c8c2",
+                      "on-background": "#141e19",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#c0edd3",
+                      "background": "#f1fcf4",
+                      "primary": "#002d1c",
+                      "secondary": "#af2d2f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad7",
+                      "surface-dim": "#d2ddd5",
+                      "tertiary": "#342300",
+                      "surface-container-high": "#e0ebe3",
+                      "inverse-primary": "#a4d0b8",
+                      "surface-tint": "#3e6752",
+                      "error-container": "#ffdad6",
+                      "surface": "#f1fcf4",
+                      "inverse-on-surface": "#e8f3ec",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-variant": "#dae5de",
+                      "primary-container": "#1a4331",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "32px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Source Serif 4"],
+                      "headline-lg": ["Source Serif 4"],
+                      "headline-sm": ["Source Serif 4"],
+                      "body-md": ["Work Sans"],
+                      "body-sm": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display-lg": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background w-full sticky top-0 z-50 border-b border-outline-variant/30 dark:border-outline/20 flat no shadows">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim cursor-pointer">BOOT Civic OS</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-label-lg text-label-lg px-3 py-1" href="#">Communities</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors px-3 py-1 rounded" href="#">Projects</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-body-sm w-64 focus:ring-2 focus:ring-primary" placeholder="Search opportunities..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer">notifications</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer">account_circle</button>
+</div>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low dark:bg-on-background border-r border-outline-variant/30 dark:border-outline/20 flex flex-col py-8 px-4 z-40 hidden xl:flex">
+<div class="mb-12 px-2">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim leading-none">BOOT OS</h2>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Civic Dashboard</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg" href="#">
+<span class="material-symbols-outlined">groups</span> Communities
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">event</span> Events
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">assignment</span> Projects
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">monitoring</span> Analytics
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant font-label-lg text-label-lg hover:bg-surface-container dark:hover:bg-primary-container/10 transition-all hover:translate-x-1 duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+                </a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="w-full bg-secondary text-on-secondary py-3 rounded-xl font-label-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                    Donate Now <span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<div class="pt-4 border-t border-outline-variant/30">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-label-md" href="#">
+<span class="material-symbols-outlined">help</span> Support
+                    </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-error transition-colors text-label-md" href="#">
+<span class="material-symbols-outlined">logout</span> Logout
+                    </a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow xl:ml-64 px-margin-desktop py-12 bg-[#FDFBF7]">
+<!-- Hero Header -->
+<section class="mb-16">
+<div class="max-w-4xl">
+<span class="text-secondary font-label-lg tracking-widest uppercase mb-4 block">Civic Engagement</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Shape the Future of Your Community</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        Join a network of over 10,000 citizens dedicating their skills to high-impact projects. From legislative research to local environmental restoration, find a role that matches your expertise and vision.
+                    </p>
+</div>
+</section>
+<!-- Search & Advanced Filtering Canvas -->
+<section class="mb-12">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+<div class="md:col-span-1">
+<label class="block font-label-lg text-primary mb-2">Keyword</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant/50 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none text-body-md" placeholder="e.g. Legal, Coding" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-primary mb-2">Impact Area</label>
+<select class="w-full px-4 py-3 bg-white border border-outline-variant/50 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none text-body-md appearance-none">
+<option>All Areas</option>
+<option>Climate Justice</option>
+<option>Urban Planning</option>
+<option>Public Education</option>
+<option>Digital Privacy</option>
+</select>
+</div>
+<div>
+<label class="block font-label-lg text-primary mb-2">Skills Required</label>
+<select class="w-full px-4 py-3 bg-white border border-outline-variant/50 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none text-body-md appearance-none">
+<option>Any Skill</option>
+<option>Data Analysis</option>
+<option>Graphic Design</option>
+<option>Legal Research</option>
+<option>Social Media</option>
+</select>
+</div>
+<div class="flex gap-2">
+<button class="flex-grow bg-primary-container text-white py-3 px-6 rounded font-label-lg hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-body-md">filter_list</span> Apply Filters
+                            </button>
+<button class="aspect-square bg-surface-container-high text-primary flex items-center justify-center rounded px-4 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Skill Chips -->
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-fixed/30 text-primary rounded-full text-label-md flex items-center gap-2">
+                            Remote <button class="material-symbols-outlined text-xs">close</button>
+</span>
+<span class="px-3 py-1 bg-primary-fixed/30 text-primary rounded-full text-label-md flex items-center gap-2">
+                            Strategic Planning <button class="material-symbols-outlined text-xs">close</button>
+</span>
+<span class="px-3 py-1 bg-primary-fixed/30 text-primary rounded-full text-label-md flex items-center gap-2">
+                            Policy Analysis <button class="material-symbols-outlined text-xs">close</button>
+</span>
+<button class="text-secondary text-label-md font-bold hover:underline ml-2">Clear all filters</button>
+</div>
+</div>
+</section>
+<!-- Opportunities Bento Grid -->
+<div class="bento-grid">
+<!-- Highlighted Opportunity (Large) -->
+<div class="col-span-12 lg:col-span-8 bg-white border border-[#C5A059]/30 p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-secondary text-white px-6 py-2 rotate-45 translate-x-12 translate-y-4 font-label-lg">URGENT</div>
+</div>
+<div class="md:w-1/2">
+<img class="w-full h-full object-cover rounded-lg aspect-video md:aspect-square" data-alt="A professional collaborative workspace where diverse people are working on maps and urban planning documents. The lighting is warm and golden, filtered through large industrial windows. The scene captures a sense of focus, authority, and collective vision with trust-green and heritage-gold accents throughout the modern architectural setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBar1mqIg6NhX21Af64fKiBzeDrgeFGBxJvkAgMzqiVMIguGA0TVnIUQPDrzrNc3WokZYviwv43Fnz4P79ThvEdixSRkCd9wLgfXwNNc80uaoW-_BaMhxRTG6psPyGHFRMB17BMBhAnFIa3RS2rnV77jPH3p9pMLcV7VF20YGzQ_1spQAjbPChbJuublhM2HfpxVRPJ-RsrTLAAROw4zqVXN7QG5WM42EyZwnF5f9E8vkeOZdcASZOTGwNeOu-LUCwKK4Tp3OkEq9Ln"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-center">
+<div class="flex gap-3 mb-4">
+<span class="text-xs font-bold px-2 py-1 bg-surface-container-highest text-primary rounded">URBAN PLANNING</span>
+<span class="text-xs font-bold px-2 py-1 bg-surface-container-highest text-primary rounded">EST. 10 HRS/WK</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Lead Urban Sustainability Researcher</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                            Lead a dedicated team in analyzing pedestrian traffic flows and green space accessibility. Your work will directly influence the 2025 Civic Green Initiative budget.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a professional woman in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8YoyN62H37EyW8ptW2vuKqVXYK00SmcDtkoj0NVla6iMNQQCNzWskUgMzMvoY54VfOT5b-KkqzO2sVFiVDXz9kofDlTyRxHBsJ4tTeWHRNTwX_HzhHDEcVKWZ7nahD-qiuYLKwNUBY06YxE5JtoVBpHb_7j94UiYOp_LRF00gD511OZcpTW7ZCD819S4QqpSrPqL1I9uGq7sYj5oHXNqv7J2k9e3eycgPxpbuKzJGDGBPJ1lxuFMl8v-SPdgczkGjHiJlHF5_MPQe"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a smiling man in a business setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnKcBRrlvab0Rxpn4aM1iHgez4Q0StQrGZEnxoHbGX1JHqv2Bj_7m6hQho1Xx0Hs0YH1NDGDkD-NBSmyTBNZSLD3dw-cZfBw_aS7Yg1xqkpzGd1Awfq9IGU2idSy-8gC7fTYIdbd5DaqdhTjxjKUf17E9MgUxzqt1gRk2gddCUYTO5M8ajneqG1NKgbwuzlU8P8cZEDy7hmsBKYV1TvtXQJf7V8px0Ul0yfj-XNEyeGoS7Gvf9M15yezbI82-friucszpIWz6uDirp"/>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center text-xs font-bold text-primary">+8</div>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded font-label-lg hover:opacity-90 transition-all">View Role</button>
+</div>
+</div>
+</div>
+<!-- Featured Secondary (Side) -->
+<div class="col-span-12 lg:col-span-4 bg-primary-container text-white p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim mb-6">workspace_premium</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Foundation Grant Writers</h3>
+<p class="text-body-sm opacity-80 leading-relaxed mb-6">
+                            Join our advocacy wing. We need skilled writers to secure funding for the "Civic Tech for All" program reaching rural districts.
+                        </p>
+</div>
+<div>
+<div class="w-full bg-white/20 h-1 rounded-full mb-3">
+<div class="bg-secondary w-3/4 h-full rounded-full"></div>
+</div>
+<p class="text-xs font-label-md mb-6 uppercase tracking-widest">3 of 4 positions filled</p>
+<button class="w-full border border-tertiary-fixed-dim text-tertiary-fixed-dim py-3 rounded font-label-lg hover:bg-tertiary-fixed-dim hover:text-primary transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Regular Opportunities -->
+<div class="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
+<div class="h-40 bg-surface mb-6 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A clean, minimalist high-key photo of a team looking at code on a monitor in a bright, modern office with lots of greenery. The vibe is productive, stable, and visionary, perfectly aligning with a corporate minimalist design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDubj8pPViWYidBJRdi6CIAzYdIKgP16_sv9rOIQvQK3WxnRkmhd-LN60Fhu7p6g8p_j-K1wqXgjVhJVwwKGACW0grFMJa5wR0fnOstfVd85tr3-bd7T6nVAIYjtyfChFhUxoH9anQo0nK5uBqJKQVY1wz6j5GbXt9UUqBXrVHEtgp-ReiUBDOp_plBqg-OtxrjIcLN2pY05QgoveaDqcCdhmVi5yEQ9eHnVALJzuqM_QR2RpHthgYSgS1xDdd9mHVx7yxfh9QiawWL"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Climate Justice</span>
+<h4 class="font-headline-sm text-[20px] text-primary mb-3">Air Quality Data Analyst</h4>
+<p class="text-body-sm text-on-surface-variant mb-6">Monitor local sensor arrays and prepare monthly impact reports for the city council.</p>
+<div class="flex items-center gap-2 text-label-md text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span> Remote / Decentralized
+                    </div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
+<div class="h-40 bg-surface mb-6 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A wide lens shot of a minimalist government building corridor with clean lines, soft natural lighting, and deep trust-green color tones. This architectural photography reflects stability, tradition, and authority for a civic-focused brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNQSrdcixXEjkAYflvPeiP2-xe1f5-9lDZEhGu62_BlV-sJGg5d4GeVW0wNUXg4Q2BeG2BcstlrHEUHdy5b7J-0ZuO_8cIPEjL7ovPyamP6XBkTRNK9m1BT50h1N9toHmv6m8sGGmbrGr7z3dmMbwRgjQ2rpaQjxcZpU_A8P5z-LWjwd5_c6jHy2rwv1wbifW7yRoveYOQxH3tYCRe4zxN-A-37yvBEOkARVIKUhWwhkfub8qxqr3fCD4PPipz004i0bsYNBs11BeS"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Digital Privacy</span>
+<h4 class="font-headline-sm text-[20px] text-primary mb-3">Policy Documentation Lead</h4>
+<p class="text-body-sm text-on-surface-variant mb-6">Help translate complex legal jargon into accessible citizen rights handbooks.</p>
+<div class="flex items-center gap-2 text-label-md text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span> Civic Center, HQ
+                    </div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 group hover:border-secondary transition-colors">
+<div class="h-40 bg-surface mb-6 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close up of a hand holding a heritage-gold fountain pen writing on high-quality cream-white paper in a studious, authoritative environment. The aesthetic is high-end editorial, corporate, and traditional, with deep green shadows and focused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmyBjM8ZYmOMXIUWHbZE4ahdeO6CXSm6T0SjmxwZwKRK0t3YTMMI-2Vn8IGmV5qwp88eqdEpDIqyWGN9vV9t28e-92nPS2GrMjZrIsq-XkqbmCB6cV0pia0ZfsbLEZii7ilP7Y2U-IHk8jDvxcyXbPHKREDqQ1ULhIiBk9YHx-LRlOK6xcwHHS8_M-YCdmUxUwz6y9eF1qxo4BnP2z09vU2YKcc8NlfqoA14npl5lNIt9hN6E31IztaMWV5wz-At3Hw7c35fHBwrQx"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Education</span>
+<h4 class="font-headline-sm text-[20px] text-primary mb-3">Literacy Program Mentor</h4>
+<p class="text-body-sm text-on-surface-variant mb-6">Weekend workshops for secondary students exploring civic participation and debate.</p>
+<div class="flex items-center gap-2 text-label-md text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span> Hybrid / Multiple Sites
+                    </div>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="mt-16 flex justify-center">
+<button class="group flex flex-col items-center gap-2">
+<span class="text-label-lg text-primary group-hover:text-secondary transition-colors">Explore more opportunities</span>
+<span class="material-symbols-outlined text-secondary animate-bounce">keyboard_double_arrow_down</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-background w-full py-16 border-t border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim mb-6">BOOT Civic OS</h3>
+<p class="text-body-sm text-on-surface-variant dark:text-surface-variant mb-6 leading-relaxed">
+                    Building the infrastructure for 21st-century citizen engagement. Empowering communities through transparency, technology, and tradition.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-widest">Platform</h4>
+<ul class="space-y-4 text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Governance Framework</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Open Data Portal</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Community Grants</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Impact Metrics</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-widest">Resources</h4>
+<ul class="space-y-4 text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Transparency Report</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-widest">Newsletter</h4>
+<p class="text-body-sm text-on-surface-variant mb-4">Stay informed about upcoming policy shifts and opportunities.</p>
+<div class="flex">
+<input class="flex-grow px-4 py-2 bg-white border border-outline-variant rounded-l outline-none focus:border-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-r hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+<div class="flex gap-8 text-label-md">
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="#">Accessibility</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="#">Ethics Statement</a>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed based on context: Details/Search page usually suppresses, but since it's an opportunity landing, we keep a "Quick Support" action) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-secondary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-50 group">
+<span class="material-symbols-outlined">question_answer</span>
+<span class="absolute right-full mr-4 bg-primary text-white px-4 py-2 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Need assistance?</span>
+</button>
+<script>
+        // Micro-interactions for hover states
+        document.querySelectorAll('.bento-grid > div').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('transition-all', 'duration-300');
+            });
+        });
+
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput?.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary/20');
+        });
+        searchInput?.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/20');
+        });
+    </script>
+</body></html>

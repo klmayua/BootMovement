@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #717973;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#8d131b",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#69000c",
+                        "surface-container": "#e6f1e9",
+                        "on-secondary-fixed": "#410004",
+                        "inverse-surface": "#29332e",
+                        "surface-container-highest": "#dae5de",
+                        "on-primary-container": "#85b098",
+                        "surface-bright": "#f1fcf4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#264e3c",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fe6763",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-surface": "#141e19",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#4f3800",
+                        "primary-fixed-dim": "#a4d0b8",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-surface-variant": "#414944",
+                        "surface-container-low": "#ebf6ef",
+                        "outline": "#717973",
+                        "on-tertiary-fixed": "#261900",
+                        "on-tertiary-container": "#c6a15a",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "outline-variant": "#c1c8c2",
+                        "on-background": "#141e19",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c0edd3",
+                        "background": "#f1fcf4",
+                        "primary": "#002d1c",
+                        "secondary": "#af2d2f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad7",
+                        "surface-dim": "#d2ddd5",
+                        "tertiary": "#342300",
+                        "surface-container-high": "#e0ebe3",
+                        "inverse-primary": "#a4d0b8",
+                        "surface-tint": "#3e6752",
+                        "error-container": "#ffdad6",
+                        "surface": "#f1fcf4",
+                        "inverse-on-surface": "#e8f3ec",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-variant": "#dae5de",
+                        "primary-container": "#1a4331",
+                        "on-primary-fixed": "#002114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-sm": ["Source Serif 4"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "display-lg": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md custom-scrollbar overflow-x-hidden">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low dark:bg-on-background border-r border-outline-variant/30 dark:border-outline/20 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim">BOOT OS</h1>
+<p class="font-label-md text-on-surface-variant uppercase tracking-widest mt-1">Civic Dashboard</p>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+<span class="font-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">groups</span>
+<span class="font-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim font-bold bg-primary-fixed/20 dark:bg-primary-container/30 rounded-lg translate-x-1" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">assignment</span>
+<span class="font-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">monitoring</span>
+<span class="font-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">settings</span>
+<span class="font-label-lg">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-4 space-y-6">
+<button class="w-full bg-secondary text-on-secondary font-label-lg py-3 rounded-lg shadow-sm hover:opacity-90 transition-opacity">
+                Donate Now
+            </button>
+<div class="space-y-2">
+<a class="flex items-center gap-3 py-2 text-on-surface-variant text-label-md hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 py-2 text-on-surface-variant text-label-md hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-surface dark:bg-on-background border-b border-outline-variant/30 dark:border-outline/20 flex justify-between items-center px-margin-desktop py-4 w-full">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Events Directory</h2>
+<div class="flex items-center gap-6">
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/50 rounded-full font-body-sm focus:outline-none focus:border-primary" placeholder="Search rallies, town halls..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button class="p-2 cursor-pointer active:opacity-80 transition-all duration-200 hover:bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 cursor-pointer active:opacity-80 transition-all duration-200 hover:bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Canvas Container -->
+<div class="p-margin-desktop max-w-container-max mx-auto space-y-10">
+<!-- Hero Section / Featured Event -->
+<section class="grid grid-cols-12 gap-gutter">
+<div class="col-span-8 relative overflow-hidden rounded-xl h-[400px] group">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent z-10"></div>
+<img alt="Featured Town Hall Event" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large, sophisticated political rally set in a grand heritage building with high ceilings and classical architecture. Thousands of engaged citizens are gathered, bathed in warm cinematic lighting and dramatic shadows. The color palette is dominated by deep greens and rich gold accents, reflecting a sense of institutional stability and visionary tradition. The atmosphere is energetic and authoritative, capturing a moment of historical importance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPNTcqtettaeRQIv9BE-uHv1DTpzkgH1KHnqB0pMHVthGWdy1NETC33zgaxOCfa9G2_bSQMByBvzQv3wmjLdYhWrpUKj6vFwGeWyw7ZbxWCGLcJSNCXAgfSZaJKfC2IWTN2vc033L9UuehEC0DsyYOj5_h5SUMf86kqqNSucFOF15IiEoXrOuU9JH6tcqTlzWgiKtQAZ6YJiJvVYR-3RF0PLikRxQZ9B1fDI9klGq4UwFfG61mrdqs292JZBQoppwfmLTkCrCkNyt"/>
+<div class="absolute bottom-0 left-0 p-10 z-20 max-w-2xl">
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-md rounded mb-4">NATIONAL RALLY</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">The Future of Civic Infrastructure: National Town Hall</h3>
+<p class="text-white/80 font-body-md mb-6">Join us for a definitive discussion on modernizing municipal governance and the rollout of the BOOT Civic OS across three major provinces.</p>
+<div class="flex items-center gap-6 text-white font-label-lg">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">calendar_today</span> Oct 24, 2024</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Heritage Hall, Central District</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 flex flex-col gap-gutter">
+<div class="bg-primary-container p-8 rounded-xl text-white flex-1 flex flex-col justify-center">
+<h4 class="font-headline-sm text-headline-sm mb-4">Campaign Momentum</h4>
+<p class="font-body-sm mb-6 opacity-80">We're nearing our quarterly engagement goal. Your presence at the upcoming workshops drives the vision forward.</p>
+<div class="w-full bg-surface/20 h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full w-[78%]"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-md">
+<span>78% Towards Goal</span>
+<span>12,400 Sign-ups</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/30 flex-1">
+<h4 class="font-label-lg text-primary uppercase tracking-widest mb-4">Upcoming Deadlines</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<div>
+<p class="font-body-md font-semibold text-on-surface">Volunteer Orientation</p>
+<p class="font-body-sm text-on-surface-variant">Tomorrow, 10:00 AM</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<div>
+<p class="font-body-md font-semibold text-on-surface">Policy Feedback Window Closes</p>
+<p class="font-body-sm text-on-surface-variant">In 3 days</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Interactive Directory -->
+<section class="space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<div class="flex gap-8">
+<button class="font-label-lg pb-4 border-b-2 border-primary text-primary" id="list-tab" onclick="switchView('list')">LIST VIEW</button>
+<button class="font-label-lg pb-4 border-transparent text-on-surface-variant hover:text-primary transition-colors" id="map-tab" onclick="switchView('map')">MAP EXPLORER</button>
+<button class="font-label-lg pb-4 border-transparent text-on-surface-variant hover:text-primary transition-colors" id="calendar-tab" onclick="switchView('calendar')">CALENDAR</button>
+</div>
+<div class="flex gap-4">
+<select class="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none">
+<option>All Event Types</option>
+<option>Town Halls</option>
+<option>Rallies</option>
+<option>Policy Workshops</option>
+</select>
+<select class="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none">
+<option>Region: All</option>
+<option>North District</option>
+<option>South Sector</option>
+<option>Heritage Zone</option>
+</select>
+</div>
+</div>
+<!-- List View Content -->
+<div class="grid grid-cols-12 gap-gutter" id="list-view">
+<!-- Event Cards (3 Columns) -->
+<div class="col-span-4 bg-surface-container-lowest border border-tertiary/10 rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md">Policy Workshop</span>
+<span class="text-on-surface-variant font-label-md">2.4 mi away</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-2 group-hover:text-secondary transition-colors">Economic Sovereignty Forum</h5>
+<p class="font-body-sm text-on-surface-variant mb-6 line-clamp-2">A deep dive into decentralised municipal budgeting and fiscal transparency tools.</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a middle-aged woman with glasses, expressing authority and intelligence. She is wearing a professional blazer. The lighting is soft and corporate, consistent with high-end editorial portraits. Background is a neutral, blurred office setting with tones of cream and deep green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO8iFjjUVzFHWQCHejXtFN5iSF-K7KM8zpJZvn6zWf7KJhwrIcAwBa7yDEhN0wZYn26J4AGxogOKquPkC1GVzxH7sbttryOlSdbNSMb0iWw0Du-AV8KlcNJ8jAeHgLwWYMjzxOJKBgG3P8juFzsQp7Kil_k8WfuDjeKMRcCD_LPm3cNs75sEbP89cwxFkPAmlvdp2gEFz_Dvl7XzhxN4Ronz-8-dfXHeQ8boqGM7z5t6G3Ar46aXUJlYRENq4AqqAFzodk5g1bPgmI"/>
+<div>
+<p class="font-label-md text-on-surface">Dr. Elena Vance</p>
+<p class="font-label-md text-on-surface-variant">Policy Director</p>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-lowest border border-tertiary/10 rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md">Town Hall</span>
+<span class="text-on-surface-variant font-label-md">0.8 mi away</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-2 group-hover:text-secondary transition-colors">Digital Identity &amp; Privacy</h5>
+<p class="font-body-sm text-on-surface-variant mb-6 line-clamp-2">Understanding the BOOT Civic OS security layer and your data rights as a citizen.</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="A focused portrait of a technology leader, a man in his late 30s with a clean-shaven face and short dark hair. He is wearing a dark green sweater. The image is styled like a high-end tech magazine feature, with clean lines, soft natural lighting, and a palette of warm whites and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwCHATqQyaLeAZcp2fSsKB9i9k37atqGbyXfqs262gKyy2AUjLZ29yUkCH2bd-6UdoF4pGUkjbMLiyxPEtV9L2h2EX3_WFNN1o1RnGQw_qGbe4f8m-xhWCAod1XQ9CiUoWBL3_AJyz6h-W1CI2i08nUnz_1i28X6Mc4-nLWoEj2R77h7N6_DvNnHwwVn7bKiDIxvC9d2Vyexss79-p_1Exb7jbPc0VOg722N7fJMsUj0BYzCLLG3yhxfxNg8TloDd6yaXXXU5tDlQ7"/>
+<div>
+<p class="font-label-md text-on-surface">Marcus Thorne</p>
+<p class="font-label-md text-on-surface-variant">CTO, BOOT OS</p>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-lowest border border-tertiary/10 rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md">Community Meetup</span>
+<span class="text-on-surface-variant font-label-md">Online</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-2 group-hover:text-secondary transition-colors">Bootcamp: Civic Engagement</h5>
+<p class="font-body-sm text-on-surface-variant mb-6 line-clamp-2">Interactive training for community leaders on how to organize local chapters effectively.</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="A vibrant portrait of a young community organizer with a warm, inclusive smile. She is in a bright, modern community center with large windows. The lighting is airy and high-key, using the cream-white foundation of the design system. Her style is professional yet approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJTgf6whD53o0lLRSewNawcnGjIFMGrdP9BbMlTXCql7IA51w-g267E7mSXAu-_nFVd1fQh8p-tsOA49KAGjhky6iQ9m_QyOsZ2r8JHq2oy3gvrWIphKUEy3M8lgNPUUAMKTygAoN0pQf-RW8muJJNTQJ5n6x6-VqY97vi01eRl5yPH9cDREuFelc_b4ZBl-YqnYLCeDd55nnyTS6CGYUEEVxG4Z_HnhdpogYccSNagewuaWfwYZBeLjMnLjOGILVVvmmJMI86mOV"/>
+<div>
+<p class="font-label-md text-on-surface">Sarah Jenkins</p>
+<p class="font-label-md text-on-surface-variant">Outreach Lead</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map View Content (Hidden by default) -->
+<div class="hidden h-[600px] rounded-xl overflow-hidden border border-outline-variant relative" id="map-view">
+<img alt="Map view" class="w-full h-full object-cover grayscale opacity-60" data-alt="A detailed, high-contrast monochrome map of a major metropolitan city center, stylized with professional architectural lines. The map uses a deep forest green and cream color scheme. Various custom diamond-shaped markers in Action Red are placed strategically across the urban grid, representing active civic events. The aesthetic is clean, sophisticated, and institutional." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsriU5r8qjAiZH3qS06P45UfMUodO5GCoOL-Qu4UO-YG95ssn_Kk41gL2MB85P6tPfh8oculQ9BQ3B0FnzHslsYgoZZjkNoENJdlvHZCV-rJYr_ljD3LKBxAQK9xZLUK4CnN1c_WI461wAxqFw4EOic8rSGBPu9T5d53N-H9Wf40zniqo5g7nBU22kis-vwb__oNCnTIKDAJ3oH-HzJkiV2IhKN7xSd5dF4mLe0bJqlG6RdASpihytLglQDh3PkJcaNwEwfxp9PEA6"/>
+<div class="absolute top-10 right-10 w-80 bg-surface/95 backdrop-blur-md p-6 rounded-lg shadow-xl border border-outline-variant/30">
+<h6 class="font-headline-sm text-headline-sm mb-4">Central District</h6>
+<p class="font-body-sm text-on-surface-variant mb-4">There are 4 events in this area this week.</p>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container rounded border border-outline-variant/20">
+<p class="font-label-lg text-primary">Regional Rally</p>
+<p class="font-body-sm text-on-surface-variant">St. George's Square • 2 PM</p>
+</div>
+<div class="p-3 bg-surface-container rounded border border-outline-variant/20">
+<p class="font-label-lg text-primary">Youth Workshop</p>
+<p class="font-body-sm text-on-surface-variant">Library Hall • 6 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Calendar View Content (Hidden by default) -->
+<div class="hidden" id="calendar-view">
+<div class="grid grid-cols-7 gap-1 bg-outline-variant/20 border border-outline-variant/30 rounded-lg overflow-hidden">
+<!-- Days of week -->
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">SUN</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">MON</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">TUE</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">WED</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">THU</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">FRI</div>
+<div class="bg-primary-container text-white py-4 text-center font-label-lg">SAT</div>
+<!-- Empty slots or prev month -->
+<div class="bg-surface-container-low h-32 p-2 opacity-50"></div>
+<div class="bg-surface-container-low h-32 p-2 opacity-50"></div>
+<!-- Current Month Days -->
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">1</span>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">2</span>
+<div class="mt-2 p-1 bg-secondary/10 border-l-2 border-secondary text-[10px] font-bold text-secondary">RALLY: CAPITAL</div>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">3</span>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">4</span>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">5</span>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">6</span>
+<div class="mt-2 p-1 bg-primary/10 border-l-2 border-primary text-[10px] font-bold text-primary">TOWN HALL</div>
+</div>
+<div class="bg-surface h-32 p-4 border border-outline-variant/10 relative">
+<span class="font-label-md opacity-40">7</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-highest dark:bg-on-background border-t border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<h2 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim mb-4">BOOT Civic OS</h2>
+<p class="font-body-sm text-on-surface-variant">The Operating System for a Modern Society. Precision, Transparency, Tradition.</p>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-lg text-primary mb-4 uppercase tracking-wider">Resources</h3>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Transparency Report</a></li>
+<li><a class="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Civic Handbook</a></li>
+<li><a class="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-lg text-primary mb-4 uppercase tracking-wider">Legal</h3>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-label-md hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-lg text-primary mb-4 uppercase tracking-wider">Newsletter</h3>
+<div class="flex">
+<input class="bg-surface-container border border-outline-variant p-2 w-full font-body-sm focus:outline-none" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 px-4 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<div class="col-span-4 mt-12 pt-8 border-t border-outline-variant/30 flex justify-between items-center">
+<p class="font-body-sm text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        function switchView(view) {
+            const listView = document.getElementById('list-view');
+            const mapView = document.getElementById('map-view');
+            const calendarView = document.getElementById('calendar-view');
+            const tabs = {
+                list: document.getElementById('list-tab'),
+                map: document.getElementById('map-tab'),
+                calendar: document.getElementById('calendar-tab')
+            };
+
+            // Hide all views
+            listView.classList.add('hidden');
+            mapView.classList.add('hidden');
+            calendarView.classList.add('hidden');
+
+            // Reset tabs
+            Object.values(tabs).forEach(tab => {
+                tab.classList.remove('border-primary', 'text-primary');
+                tab.classList.add('border-transparent', 'text-on-surface-variant');
+            });
+
+            // Show selected view
+            if (view === 'list') {
+                listView.classList.remove('hidden');
+                tabs.list.classList.add('border-primary', 'text-primary');
+                tabs.list.classList.remove('border-transparent', 'text-on-surface-variant');
+            } else if (view === 'map') {
+                mapView.classList.remove('hidden');
+                tabs.map.classList.add('border-primary', 'text-primary');
+                tabs.map.classList.remove('border-transparent', 'text-on-surface-variant');
+            } else if (view === 'calendar') {
+                calendarView.classList.remove('hidden');
+                tabs.calendar.classList.add('border-primary', 'text-primary');
+                tabs.calendar.classList.remove('border-transparent', 'text-on-surface-variant');
+            }
+        }
+    </script>
+</body></html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candidate Directory | BOOT Civic OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(241, 252, 244, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#8d131b",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#69000c",
+                        "surface-container": "#e6f1e9",
+                        "on-secondary-fixed": "#410004",
+                        "inverse-surface": "#29332e",
+                        "surface-container-highest": "#dae5de",
+                        "on-primary-container": "#85b098",
+                        "surface-bright": "#f1fcf4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#264e3c",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fe6763",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-surface": "#141e19",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#4f3800",
+                        "primary-fixed-dim": "#a4d0b8",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-surface-variant": "#414944",
+                        "surface-container-low": "#ebf6ef",
+                        "outline": "#717973",
+                        "on-tertiary-fixed": "#261900",
+                        "on-tertiary-container": "#c6a15a",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "outline-variant": "#c1c8c2",
+                        "on-background": "#141e19",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c0edd3",
+                        "background": "#f1fcf4",
+                        "primary": "#002d1c",
+                        "secondary": "#af2d2f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad7",
+                        "surface-dim": "#d2ddd5",
+                        "tertiary": "#342300",
+                        "surface-container-high": "#e0ebe3",
+                        "inverse-primary": "#a4d0b8",
+                        "surface-tint": "#3e6752",
+                        "error-container": "#ffdad6",
+                        "surface": "#f1fcf4",
+                        "inverse-on-surface": "#e8f3ec",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-variant": "#dae5de",
+                        "primary-container": "#1a4331",
+                        "on-primary-fixed": "#002114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-sm": ["Source Serif 4"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "display-lg": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-8">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</h1>
+<nav class="hidden md:flex gap-6">
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary px-3 py-2 font-label-lg text-label-lg" href="#">Communities</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="#">Events</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded font-label-lg text-label-lg" href="#">Projects</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/50 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none w-64 transition-all duration-300" placeholder="Search candidates..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant">search</span>
+</div>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">notifications</button>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container cursor-pointer overflow-hidden border border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional studio portrait of a mid-40s corporate executive with a warm, confident expression. The lighting is soft and directional, typical of a high-end editorial shoot, with a clean cream-white background that matches a professional design system. The person is wearing a dark, tailored suit that reflects a traditional yet visionary leadership style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHPR4TbRRJaXBeJkymj5v4_3VjzGoNx8DmVgZVpDW1jvVUmqGJkjeBKdF6F8ySwJUOMcbarU1s_QAb3IQdO98399BFcoIpFZ1imzJBLxBt-si5Yd_8bqPdL6PDa2DGyx-VvA5w9-zPuYEWGKnVEj8ZFNAVjiaNQHOsFersEmCCxKq0Nxm9jfewmbMM0JbkB4HtYM-crVBY87RLXUZqegu2D1ihZgh2tRt4KChX-lhHeci1ZaMsVxkpfZYhwQFFBLdDnGJqDzRXUqR"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col h-full py-8 px-4 hidden lg:flex mt-[73px]">
+<div class="mb-10 px-2">
+<h2 class="font-headline-sm text-headline-sm text-primary">BOOT OS</h2>
+<p class="text-label-md text-on-surface-variant opacity-70">Civic Dashboard</p>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg group" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:translate-x-1 duration-300 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/30 px-2">
+<button class="w-full bg-secondary text-on-secondary font-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity mb-4">Donate Now</button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span class="text-label-md">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="text-label-md">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow lg:ml-64 p-margin-desktop bg-surface">
+<!-- Header Section -->
+<div class="max-w-container-max mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Candidate Directory</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover the visionaries leading our movement across the nation. Informed, vetted, and backed by the BOOT Civic OS community.</p>
+</div>
+<!-- Filter Controls (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="col-span-1 md:col-span-2 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl flex flex-col justify-between">
+<label class="font-label-lg text-primary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Region
+                        </label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-semibold">All Regions</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Northeast</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Southwest</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">Midwest</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-label-md">West Coast</button>
+</div>
+</div>
+<div class="col-span-1 p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl">
+<label class="font-label-lg text-primary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">account_balance</span>
+                            Office Level
+                        </label>
+<select class="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface cursor-pointer p-0">
+<option>All Levels</option>
+<option>Federal</option>
+<option>State Senate</option>
+<option>State Assembly</option>
+<option>Municipal</option>
+</select>
+</div>
+<div class="col-span-1 p-6 bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between">
+<div>
+<p class="font-headline-sm text-headline-sm">124</p>
+<p class="font-label-md opacity-80 uppercase tracking-wider">Candidates Active</p>
+</div>
+<button class="flex items-center gap-2 font-label-lg hover:underline transition-all">
+                            View New Endorsements
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Directory Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Candidate Card 1 -->
+<div class="bg-surface border border-outline-variant/20 rounded-lg overflow-hidden group hover:border-tertiary-container/50 transition-all duration-500">
+<div class="h-80 overflow-hidden relative">
+<img alt="Candidate 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated editorial portrait of a female political candidate with a determined and thoughtful gaze. She is set against a soft-focus background of a modern civic building with warm gold and deep green accents. The lighting is authoritative and premium, highlighting her professional attire in a way that aligns with high-end political publication styles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUO8rfAqTMZAJMEBYgrBUxYuqTJkjTy7hw9walJmpHpFghkpX2bdLRiVZfOMGuKzqLKzPgkFQbub86Oi6k1LTaysByGPNOvYTzUn3rpSF55mfHwUvmr8_NohBB8xRWSYVO8qgRRi9NVBO4W8CCh7cEZcId3ywFG8_FhcVYW5kZ3fPt7wQ4dIVjBRWJjGoFPnA0L2MpMasPjoJzeQ2GTHEn1RqySr2nJv9JosC6hcVpKupsvpvdHAY_GkrD36oXTI8SwzvkLBF2JYBm"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded text-label-md font-bold backdrop-blur-md">FEDERAL OFFICE</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Dr. Sarah Vance</h3>
+<p class="text-on-surface-variant font-label-lg uppercase tracking-widest text-xs">Midwest Region • Dist. 4</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Advocating for digital sovereignty and transparent civic infrastructure for all citizens in the heartland.</p>
+<div class="flex items-center gap-4 pt-6 border-t border-outline-variant/10">
+<div class="flex-grow">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 72%"></div>
+</div>
+<p class="text-label-md mt-2 text-on-surface-variant">72% Goal Funded</p>
+</div>
+<button class="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
+</div>
+</div>
+</div>
+<!-- Candidate Card 2 -->
+<div class="bg-surface border border-outline-variant/20 rounded-lg overflow-hidden group hover:border-tertiary-container/50 transition-all duration-500">
+<div class="h-80 overflow-hidden relative">
+<img alt="Candidate 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A portrait of a male political candidate in his early 50s, conveying wisdom and stability. He is standing in a brightly lit, modern legislative library with warm wood textures and clean minimalist lines. The color palette emphasizes rich greens and cream-white, suggesting a visionary tradition and institutional weight. The image has the sharp, high-contrast clarity of a luxury corporate magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMCHGIt-Me6552uQkJLdW3NWpSLc0yN00BKcbYnaKIFFVmXstpprEJamsfpGJSn4jlx1O5HbUE1akVF-2aQsnympggRqNOvC3ZcpJVM1jL9YDxR7fHgTLBARVmng-kwF_pTWVSbIhCc_z1ocV6NpKpkqnZhkPMzr3cvpmv11zev-sW1iVlLtYLB_O0xQJLQBPhYnHUhbO72lotcvq3eCvEiiITFrrcb2h7OMFq4xCxYlspjCI3khnFzKYtDAVlTDFvo7l4oMiioFHy"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded text-label-md font-bold backdrop-blur-md">STATE SENATE</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Marcus Thorne</h3>
+<p class="text-on-surface-variant font-label-lg uppercase tracking-widest text-xs">West Coast • Dist. 12</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Building sustainable economic corridors and securing universal fiber access across the coastline.</p>
+<div class="flex items-center gap-4 pt-6 border-t border-outline-variant/10">
+<div class="flex-grow">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 45%"></div>
+</div>
+<p class="text-label-md mt-2 text-on-surface-variant">45% Goal Funded</p>
+</div>
+<button class="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
+</div>
+</div>
+</div>
+<!-- Candidate Card 3 -->
+<div class="bg-surface border border-outline-variant/20 rounded-lg overflow-hidden group hover:border-tertiary-container/50 transition-all duration-500">
+<div class="h-80 overflow-hidden relative">
+<img alt="Candidate 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professional portrait of a young, visionary female candidate in a clean, high-key environment. She is surrounded by architectural elements that evoke stability and progress, like polished stone and large windows. The mood is optimistic yet serious, with a color story centered on primary green and action red accents. The lighting is bright and even, creating a modern light-mode aesthetic for a political directory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOoUbEoSOAnuPVQtDioFLhNyx3ZR8QG58hFCS2IMPIaApB6u5ME6ACB8evT07dvrOsXqDU2xAZ4RisI2towBCNQayg3gpMC5y9buwsHbZDAF0u_u4x1rUVH6woGpIXIapH4o5IiTJF72ebP8Tiw-kWjITOSeW0AO3NHuNz8OiDGd4q5sJX_nkZ0oNj-NX-LUb0RuAmADQNd1SSzXlWStb2G2J5HmtZFkP_hQZAuAZg4mwkL9mdwXuv7B3nreOZZXlFl_jpKqhWuxf"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded text-label-md font-bold backdrop-blur-md">MUNICIPAL</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Elena Rodriguez</h3>
+<p class="text-on-surface-variant font-label-lg uppercase tracking-widest text-xs">Southwest • City Council</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Championing local data privacy and neighborhood-driven urban planning through community-led nodes.</p>
+<div class="flex items-center gap-4 pt-6 border-t border-outline-variant/10">
+<div class="flex-grow">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 88%"></div>
+</div>
+<p class="text-label-md mt-2 text-on-surface-variant">88% Goal Funded</p>
+</div>
+<button class="material-symbols-outlined p-2 border border-outline-variant/30 rounded-full hover:bg-surface-container transition-all">favorite</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="mt-16 flex flex-col items-center gap-6">
+<button class="px-8 py-3 bg-surface border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-all flex items-center gap-2">
+                        Load More Profiles
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+<p class="text-label-md text-on-surface-variant">Showing 3 of 124 movement-backed candidates</p>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4">BOOT Civic OS</h2>
+<p class="text-body-sm text-on-surface-variant mb-6">Securing the future of civic participation through technology and community-driven leadership.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">campaign</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">forum</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-wider">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Transparency Report</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Policy Framework</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-6 uppercase tracking-wider">Stay Informed</h4>
+<form class="space-y-3">
+<input class="w-full bg-surface p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:outline-none text-body-sm" placeholder="Email address" type="email"/>
+<button class="w-full bg-primary text-on-primary py-3 rounded font-label-lg hover:opacity-90 transition-opacity">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">language</span>
+                    English (US)
+                </span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for candidate card hover
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-105');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-105');
+        });
+    </script>
+</body></html>

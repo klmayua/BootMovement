@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #f1fcf4; /* Cream Foundation */
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .impact-gradient {
+            background: linear-gradient(135deg, #1A4331 0%, #002d1c 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#8d131b",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#69000c",
+                      "surface-container": "#e6f1e9",
+                      "on-secondary-fixed": "#410004",
+                      "inverse-surface": "#29332e",
+                      "surface-container-highest": "#dae5de",
+                      "on-primary-container": "#85b098",
+                      "surface-bright": "#f1fcf4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#264e3c",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fe6763",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface": "#141e19",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#4f3800",
+                      "primary-fixed-dim": "#a4d0b8",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-surface-variant": "#414944",
+                      "surface-container-low": "#ebf6ef",
+                      "outline": "#717973",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-container": "#c6a15a",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "outline-variant": "#c1c8c2",
+                      "on-background": "#141e19",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#c0edd3",
+                      "background": "#f1fcf4",
+                      "primary": "#002d1c",
+                      "secondary": "#af2d2f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad7",
+                      "surface-dim": "#d2ddd5",
+                      "tertiary": "#342300",
+                      "surface-container-high": "#e0ebe3",
+                      "inverse-primary": "#a4d0b8",
+                      "surface-tint": "#3e6752",
+                      "error-container": "#ffdad6",
+                      "surface": "#f1fcf4",
+                      "inverse-on-surface": "#e8f3ec",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-variant": "#dae5de",
+                      "primary-container": "#1a4331",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "32px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Source Serif 4"],
+                      "headline-lg": ["Source Serif 4"],
+                      "headline-sm": ["Source Serif 4"],
+                      "body-md": ["Work Sans"],
+                      "body-sm": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display-lg": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background overflow-x-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col py-8 px-4 z-50">
+<div class="mb-12 px-2">
+<h1 class="font-headline-sm text-headline-sm text-primary">BOOT OS</h1>
+<p class="font-label-md text-on-surface-variant">Civic Dashboard</p>
+</div>
+<nav class="flex-grow space-y-2">
+<!-- Active state mapping: Dashboard (Primary intent for general progress/impact overview) -->
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-primary font-bold bg-primary-fixed/20 rounded-lg hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                Communities
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+                Events
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+                Projects
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-6 px-2 space-y-4">
+<button class="w-full bg-secondary text-on-secondary py-3 px-4 rounded-lg font-label-lg hover:opacity-90 transition-opacity">
+                Donate Now
+            </button>
+<div class="space-y-2">
+<a class="flex items-center gap-4 p-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-label-md">Support</span>
+</a>
+<a class="flex items-center gap-4 p-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-label-md">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 bg-surface border-b border-outline-variant/30 px-margin-desktop py-4 flex justify-between items-center w-full">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">My Impact</h2>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="bg-surface-container-low border-none rounded-full py-2 px-10 focus:ring-2 focus:ring-primary w-64 text-body-sm" placeholder="Search insights..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-body-md" data-icon="search">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<div class="flex items-center gap-3 cursor-pointer p-1 pr-4 rounded-full hover:bg-surface-container-low transition-colors">
+<img alt="User profile" class="w-8 h-8 rounded-full bg-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjW1gjqzhaAafOaA6bxJyTzMk5RCdYUvN31z1Psftvg3NmFsrxaTsWx7J8Qy3wEPob6dotLE2kYsy2pozjDyJne3Ru2x8SHqfF9YWSVNd2Z6e3Ds_LM_ASVVthal9QyKTAir2ay4S49i01RtiKS9mmRn9Qj8s_TffY_yRT7aHwMI8gIKkFxR0u1JCXg26K6qbYxvXJHU4lncSlZjZTnM-vOEceLfufyEC_o_CMGc-FRDedYOUtd6POxdX2WqAvmsrE9ZHyUyKd9jD8"/>
+<span class="font-label-lg text-primary">Alex Chen</span>
+</div>
+</div>
+</div>
+</header>
+<div class="px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Hero Impact Summary -->
+<section class="grid grid-cols-12 gap-gutter mb-12">
+<div class="col-span-8 p-12 bg-primary-container text-white rounded-xl relative overflow-hidden shadow-sm">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="font-label-lg text-primary-fixed-dim tracking-widest uppercase mb-4 block">Personal Legacy</span>
+<h3 class="font-display-lg text-display-lg mb-4">Empowering 1,240 Neighbors</h3>
+<p class="font-body-lg text-surface-variant max-w-lg mb-8">Through consistent contributions to urban development and local community grants, your direct actions have catalyzed a 15% increase in local green spaces.</p>
+</div>
+<div class="flex gap-8">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md">148</span>
+<span class="font-label-md text-primary-fixed-dim">Volunteer Hours</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md">$12,450</span>
+<span class="font-label-md text-primary-fixed-dim">Grants Facilitated</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md">12</span>
+<span class="font-label-md text-primary-fixed-dim">Local Policies Passed</span>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none">
+
+</div>
+</div>
+<div class="col-span-4 p-8 bg-surface-container border border-outline-variant/30 rounded-xl flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Milestone Progress</h4>
+<p class="font-body-sm text-on-surface-variant mb-6">Next Badge: Community Architect</p>
+<div class="relative w-full h-48 flex items-center justify-center">
+<!-- Circular Progress Simulation -->
+<svg class="w-40 h-40 transform -rotate-90">
+<circle class="text-tertiary-fixed" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-secondary transition-all duration-1000" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-dasharray="440" stroke-dashoffset="88" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md text-primary">80%</span>
+<span class="font-label-md text-on-surface-variant">Level 14</span>
+</div>
+</div>
+</div>
+<button class="w-full border border-tertiary-fixed-dim text-tertiary font-label-lg py-3 hover:bg-tertiary-fixed/10 transition-colors mt-4">
+                        View Achievements
+                    </button>
+</div>
+</section>
+<!-- Data Visualizations (Bento Grid Style) -->
+<section class="grid grid-cols-12 gap-gutter mb-12">
+<!-- Contribution Trends -->
+<div class="col-span-7 bg-white border border-outline-variant/30 p-8 rounded-xl">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Contribution Velocity</h4>
+<p class="font-body-sm text-on-surface-variant">Engagement levels across Q1-Q3 2024</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-primary rounded-full font-label-md">Monthly</span>
+<span class="px-3 py-1 text-on-surface-variant rounded-full font-label-md cursor-pointer hover:bg-surface-container-low">Quarterly</span>
+</div>
+</div>
+<div class="h-64 w-full flex items-end gap-4 px-4">
+<!-- Bar Chart Simulation -->
+<div class="flex-1 bg-primary-fixed-dim/20 h-1/4 rounded-t-sm group relative">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary-fixed-dim/30 h-2/4 rounded-t-sm group relative">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary-fixed-dim/40 h-3/5 rounded-t-sm group relative">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary-container h-4/5 rounded-t-sm group relative">
+<div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary-fixed-dim/50 h-3/4 rounded-t-sm group relative">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary-container h-full rounded-t-sm group relative">
+<div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-40 transition-opacity"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-label-md text-on-surface-variant uppercase tracking-tighter">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+</div>
+</div>
+<!-- Impact Domains -->
+<div class="col-span-5 bg-white border border-outline-variant/30 p-8 rounded-xl flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-6">Impact Domains</h4>
+<div class="space-y-6 flex-grow flex flex-col justify-center">
+<div class="space-y-2">
+<div class="flex justify-between text-label-lg">
+<span class="text-on-surface">Environmental Sustainability</span>
+<span class="text-primary font-bold">42%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[42%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-label-lg">
+<span class="text-on-surface">Education &amp; Literacy</span>
+<span class="text-primary font-bold">28%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[28%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-label-lg">
+<span class="text-on-surface">Urban Infrastructure</span>
+<span class="text-primary font-bold">18%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full w-[18%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-label-lg">
+<span class="text-on-surface">Public Wellness</span>
+<span class="text-primary font-bold">12%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-outline h-full w-[12%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Row: Recent Activity & Community Leaderboard -->
+<section class="grid grid-cols-12 gap-gutter">
+<!-- Recent Impact Log -->
+<div class="col-span-8 bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden">
+<div class="p-8 border-b border-outline-variant/30 flex justify-between items-center bg-white/50">
+<h4 class="font-headline-sm text-headline-sm text-primary">Contribution Log</h4>
+<button class="text-primary font-label-lg flex items-center gap-1 hover:underline">
+                            Export Report
+                            <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<div class="p-8">
+<table class="w-full text-left">
+<thead>
+<tr class="text-label-md text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/20">
+<th class="pb-4 font-semibold">Action</th>
+<th class="pb-4 font-semibold">Category</th>
+<th class="pb-4 font-semibold">Date</th>
+<th class="pb-4 font-semibold text-right">Points</th>
+</tr>
+</thead>
+<tbody class="text-body-sm">
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+<td class="py-5 font-semibold text-primary">Oak Tree Initiative - District 7</td>
+<td class="py-5"><span class="px-2 py-1 bg-primary-fixed/30 text-on-primary-fixed-variant rounded-md text-xs">Sustainability</span></td>
+<td class="py-5 text-on-surface-variant">Oct 12, 2024</td>
+<td class="py-5 text-right font-bold text-secondary">+450</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+<td class="py-5 font-semibold text-primary">Community Grant: STEM for All</td>
+<td class="py-5"><span class="px-2 py-1 bg-tertiary-fixed/30 text-on-tertiary-fixed-variant rounded-md text-xs">Education</span></td>
+<td class="py-5 text-on-surface-variant">Oct 08, 2024</td>
+<td class="py-5 text-right font-bold text-secondary">+1,200</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+<td class="py-5 font-semibold text-primary">Urban Transit Review - Panelist</td>
+<td class="py-5"><span class="px-2 py-1 bg-secondary-fixed/30 text-on-secondary-fixed-variant rounded-md text-xs">Infrastructure</span></td>
+<td class="py-5 text-on-surface-variant">Sep 28, 2024</td>
+<td class="py-5 text-right font-bold text-secondary">+800</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-5 font-semibold text-primary">Volunteer: Local Food Drive</td>
+<td class="py-5"><span class="px-2 py-1 bg-outline-variant/30 text-on-surface-variant rounded-md text-xs">Wellness</span></td>
+<td class="py-5 text-on-surface-variant">Sep 15, 2024</td>
+<td class="py-5 text-right font-bold text-secondary">+250</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Top Contributors (Community Context) -->
+<div class="col-span-4 bg-white border border-outline-variant/30 rounded-xl p-8">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-6">Regional Leaders</h4>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-secondary text-headline-md opacity-20">01</span>
+<img alt="Top contributor avatar" class="w-12 h-12 rounded-full border-2 border-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx1cBILK6F7XxKl5fvQ3aQ9_uxs0ntfOwowssOiHHQDJUOOr8MyV3--2JPvE0zDBLavV0DCGxkT-ATGWla1UAp0f4MExwxi3av8I0pX97tCsdBhod0VZy46eYmDpCw_lAtFmiFnYmi12zSWfCjI59JN-3GJQeGuIuUDhsRZEyHKUNpMizpT_qwDzGBOdG7k6ZHjUfYXp6dqdy20gqZJM8e5iq9dcn9KOkQYo5YFQEd0MeHzwdkfIzi6vV4hDJxl-AwNVOM1Gj016wm"/>
+<div class="flex-grow">
+<p class="font-label-lg text-primary">Jordan D.</p>
+<p class="text-label-md text-on-surface-variant">24,500 Impact pts</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-on-surface-variant text-headline-md opacity-20">02</span>
+<img alt="Second contributor avatar" class="w-12 h-12 rounded-full border-2 border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDmWNXwDyoo5eZEnte2LuyEZEpjBLJQ5o7RtqCq-n0WpsYmsHXQiJvZJ0vFB9YTF5_bJffC2ihOJMnBeGyc1phEQJaDkHnQbbphsM5Fp4hUMcy5CnbM1dhJvmqHmEK9uf2FvsgWw4L2NHj0WK0DBtSr3Vv0T1SHaiuOWCKnM5b1bPYirg58B4l5Af_crd0Am1uPCs0Q3OQvmjCzRvqFW7wEY6Ngah3L6TZK9WavTf-OkvihOGtH6lr1gH-fTYzXWcfihM6KDgHpMR-"/>
+<div class="flex-grow">
+<p class="font-label-lg text-primary">Sarah M.</p>
+<p class="text-label-md text-on-surface-variant">21,200 Impact pts</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-4 -mx-4 rounded-lg border-y border-outline-variant/10">
+<span class="font-display-lg text-primary text-headline-md opacity-20">14</span>
+<img alt="User avatar" class="w-12 h-12 rounded-full border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY28728lbUeiMkOylsw0XwM15n3XIqpDlTHYkKzWEkcJCdOr_MusPoB-_fN9GDRS29oKx1tLf3w7N7Dk5L2tEo9CqjB6zt6W2HXbJOAJDcbFwISnVw29h3xbKNOaUJm6-8KALYwpGuM9G0Z_KZPBrCgP_E8ogqX19iW_-xBNPYEvMGg0gsJ6sJ1qUIU5iDCQRxiDq6AhiitTo_KP88N3odHdZXU_brv5wS52xO7A_CigDcdmKLAIBhsepW0kX9Ruy0MdWKRR7IJ-9i"/>
+<div class="flex-grow">
+<p class="font-label-lg text-primary">Alex Chen (You)</p>
+<p class="text-label-md text-on-surface-variant">12,850 Impact pts</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-on-surface-variant text-headline-md opacity-20">15</span>
+<img alt="Next contributor avatar" class="w-12 h-12 rounded-full border-2 border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjT8ZFLibTUlIu8m-zYQLFWGVbXC8lnqhxDGaUu7KhToHyxW4uK-2OOGbH-3XxT4boh7_ARc4uGFssQ9ynoT7_jk_SYDgF8a3uDCMxVnjjTy_uc3-Bsm4JYzue17_oxafFCRFwwH6_gLOwZWV7wRQoZF2KP5Ia_YghCx7HR71NXmiYEYWIN0QCqtmz3PFuKYVtsFjicJMMwUvHGyjWq3sDwiiCF3Cbn_LqkWdt-YQB51dYTX7kMgQO99q6LNsKOXFxki4EzevDU3NY"/>
+<div class="flex-grow">
+<p class="font-label-lg text-primary">Riley L.</p>
+<p class="text-label-md text-on-surface-variant">11,900 Impact pts</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-primary font-label-lg border-t border-outline-variant/30 hover:bg-surface-container-low transition-colors">
+                        Explore Full Leaderboard
+                    </button>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">BOOT Civic OS</h3>
+<p class="font-body-sm text-on-surface-variant pr-8">Fostering transparent community growth and individual contribution through institutional-grade digital infrastructure.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-primary mb-4">System</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-primary mb-4">Support</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Help Center</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Status</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-primary mb-4">Civic Network</h4>
+<p class="font-body-sm text-on-surface-variant mb-4">Join 240,000+ citizens shaping the future.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80" data-icon="language">language</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+</div>
+</footer>
+</main>
+<!-- Contextual Floating Action Button (Only on Dashboard) -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform active:opacity-80 z-50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<script>
+        // Micro-interactions for chart bars
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const height = item.style.height;
+                // Simple hover logic if needed via JS
+            });
+        });
+
+        // Theme sync if needed
+        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDarkMode) {
+            // document.documentElement.classList.add('dark');
+        }
+    </script>
+</body></html>

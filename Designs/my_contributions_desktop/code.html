@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Contributions | BOOT Civic OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#8d131b",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#69000c",
+                        "surface-container": "#e6f1e9",
+                        "on-secondary-fixed": "#410004",
+                        "inverse-surface": "#29332e",
+                        "surface-container-highest": "#dae5de",
+                        "on-primary-container": "#85b098",
+                        "surface-bright": "#f1fcf4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#264e3c",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fe6763",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-surface": "#141e19",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#4f3800",
+                        "primary-fixed-dim": "#a4d0b8",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-surface-variant": "#414944",
+                        "surface-container-low": "#ebf6ef",
+                        "outline": "#717973",
+                        "on-tertiary-fixed": "#261900",
+                        "on-tertiary-container": "#c6a15a",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "outline-variant": "#c1c8c2",
+                        "on-background": "#141e19",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c0edd3",
+                        "background": "#f1fcf4",
+                        "primary": "#002d1c",
+                        "secondary": "#af2d2f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad7",
+                        "surface-dim": "#d2ddd5",
+                        "tertiary": "#342300",
+                        "surface-container-high": "#e0ebe3",
+                        "inverse-primary": "#a4d0b8",
+                        "surface-tint": "#3e6752",
+                        "error-container": "#ffdad6",
+                        "surface": "#f1fcf4",
+                        "inverse-on-surface": "#e8f3ec",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-variant": "#dae5de",
+                        "primary-container": "#1a4331",
+                        "on-primary-fixed": "#002114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-sm": ["Source Serif 4"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "display-lg": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #FDFBF7; /* Heritage Cream base */
+            font-family: 'Work Sans', sans-serif;
+            color: #141e19;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            color: #002d1c;
+            font-weight: 700;
+            background-color: rgba(192, 237, 211, 0.2);
+            border-radius: 0.25rem;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- Top Navigation Anchor -->
+<header class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<nav class="flex space-x-6">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#">Overview</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary px-3 py-2" href="#">Contributions</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#">Policies</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation Anchor -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/30 bg-surface-container-low py-8 px-4 z-40 mt-[73px]">
+<div class="mb-10 px-2">
+<h2 class="font-headline-sm text-headline-sm text-primary">BOOT OS</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Civic Dashboard</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary font-bold bg-primary-fixed/20 rounded-lg translate-x-1" href="#">
+<span class="material-symbols-outlined">volunteer_activism</span>
+<span class="font-label-lg text-label-lg">Contributions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/30 mt-auto">
+<button class="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded hover:opacity-90 transition-opacity uppercase tracking-wider">Donate Now</button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 p-margin-desktop bg-surface">
+<!-- Header Section -->
+<section class="max-w-container-max mx-auto mb-12">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-2">My Contributions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A verified ledger of your institutional impact, encompassing financial support, community labor, and policy stewardship within the BOOT ecosystem.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 border border-outline px-6 py-2 rounded font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">download</span> Export Ledger
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Summary Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16">
+<div class="col-span-1 md:col-span-2 bg-surface-container-low border border-outline-variant/30 p-8 rounded flex flex-col justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Lifetime Impact Score</span>
+<div class="text-display-lg font-display-lg text-primary mt-2">4,820 <span class="text-headline-sm font-headline-sm text-secondary">PT</span></div>
+</div>
+<div class="mt-8">
+<div class="w-full h-1 bg-tertiary-fixed rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 72%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Next Milestone: Elite Steward (250 PT remaining)</p>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container-lowest border border-outline-variant/30 p-8 rounded">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Total Donated</span>
+<div class="text-headline-lg font-headline-lg text-primary mt-4">$12,450</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> 12% from last cycle
+                        </p>
+</div>
+<div class="col-span-1 bg-surface-container-lowest border border-outline-variant/30 p-8 rounded">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Volunteer Hours</span>
+<div class="text-headline-lg font-headline-lg text-primary mt-4">164.5</div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Fully Verified
+                        </p>
+</div>
+</div>
+<!-- Ledger & Timeline Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Contribution Ledger (Table) -->
+<div class="lg:col-span-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Contribution Ledger</h3>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 rounded text-label-md font-label-md text-on-surface cursor-pointer">All</span>
+<span class="hover:bg-surface-container-high px-3 py-1 rounded text-label-md font-label-md text-on-surface-variant cursor-pointer">Financial</span>
+<span class="hover:bg-surface-container-high px-3 py-1 rounded text-label-md font-label-md text-on-surface-variant cursor-pointer">Labor</span>
+<span class="hover:bg-surface-container-high px-3 py-1 rounded text-label-md font-label-md text-on-surface-variant cursor-pointer">Policy</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/50">
+<th class="py-4 font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Date</th>
+<th class="py-4 font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Activity</th>
+<th class="py-4 font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Category</th>
+<th class="py-4 font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-body-md text-body-md text-on-surface-variant">Oct 24, 2024</td>
+<td class="py-6">
+<div class="font-body-md text-body-md text-primary font-bold">Policy Draft Review</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Civic Housing Proposal v4.2</div>
+</td>
+<td class="py-6">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded text-label-md font-label-md">Policy Advocacy</span>
+</td>
+<td class="py-6 font-body-md text-body-md text-primary text-right font-bold">+25 PT</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-body-md text-body-md text-on-surface-variant">Oct 18, 2024</td>
+<td class="py-6">
+<div class="font-body-md text-body-md text-primary font-bold">Recurring Sustainer Donation</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">General Operational Fund</div>
+</td>
+<td class="py-6">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-label-md font-label-md">Financial</span>
+</td>
+<td class="py-6 font-body-md text-body-md text-primary text-right font-bold">$250.00</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-body-md text-body-md text-on-surface-variant">Oct 12, 2024</td>
+<td class="py-6">
+<div class="font-body-md text-body-md text-primary font-bold">Community Clean-up Lead</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">North District Reclamation</div>
+</td>
+<td class="py-6">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded text-label-md font-label-md">Volunteer Labor</span>
+</td>
+<td class="py-6 font-body-md text-body-md text-primary text-right font-bold">4.5 Hrs</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-body-md text-body-md text-on-surface-variant">Sep 30, 2024</td>
+<td class="py-6">
+<div class="font-body-md text-body-md text-primary font-bold">Technical Advisory Board</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Quarterly Infrastructure Audit</div>
+</td>
+<td class="py-6">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded text-label-md font-label-md">Policy Advocacy</span>
+</td>
+<td class="py-6 font-body-md text-body-md text-primary text-right font-bold">2.0 Hrs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="font-label-lg text-label-lg text-primary border border-primary px-8 py-3 rounded hover:bg-primary hover:text-white transition-all">Load More Records</button>
+</div>
+</div>
+<!-- Right Sidebar: Highlights & Visual Timeline -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Timeline Asset Visual -->
+<div class="bg-primary-container text-on-primary rounded overflow-hidden relative min-h-[400px]">
+
+<div class="relative z-10 p-8 flex flex-col h-full justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Activity Velocity</h4>
+<p class="font-body-sm text-body-sm opacity-80">Real-time visualization of your civic engagement momentum across the last 12 fiscal cycles.</p>
+</div>
+<div class="mt-auto space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg">Peak Engagement</p>
+<p class="font-body-sm text-body-sm opacity-70">August 2024</p>
+</div>
+</div>
+<button class="w-full bg-surface text-primary font-label-lg py-3 rounded shadow-lg">View Analytics</button>
+</div>
+</div>
+</div>
+<!-- Policy Stewardship Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-8 rounded">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline-sm text-headline-sm text-primary">Policy Impact</h4>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Authored 2 passed amendments regarding decentralized utility management.</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Co-sponsored the Urban Mobility Reform bill (Oct 2024).</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Verified expert on 14 environmental policy discussions.</div>
+</li>
+</ul>
+</div>
+<!-- Campaign Goal Progress -->
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded">
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-4">Campaign Milestone</h4>
+<div class="flex justify-between items-end mb-2">
+<span class="font-headline-sm text-headline-sm text-primary">$12,450</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">of $15,000 Gold Tier</span>
+</div>
+<div class="w-full h-3 bg-tertiary-fixed rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 83%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4 italic">"Your legacy is being built one contribution at a time."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer Anchor -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-sm text-headline-sm text-primary">BOOT OS</span>
+<p class="mt-4 font-body-sm text-body-sm text-on-surface-variant max-w-xs leading-relaxed">The Civic Operating System for the modern electorate. Building a more transparent, participatory, and efficient future for all citizens.</p>
+<p class="mt-8 font-label-md text-label-md text-on-surface-variant opacity-60">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface mb-6 uppercase tracking-widest">Platform</h5>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Transparency Report</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface mb-6 uppercase tracking-widest">Connect</h5>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Help Center</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Twitter / X</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for table rows
+        document.querySelectorAll('tbody tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.querySelector('td:last-child').style.transform = 'translateX(-4px)';
+                row.querySelector('td:last-child').style.transition = 'transform 0.2s ease-out';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.querySelector('td:last-child').style.transform = 'translateX(0)';
+            });
+        });
+
+        // Hover effect for the Summary Stats cards
+        document.querySelectorAll('.bento-stat').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

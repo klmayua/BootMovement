@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOOT Member Dashboard | Civic Movement</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#002d1c",
+                    "surface-container": "#e6f1e9",
+                    "secondary-container": "#fe6763",
+                    "on-surface-variant": "#414944",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-secondary-fixed": "#410004",
+                    "surface-variant": "#dae5de",
+                    "outline": "#717973",
+                    "inverse-on-surface": "#e8f3ec",
+                    "on-primary-fixed": "#002114",
+                    "surface-container-low": "#ebf6ef",
+                    "primary-container": "#1a4331",
+                    "inverse-primary": "#a4d0b8",
+                    "on-tertiary-container": "#c6a15a",
+                    "surface": "#f1fcf4",
+                    "outline-variant": "#c1c8c2",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#a4d0b8",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#261900",
+                    "tertiary": "#342300",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f1fcf4",
+                    "on-primary-container": "#85b098",
+                    "on-background": "#141e19",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#29332e",
+                    "surface-container-high": "#e0ebe3",
+                    "surface-dim": "#d2ddd5",
+                    "secondary": "#af2d2f",
+                    "background": "#f1fcf4",
+                    "on-secondary-container": "#69000c",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#c0edd3",
+                    "surface-tint": "#3e6752",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#141e19",
+                    "surface-container-highest": "#dae5de",
+                    "tertiary-container": "#4f3800",
+                    "on-primary-fixed-variant": "#264e3c",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-secondary-fixed-variant": "#8d131b",
+                    "secondary-fixed": "#ffdad7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Work Sans"],
+                    "headline-md": ["Source Serif 4"],
+                    "headline-sm": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "body-md": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "body-sm": ["Work Sans"],
+                    "headline-lg": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f1fcf4; /* Cream Foundation */
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .bento-card {
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0 20px 40px rgba(26, 67, 49, 0.08);
+        }
+        .active-tab {
+            background-color: #1a4331;
+            color: #85b098;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background flex h-screen overflow-hidden">
+<!-- SIDE NAVIGATION DRAWER (Mandatory Shared Component Implementation) -->
+<aside class="hidden md:flex h-full w-80 bg-surface-container-low flex-col p-4 shadow-sm shrink-0">
+<div class="mb-8 px-4 py-2">
+<h1 class="font-headline-sm text-headline-sm text-primary">BOOT Civic Movement</h1>
+</div>
+<nav class="flex flex-col gap-2 flex-grow overflow-y-auto">
+<!-- Labels from JSON: ["Home", "About", "Thesis", "Communities", "Events", "Candidates", "Impact Hub"] -->
+<a class="active-tab flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-lg text-label-lg">Home</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-lg text-label-lg">About</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-lg text-label-lg">Thesis</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-label-lg text-label-lg">Candidates</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 p-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-lg text-label-lg">Impact Hub</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/30 px-4">
+<div class="flex items-center gap-3">
+<img alt="User Profile" class="w-10 h-10 rounded-full border border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHwDjfhdBoq7UPphJb5NIujU3CbeLGtOkKm1SQoYdDpEoBcvwlMFIhPMWUcFGVu-mWR63g7Md_rVrSjmClCPZEsaO8BO7r8KUsG2Wwr3z_cQocigJ-rEiRiHLYKjT4Dbwigf1UZxePezzCNqmuSTS5hPw0p5v_i7kTDrO6HC-QOsPMkI63tr9Bkgf5yeqXkDXR_K8a5ddSYjmr-_Wb0ixzihDJmilRwkJLtqxdii9BJl7LAr_fWIefRz4-m2aGp1G3kUn0xQc2pH9n"/>
+<div>
+<p class="font-label-lg text-label-lg text-primary">Dr. Chinedu Okafor</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Lagos Central Chapter</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN CONTENT AREA -->
+<main class="flex-grow overflow-y-auto bg-surface-bright relative">
+<!-- TopAppBar (Mandatory Shared Component Implementation) -->
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-20">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+<span class="font-headline-md text-headline-md text-primary">BOOT Dashboard</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-secondary border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Activity</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Resources</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Support</a>
+</div>
+<button class="bg-secondary text-white px-6 py-2 rounded shadow-sm hover:opacity-90 transition-all font-label-lg">Join Now</button>
+</div>
+</div>
+</header>
+<div class="max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Hero Grid -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- PROGRESS SECTION: Gamified Progress Ring -->
+<div class="col-span-12 lg:col-span-4 bento-card p-8 rounded-xl flex flex-col items-center justify-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">'True Nigerian' Score</h3>
+<div class="relative flex items-center justify-center">
+<svg class="w-48 h-48">
+<circle class="text-surface-variant" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-secondary progress-ring-circle" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-dasharray="502.65" stroke-dashoffset="125.66" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col">
+<span class="font-display-lg text-display-lg text-primary">75%</span>
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">Patriot Tier</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-6 px-4">
+                        You've contributed 12 volunteer hours this month. 3 more hours to reach <span class="text-secondary font-bold">Statesman</span> rank.
+                    </p>
+</div>
+<!-- CONTRIBUTION CHART -->
+<div class="col-span-12 lg:col-span-8 bento-card p-8 rounded-xl">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Impact Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cumulative monthly contribution points</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-container text-on-primary-container font-label-md text-label-md rounded">Points: 2,450</span>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="h-48 w-full flex items-end gap-2 px-2">
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[20%] rounded-t-sm" title="Jan"></div>
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[35%] rounded-t-sm" title="Feb"></div>
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[45%] rounded-t-sm" title="Mar"></div>
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[30%] rounded-t-sm" title="Apr"></div>
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[65%] rounded-t-sm" title="May"></div>
+<div class="flex-1 bg-surface-container hover:bg-primary-container transition-colors h-[85%] rounded-t-sm" title="Jun"></div>
+<div class="flex-1 bg-secondary h-[95%] rounded-t-sm animate-pulse" title="Current"></div>
+</div>
+<div class="flex justify-between mt-4 font-label-md text-label-md text-on-surface-variant border-t border-outline-variant/30 pt-4">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+</div>
+</div>
+<!-- ACTIVE COMMUNITIES GRID -->
+<div class="col-span-12 lg:col-span-8">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Your Communities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Community Card 1 -->
+<div class="bento-card rounded-xl overflow-hidden group">
+<div class="h-32 w-full relative overflow-hidden bg-primary-container">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="A birds-eye view of a modern Nigerian tech hub with professionals collaborating in a brightly lit, open-plan office. The interior features minimalist wooden furniture, lush indoor plants, and floor-to-ceiling windows showing a hint of Lagos skyline. The lighting is soft, golden, and high-key, reinforcing a clean, corporate, and futuristic institutional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKKh2eiIhYVgxRCussLnOO8whgHQysYoLej-HkluVHqbW45k_XTvvlgGWxVnez172jv33i7eI4Skehct70ZwuZ-Jq9OVNbXaqZjCyK1lzI4fcHnlCKMHJIi2xSQ_4L-QhRt10cmhY64JcwPrLhDslw32t9ru3UrrQ7Z8aD7D5XjxAOyDvyDYU4uY62m8TKvGktVGRwMygluMW1lxbq3P3g94ruPD3_pg1pq1CVnkXQK9zWglh68hMpDlaCE7il434gumosmcxq3SzH"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-primary font-label-md text-label-md">Public Policy</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Policy Reformers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Drafting new educational guidelines for 2025.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">42 Active members</span>
+<button class="text-primary hover:underline font-label-md text-label-md flex items-center gap-1">Open <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Community Card 2 -->
+<div class="bento-card rounded-xl overflow-hidden group">
+<div class="h-32 w-full relative overflow-hidden bg-tertiary-container">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="A high-end editorial shot of a community town hall meeting held in a modern, architecturally significant Nigerian building. Participants are engaged in serious dialogue, dressed in professional attire. The environment is clean and sophisticated with warm cream walls and deep green accents, reflecting an atmosphere of authority, trust, and visionary tradition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ka75Qa_ts_QPrf-qQVdnASk2EqNlye-TipBg7B4C4n9Wsayq2vIAb7zN9p_1kfPIGDVzLn0l7jHtyXuXpnrdrW-rY8XEzTV8kRpIZmUEMcWz7KpGI1155W6KxbjZ2md_9tMifQ0pfcZJcgeUAd__Rd5TcpkxxpIj_REcmjoJjVGFp_fIbHx0unCV8KyWgGynhYNH_601uyqZtHtMTZcuIP0FxbRzLj9PhAO1KpJfN692CznugESRFAhI7qVCJJqJWKtrxEVyLjPj"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-primary font-label-md text-label-md">Lagos Central</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Chapter Mobilizers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Coordinating grassroots outreach for the upcoming summit.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">128 Active members</span>
+<button class="text-primary hover:underline font-label-md text-label-md flex items-center gap-1">Open <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RECOMMENDED ACTIONS FEED -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<h3 class="font-headline-sm text-headline-sm text-primary">Recommended Actions</h3>
+<div class="bento-card p-6 rounded-xl flex flex-col gap-4">
+<div class="flex gap-4 items-start p-4 bg-surface-container-low rounded border-l-4 border-secondary hover:bg-surface-container transition-colors cursor-pointer">
+<div class="bg-secondary/10 p-2 rounded">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Validate Chapter Records</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Help verify 5 new member registrations in your district.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-surface-container-low rounded border-l-4 border-primary hover:bg-surface-container transition-colors cursor-pointer">
+<div class="bg-primary/10 p-2 rounded">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Comment on Education Bill</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your expertise is needed in the 'Vision 2030' forum.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-surface-container-low rounded border-l-4 border-on-tertiary-container hover:bg-surface-container transition-colors cursor-pointer">
+<div class="bg-on-tertiary-container/10 p-2 rounded">
+<span class="material-symbols-outlined text-on-tertiary-container">volunteer_activism</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Donate to Mobilization Fund</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Help us reach the N5,000,000 goal for regional offices.</p>
+</div>
+</div>
+<button class="mt-4 text-center py-3 border border-outline-variant hover:bg-surface-variant transition-all font-label-lg text-label-lg rounded">View All Actions</button>
+</div>
+</div>
+<!-- CALENDAR SECTION -->
+<div class="col-span-12 bento-card p-8 rounded-xl mt-4">
+<div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Upcoming Movement Events</h3>
+<div class="flex items-center gap-4 bg-surface-container-low p-2 rounded-lg">
+<button class="p-1 hover:bg-surface-variant rounded"><span class="material-symbols-outlined">chevron_left</span></button>
+<span class="font-label-lg text-label-lg text-primary px-4">August 2024</span>
+<button class="p-1 hover:bg-surface-variant rounded"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Event item -->
+<div class="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+<div class="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+<span class="font-label-md text-label-md uppercase">Aug</span>
+<span class="font-headline-sm text-headline-sm leading-none">12</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">National Strategy Summit</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Abuja, FCT • 09:00 AM</p>
+</div>
+</div>
+<!-- Event item -->
+<div class="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+<div class="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+<span class="font-label-md text-label-md uppercase">Aug</span>
+<span class="font-headline-sm text-headline-sm leading-none">15</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Grassroots Training</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Virtual Workshop • 06:00 PM</p>
+</div>
+</div>
+<!-- Event item -->
+<div class="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+<div class="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+<span class="font-label-md text-label-md uppercase">Aug</span>
+<span class="font-headline-sm text-headline-sm leading-none">22</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Economic Thesis Launch</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lagos Island • 10:00 AM</p>
+</div>
+</div>
+<!-- Event item -->
+<div class="flex gap-4 items-center p-4 border border-outline-variant/30 rounded-lg hover:border-secondary transition-colors group">
+<div class="flex flex-col items-center justify-center bg-primary text-white w-16 h-16 rounded shrink-0">
+<span class="font-label-md text-label-md uppercase">Sep</span>
+<span class="font-headline-sm text-headline-sm leading-none">05</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary group-hover:text-secondary transition-colors">Regional Town Hall</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enugu Chapter • 02:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FOOTER (Mandatory Shared Component Implementation) -->
+<footer class="w-full mt-auto bg-primary text-on-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-2">
+<span class="font-headline-sm text-headline-sm text-on-primary">BOOT Civic Movement</span>
+<p class="font-body-sm text-body-sm opacity-80 max-w-sm">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Volunteer Portal</a>
+<a class="text-primary-fixed-dim hover:text-white underline font-body-sm text-body-sm transition-colors" href="#">Donate</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- FAB (Suppressed as per rules for high-density dashboard focus unless contextually relevant) -->
+<!-- Determined FAB "Join/Add" is helpful on Home dashboard -->
+<button class="fixed bottom-10 right-10 bg-secondary-container text-on-secondary-fixed w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform md:hidden">
+<span class="material-symbols-outlined">add</span>
+</button>
+</body></html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOOT Civic Movement | Accountability &amp; Vision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#002d1c",
+                    "surface-container": "#e6f1e9",
+                    "secondary-container": "#fe6763",
+                    "on-surface-variant": "#414944",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-secondary-fixed": "#410004",
+                    "surface-variant": "#dae5de",
+                    "outline": "#717973",
+                    "inverse-on-surface": "#e8f3ec",
+                    "on-primary-fixed": "#002114",
+                    "surface-container-low": "#ebf6ef",
+                    "primary-container": "#1a4331",
+                    "inverse-primary": "#a4d0b8",
+                    "on-tertiary-container": "#c6a15a",
+                    "surface": "#f1fcf4",
+                    "outline-variant": "#c1c8c2",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#a4d0b8",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#261900",
+                    "tertiary": "#342300",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f1fcf4",
+                    "on-primary-container": "#85b098",
+                    "on-background": "#141e19",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#29332e",
+                    "surface-container-high": "#e0ebe3",
+                    "surface-dim": "#d2ddd5",
+                    "secondary": "#af2d2f",
+                    "background": "#f1fcf4",
+                    "on-secondary-container": "#69000c",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#c0edd3",
+                    "surface-tint": "#3e6752",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#141e19",
+                    "surface-container-highest": "#dae5de",
+                    "tertiary-container": "#4f3800",
+                    "on-primary-fixed-variant": "#264e3c",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-secondary-fixed-variant": "#8d131b",
+                    "secondary-fixed": "#ffdad7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Work Sans"],
+                    "headline-md": ["Source Serif 4"],
+                    "headline-sm": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "body-md": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "body-sm": ["Work Sans"],
+                    "headline-lg": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-cream { background-color: #FDFBF7; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 45, 28, 0.85), rgba(0, 45, 28, 0.95));
+        }
+        .mask-gold-gradient {
+            background: linear-gradient(90deg, #c6a15a 0%, #4f3800 100%);
+        }
+        .pillar-card:hover .pillar-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    </style>
+</head>
+<body class="bg-cream text-on-background selection:bg-secondary selection:text-white">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md text-primary">BOOT Civic Movement</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Thesis</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Events</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-lg text-label-lg hover:brightness-110 transition-all active:scale-95">
+                Join Now
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="National Assembly Building" class="w-full h-full object-cover" data-alt="A grand, architectural shot of a neoclassical government building featuring massive stone columns and intricate carvings. The lighting is dramatic, with a warm sun setting behind the structure, casting long shadows. The scene is captured in a cinematic, editorial style with deep green and gold tones, evoking a sense of institutional permanence and historical weight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBktre1t5gtk0LcsqiOsUVYs-OubN7wRk1GSv6y1lyAivhTVCjdh0T8iRu63McxGb_sc7lLTmWU9t1LeTkBAIwm5Z0NEMcf_rJig4DtF5REJuyazi-qZEfJbZ1Hr6EBgmX63s4Tcoi7ulkS39F0mMOFIhz_s3tffqz1_SFJhQNOFjPNUxy3BAA2B1Jn6KoJ7_dzRsiQZKg09PP09-q3nuPOIFRE8uwQsh5t50JguujgmD9QgqG8xOVnjA2x4MG6p_poasX7Pk-1vYjI"/>
+<div class="hero-gradient absolute inset-0"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+<div class="text-white space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 border border-primary-fixed-dim/30 rounded-full bg-primary/40 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md tracking-widest uppercase">The 2024 Reform Agenda</span>
+</div>
+<h2 class="font-display-lg text-display-lg leading-tight">
+                        Traditional Values. <br/>
+<span class="text-primary-fixed-dim">Future Progress.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-lg">
+                        Restoring the foundations of civic duty through transparency, localized empowerment, and unwavering institutional integrity.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-lg text-label-lg flex items-center gap-2 hover:translate-y-[-2px] transition-transform shadow-xl shadow-secondary/20">
+                            Join the Movement
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-white/30 text-white px-8 py-4 rounded-full font-label-lg text-label-lg hover:bg-white/10 transition-all">
+                            View Our Thesis
+                        </button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="bg-surface/5 backdrop-blur-md border border-white/10 p-8 rounded-xl">
+<div class="flex justify-between items-end mb-12">
+<div>
+<p class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-tighter">Current Momentum</p>
+<p class="font-headline-lg text-headline-lg text-white">428,910</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-headline-lg" data-weight="fill">trending_up</span>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-white font-label-lg text-label-lg">
+<span>Volunteer Goal</span>
+<span>85%</span>
+</div>
+<div class="h-2 w-full bg-primary-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 85%"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary/40 p-4 rounded-lg">
+<p class="text-primary-fixed-dim font-label-md text-label-md">Local Chapters</p>
+<p class="text-white font-headline-sm text-headline-sm">114</p>
+</div>
+<div class="bg-primary/40 p-4 rounded-lg">
+<p class="text-primary-fixed-dim font-label-md text-label-md">Active Campaigns</p>
+<p class="text-white font-headline-sm text-headline-sm">32</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Manifesto Highlight -->
+<section class="py-24 bg-white">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center space-y-8">
+<span class="material-symbols-outlined text-primary text-display-lg opacity-20" data-icon="format_quote">format_quote</span>
+<h3 class="font-headline-lg text-headline-lg text-primary italic">
+                    "We do not seek to reinvent the wheel of governance, but to return it to the citizens it was built to serve. Accountability is not a campaign slogan—it is our primary mandate."
+                </h3>
+<div class="flex flex-col items-center gap-2">
+<div class="h-px w-24 bg-on-tertiary-container"></div>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-tertiary-container">The Boot Manifesto, 2024</p>
+</div>
+</div>
+</section>
+<!-- Mission Pillars - Bento Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Foundational Pillars</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A multi-generational strategy designed to restore trust in public institutions through pragmatic, localized reform.</p>
+</div>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-2 group" href="#">
+                    Explore Our Full Policy Framework
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar 1 -->
+<div class="md:col-span-2 group pillar-card bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 hover:border-primary/20 transition-all">
+<div class="flex flex-col h-full justify-between gap-12">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined pillar-icon text-primary text-display-lg transition-transform" data-icon="account_balance">account_balance</span>
+<span class="font-label-md text-label-md text-on-tertiary-container border border-on-tertiary-container/30 px-3 py-1 rounded-full">Pillar 01</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Institutional Accountability</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">We advocate for strict transparency protocols and digital-first public ledgers to ensure every cent of taxpayer revenue is traceable and purposeful.</p>
+</div>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="group pillar-card bg-primary text-white p-10 rounded-xl transition-all">
+<div class="flex flex-col h-full justify-between gap-12">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined pillar-icon text-secondary text-display-lg transition-transform" data-icon="groups">groups</span>
+<span class="font-label-md text-label-md text-primary-fixed-dim border border-primary-fixed-dim/30 px-3 py-1 rounded-full">Pillar 02</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-4">Localized Empowerment</h4>
+<p class="font-body-md text-body-md text-surface-variant">Returning decision-making power to municipal councils and community boards, reducing central bureaucracy.</p>
+</div>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="group pillar-card bg-surface-container-highest p-10 rounded-xl transition-all">
+<div class="flex flex-col h-full justify-between gap-12">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined pillar-icon text-on-tertiary-container text-display-lg transition-transform" data-icon="history_edu">history_edu</span>
+<span class="font-label-md text-label-md text-on-surface-variant border border-outline/30 px-3 py-1 rounded-full">Pillar 03</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Heritage Conservation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Protecting our national cultural assets while modernizing the infrastructure that supports them for future generations.</p>
+</div>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="md:col-span-2 group pillar-card bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 transition-all">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="w-full md:w-1/3">
+<img class="w-full h-48 object-cover rounded-lg" data-alt="A focused close-up shot of hands signing a formal document with a high-end fountain pen. The setting is a professional office with a mahogany desk and soft, focused lamp lighting. The aesthetic is clean, authoritative, and traditional, with a color palette dominated by deep greens, rich browns, and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyhxbTLinqETCq9NSMdvnqIScl2K_r7HutjCvexWq-Cu2Z9fkqA0mLOtXJun1C6RYhDp_aBNRJ4WYZ5k3Y6N90karpHe1KSlcuR1ynIkoYj4nWz4B-1KE1djuop4lbFbVCEshrVDSu51utJhSMrUXY-g5hhGGA81txCwGI1xVtmsFr231h1UFnLRnFeceGcq8MQ_9gPmNA-AnM15dy8EUABuLtUG5Vh7YF62i0WDYiqLbWVn5nQZ6Vc8HTW6WDpLcCXAxzpwoO2aK"/>
+</div>
+<div class="w-full md:w-2/3">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-headline-md text-primary">Pragmatic Economics</h4>
+<span class="font-label-md text-label-md text-on-surface-variant">Pillar 04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A fiscal strategy rooted in reality, prioritizing debt reduction and small-business incentives to drive grassroots growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-primary py-20 text-white">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-2">
+<p class="font-display-lg text-display-lg text-secondary">150k+</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Signed Members</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-display-lg text-secondary">$2.4M</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Community Funded</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-display-lg text-secondary">22</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Policy Wins</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-display-lg text-secondary">48</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed-dim">Endorsed Leaders</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-32 bg-cream overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[40rem]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="max-w-2xl bg-white p-12 md:p-20 shadow-2xl shadow-primary/5 rounded-xl border-l-8 border-secondary">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">The future is a choice we make together.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        Join the BOOT Civic Movement today. Whether as a donor, a volunteer, or a local organizer, your contribution is the catalyst for national accountability.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary text-on-secondary px-10 py-5 rounded-full font-label-lg text-label-lg hover:brightness-110 shadow-lg shadow-secondary/30 transition-all active:scale-95">
+                            Join the Movement
+                        </button>
+<button class="bg-primary text-white px-10 py-5 rounded-full font-label-lg text-label-lg hover:brightness-110 transition-all active:scale-95">
+                            Donate to the Cause
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary text-on-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-headline-sm" data-icon="account_balance">account_balance</span>
+<h2 class="font-headline-sm text-headline-sm">BOOT Civic Movement</h2>
+</div>
+<p class="font-body-sm text-body-sm opacity-70">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-all" href="#">Volunteer Portal</a>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-all" href="#">Donate</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="public">public</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.pillar-card').forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@100..900&amp;family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#8d131b",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#69000c",
+                        "surface-container": "#e6f1e9",
+                        "on-secondary-fixed": "#410004",
+                        "inverse-surface": "#29332e",
+                        "surface-container-highest": "#dae5de",
+                        "on-primary-container": "#85b098",
+                        "surface-bright": "#f1fcf4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#264e3c",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fe6763",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-surface": "#141e19",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#4f3800",
+                        "primary-fixed-dim": "#a4d0b8",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-surface-variant": "#414944",
+                        "surface-container-low": "#ebf6ef",
+                        "outline": "#717973",
+                        "on-tertiary-fixed": "#261900",
+                        "on-tertiary-container": "#c6a15a",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "outline-variant": "#c1c8c2",
+                        "on-background": "#141e19",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c0edd3",
+                        "background": "#f1fcf4",
+                        "primary": "#002d1c",
+                        "secondary": "#af2d2f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad7",
+                        "surface-dim": "#d2ddd5",
+                        "tertiary": "#342300",
+                        "surface-container-high": "#e0ebe3",
+                        "inverse-primary": "#a4d0b8",
+                        "surface-tint": "#3e6752",
+                        "error-container": "#ffdad6",
+                        "surface": "#f1fcf4",
+                        "inverse-on-surface": "#e8f3ec",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-variant": "#dae5de",
+                        "primary-container": "#1a4331",
+                        "on-primary-fixed": "#002114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-sm": ["Source Serif 4"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "display-lg": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FDFBF7; /* Cream White foundation from guidance */
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .tonal-elevation {
+            box-shadow: 0 20px 40px -10px rgba(26, 67, 49, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased text-on-surface">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">BOOT Civic OS</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary px-3 py-1" href="#">Events</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Projects</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-1 rounded" href="#">Communities</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-body-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search town halls..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">notifications</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">account_circle</button>
+</div>
+</header>
+<!-- SideNavBar (Hidden on desktop for this specific view layout, but follows guidelines) -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 py-8 px-4 flex-col hidden xl:flex mt-[72px]">
+<div class="flex flex-col gap-2 flex-grow">
+<div class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all duration-300">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all hover:translate-x-1">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</div>
+</div>
+<div class="mt-auto border-t border-outline-variant/30 pt-4 flex flex-col gap-2">
+<button class="w-full bg-secondary text-on-secondary font-label-lg text-label-lg py-3 rounded-lg hover:opacity-90 transition-opacity">Donate Now</button>
+<div class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-lg text-label-lg">Support</span>
+</div>
+</div>
+</aside>
+<main class="xl:ml-64 px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Hero: Live Stream Section -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md mb-4 animate-pulse">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> LIVE NOW
+                    </span>
+<h1 class="font-headline-lg text-headline-lg text-primary">Urban Development &amp; Green Spaces</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Joining Commissioner Sarah Jenkins and the Planning Board to discuss the 2025 Metro Park Expansion Project.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-3 border border-outline text-primary font-label-lg text-label-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">share</span> Share
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-all">
+<span class="material-symbols-outlined">add_alert</span> Set Reminder
+                    </button>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Video Player -->
+<div class="col-span-8 bg-black aspect-video relative group overflow-hidden rounded-lg shadow-xl">
+<img alt="Live Stream" class="w-full h-full object-cover opacity-80" data-alt="A high-definition professional cinematic shot of a modern government town hall meeting interior. A diverse panel of focused officials sits at a polished wood desk with microphones, while a blurred audience watches in the background. The lighting is soft and authoritative, using a palette of deep greens and warm cream tones consistent with a prestigious institutional brand. The atmosphere is serious and transparent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVoLFMv2uniA2Bd96zPl3gQL1eW9Qsh2c_28fAG3t2G4XsMJjUo_JZDQSkjYR8qYLLr0CS9BqiMGLfT8Rty83V7czM7KZ3v3CX4U1-m2yUpkLzQoPMFF2MK6lJdwzz_9gc3D_QNiKcJgcP01RT5q81nEzVJjlsaMCvdHJol-BJbbqKa-GiIYE0nOM6TPOSCkuLIHXyGV3-2aJy5RFKusvKSsG1qXemHY6JKkz4EBH81YEJjRDvtA5rJibjhkjm8Z9DguFTCEYUfySL"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-white text-8xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">1,248 watching now</span>
+</div>
+</div>
+</div>
+<!-- Q&A Side Panel -->
+<div class="col-span-4 glass-card p-6 flex flex-col h-full max-h-[506px]">
+<div class="flex items-center justify-between mb-6 border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Q&amp;A</h3>
+<span class="text-label-md text-label-md text-on-surface-variant">42 Active Questions</span>
+</div>
+<div class="flex-grow overflow-y-auto space-y-4 mb-6 pr-2">
+<!-- Question Card -->
+<div class="p-4 bg-surface-container-low border-l-4 border-secondary transition-all hover:translate-x-1">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-primary font-bold">Marcus T.</span>
+<span class="text-[10px] text-on-surface-variant uppercase">2m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Will the new park include designated zones for community gardening or is it strictly recreational?</p>
+<div class="flex gap-4 mt-3">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span class="text-xs">12</span>
+</button>
+<button class="text-xs font-label-md text-secondary uppercase tracking-wider">Top Priority</button>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border-l-4 border-outline-variant transition-all hover:translate-x-1">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-primary font-bold">Elena Rodriguez</span>
+<span class="text-[10px] text-on-surface-variant uppercase">5m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">How are the noise pollution concerns from the nearby highway being addressed in the expansion plan?</p>
+<div class="flex gap-4 mt-3">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span class="text-xs">8</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full p-4 pr-12 bg-surface-container border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-transparent resize-none h-24 font-body-sm" placeholder="Ask a question..."></textarea>
+<button class="absolute bottom-3 right-3 p-2 bg-primary text-on-primary rounded-lg hover:opacity-90">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Schedule Section -->
+<section class="mb-20">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Town Hall Schedule</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Stay informed about upcoming sessions and public hearings.</p>
+</div>
+<button class="text-primary font-label-lg text-label-lg border-b-2 border-primary-fixed-dim hover:border-primary transition-all">View Full Calendar</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Schedule Card 1 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant/30 flex flex-col items-start hover:bg-surface-container-high transition-colors">
+<div class="mb-6 flex flex-col">
+<span class="font-display-lg text-display-lg text-secondary leading-none">24</span>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">October</span>
+</div>
+<div class="mb-auto">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Education Budget 2025</h4>
+<div class="flex items-center gap-2 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-body-sm text-body-sm">6:30 PM • 2 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Public hearing regarding allocation for primary school technology upgrades and teacher retention programs.</p>
+</div>
+<button class="mt-8 flex items-center gap-2 font-label-md text-label-md text-primary group">
+                        REGISTER TO SPEAK <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Schedule Card 2 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant/30 flex flex-col items-start hover:bg-surface-container-high transition-colors">
+<div class="mb-6 flex flex-col">
+<span class="font-display-lg text-display-lg text-secondary leading-none">02</span>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">November</span>
+</div>
+<div class="mb-auto">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Public Safety Workshop</h4>
+<div class="flex items-center gap-2 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-body-sm text-body-sm">5:00 PM • 90 Mins</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Interactive session focused on community policing initiatives and neighborhood watch integration.</p>
+</div>
+<button class="mt-8 flex items-center gap-2 font-label-md text-label-md text-primary group">
+                        ADD TO CALENDAR <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">event</span>
+</button>
+</div>
+<!-- Schedule Card 3 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant/30 flex flex-col items-start hover:bg-surface-container-high transition-colors">
+<div class="mb-6 flex flex-col">
+<span class="font-display-lg text-display-lg text-secondary leading-none">15</span>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant">November</span>
+</div>
+<div class="mb-auto">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Small Business Grants</h4>
+<div class="flex items-center gap-2 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-body-sm text-body-sm">11:00 AM • 1 Hour</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Q&amp;A session for local entrepreneurs regarding the newly announced 'Civic Bloom' startup fund.</p>
+</div>
+<button class="mt-8 flex items-center gap-2 font-label-md text-label-md text-primary group">
+                        RSVP NOW <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">check_circle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Archive Section -->
+<section class="py-16 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline-md text-headline-md text-primary">Archived Sessions</h2>
+<div class="flex gap-2">
+<span class="px-4 py-2 bg-primary-container text-on-primary-container rounded-full text-label-md font-label-md cursor-pointer">All Categories</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-label-md font-label-md hover:bg-outline-variant/20 transition-all cursor-pointer">Housing</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-label-md font-label-md hover:bg-outline-variant/20 transition-all cursor-pointer">Transport</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-label-md font-label-md hover:bg-outline-variant/20 transition-all cursor-pointer">Healthcare</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Archive Card -->
+<div class="group cursor-pointer">
+<div class="relative aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Archive Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic capture of a large conference hall with rows of attendees listening to a presentation on stage. The environment is professional and modern, lit with cool overhead spotlights that create depth. The color palette follows an institutional green and cream theme, projecting authority and democratic transparency. A clear sense of public engagement and civic duty is present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATMtswogjc8HUgQ2MllqO6alqY6cNUs3h2B45Tl6-bZ_lCN8n7sAE4G_ZZce2DUWL41kbERH5JK3zQp4lO117QIp2ZM7mpr3Jh8gfW0iqqFWqZi3sWEbnr1ToStlut9_H6Pa1sRT6K_PPhWqnKOf8Zw6yyS-l3HRxXoINFM7JonlQ-8f3p11-aHnl7NJtsYDBKJDZUkjyLZsp0GA9nsk4Jn7vyjW5ow8iNS3uLHYep6_Qy4e8Jo0bAWcusSHexGtJQkVAT5Afbwwvc"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+<span class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] font-label-md rounded">45:12</span>
+</div>
+<span class="text-label-md text-label-md text-secondary font-bold uppercase tracking-wider mb-1 block">Infrastructure</span>
+<h5 class="font-headline-sm text-[18px] leading-tight text-primary group-hover:text-secondary transition-colors mb-2">Transit Line C Expansion Review</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Streamed Sept 14, 2024</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Archive Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A bright and airy community center space with large windows and modern furniture. A local leader is speaking to a small, attentive group of diverse residents in a light-mode setting. The visual language is clean and minimalist, emphasizing open communication and public accessibility. Soft morning light fills the room, highlighting the professional yet welcoming cream and green decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyAKuF9uIVKTXmPvRiPbLJDMphPtiD-G9yOpxWvhfCOP-1zx-jX6-HuBH8gL0Ehmiq3nLdg7BMYPkpxXVlXu_hRt2YgFZYDNONzEP54mEKLLxJEcoRDjwKkYBcdxBMincb84puRaks9J_pYL7IHtcRyuqlUxwkNwCwUPkwMqMN3VxxPhrKvfl8iBjvH3aBRttCCs7I0wYNOaN17Zzr2uZ8jQyTN19mxtZiA1Q1InkBhqfepmYDUsmaf6LljDkPDbaHstpdw4PuBSv"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+<span class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] font-label-md rounded">1:02:45</span>
+</div>
+<span class="text-label-md text-label-md text-secondary font-bold uppercase tracking-wider mb-1 block">Housing</span>
+<h5 class="font-headline-sm text-[18px] leading-tight text-primary group-hover:text-secondary transition-colors mb-2">Affordable Living Initiatives</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Streamed Aug 28, 2024</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Archive Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An office environment featuring a high-tech control room with digital screens displaying urban metrics and maps. Professional staff work collaboratively in a clean, minimalist space. The lighting is focused and modern, utilizing a sophisticated palette of deep greens and rich cream tones. The mood is one of technological precision and visionary civic management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRoO8vmarpAb5lrPn5ig-7iUul8d1hPdxnbdb4tWz1zxRoZHDYXy_8kfRn4-Refp7CJIKzrX1hB7BLaollxH3E_6vFNKWLI-YEduRN7weRWFiqZYF-v_ZRVRU62MHfw6LcS50MSJdPQU5XPUbXxgebjv8AVCo3O3ChYq-jnb2pXt5Zv8cXQmdVU2uDkNE3XEIj-RLORE5wX-XPz-JtNSzQNfexIKCBkVBIFYBcQNItT2LLWGjWwW-RjZnN6CD_SAyVJpBue2wMnNrF"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+<span class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] font-label-md rounded">58:20</span>
+</div>
+<span class="text-label-md text-label-md text-secondary font-bold uppercase tracking-wider mb-1 block">Economy</span>
+<h5 class="font-headline-sm text-[18px] leading-tight text-primary group-hover:text-secondary transition-colors mb-2">Digital Economy Framework</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Streamed Aug 12, 2024</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Archive Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide shot of a modern auditorium filled with citizens during a lively debate. Bright stage lighting highlights the speakers, while the audience is bathed in soft, natural ambient light. The interior design elements include dark wood and green accents, reinforcing a traditional yet forward-looking corporate aesthetic. The atmosphere is charged with democratic energy and intellectual engagement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-8S157l4Cl2FtXMo9JdxxC5dCc-KwuHTAiGBdElVay0QptWcg04kAHERYERnApvrNT4msOwRkqUQ3jAIYWsRrKXY_eYToM2TVjhVbsbo_PY2O9WSuVgw1P2va5xmWbfrswlF3z-s1UrIo9uZGV31DymQK-Yjd21zdXbhe9Zn42D9lmb9etPzFVp99xDn_5h0kv-bqYYZaTKQzwXjt5C10Ke2aiCqTJ075y0Bn9BjU7YhlkQzc9EeQnxOJocuZ0rW3Y-3xzcaXuuG6"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+<span class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] font-label-md rounded">1:24:10</span>
+</div>
+<span class="text-label-md text-label-md text-secondary font-bold uppercase tracking-wider mb-1 block">Healthcare</span>
+<h5 class="font-headline-sm text-[18px] leading-tight text-primary group-hover:text-secondary transition-colors mb-2">Community Wellness Expansion</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Streamed July 30, 2024</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<span class="font-headline-sm text-headline-sm text-primary mb-6 block">BOOT OS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pr-8">Empowering citizens through transparent governance and direct digital participation in democratic processes.</p>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Town Halls</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Project Radar</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Budget Tracker</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Organization</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Transparency Report</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Stay Connected</h4>
+<div class="flex flex-col gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Join 20k+ citizens receiving weekly updates.</p>
+<div class="flex h-12">
+<input class="flex-grow bg-surface border border-outline-variant/50 px-4 focus:ring-1 focus:ring-primary outline-none text-body-sm" placeholder="Your email" type="email"/>
+<button class="bg-primary text-on-primary px-6 font-label-md text-label-md">JOIN</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/20 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and simple UI logic
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', function() {
+                this.style.opacity = '0.8';
+            });
+            el.addEventListener('mouseup', function() {
+                this.style.opacity = '1';
+            });
+        });
+
+        // Simulating basic search bar behavior
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary/20');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/20');
+        });
+    </script>
+</body></html>

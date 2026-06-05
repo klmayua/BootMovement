@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .thesis-gradient {
+            background: linear-gradient(180deg, rgba(241, 252, 244, 1) 0%, rgba(224, 235, 227, 0.5) 100%);
+        }
+        .footnote-trigger:hover .footnote-content {
+            display: block;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#8d131b",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#69000c",
+                      "surface-container": "#e6f1e9",
+                      "on-secondary-fixed": "#410004",
+                      "inverse-surface": "#29332e",
+                      "surface-container-highest": "#dae5de",
+                      "on-primary-container": "#85b098",
+                      "surface-bright": "#f1fcf4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#264e3c",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fe6763",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface": "#141e19",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#4f3800",
+                      "primary-fixed-dim": "#a4d0b8",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-surface-variant": "#414944",
+                      "surface-container-low": "#ebf6ef",
+                      "outline": "#717973",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-container": "#c6a15a",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "outline-variant": "#c1c8c2",
+                      "on-background": "#141e19",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#c0edd3",
+                      "background": "#f1fcf4",
+                      "primary": "#002d1c",
+                      "secondary": "#af2d2f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad7",
+                      "surface-dim": "#d2ddd5",
+                      "tertiary": "#342300",
+                      "surface-container-high": "#e0ebe3",
+                      "inverse-primary": "#a4d0b8",
+                      "surface-tint": "#3e6752",
+                      "error-container": "#ffdad6",
+                      "surface": "#f1fcf4",
+                      "inverse-on-surface": "#e8f3ec",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-variant": "#dae5de",
+                      "primary-container": "#1a4331",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "32px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Source Serif 4"],
+                      "headline-lg": ["Source Serif 4"],
+                      "headline-sm": ["Source Serif 4"],
+                      "body-md": ["Work Sans"],
+                      "body-sm": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display-lg": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary/20 selection:text-secondary">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant/30 z-50">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary text-[32px]">account_balance</span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">BOOT Civic Movement</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary transition-colors duration-200" href="#">Thesis</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Communities</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Events</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-lg text-label-lg transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                Join Now
+            </button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto flex flex-row relative min-h-screen">
+<!-- NavigationDrawer (Sticky Left) -->
+<aside class="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-sm text-headline-sm text-primary px-4 mb-4">Movement Navigation</h2>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-lg text-label-lg">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-lg text-label-lg">About</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-lg text-label-lg">Thesis</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-label-lg text-label-lg">Candidates</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-lg text-label-lg">Impact Hub</span>
+</a>
+</div>
+<!-- Campaign Progress Indicator -->
+<div class="mt-12 p-6 bg-surface-container rounded-xl border border-outline-variant/30">
+<p class="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">Movement Momentum</p>
+<div class="h-2 w-full bg-tertiary-fixed-dim rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4 transition-all duration-1000"></div>
+</div>
+<p class="font-label-sm text-label-md mt-2 text-on-surface-variant">75% to Phase II Activation</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1 px-margin-desktop py-16 thesis-gradient">
+<!-- Hero Header -->
+<header class="max-w-3xl mb-24">
+<span class="font-label-lg text-label-lg text-secondary tracking-widest uppercase mb-4 block">Core Philosophy v2.4</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8">The BOOT Thesis: Reclaiming the Civic Engine</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 italic border-l-4 border-tertiary-container pl-6 leading-relaxed">
+                    "Civic stability is not a static state of rest, but a dynamic equilibrium of accountability, tradition, and radical transparency."
+                </p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background bg-primary-container flex items-center justify-center text-white font-label-md">JD</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-tertiary flex items-center justify-center text-white font-label-md">MK</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-white font-label-md">LS</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Authored by the Council of Visionary Tradition</p>
+</div>
+</header>
+<!-- Abstract Bento Grid -->
+<div class="grid grid-cols-12 gap-gutter mb-32">
+<div class="col-span-12 md:col-span-8 bg-surface-container-highest p-12 rounded-xl relative overflow-hidden">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">01. The Principle of Rooted Mobility</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-loose">
+                        The modern state suffers from a disconnect between institutional tradition and the velocity of digital progress. The BOOT movement proposes a "Rooted Mobility" model where foundational legal frameworks remain anchored in history, while administrative execution moves at the speed of decentralized ledger technology.
+                    </p>
+<div class="flex items-center gap-2 text-secondary font-label-lg cursor-pointer hover:underline">
+<span>Read full derivation</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary-container p-12 rounded-xl text-on-primary-container flex flex-col justify-between">
+<span class="material-symbols-outlined text-5xl opacity-50">analytics</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Accountability Index</h4>
+<p class="font-body-sm text-body-sm opacity-80">Our metric for measuring the responsiveness of public servants to constituent mandates.</p>
+</div>
+</div>
+</div>
+<!-- Deep Content Section -->
+<div class="max-w-3xl space-y-16">
+<article class="prose prose-slate prose-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+<span class="w-8 h-8 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center text-sm">2</span>
+                        The Mechanics of Institutional Weight
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        Stability is not found in the absence of change, but in the structural integrity of the change process. Institutional weight refers to the intentional friction designed into governance to prevent populist volatility from overriding long-term strategy. 
+                        <span class="relative group cursor-help inline-flex items-center text-secondary font-semibold ml-1 footnote-trigger">
+                            [1]
+                            <span class="footnote-content hidden absolute left-0 bottom-full mb-2 w-72 p-4 bg-surface shadow-xl border border-outline-variant rounded-lg z-20 text-on-surface-variant font-normal text-sm leading-snug">
+<strong class="text-primary block mb-1">Footnote 1:</strong>
+                                Referencing the 1922 'Stability vs Velocity' paper by Dr. Aris Thorne. Thorne argues that rapid legislative cycles without "anchor years" lead to civic fatigue.
+                            </span>
+</span>
+</p>
+<div class="my-12 p-8 glass-card rounded-xl">
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+<span class="font-body-md text-body-md">Decentralized Veto Mechanisms for local guilds.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+<span class="font-body-md text-body-md">Sunset Clauses on all emergency administrative powers.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container mt-1">diamond</span>
+<span class="font-body-md text-body-md">Transparent Budgetary Ledgering (The BOOT Protocol).</span>
+</li>
+</ul>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        By enforcing these constraints, we ensure that every action taken by the civic body is deliberate, documented, and defensible before the electorate.
+                    </p>
+</article>
+<!-- Visual Asset Placeholder -->
+<div class="w-full aspect-video rounded-2xl overflow-hidden relative group">
+<img alt="Architectural conceptualization of modern democracy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand, neoclassical library hall infused with futuristic holographic interfaces floating between the rows of antique books. The architecture is heavy stone and marble, illuminated by warm, dramatic sunlight streaming through high windows. Modern architectural glass walkways bridge the upper tiers. The atmosphere is quiet, intellectual, and authoritative, combining the weight of tradition with the precision of digital technology in a cream and green color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QXnmiL9hNIt-zY2sUQ9FMA6Zl8LdzWwk8b1SmuXGdmrRO3u5WPI7Pq1WRvTvugqQ1Iv8CgHbblGsR7yYEwMr3qA7XY5yjiPuhviENmHUsPMepYY2axO7W1mKXYzK9RQnKXhb8ahIdKCZa2g7m17LJyPm5nnXg4eeEg5IA5QGs93cbk-t7cl6mJFG-w5UxVrnp7sC46xFRx7o6ujWl_PF_c-GzoFq2RtA3Gy-4VyPjK2bL1Rk_UvcEgzv2-f2VQQaK2WEsfTdeYkQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<p class="text-white font-headline-sm text-headline-sm mb-2">Visualizing the Equilibrium</p>
+<p class="text-white/80 font-body-sm text-body-sm max-w-md">Fig A.1: The intersection of historic precedent and modern data infrastructure.</p>
+</div>
+</div>
+<article class="prose prose-slate prose-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+<span class="w-8 h-8 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center text-sm">3</span>
+                        The Mandate of Sovereign Action
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        Finally, the thesis addresses the necessity of individual sovereignty within the collective framework. The BOOT movement does not seek to replace the individual with the state, but to provide the individual with a more precise "Boot" — a tool for traction in a slippery political landscape.
+                    </p>
+<blockquote class="border-l-4 border-secondary pl-8 my-12 italic text-on-secondary-fixed-variant font-headline-sm bg-secondary-fixed/30 py-6">
+                        "The strength of the chain is not in its links, but in the clarity of the space between them."
+                    </blockquote>
+</article>
+</div>
+<!-- Interaction Sidebar/CTA -->
+<div class="mt-24 pt-16 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="max-w-md">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Request the Full Manuscript</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The BOOT Thesis is available in a limited-edition leather-bound volume for founding members, or as a verified PDF for movement volunteers.</p>
+</div>
+<div class="flex gap-4">
+<button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all">Download PDF</button>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-lg text-label-lg hover:brightness-110 transition-all">Order Print</button>
+</div>
+</div>
+</section>
+<!-- Contextual Sidebar -->
+<aside class="hidden xl:block w-72 h-fit sticky top-20 p-8 space-y-12">
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">On This Page</h4>
+<nav class="space-y-4">
+<a class="block text-secondary font-medium" href="#">01. Rooted Mobility</a>
+<a class="block text-on-surface-variant hover:text-primary" href="#">02. Institutional Weight</a>
+<a class="block text-on-surface-variant hover:text-primary" href="#">03. Sovereign Action</a>
+<a class="block text-on-surface-variant hover:text-primary" href="#">04. Implementation Protocol</a>
+</nav>
+</div>
+<div class="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl">
+<h5 class="font-label-lg text-label-lg mb-4">Thesis Score: 98%</h5>
+<p class="text-xs opacity-80 leading-relaxed">This document has been peer-reviewed by the BOOT Academic Council for logical consistency and historical accuracy.</p>
+<div class="mt-4 flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
+<div class="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
+<div class="w-8 h-8 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center text-[10px]">✔</div>
+</div>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-outline-variant text-4xl block mb-2">shield_with_heart</span>
+<p class="font-label-md text-label-md text-outline">Verified Authenticity</p>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary dark:bg-primary-container text-on-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">BOOT Civic Movement</h3>
+<p class="font-body-sm text-body-sm opacity-80 max-w-xs">Restoring the foundations of civic duty through transparency, accountability, and the weight of history.</p>
+<p class="font-body-sm text-body-sm mt-4 text-primary-fixed-dim">© 2024 BOOT Civic Movement. All Rights Reserved. Built for Accountability.</p>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg text-label-lg text-tertiary-fixed">Platform</h4>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg text-label-lg text-tertiary-fixed">Engagement</h4>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Volunteer Portal</a>
+<a class="font-body-sm text-body-sm text-primary-fixed-dim hover:text-white underline transition-colors" href="#">Donate</a>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
+<span class="material-symbols-outlined text-white">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/20 cursor-pointer hover:bg-secondary transition-all">
+<span class="material-symbols-outlined text-white">mail</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for sidebar links
+        document.querySelectorAll('aside nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('aside nav a').forEach(l => l.classList.remove('text-secondary'));
+                link.classList.add('text-secondary');
+            });
+        });
+
+        // Simple observer for scroll effects on content
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('article').forEach(article => {
+            article.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(article);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Detail | BOOT Civic OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(241, 252, 244, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .bento-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#8d131b",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#69000c",
+                      "surface-container": "#e6f1e9",
+                      "on-secondary-fixed": "#410004",
+                      "inverse-surface": "#29332e",
+                      "surface-container-highest": "#dae5de",
+                      "on-primary-container": "#85b098",
+                      "surface-bright": "#f1fcf4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#264e3c",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fe6763",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface": "#141e19",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#4f3800",
+                      "primary-fixed-dim": "#a4d0b8",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-surface-variant": "#414944",
+                      "surface-container-low": "#ebf6ef",
+                      "outline": "#717973",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-container": "#c6a15a",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "outline-variant": "#c1c8c2",
+                      "on-background": "#141e19",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#c0edd3",
+                      "background": "#f1fcf4",
+                      "primary": "#002d1c",
+                      "secondary": "#af2d2f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad7",
+                      "surface-dim": "#d2ddd5",
+                      "tertiary": "#342300",
+                      "surface-container-high": "#e0ebe3",
+                      "inverse-primary": "#a4d0b8",
+                      "surface-tint": "#3e6752",
+                      "error-container": "#ffdad6",
+                      "surface": "#f1fcf4",
+                      "inverse-on-surface": "#e8f3ec",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-variant": "#dae5de",
+                      "primary-container": "#1a4331",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "32px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Source Serif 4"],
+                      "headline-lg": ["Source Serif 4"],
+                      "headline-sm": ["Source Serif 4"],
+                      "body-md": ["Work Sans"],
+                      "body-sm": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display-lg": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- SideNavBar Shell -->
+<nav class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">BOOT OS</h1>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Civic Dashboard</p>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-primary-fixed/20 rounded-lg transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-lg text-label-lg">Communities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-lg text-label-lg">Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-lg text-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all group duration-300 ease-in-out hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+<button class="mt-4 mb-8 mx-2 py-3 bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-opacity">
+            Donate Now
+        </button>
+<div class="pt-6 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-lg text-label-lg">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-lg text-label-lg">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<nav class="flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary py-1" href="#">Chapter Overview</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-2 py-1" href="#">Directory</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-2 py-1" href="#">Activity</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/50 rounded-full focus:outline-none focus:border-primary transition-all w-64 font-body-sm text-body-sm" placeholder="Search resources..." type="text"/>
+</div>
+<div class="flex gap-4 items-center">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile" data-alt="A professional headshot of a middle-aged community leader in a business casual outfit, set against a soft, out-of-focus background of an airy, modern office. The lighting is warm and natural, creating a trustworthy and authoritative mood that aligns with the corporate yet accessible vision of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdfHkf-xTDYT3uWXQL6hD8xqkuCEEhfKpKxEUOUZ1D068wIcOvvmfGaV-SNQyvb5Bjkp_hJ_CxJS0rbmO9cuH6eBTWxcdoNWn4pXIkbJHFCvRaHlHhQ20VclTjfD0DJ0n29Y8J52BZ92IMmapP7e-wh9iHKBk9zKCeLNMbq7kuMPjfTehET9l_rsAnWEOkgbWC2Xf1hXCYAGELXao60kYmY-P6pKX120TdgXjwZT_sWURubc1Fe3kEzACdOBd4mdle1kbbclt6_JPV"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Community Hero Section -->
+<section class="relative h-[400px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide panoramic shot of a high-end, minimalist community center lobby featuring clean lines, natural wood textures, and large glass windows. The space is filled with soft, diffused sunlight, creating a serene and visionary atmosphere. The color palette is dominated by cream tones and deep forest greens, reflecting an aura of stability and institutional weight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEn8qAA400mF3HRE0RjMcR_8iPTpt3AYRp2krtneW6ziflYfl_skBW08DJ_kfb-IQAm2CizFGJGJUQnsI2aN0Z2SGnqdpAlRsRwwq9FYOrH4zkRIyvY5SGOdjDsp25GFfKZ31kGb-LQEd-vqjUoPIEmy3xQs2bEOBLT84d8acqG_Z8qZe7MqAp4Lth_vb3VsSJSP7PDXXUjjdcKOgeY9ufykXd5e62jLZiDdZ3nNujGnZ55zhjqaQkudtg9IDZvsc55bRaVBELQkNz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop pb-12 w-full flex justify-between items-end">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary px-3 py-1 text-on-secondary font-label-md text-label-md rounded-full uppercase tracking-widest">Premium Chapter</span>
+<span class="text-on-primary-fixed flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Seattle Metropolitan
+                        </span>
+</div>
+<h2 class="font-display-lg text-display-lg text-white mb-2">Northwest Civic Coalition</h2>
+<p class="text-primary-fixed-dim font-body-lg text-body-lg max-w-2xl">Pioneering sustainable urban development and transparent governance through community-led initiatives in the Pacific Northwest.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-surface-bright transition-colors shadow-lg">Join Discussion</button>
+<button class="px-8 py-4 border-2 border-white/50 text-white font-bold rounded-lg hover:bg-white/10 transition-colors">Follow Updates</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Content -->
+<section class="px-margin-desktop py-16">
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Active Projects (Main Area) -->
+<div class="col-span-8 space-y-gutter">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline-md text-headline-md text-primary">Active Initiatives</h3>
+<a class="text-secondary font-label-lg text-label-lg flex items-center gap-1 hover:underline" href="#">View All Projects <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Project Card 1 -->
+<div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden bento-item group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A focused group of professionals collaborating around a large wooden table in a brightly lit modern conference room. They are working on architectural blueprints and digital tablets. The aesthetic is clean and professional, emphasizing trust, collective vision, and heritage-inspired seriousness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0jeOyzeOUCAKdvWQAh13JuTXnnVfGE6DmAQxi6Ed1Gl7Ug1rdy_63HwE8GiZP7xNmFX6S0PhRle4DxK5v20nORZjceSi6zvi6pLcM1OTsKiWp3bjaJa8Mi3bUIvufTlRC1bqyxcPkPBKS193gTn_uTw2pmErh5DZ9dre9zVeJH484Qn3I00kExQxEtM-_u2n_HVp3wGUpMno8wMgDF6GoNJEMDiV58UVDp6YtuRFkV8IutxR4jMyEhxc0bpOwlQpZYVf_Ah_MoT_7"/>
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-white font-label-md text-label-md">75% Funded</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Green Canopy Expansion</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6">Restoring urban tree cover across the metropolitan area to combat heat islands.</p>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-md text-label-md text-on-surface-variant">
+<span>$45,000 raised</span>
+<span>Goal: $60,000</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden bento-item group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of diverse hands placing a small glass voting token into a minimalist ballot box. The lighting is soft and high-key, highlighting textures of wood and glass. The image represents institutional transparency and democratic authority in a modern, elegant setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8N5ItX2kydBwfcm152tzAoAhk532eR8klHtKk_BBTXLEgBCjx00qtKz2FY7q4O0BwU5ctHcJkYdWqR7BGPtGQ4nd6R3EeO8bw26MwugMH8LyA7fqvG5-UE5Ea16DSckYXuRQ5DQInsDskIoSYXsxHybOZzQb_xjLjdTMQMeAC2xIDBHtVMta2iZHFcpZ6kewN-gKyShSu3emiAAD6hC13c4R1Q-YUEKc7SRFGNP6PFXW6waq92qh5mg4z_3r8GmWuHamo0BQ3J4r"/>
+<div class="absolute top-4 right-4 bg-tertiary-container/80 backdrop-blur-md px-3 py-1 rounded-full text-on-tertiary-container font-label-md text-label-md">In Progress</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Civic Ledger Transparency</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6">Implementing blockchain-backed reporting for all local treasury expenditures.</p>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/3"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-md text-label-md text-on-surface-variant">
+<span>$12,000 raised</span>
+<span>Goal: $35,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion Forum -->
+<div class="pt-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Recent Discussions</h3>
+<div class="space-y-4">
+<div class="glass-card p-6 rounded-xl border border-outline-variant/20 flex gap-6 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">forum</span>
+<span class="font-label-md text-label-md">24</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-headline-sm text-[18px] text-primary">Proposal: Mandatory Rainwater Harvesting in New Zoning</h5>
+<span class="font-label-md text-label-md text-on-surface-variant">2h ago</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">A discussion on integrating sustainable water practices into the upcoming 2025 city planning mandate.</p>
+<div class="flex gap-4 mt-4">
+<span class="text-secondary font-label-md text-label-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 142</span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">account_circle</span> Started by Marcus Thorne</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl border border-outline-variant/20 flex gap-6 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">lightbulb</span>
+<span class="font-label-md text-label-md">8</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-headline-sm text-[18px] text-primary">Ideas for the Annual Heritage Gala</h5>
+<span class="font-label-md text-label-md text-on-surface-variant">Yesterday</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Brainstorming session for venue selection and sponsorship outreach for our flagship event.</p>
+<div class="flex gap-4 mt-4">
+<span class="text-secondary font-label-md text-label-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 89</span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">account_circle</span> Started by Elena Vance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Content (Leadership & Resources) -->
+<aside class="col-span-4 space-y-10">
+<!-- Leadership Profiles -->
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">shield_person</span> Chapter Leadership
+                        </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-xl border border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-primary-fixed">
+<img alt="Sarah Jenkins" data-alt="Portrait of a sophisticated female community leader in her 40s, wearing a charcoal grey blazer. Her expression is warm and resolute. The background is a minimalist, softly lit library setting that evokes a sense of visionary tradition and intellectual authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMvTqFfusip_TiqJFDLdm4VGtRpTTD93nRyNUHIYzCwyigmMB7cac7PrJ0e4qv38IfTaedwCAmkxSLyaiY5M560SlUFjgllWlwsSxjdUcRsNIE17bUUl1c9oKvrDX2zyRiEzZFEHuxMutyaKhr7d6lfMuFTrsQbX5mb97bGHQdNJHPFiQhzRyHRF9zqqWRGwrtWWlCAet9asT0j2Cj3jj0WfvhbBInKVq95t1SwGM6Lqhnb5HACJ0VnHtKV2jkchJDggOQSV2ppwo3"/>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary">Sarah Jenkins</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Regional Director</p>
+</div>
+<button class="ml-auto material-symbols-outlined text-on-surface-variant hover:text-primary">mail</button>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl border border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-primary-fixed">
+<img alt="David Chen" data-alt="A professional portrait of a man in a structured green shirt, looking confidently into the camera. He is set against a clean, architectural backdrop with soft sunlight filtering through. The style is modern, minimalist, and conveys a feeling of reliability and progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Z7vK-RtRpUw2lN9Yu5HHIzi7Fn4C-l5pdMPgU46rqwGdy55FG98o-SD_58PM2Orp8FaxUi-gdowlKUK6IGUHuao4D3CmiDIB2n3OtBiizvJHoXf_5J_4CC6VBWhTq4wD5wIZQ6cC5PW5SjvJ94DYhInxJbex51nNDiuklFY1ixh-KagEzty2rqGszbQlYkP0Fx4J7dZ-6jT9Lmw90TZsZdzh36Cbxt0WIDj4UZATYRpNOtSXkAkYUmzBo5rsCU4CS4uKktJTXF_6"/>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary">David Chen</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lead Project Coordinator</p>
+</div>
+<button class="ml-auto material-symbols-outlined text-on-surface-variant hover:text-primary">mail</button>
+</div>
+</div>
+</div>
+<!-- Resource Library -->
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/30">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Resource Library</h3>
+<div class="space-y-6">
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded shadow-sm text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary group-hover:underline">Bylaws &amp; Charter v2.4</p>
+<p class="font-label-md text-label-md text-on-surface-variant">PDF • 2.4 MB</p>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded shadow-sm text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary group-hover:underline">Quarterly Impact Report</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Excel • 1.1 MB</p>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded shadow-sm text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">video_library</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary group-hover:underline">Town Hall Archives</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Video Link</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 border border-primary text-primary font-label-lg text-label-lg rounded-lg hover:bg-primary hover:text-white transition-all">
+                            Access Full Archive
+                        </button>
+</div>
+<!-- Chapter Statistics -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-xl border border-outline-variant/30 text-center">
+<p class="font-display-lg text-[24px] text-secondary font-bold">1.2k</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">Members</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-outline-variant/30 text-center">
+<p class="font-display-lg text-[24px] text-primary font-bold">14</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">Projects</p>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full py-16 bg-surface-container-highest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-6">BOOT Civic OS</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+                        Building the foundations of future-facing governance, one community at a time.
+                    </p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Dashboard</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Communities</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Events</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Transparency Report</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-6">Connect</h5>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Contact Us</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">Support Center</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">
+                    © 2024 BOOT Civic Operating System. All Rights Reserved.
+                </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interactions for Project Cards
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Subtle feedback handled by CSS classes
+            });
+        });
+
+        // Tab selection logic (simulated for UI showcase)
+        const tabs = document.querySelectorAll('header nav a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                tabs.forEach(t => {
+                    t.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+                    t.classList.add('text-on-surface-variant');
+                });
+                tab.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+                tab.classList.remove('text-on-surface-variant');
+            });
+        });
+    </script>
+</body></html>
