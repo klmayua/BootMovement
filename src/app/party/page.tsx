@@ -162,13 +162,6 @@ export default function PartyPage() {
     </div>
   );
 }
-
-
-
-
-      <main>
-        {/* Hero Section */}
-        <section className="relative h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img className="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dndBN91UiEj2HgrdJ3hFcXdbdXBSL9bAFJnGOQhuJCnYhBA-OARRQb6deSzroPC8rZPCONTWU3SmzpYhxCh_fmBh_iGEceyZCfpnp26SJgwjCFWris42Mmwen8JhKJvFcbt3zLjl8gCxSf2M6FQ5b49J1jakOLLXSe1wrT33jXsDPb8If01emqu-vmiMuibLKY4kwiaj-pfRLUOCl4GeEK7XNMdcJFQTFNyoUCHQlSzIxmaIBRmQ8OezA7-cRGSB1ICIh_n04AAS" alt="Neoclassical government building" />
           </div>
