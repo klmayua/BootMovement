@@ -2,14 +2,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { CitizenLayout } from '@/components/layout/citizen/CitizenLayout';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function EventsPage() {
   const [view, setView] = useState<'list' | 'map' | 'calendar'>('list');
   
   return (
-    <CitizenLayout>
-      <div className="p-margin-desktop max-w-container-max mx-auto space-y-10">
+    <PublicLayout>
+      <div className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto space-y-10">
         {/* Hero Section / Featured Event */}
         <section className="grid grid-cols-12 gap-gutter">
           <div className="col-span-8 relative overflow-hidden rounded-xl h-[400px] group">
@@ -215,6 +215,6 @@ export default function EventsPage() {
           )}
         </section>
       </div>
-    </CitizenLayout>
+    </PublicLayout>
   );
 }

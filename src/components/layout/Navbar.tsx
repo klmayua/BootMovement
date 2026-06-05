@@ -9,11 +9,12 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: 'Dashboard', href: '/' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Thesis', href: '/thesis' },
     { name: 'Communities', href: '/communities' },
     { name: 'Events', href: '/events' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Party Website', href: '/party' },
   ];
 
   return (

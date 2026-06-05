@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen overflow-x-hidden">
-        <main className="max-w-container-max mx-auto pb-bottom-nav">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full pb-bottom-nav">
           {/* Hero Section: Editorial Impact */}
            <section className="px-margin-desktop py-24 grid grid-cols-12 gap-gutter items-center">
              <div className="lg:col-span-7 text-center lg:text-left space-y-6 md:space-y-8">

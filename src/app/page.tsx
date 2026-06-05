@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { PartyLayout } from '@/components/layout/party/PartyLayout';
+import { PublicLayout } from '@/components/layout/PublicLayout';
 
 export default function HomePage() {
   return (
-    <PartyLayout>
+    <PublicLayout>
       <main>
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
@@ -161,6 +161,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </PartyLayout>
+    </PublicLayout>
   );
 }

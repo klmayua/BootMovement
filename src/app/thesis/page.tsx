@@ -6,7 +6,7 @@ export default function BootThesis() {
   return (
     <PublicLayout>
       <div className="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary/20 selection:text-secondary">
-        <main className="max-w-container-max mx-auto flex flex-row relative min-h-screen">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto flex flex-row relative min-h-screen">
         {/* NavigationDrawer (Sticky Left) */}
         <aside className="hidden lg:block w-80 h-[calc(100vh-80px)] sticky top-20 p-4 border-r border-outline-variant/20 bg-surface-container-low">
           <div className="flex flex-col gap-2">

@@ -6,7 +6,7 @@ export default function ProjectsHub() {
   return (
     <PublicLayout>
       <div className="bg-surface font-body-md text-on-surface min-h-screen">
-        <main className="flex-grow p-margin-desktop space-y-12">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto space-y-12">
           {/* Hero Stats & Vision */}
           <section className="grid grid-cols-12 gap-6">
             <div className="col-span-8 relative rounded-xl overflow-hidden bg-primary-container p-12 text-on-primary h-[400px] flex flex-col justify-end group">
@@ -164,48 +164,7 @@ export default function ProjectsHub() {
               </div>
             </div>
            </section>
-         {/* Footer */}
-        <footer className="bg-surface-container-highest dark:bg-on-background w-full py-16 border-t border-outline-variant/30 dark:border-outline/20">
-          <div className="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
-            <div className="space-y-4">
-              <h3 className="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim">BOOT OS</h3>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">A visionary tradition building a more stable, digital federation.</p>
-            </div>
-            <div>
-              <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Governance</h4>
-              <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="/newsroom">Transparency Report</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/thesis">Constitutional Code</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/about">Vote Audit</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Legal</h4>
-              <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="/about">Privacy Policy</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/about">Terms of Service</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/about">Ethics Charter</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-label-lg text-label-lg mb-6 uppercase tracking-widest text-primary">Contact</h4>
-              <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
-                <li><Link className="hover:text-primary transition-all underline" href="/newsroom">Press Office</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/about">Ambassador Program</Link></li>
-                <li><Link className="hover:text-primary transition-all underline" href="/contact">Contact Us</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/10 text-center">
-            <p className="font-label-md text-label-md text-on-surface-variant">© 2024 BOOT Civic Operating System. All Rights Reserved.</p>
-          </div>
-        </footer>
-      </main>
-      {/* FAB */}
-      <button className="fixed bottom-10 right-10 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
-        <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>add</span>
-      </button>
-    </div>
-    </PublicLayout>
-  );
-}
+         </div>
+       </PublicLayout>
+     );
+   }
