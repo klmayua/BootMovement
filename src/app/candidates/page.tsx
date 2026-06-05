@@ -263,6 +263,6 @@ export default function CandidatesPage() {
           </div>
         </div>
       </footer>
-    </PublicLayout>
+    </div>
   );
 }
