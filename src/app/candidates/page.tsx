@@ -241,7 +241,8 @@ export default function CandidatesPage() {
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">forum</span>
           </div>
         </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </PublicLayout>
   );
 }

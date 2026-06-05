@@ -44,7 +44,6 @@ export default function MovementHub() {
              </nav>
            </div>
          )}
-       </header>
       </header>
       <main className="flex min-h-screen pb-bottom-nav">
         {/* NavigationDrawer (Sidebar) */}

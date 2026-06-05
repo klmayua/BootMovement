@@ -45,7 +45,7 @@ export default function PartyPage() {
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8">Upholding the institutional integrity that has sustained our society for generations. We protect the core principles of accountability and respect.</p>
                 <Link className="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:gap-4 transition-all active:scale-95" href="/party/about">
                                 LEARN MORE <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                            </a>
+                            </Link>
               </div>
               {/* Card: Future Progress */}
               <div className="group relative bg-primary-container p-12 text-on-primary transition-all duration-500 overflow-hidden">
