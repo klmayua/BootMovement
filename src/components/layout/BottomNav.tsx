@@ -48,34 +48,34 @@ export function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden 
-                    bg-surface/80 backdrop-blur-lg border-t border-outline-variant/30 
-                    flex justify-around items-center 
-                    h-20 pb-[env(safe-area-inset-bottom)]"
-         aria-label="Mobile Navigation">
-      {config.map((item) => {
-        const isActive = pathname === item.href;
-        return (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`relative flex flex-col items-center justify-center gap-1 
-                        px-4 py-2 min-w-[64px] transition-all duration-200 
-                        active:scale-90 touch-manipulation
-                        ${isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
-            aria-current={isActive ? 'page' : undefined}
-          >
-            <span className={`material-symbols-outlined transition-all duration-200 
-                             ${isActive ? 'scale-110' : 'scale-100'}`}
-                  style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
-              {item.icon}
-            </span>
-            <span className={`text-[10px] leading-none ${isActive ? 'font-bold' : 'font-medium'}`}>{item.label}</span>
-            {isActive && (
-              <div className="absolute -bottom-1 w-1 h-1 bg-primary rounded-full" />
-            )}
-          </Link>
-        );
-      })}
-    </nav>
+                     bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 
+                     flex justify-around items-center 
+                     h-20 pb-[env(safe-area-inset-bottom)] touch-manipulation"
+          aria-label="Mobile Navigation">
+       {config.map((item) => {
+         const isActive = pathname === item.href;
+         return (
+           <Link
+             key={item.href}
+             href={item.href}
+             className={`relative flex flex-col items-center justify-center gap-1 
+                         px-4 py-2 min-w-[64px] transition-all duration-200 
+                         active:scale-90 touch-manipulation
+                         ${isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
+             aria-current={isActive ? 'page' : undefined}
+           >
+             <span className={`material-symbols-outlined transition-all duration-200 
+                              ${isActive ? 'scale-110' : 'scale-100'}`}
+                   style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
+               {item.icon}
+             </span>
+             <span className={`text-[10px] leading-none ${isActive ? 'font-bold' : 'font-medium'}`}>{item.label}</span>
+             {isActive && (
+               <div className="absolute -bottom-1 w-1 h-1 bg-primary rounded-full" />
+             )}
+           </Link>
+         );
+       })}
+     </nav>
   );
 }

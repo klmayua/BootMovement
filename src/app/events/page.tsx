@@ -10,20 +10,20 @@ export default function EventsPage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
-        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full pb-bottom-nav">
           {/* Hero Section / Featured Event */}
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16">
-            <div className="lg:col-span-8 relative overflow-hidden rounded-xl h-[400px] group">
+            <div className="lg:col-span-8 relative overflow-hidden rounded-xl h-[300px] md:h-[400px] group touch-manipulation">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent z-10"></div>
               <img 
                 alt="Featured Town Hall Event" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPNTcqtettaeRQIv9BE-uHv1DTpzkgH1KHnqB0pMHVthGWdy1NETC33zgaxOCfa9G2_bSQMByBvzQv3wmjLdYhWrpUKj6vFwGeWyw7ZbxWCGLcJSNCXAgfSZaJKfC2IWTN2vc033L9UuehEC0DsyYOj5_h5SUMf86kqqNSucFOF15IiEoXrOuU9JH6tcqTlzWgiKtQAZ6YJiJvVYR-3RF0PLikRxQZ9B1fDI9klGq4UwFfG61mrdqs292JZBQoppwfmLTkCrCkNyt"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPNTcqtettaeRQIv9BE-uHv1DTpzkgH1KHnqB0pMHVthGWdy1NETC33zgaxOCfa9G2_bSQMByBvzQv3wmjLdYhWrpUKj6vFwGeWyw7ZbxWCGLcJSNCXAgfSZaJKfC2IWTN2H laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS laCjr-SXPjR9VNIupbD/RzMSpLJhS-QHmWpLRTaqFAtK1sH_0jLCOW7PNucPCQDpgVfhpBUMD_xK8iwT6NMVqdPruxLhC+AtYIkSwS7I6pYp_ZzS"
               />
-              <div className="absolute bottom-0 left-0 p-10 z-20 max-w-2xl">
+              <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 max-w-2xl">
                 <span className="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-md rounded mb-4">NATIONAL RALLY</span>
-                <h3 className="font-headline-lg text-headline-lg text-white mb-2">The Future of Civic Infrastructure: National Town Hall</h3>
-                <p className="text-white/80 font-body-md mb-6">Join us for a definitive discussion on modernizing municipal governance and the rollout of the BOOT Civic OS across three major provinces.</p>
+                <h3 className="font-headline-lg text-white mb-2">The Future of Civic Infrastructure: National Town Hall</h3>
+                <p className="text-white/80 font-body-md mb-6 line-clamp-2 md:line-clamp-none">Join us for a definitive discussion on modernizing municipal governance and the rollout of the BOOT Civic OS across three major provinces.</p>
                 <div className="flex flex-wrap items-center gap-6 text-white font-label-lg">
                   <span className="flex items-center gap-2"><span className="material-symbols-outlined text-secondary">calendar_today</span> Oct 24, 2024</span>
                   <span className="flex items-center gap-2"><span className="material-symbols-outlined text-secondary">location_on</span> Heritage Hall, Central District</span>
@@ -31,8 +31,8 @@ export default function EventsPage() {
               </div>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-gutter">
-              <div className="bg-primary-container p-8 rounded-xl text-white flex-1 flex flex-col justify-center">
-                <h4 className="font-headline-sm text-headline-sm mb-4">Campaign Momentum</h4>
+              <div className="bg-primary-container p-6 md:p-8 rounded-xl text-white flex-1 flex flex-col justify-center">
+                <h4 className="font-headline-sm mb-4">Campaign Momentum</h4>
                 <p className="font-body-sm mb-6 opacity-80">We're nearing our quarterly engagement goal. Your presence at the upcoming workshops drives the vision forward.</p>
                 <div className="w-full bg-surface/20 h-3 rounded-full overflow-hidden">
                   <div className="bg-on-tertiary-container h-full w-[78%]"></div>
@@ -42,7 +42,7 @@ export default function EventsPage() {
                   <span>12,400 Sign-ups</span>
                 </div>
               </div>
-              <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/30 flex-1">
+              <div className="bg-surface-container-high p-6 md:p-8 rounded-xl border border-outline-variant/30 flex-1">
                 <h4 className="font-label-lg text-primary uppercase tracking-widest mb-4">Upcoming Deadlines</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -66,42 +66,42 @@ export default function EventsPage() {
 
           {/* Interactive Directory */}
           <section className="space-y-6">
-            <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-outline-variant pb-4 gap-4">
-              <div className="flex gap-8 overflow-x-auto pb-2 md:pb-0">
-                <button 
-                  onClick={() => setView('list')}
-                  className={`font-label-lg pb-4 border-b-2 transition-colors ${view === 'list' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
-                >
-                  LIST VIEW
-                </button>
-                <button 
-                  onClick={() => setView('map')}
-                  className={`font-label-lg pb-4 border-b-2 transition-colors ${view === 'map' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
-                >
-                  MAP EXPLORER
-                </button>
-                <button 
-                  onClick={() => setView('calendar')}
-                  className={`font-label-lg pb-4 border-b-2 transition-colors ${view === 'calendar' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
-                >
-                  CALENDAR
-                </button>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <select className="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none">
-                  <option>All Event Types</option>
-                  <option>Town Halls</option>
-                  <option>Rallies</option>
-                  <option>Policy Workshops</option>
-                </select>
-                <select className="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none">
-                  <option>Region: All</option>
-                  <option>North District</option>
-                  <option>South Sector</option>
-                  <option>Heritage Zone</option>
-                </select>
-              </div>
-            </div>
+             <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-outline-variant pb-4 gap-4">
+               <div className="flex gap-8 overflow-x-auto pb-2 md:pb-0 touch-manipulation">
+                 <button 
+                   onClick={() => setView('list')}
+                   className={`font-label-lg pb-4 border-b-2 transition-colors touch-manipulation ${view === 'list' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
+                 >
+                   LIST VIEW
+                 </button>
+                 <button 
+                   onClick={() => setView('map')}
+                   className={`font-label-lg pb-4 border-b-2 transition-colors touch-manipulation ${view === 'map' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
+                 >
+                   MAP EXPLORER
+                 </button>
+                 <button 
+                   onClick={() => setView('calendar')}
+                   className={`font-label-lg pb-4 border-b-2 transition-colors touch-manipulation ${view === 'calendar' ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant hover:text-primary'}`}
+                 >
+                   CALENDAR
+                 </button>
+               </div>
+               <div className="flex flex-wrap gap-4">
+                 <select className="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none touch-manipulation">
+                   <option>All Event Types</option>
+                   <option>Town Halls</option>
+                   <option>Rallies</option>
+                   <option>Policy Workshops</option>
+                 </select>
+                 <select className="bg-surface border border-outline-variant/50 rounded px-4 py-2 font-label-md text-on-surface focus:ring-1 focus:ring-primary outline-none touch-manipulation">
+                   <option>Region: All</option>
+                   <option>North District</option>
+                   <option>South Sector</option>
+                   <option>Heritage Zone</option>
+                 </select>
+               </div>
+             </div>
 
             {/* List View Content */}
             {view === 'list' && (

@@ -6,7 +6,7 @@ export default function CommunitiesPage() {
   return (
     <PublicLayout>
       <div className="flex flex-col min-h-screen">
-        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full">
+        <main className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full pb-bottom-nav">
           {/* Hero Section */}
           <section className="relative h-[400px] flex items-center overflow-hidden bg-primary-container text-on-primary-container mb-20">
             <div className="relative z-10 max-w-2xl px-margin-mobile md:px-0">

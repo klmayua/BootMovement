@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/Card';
 export default function DonatePage() {
   return (
     <PublicLayout>
-      <section className="py-20 px-4 bg-surface">
+      <section className="py-20 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
@@ -18,17 +18,16 @@ export default function DonatePage() {
                 or political lobbyists. We are powered by the people, for the people.
               </Typography>
             </div>
-
             <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-accent/20">
-                <span className="text-2xl">🛡️</span>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-accent/20 touch-manipulation">
+                <span className="material-symbols-outlined text-primary text-2xl">shield</span>
                 <div>
                   <Typography variant="label-md" className="text-primary">100% Transparency</Typography>
                   <Typography variant="body-sm" className="text-neutral/70">Every donation is logged on the public blockchain ledger.</Typography>
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-accent/20">
-                <span className="text-2xl">🚀</span>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-accent/20 touch-manipulation">
+                <span className="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
                 <div>
                   <Typography variant="label-md" className="text-primary">Direct Impact</Typography>
                   <Typography variant="body-sm" className="text-neutral/70">Funds go directly to community projects and movement operations.</Typography>
@@ -36,22 +35,19 @@ export default function DonatePage() {
               </div>
             </div>
           </div>
-
-          <Card variant="elevated" className="border-2 border-accent/30">
+          <Card variant="elevated" className="border-2 border-accent/30 touch-manipulation">
             <CardContent className="p-8 space-y-8">
               <div className="text-center space-y-2">
                 <Typography variant="headline-md" className="text-primary">Make a Contribution</Typography>
                 <Typography variant="body-sm" className="text-neutral/60">Choose an amount to support our operations</Typography>
               </div>
-
               <div className="grid grid-cols-3 gap-4">
                 {['₦5,000', '₦20,000', '₦50,000'].map((amt, i) => (
-                  <Button key={i} variant={i === 1 ? 'primary' : 'secondary'} size="md" className="py-4">
+                  <Button key={i} variant={i === 1 ? 'primary' : 'secondary'} size="md" className="py-4 touch-manipulation">
                     {amt}
                   </Button>
                 ))}
               </div>
-
               <div className="space-y-2">
                 <Typography variant="label-md" className="text-neutral">Custom Amount</Typography>
                 <div className="relative">
@@ -59,19 +55,16 @@ export default function DonatePage() {
                   <input 
                     type="number" 
                     placeholder="0.00" 
-                    className="w-full pl-8 pr-4 py-3 rounded-default border border-neutral/20 focus:border-primary focus:ring-0 outline-none"
+                    className="w-full pl-8 pr-4 py-3 rounded-default border border-neutral/20 focus:border-primary focus:ring-0 outline-none touch-manipulation"
                   />
                 </div>
               </div>
-
-              <Button variant="action" size="lg" className="w-full py-6 text-lg">
+              <Button variant="action" size="lg" className="w-full py-6 text-lg touch-manipulation">
                 Complete Donation
               </Button>
-
               <div className="text-center space-y-2">
                 <p className="text-xs text-neutral/50">Secure payment powered by BOOT-Pay</p>
                 <div className="flex justify-center gap-3 opacity-50 grayscale">
-                  {/* Mock payment icons */}
                   <div className="w-8 h-5 bg-neutral/20 rounded" />
                   <div className="w-8 h-5 bg-neutral/20 rounded" />
                   <div className="w-8 h-5 bg-neutral/20 rounded" />

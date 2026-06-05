@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AuthRecoveryPage() {
   return (
-    <div className="min-h-screen bg-surface flex items-center justify-center p-margin-desktop">
+    <div className="min-h-screen bg-surface flex items-center justify-center px-margin-mobile md:px-margin-desktop">
       <div className="max-w-md w-full bg-white border border-outline-variant/30 p-8 rounded-xl shadow-sm text-center">
         <div className="w-16 h-16 bg-primary-fixed/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="material-symbols-outlined text-3xl">lock_reset</span>

@@ -33,7 +33,7 @@ export const PortalLayout = ({
   const pathname = usePathname();
 
   return (
-    <div className="min-h-screen flex bg-surface-container">
+    <div className="min-h-screen flex bg-surface-container overflow-x-hidden">
       {/* Sidebar */}
       <aside className="w-64 bg-primary text-white hidden lg:flex flex-col sticky top-0 h-screen">
         <div className="p-6 flex items-center gap-3 border-b border-primary/20">
@@ -74,8 +74,8 @@ export const PortalLayout = ({
 
       {/* Main Content Area */}
       <div className="flex-grow flex flex-col min-w-0">
-        <header className="h-16 bg-surface border-b border-accent/20 px-6 flex items-center justify-between sticky top-0 z-10">
-          <h2 className="font-serif font-semibold text-primary text-xl">
+        <header className="h-16 bg-surface border-b border-accent/20 px-4 md:px-6 flex items-center justify-between sticky top-0 z-10">
+          <h2 className="font-serif font-semibold text-primary text-lg md:text-xl truncate">
             {navItems.find(i => i.href === pathname)?.name || 'Dashboard'}
           </h2>
           <div className="flex items-center gap-4">
@@ -88,7 +88,7 @@ export const PortalLayout = ({
             </div>
           </div>
         </header>
-        <main className="p-6 overflow-y-auto">
+        <main className="p-4 md:p-6 overflow-y-auto">
           {children}
         </main>
       </div>

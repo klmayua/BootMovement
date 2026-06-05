@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/Card';
 export default function ImpactPage() {
   return (
     <PublicLayout>
-      <section className="py-20 px-4 bg-surface">
+      <section className="py-20 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-7xl mx-auto space-y-20">
           <div className="text-center space-y-6">
             <Typography variant="label-lg" className="text-accent">Proven Results</Typography>
@@ -17,8 +17,6 @@ export default function ImpactPage() {
               every kobo, and every life improved across the movement.
             </Typography>
           </div>
-
-          {/* Impact Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { label: 'People Impacted', value: '1.2M' },
@@ -26,14 +24,12 @@ export default function ImpactPage() {
               { label: 'Funds Mobilized', value: '₦4.2B' },
               { label: 'Volunteer Hours', value: '850k' },
             ].map((stat, i) => (
-              <Card key={i} className="text-center p-6 bg-surface-container border-none shadow-sm">
+              <Card key={i} className="text-center p-6 bg-surface-container border-none shadow-sm touch-manipulation">
                 <Typography variant="display-lg" className="text-primary font-bold">{stat.value}</Typography>
                 <Typography variant="label-md" className="text-neutral/60 uppercase">{stat.label}</Typography>
               </Card>
             ))}
           </div>
-
-          {/* Project Gallery */}
           <div className="space-y-12">
             <div className="text-center">
               <Typography variant="headline-lg" className="text-primary">Success Stories</Typography>
@@ -65,7 +61,7 @@ export default function ImpactPage() {
                   metric: '15k People with Clean Water' 
                 },
               ].map((project, i) => (
-                <Card key={i} className="group overflow-hidden hover:border-primary transition-all">
+                <Card key={i} className="group overflow-hidden hover:border-primary transition-all touch-manipulation">
                   <div className="h-48 bg-surface-container relative">
                     <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors" />
                   </div>
@@ -79,22 +75,20 @@ export default function ImpactPage() {
                     </Typography>
                     <div className="flex items-center justify-between pt-4 border-t border-accent/10">
                       <span className="text-sm font-bold text-primary">{project.metric}</span>
-                      <Button variant="ghost" size="sm">View Details →</Button>
+                      <Button variant="ghost" size="sm" className="touch-manipulation">View Details →</Button>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
-
-          {/* Transparency Callout */}
-          <div className="bg-surface-container rounded-3xl p-12 text-center space-y-8 border border-accent/20">
+          <div className="bg-surface-container rounded-3xl p-8 md:p-12 text-center space-y-8 border border-accent/20">
             <Typography variant="headline-lg" className="text-primary">Radical Transparency</Typography>
             <Typography variant="body-lg" className="text-neutral/80 max-w-2xl mx-auto">
               Every project in the Impact Hub is backed by public ledgers. You can trace every 
               contribution from donation to delivery.
             </Typography>
-            <Button variant="primary" size="lg">Explore the Public Ledger</Button>
+            <Button variant="primary" size="lg" className="touch-manipulation">Explore the Public Ledger</Button>
           </div>
         </div>
       </section>

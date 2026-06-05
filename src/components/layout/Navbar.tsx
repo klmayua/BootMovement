@@ -81,29 +81,32 @@ export const Navbar = () => {
         </div>
       </div>
     
-      {/* Mobile Dropdown Menu */}
-      {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-surface border-b border-outline-variant/30 md:hidden shadow-lg">
-          <nav className="flex flex-col p-4 gap-2">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-                className={`font-label-lg text-label-lg px-1 py-3 transition-all duration-200 active:scale-95 ${
-                  pathname === link.href 
-                    ? 'text-primary font-bold border-b-2 border-primary' 
-                    : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-md'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link href="/donate" className="bg-secondary text-on-secondary px-6 py-3 font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all duration-200 text-center mt-2">
-              Donate Now
-            </Link>
-          </nav>
-        </div>
-      )}
+     {/* Mobile Dropdown Menu */}
+     <div className={`absolute top-full left-0 right-0 bg-surface border-b border-outline-variant/30 md:hidden shadow-2xl transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-[100vh] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}>
+       <nav className="flex flex-col p-4 gap-2">
+         {navLinks.map((link) => (
+           <Link 
+             key={link.href}
+             href={link.href} 
+             onClick={() => setMobileMenuOpen(false)}
+             className={`font-label-lg text-label-lg px-4 py-4 transition-all duration-200 active:scale-95 touch-manipulation ${
+               pathname === link.href 
+                 ? 'text-primary font-bold bg-surface-container-low rounded-lg' 
+                 : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg'
+             }`}
+           >
+             {link.name}
+           </Link>
+         ))}
+         <Link 
+           href="/donate" 
+           onClick={() => setMobileMenuOpen(false)}
+           className="bg-secondary text-on-secondary px-6 py-4 font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all duration-200 text-center mt-2 rounded-lg touch-manipulation"
+         >
+           Donate Now
+         </Link>
+       </nav>
+     </div>
     </header>
   );
 };

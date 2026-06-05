@@ -6,7 +6,7 @@ export default function ExecutiveDashboard() {
     <div className="text-on-surface font-body-md">
       {/* TopAppBar */}
       <header className="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant/30">
-        <div className="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+        <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
           <div className="flex items-center gap-4">
             <span className="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
             <h1 className="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">CivicOS</h1>
@@ -61,72 +61,72 @@ export default function ExecutiveDashboard() {
             </div>
             {/* Bento Grid Layout */}
             <div className="grid grid-cols-12 gap-gutter">
-              {/* KPI Tile: Membership */}
-              <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-primary p-2 bg-surface-container rounded-lg" data-icon="groups">groups</span>
-                    <span className="text-green-600 font-bold text-sm">+12.4%</span>
-                  </div>
-                  <h3 className="font-label-lg text-label-lg text-on-surface-variant">Active Membership</h3>
-                  <p className="font-headline-lg text-headline-lg text-primary">2,841,902</p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-outline-variant/20">
-                  <div className="flex justify-between text-xs text-on-surface-variant">
-                    <span>Verified Voters</span>
-                    <span className="font-bold">88%</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-surface-container rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary h-full w-[88%]"></div>
-                  </div>
-                </div>
-              </div>
-              {/* KPI Tile: Funding */}
-              <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-secondary p-2 bg-secondary-container/10 rounded-lg" data-icon="payments">payments</span>
-                    <span className="text-green-600 font-bold text-sm">On Track</span>
-                  </div>
-                  <h3 className="font-label-lg text-label-lg text-on-surface-variant">Movement Funding</h3>
-                  <p className="font-headline-lg text-headline-lg text-primary">$42.8M</p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-outline-variant/20">
-                  <div className="flex justify-between text-xs text-on-surface-variant">
-                    <span>Q3 Target: $50M</span>
-                    <span className="font-bold">85%</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-secondary-container/20 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-secondary h-full w-[85%]"></div>
-                  </div>
-                </div>
-              </div>
-              {/* KPI Tile: Engagement */}
-              <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200">
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="material-symbols-outlined text-tertiary p-2 bg-tertiary-fixed/30 rounded-lg" data-icon="bolt">bolt</span>
-                    <span className="text-secondary font-bold text-sm">Critical</span>
-                  </div>
-                  <h3 className="font-label-lg text-label-lg text-on-surface-variant">Action Response Rate</h3>
-                  <p className="font-headline-lg text-headline-lg text-primary">64.2%</p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-outline-variant/20">
-                  <div className="flex justify-between text-xs text-on-surface-variant">
-                    <span>Avg Time: 14m</span>
-                    <span className="font-bold">Lower than goal</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-surface-container rounded-full mt-2 overflow-hidden">
-                    <div className="bg-tertiary h-full w-[64%]"></div>
-                  </div>
-                </div>
-              </div>
-              {/* National Resource Map */}
-              <div className="col-span-12 lg:col-span-8 bg-primary-container rounded-xl overflow-hidden relative min-h-[500px] flex flex-col">
-                <div className="p-8 z-10">
-                  <h3 className="font-headline-sm text-headline-sm text-white">Geospatial Resource Distribution</h3>
-                  <p className="text-on-primary-container text-body-sm">Real-time deployment of regional organizers and local offices.</p>
-                </div>
+               {/* KPI Tile: Membership */}
+               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200 touch-manipulation">
+                 <div>
+                   <div className="flex justify-between items-start mb-4">
+                     <span className="material-symbols-outlined text-primary p-2 bg-surface-container rounded-lg" data-icon="groups">groups</span>
+                     <span className="text-green-600 font-bold text-sm">+12.4%</span>
+                   </div>
+                   <h3 className="font-label-lg text-on-surface-variant">Active Membership</h3>
+                   <p className="font-headline-lg text-primary">2,841,902</p>
+                 </div>
+                 <div className="mt-4 pt-4 border-t border-outline-variant/20">
+                   <div className="flex justify-between text-xs text-on-surface-variant">
+                     <span>Verified Voters</span>
+                     <span className="font-bold">88%</span>
+                   </div>
+                   <div className="w-full h-1.5 bg-surface-container rounded-full mt-2 overflow-hidden">
+                     <div className="bg-primary h-full w-[88%]"></div>
+                   </div>
+                 </div>
+               </div>
+               {/* KPI Tile: Funding */}
+               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200 touch-manipulation">
+                 <div>
+                   <div className="flex justify-between items-start mb-4">
+                     <span className="material-symbols-outlined text-secondary p-2 bg-secondary-container/10 rounded-lg" data-icon="payments">payments</span>
+                     <span className="text-green-600 font-bold text-sm">On Track</span>
+                   </div>
+                   <h3 className="font-label-lg text-on-surface-variant">Movement Funding</h3>
+                   <p className="font-headline-lg text-primary">$42.8M</p>
+                 </div>
+                 <div className="mt-4 pt-4 border-t border-outline-variant/20">
+                   <div className="flex justify-between text-xs text-on-surface-variant">
+                     <span>Q3 Target: $50M</span>
+                     <span className="font-bold">85%</span>
+                   </div>
+                   <div className="w-full h-1.5 bg-secondary-container/20 rounded-full mt-2 overflow-hidden">
+                     <div className="bg-secondary h-full w-[85%]"></div>
+                   </div>
+                 </div>
+               </div>
+               {/* KPI Tile: Engagement */}
+               <div className="col-span-12 md:col-span-4 bg-white border border-outline-variant/30 p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-200 touch-manipulation">
+                 <div>
+                   <div className="flex justify-between items-start mb-4">
+                     <span className="material-symbols-outlined text-tertiary p-2 bg-tertiary-fixed/30 rounded-lg" data-icon="bolt">bolt</span>
+                     <span className="text-secondary font-bold text-sm">Critical</span>
+                   </div>
+                   <h3 className="font-label-lg text-on-surface-variant">Action Response Rate</h3>
+                   <p className="font-headline-lg text-primary">64.2%</p>
+                 </div>
+                 <div className="mt-4 pt-4 border-t border-outline-variant/20">
+                   <div className="flex justify-between text-xs text-on-surface-variant">
+                     <span>Avg Time: 14m</span>
+                     <span className="font-bold">Lower than goal</span>
+                   </div>
+                   <div className="w-full h-1.5 bg-surface-container rounded-full mt-2 overflow-hidden">
+                     <div className="bg-tertiary h-full w-[64%]"></div>
+                   </div>
+                 </div>
+               </div>
+               {/* National Resource Map */}
+               <div className="col-span-12 lg:col-span-8 bg-primary-container rounded-xl overflow-hidden relative min-h-[350px] md:min-h-[500px] flex flex-col">
+                 <div className="p-6 md:p-8 z-10">
+                   <h3 className="font-headline-sm text-white">Geospatial Resource Distribution</h3>
+                   <p className="text-on-primary-container text-body-sm">Real-time deployment of regional organizers and local offices.</p>
+                 </div>
                 <div className="flex-1 flex items-center justify-center p-8 opacity-40">
                   <div className="relative w-full h-full flex items-center justify-center">
                     <span className="material-symbols-outlined text-[300px] text-white/10" data-icon="public">public</span>
@@ -272,8 +272,8 @@ export default function ExecutiveDashboard() {
         </main>
        </div>
        {/* Footer */}
-       <footer className="w-full mt-auto bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/50">
-         <div className="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto">
+        <footer className="w-full mt-auto bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/50">
+          <div className="flex flex-col md:flex-row justify-between items-center py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
            <div className="mb-8 md:mb-0">
              <span className="font-label-lg text-label-lg font-bold text-primary">CivicOS</span>
              <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">© 2024 Civic Operating System. Visionary Tradition Infrastructure.</p>
